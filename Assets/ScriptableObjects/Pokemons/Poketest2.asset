@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad1a404d5d818e544a96f653a3f81ea5, type: 3}
+  m_Name: Poketest2
+  m_EditorClassIdentifier: Assembly-CSharp::Creatures
+  basicName: 
+  image: {fileID: 0}
+  E1image: {fileID: 0}
+  E2image: {fileID: 0}
+  type: 0
+  type2: 0
+  E1type: 0
+  E1type2: 0
+  E2type: 0
+  E2type2: 0
+  attacks:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  effects: 0
+  hp: 0
+  atk: 0
+  def: 0
+  sDef: 0
+  sAtk: 0
+  speed: 0
+  hpIV: 0
+  atkIV: 0
+  defIV: 0
+  sDefIV: 0
+  sAtkIV: 0
+  speedIV: 0
+  atkX: 0
+  defX: 0
+  sDefX: 0
+  sAtkX: 0
+  speedX: 0
+  attacksOnLevelUps: []
+  attacksOnLevels: 

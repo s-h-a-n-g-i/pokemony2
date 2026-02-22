@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class CreatureEq : MonoBehaviour
 {
-    public List<Creatures> creaturesCaptured;
-
-
-
+    public List<Pokemon> creaturesCaptured;
+    public Pokemon[] Equipped = new Pokemon[5];
 }

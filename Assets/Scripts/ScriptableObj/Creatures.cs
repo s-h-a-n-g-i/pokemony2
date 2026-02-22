@@ -1,39 +1,29 @@
+using System.Collections.Generic;
 using UnityEngine;
 
-public enum PokemonTypes
-{
-    nothing,
-    Angel,
-    FallenAngel,
-    Demon,
-    Seraph,
-    Ghost,
-    Soulless,
-    Nefilim
-}
-public enum Effects
-{
-    None,
-    Blind,
-    Burn,
-    Poison,
-    Slow,
-    Weakness,
-    Buff
-}
+
 
 [CreateAssetMenu(menuName = "ScriptableObjects/Creatures")]
 public class Creatures : ScriptableObject
 {
+    
     [Header("Info")]
     public string basicName;
-    public string nickname;
 
     public Sprite image;
-    public Sprite icon;
+    public Sprite E1image;
+    public Sprite E2image;
 
     public PokemonTypes type;
     public PokemonTypes type2;
+
+
+    public PokemonTypes E1type;
+    public PokemonTypes E1type2;
+
+
+    public PokemonTypes E2type;
+    public PokemonTypes E2type2;
 
     public Attacks[] attacks = new Attacks[4];
 
@@ -45,7 +35,14 @@ public class Creatures : ScriptableObject
     public int sDef;
     public int sAtk;
     public int speed;
-    public int xp;
+
+    [Header("IV")]
+    public int hpIV;
+    public int atkIV;
+    public int defIV;
+    public int sDefIV;
+    public int sAtkIV;
+    public int speedIV;
 
     [Header("Modifiers")]
 
@@ -55,5 +52,6 @@ public class Creatures : ScriptableObject
     public int sAtkX;
     public int speedX;
 
-    [HideInInspector] public int xpToNextLevel;
+    public Attacks[] attacksOnLevelUps;
+    public int[] attacksOnLevels;
 }

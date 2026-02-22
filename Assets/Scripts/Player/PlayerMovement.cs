@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
       
     private void SprintCheck() 
-    {
+    { 
         if (!hasRunningShoes) return;
 
         if (Input.GetKey(KeyCode.X))

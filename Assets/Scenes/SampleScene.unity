@@ -378,7 +378,7 @@ Transform:
   m_GameObject: {fileID: 681384810}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -399,6 +399,7 @@ GameObject:
   - component: {fileID: 1115949314}
   - component: {fileID: 1115949313}
   - component: {fileID: 1115949315}
+  - component: {fileID: 1115949316}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -505,8 +506,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07577a4a9ac9c89418c9c1ee48334608, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CreatureEq
-  creaturesCaptured:
-  - {fileID: 11400000, guid: 3302b56bc15e0664c8b8d34eb5c70874, type: 2}
 --- !u!114 &1115949314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -550,7 +549,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -563,9 +562,36 @@ BoxCollider2D:
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_AutoTiling: 1
+  m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
+--- !u!50 &1115949316
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115949309}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1846385645
 GameObject:
   m_ObjectHideFlags: 0
@@ -5089,7 +5115,7 @@ BoxCollider2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 1
+  m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -5204,6 +5230,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4c9848d23daf649a7a8aa54bcca3f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FightNPC
+  pokemonToFight: {fileID: 11400000, guid: 3302b56bc15e0664c8b8d34eb5c70874, type: 2}
+  level: 3
+  pokemonToFighting: {fileID: 11400000, guid: f4021b1681ed5cb4a97c04d7f0d882ad, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

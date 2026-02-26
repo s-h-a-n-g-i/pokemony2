@@ -11,17 +11,21 @@ public class Creatures : ScriptableObject
     public string basicName;
 
     public Sprite image;
-    public Sprite E1image;
-    public Sprite E2image;
 
     public PokemonTypes type;
     public PokemonTypes type2;
 
 
+    [Header("1st Evolution")]
+    public Sprite E1image;
+    public int evoLevel1;
     public PokemonTypes E1type;
     public PokemonTypes E1type2;
 
 
+    [Header("2nd Evolution")]
+    public Sprite E2image;
+    public int evoLevel2;
     public PokemonTypes E2type;
     public PokemonTypes E2type2;
 

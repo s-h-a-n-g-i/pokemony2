@@ -30,22 +30,33 @@ public class PlayerMovement : MonoBehaviour
     private void MovementCheck() 
     {
         if (Input.GetKey(KeyCode.UpArrow) && !isMoving)
+        {
+            isMoving = true;
             StartCoroutine(Move(Vector3.up));
+        }
 
         if (Input.GetKey(KeyCode.DownArrow) && !isMoving)
+        {
+            isMoving = true;
             StartCoroutine(Move(Vector3.down));
+        }
 
         if (Input.GetKey(KeyCode.RightArrow) && !isMoving)
+        {
+            isMoving = true;
             StartCoroutine(Move(Vector3.right));
+        }
 
         if (Input.GetKey(KeyCode.LeftArrow) && !isMoving)
-            StartCoroutine(Move(Vector3.left));
+        {
+            isMoving = true; 
+            StartCoroutine(Move(Vector3.left)); 
+        }
     }
 
 
     private IEnumerator Move(Vector3 dir) 
     {
-        isMoving = true;
         float leftTime = 0;
 
         prevPos = transform.position;

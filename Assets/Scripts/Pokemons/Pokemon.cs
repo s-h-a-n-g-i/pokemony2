@@ -38,14 +38,17 @@ public class Pokemon
     public PokemonTypes type2;
 
     [Header("Evolution 1")]
-    public Sprite E1image;
 
+    public Sprite E1image;
+    public int evoLevel1;
 
     public PokemonTypes E1type;
     public PokemonTypes E1type2;
 
     [Header("Evolution 2")]
+
     public Sprite E2image;
+    public int evoLevel2;
 
     public PokemonTypes E2type;
     public PokemonTypes E2type2;
@@ -117,7 +120,7 @@ public class Pokemon
 
         level = startingLevel;
 
-        //PokemonSpawnLevelUp(level);
+        PokemonSpawnLevelUp(level);
 
 }
 
@@ -127,12 +130,13 @@ public class Pokemon
         xp = 0;
         xpToNextLevel = xpToNextLevel / 2 + xpToNextLevel;
         StatsUp();
+        if (level == evoLevel1 || level == evoLevel2) Evolution();
     }
 
     public void Evolution() 
     {
         StatsUp();
-        StatsUp();
+        IVsUp();
         evoState++;
     }
 
@@ -146,4 +150,38 @@ public class Pokemon
         speed += speedIV;
     }
 
+    private void IVsUp()
+    {
+        hpIV ++;
+        atkIV ++;
+        defIV ++;
+        sDefIV ++;
+        sAtkIV ++;
+        speedIV ++;
+    }
+
+    public int giveXP() 
+    {
+        return level/2*3;
+    }
+
+    public PokemonTypes[] TypesOfPokemon()
+    {
+        if (evoState == 1)
+            return new PokemonTypes[] { E1type, E1type2 };
+        else if (evoState == 2)
+            return new PokemonTypes[] { E2type, E2type2 };
+        else
+            return new PokemonTypes[] { type, type2 };
+    }
+
+    public string PokemonNameOut() 
+    {
+        string n;
+        n = basicName;
+        if (nickname != null) n = nickname;
+        n += " (" + level + ")";
+        
+        return n;
+    }
 }

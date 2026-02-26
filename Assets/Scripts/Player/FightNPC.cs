@@ -4,15 +4,24 @@ using UnityEngine.SceneManagement;
 public class FightNPC : MonoBehaviour
 {
 
-    [SerializeField] private Creatures pokemonToFight;
-    [SerializeField] private int level;
+    [SerializeField] private Creatures[] pokemonToFight;
+    [SerializeField] private int level = 3;
     [SerializeField] private FightingPokemons pokemonToFighting;
-    private Pokemon pokemon;
+    private Pokemon[] pokemon;
 
     void Start()
     {
-        Debug.Log(pokemonToFight.name);
-        pokemon.CreatePokemon(pokemonToFight, 0);
+        pokemon = new Pokemon[pokemonToFight.Length];
+
+
+        //Debug.Log(pokemonToFight.name);
+        for(int i = 0; i < pokemon.Length;i++)
+        {
+            pokemon[i] = new Pokemon();
+            //Debug.Log(i);
+            pokemon[i].CreatePokemon(pokemonToFight[i], level);
+        }
+
     }
 
     void Update()
@@ -23,7 +32,7 @@ public class FightNPC : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         pokemonToFighting.isThisTrainer = true;
-        pokemonToFighting.pokemonToBattle = pokemon;
+        pokemonToFighting.pokemonsToBattleTrainer = pokemon;
 
         SceneManager.LoadScene("Fight");
     }

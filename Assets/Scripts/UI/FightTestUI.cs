@@ -12,7 +12,7 @@ public class FightTestUI : MonoBehaviour
     {
         text = GetComponent<TMP_Text>();
 
-        text.text =f.pokemonToBattle.basicName + " " + f.pokemonToBattle.atk;
+        text.text =f.pokemonToBattle.basicName + " " + f.pokemonToBattle.atk + " : " + f.pokemonToBattle.level;
     }
 
     void Update()

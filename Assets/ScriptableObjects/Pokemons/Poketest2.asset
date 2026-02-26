@@ -12,34 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1a404d5d818e544a96f653a3f81ea5, type: 3}
   m_Name: Poketest2
   m_EditorClassIdentifier: Assembly-CSharp::Creatures
-  basicName: 
-  image: {fileID: 0}
-  E1image: {fileID: 0}
-  E2image: {fileID: 0}
-  type: 0
+  basicName: Scafag
+  image: {fileID: 4958859246033760358, guid: 2258eeffec21e56418cdeb940a335b68, type: 3}
+  E1image: {fileID: 4958859246033760358, guid: 2258eeffec21e56418cdeb940a335b68, type: 3}
+  E2image: {fileID: 4958859246033760358, guid: 2258eeffec21e56418cdeb940a335b68, type: 3}
+  type: 1
   type2: 0
-  E1type: 0
+  E1type: 1
   E1type2: 0
-  E2type: 0
+  E2type: 1
   E2type2: 0
   attacks:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 83d6aa5dcd086d644b0ef38057940a90, type: 2}
+  - {fileID: 11400000, guid: 83d6aa5dcd086d644b0ef38057940a90, type: 2}
+  - {fileID: 11400000, guid: e3a2f746c112d2142acc04e1a43382cd, type: 2}
+  - {fileID: 11400000, guid: e3a2f746c112d2142acc04e1a43382cd, type: 2}
   effects: 0
-  hp: 0
-  atk: 0
-  def: 0
-  sDef: 0
-  sAtk: 0
-  speed: 0
-  hpIV: 0
-  atkIV: 0
-  defIV: 0
-  sDefIV: 0
-  sAtkIV: 0
-  speedIV: 0
+  hp: 5
+  atk: 2
+  def: 1
+  sDef: 1
+  sAtk: 4
+  speed: 6
+  hpIV: 1
+  atkIV: 1
+  defIV: 1
+  sDefIV: 1
+  sAtkIV: 1
+  speedIV: 2
   atkX: 0
   defX: 0
   sDefX: 0

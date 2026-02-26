@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Creatures
   basicName: Poketest1
   image: {fileID: 4958859246033760358, guid: 2258eeffec21e56418cdeb940a335b68, type: 3}
-  E1image: {fileID: 0}
-  E2image: {fileID: 0}
+  E1image: {fileID: 4958859246033760358, guid: 2258eeffec21e56418cdeb940a335b68, type: 3}
+  E2image: {fileID: 4958859246033760358, guid: 2258eeffec21e56418cdeb940a335b68, type: 3}
   type: 3
   type2: 0
   E1type: 3
@@ -24,6 +24,9 @@ MonoBehaviour:
   E2type2: 1
   attacks:
   - {fileID: 11400000, guid: 83d6aa5dcd086d644b0ef38057940a90, type: 2}
+  - {fileID: 11400000, guid: e3a2f746c112d2142acc04e1a43382cd, type: 2}
+  - {fileID: 11400000, guid: e3a2f746c112d2142acc04e1a43382cd, type: 2}
+  - {fileID: 11400000, guid: e3a2f746c112d2142acc04e1a43382cd, type: 2}
   effects: 0
   hp: 10
   atk: 5

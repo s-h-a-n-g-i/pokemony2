@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CreatureEq : MonoBehaviour
+[CreateAssetMenu(menuName = "ScriptableObjects/CreatureEq")]
+public class CreatureEq : ScriptableObject
 {
     public List<Pokemon> creaturesCaptured;
     public Pokemon[] Equipped = new Pokemon[5];

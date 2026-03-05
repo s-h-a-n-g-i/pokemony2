@@ -74,4 +74,10 @@ public class FightManager : MonoBehaviour
         enemyPokemonName.text = FightSO.pokemonToBattle.PokemonNameOut();
     }
 
+    private void SetAttack() 
+    {
+        
+    }
+
+
 }

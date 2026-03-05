@@ -184,4 +184,40 @@ public class Pokemon
         
         return n;
     }
+
+    public Attacks GetRandomAttack() 
+    {
+        Attacks a;
+        do 
+        {
+            a = attacks[Random.Range(0, 4)];
+        }
+        while (a != null || a.name != "None");
+
+        return a;
+
+    }
+
+    public bool GetDamage(Attacks atk) 
+    {
+        int roll = Random.Range(0,100);
+
+        if (atk.accuracy > roll) return false;
+
+        hp -= atk.damage;
+        
+        if (hp <= 0) 
+        {
+            pokemonDead();
+        }
+
+
+        return true;
+    }
+
+
+    private void pokemonDead() 
+    {
+        
+    }
 }

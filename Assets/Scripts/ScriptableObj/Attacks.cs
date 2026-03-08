@@ -16,5 +16,4 @@ public class Attacks : ScriptableObject
     public Effects effect;
 
 
-
 }

@@ -53,7 +53,7 @@ public class Pokemon
     public PokemonTypes E2type;
     public PokemonTypes E2type2;
 
-    public Attacks[] attacks = new Attacks[4];
+    public Attack[] AttacksActive = new Attack[4];
 
     [Header("Basic Stats")]
     public int hp;
@@ -116,13 +116,24 @@ public class Pokemon
         image = c.image;
         basicName = c.basicName;
 
-        attacks = c.attacks;
+        ApplyAttacksToClass(c.attacks);
 
         level = startingLevel;
 
         PokemonSpawnLevelUp(level);
 
 }
+
+    private void ApplyAttacksToClass(Attacks[] s) 
+    {
+        for (int i = 0; i < 4; i++) 
+        {
+            if (s[i] != null || s[i].name != "None") 
+            {
+                AttacksActive[i] = new Attack(s[i].name, s[i].attackType, s[i].maxPp, s[i].damage, s[i].accuracy, s[i].speed, s[i].desc);
+            }
+        }
+    }
 
 
     public void LvLUp() 
@@ -185,14 +196,14 @@ public class Pokemon
         return n;
     }
 
-    public Attacks GetRandomAttack() 
+    public Attack GetRandomAttack() 
     {
-        Attacks a;
+        Attack a;
         do 
         {
-            a = attacks[Random.Range(0, 4)];
+            a = AttacksActive[Random.Range(0, 4)];
         }
-        while (a != null || a.name != "None");
+        while (a != null || a.attackName != "None");
 
         return a;
 

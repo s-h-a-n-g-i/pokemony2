@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: PokemonTest
   m_EditorClassIdentifier: Assembly-CSharp::Creatures
   basicName: Poketest1
-  image: {fileID: 4958859246033760358, guid: 2258eeffec21e56418cdeb940a335b68, type: 3}
-  E1image: {fileID: 4958859246033760358, guid: 2258eeffec21e56418cdeb940a335b68, type: 3}
-  E2image: {fileID: 4958859246033760358, guid: 2258eeffec21e56418cdeb940a335b68, type: 3}
+  image: {fileID: 4226022105378688112, guid: 7e556d564c7080f46a6c03105b8aff44, type: 3}
   type: 3
   type2: 0
+  E1image: {fileID: 4958859246033760358, guid: 2258eeffec21e56418cdeb940a335b68, type: 3}
+  evoLevel1: 0
   E1type: 3
   E1type2: 1
+  E2image: {fileID: 4958859246033760358, guid: 2258eeffec21e56418cdeb940a335b68, type: 3}
+  evoLevel2: 0
   E2type: 5
   E2type2: 1
   attacks:

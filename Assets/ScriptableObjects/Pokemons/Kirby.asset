@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Kirby
   m_EditorClassIdentifier: Assembly-CSharp::Creatures
   basicName: Kirby
-  image: {fileID: 8611607649075010630, guid: 289171aa41aa0fd46922a47830d53dd4, type: 3}
+  image: {fileID: -8636221404721523813, guid: d250a524c19d91148bd7eb827722e4c6, type: 3}
   type: 3
   type2: 0
   E1image: {fileID: 8611607649075010630, guid: 289171aa41aa0fd46922a47830d53dd4, type: 3}

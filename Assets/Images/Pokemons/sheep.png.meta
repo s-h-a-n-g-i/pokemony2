@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2258eeffec21e56418cdeb940a335b68
+guid: d250a524c19d91148bd7eb827722e4c6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4958859246033760358
-    second: pokemen1_0
+      213: -8636221404721523813
+    second: sheep_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pokemen1_0
+      name: sheep_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 660f00b063861d440800000000000000
-      internalID: 4958859246033760358
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pokemen1_1
-      rect:
-        serializedVersion: 2
-        x: 18
-        y: 25
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ee87736d86c16ff42bd21f3ed2691435
-      internalID: -2106524695
+      spriteID: b93d2f9936af52880800000000000000
+      internalID: -8636221404721523813
       vertices: []
       indices: 
       edges: []
@@ -147,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b6c9dd5392f4b5d4b9b880a5c29942ce
+    spriteID: ff9730f1cc8402a4e9e9fbc74bb35637
     internalID: 0
     vertices: []
     indices: 
@@ -157,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pokemen1_0: 4958859246033760358
-      pokemen1_1: -2106524695
+      sheep_0: -8636221404721523813
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

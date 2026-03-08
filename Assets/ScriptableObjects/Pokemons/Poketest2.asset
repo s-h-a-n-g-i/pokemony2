@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: Poketest2
   m_EditorClassIdentifier: Assembly-CSharp::Creatures
   basicName: Scafag
-  image: {fileID: 4958859246033760358, guid: 2258eeffec21e56418cdeb940a335b68, type: 3}
-  E1image: {fileID: 4958859246033760358, guid: 2258eeffec21e56418cdeb940a335b68, type: 3}
-  E2image: {fileID: 4958859246033760358, guid: 2258eeffec21e56418cdeb940a335b68, type: 3}
+  image: {fileID: -3447102151616154709, guid: a1cb6c7d94e089f43ac5bfc4ddf327ba, type: 3}
   type: 1
   type2: 0
+  E1image: {fileID: 4958859246033760358, guid: 2258eeffec21e56418cdeb940a335b68, type: 3}
+  evoLevel1: 0
   E1type: 1
   E1type2: 0
+  E2image: {fileID: 4958859246033760358, guid: 2258eeffec21e56418cdeb940a335b68, type: 3}
+  evoLevel2: 0
   E2type: 1
   E2type2: 0
   attacks:

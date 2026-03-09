@@ -79,7 +79,7 @@ public class FightManager : MonoBehaviour
         
     }
 
-    public void Attack(Attack playerAttack) 
+    public void Attack() 
     {
         
     }

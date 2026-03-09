@@ -29,7 +29,7 @@ public class FightBtn : MonoBehaviour
 
     public void AttackUse()
     {
-        fightManager.Attack(pokemon.AttacksActive[attackCounter]);
+        //fightManager.Attack(pokemon.AttacksActive[attackCounter]);
     }
 
 }

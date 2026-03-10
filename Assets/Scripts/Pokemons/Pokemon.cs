@@ -57,6 +57,7 @@ public class Pokemon
 
     [Header("Basic Stats")]
     public int hp;
+    public int maxHp;
     public int atk;
     public int def;
     public int sDef;
@@ -98,6 +99,7 @@ public class Pokemon
 
     public void CreatePokemon(Creatures c, int startingLevel = 0) 
     {
+        maxHp = c.hp;
         hp = c.hp;
         atk = c.atk;
         def = c.def;

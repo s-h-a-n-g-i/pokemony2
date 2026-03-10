@@ -28,13 +28,15 @@ public class FightManager : MonoBehaviour
 
     void Start()
     {
+        CreatureEqSO.ActivePokemon = CreatureEqSO.Equipped[chosenPokemon];
         isTrainer = FightSO.isThisTrainer;
-        if(isTrainer) SetTrainer();
-        
+        if (isTrainer) SetTrainer();
     }
 
     void Update()
     {
+
+        CreatureEqSO.ActivePokemon = CreatureEqSO.Equipped[chosenPokemon];
         setUpMyPokemon();
         setUpEnemyTrainerPokemon();
     }
@@ -57,8 +59,8 @@ public class FightManager : MonoBehaviour
 
     private void setUpMyPokemon(int chosen = 0)
     {
-        myPokemonImage.sprite = CreatureEqSO.Equipped[chosen].image;
-        myPokemonName.text = CreatureEqSO.Equipped[chosen].PokemonNameOut();
+        myPokemonImage.sprite = CreatureEqSO.ActivePokemon.image;
+        myPokemonName.text = CreatureEqSO.ActivePokemon.PokemonNameOut();
     }
 
     private void setUpEnemyTrainerPokemon(int chosen = 0)
@@ -74,14 +76,14 @@ public class FightManager : MonoBehaviour
         enemyPokemonName.text = FightSO.pokemonToBattle.PokemonNameOut();
     }
 
-    private void SetAttack() 
+    private void SetAttack()
     {
-        
+
     }
 
-    public void Attack() 
+    public void Attack()
     {
-        
+
     }
 
 }

@@ -11,7 +11,7 @@ public class FightBtn : MonoBehaviour
     [SerializeField] private FightManager fightManager;
     private Attack Attacks;
     private Pokemon pokemon;
-
+    private string sperma = "poldek je sperme";
 
 
     void Update()

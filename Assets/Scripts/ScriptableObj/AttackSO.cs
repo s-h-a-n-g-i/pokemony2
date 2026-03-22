@@ -1,7 +1,7 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "ScriptableObjects/Attacks")]
-public class Attacks : ScriptableObject
+[CreateAssetMenu(menuName = "ScriptableObjects/AttackSO")]
+public class AttackSO : ScriptableObject
 {
     public string attackName;
     public PokemonTypes attackType;

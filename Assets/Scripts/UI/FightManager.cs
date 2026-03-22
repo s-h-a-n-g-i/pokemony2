@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,7 +7,7 @@ using UnityEngine.UI;
 public class FightManager : MonoBehaviour
 {
     [Header("Settings")]
-    [SerializeField] private FightingPokemons FightSO;
+    [SerializeField] private PokemonInFightSO FightSO;
     [SerializeField] private CreatureEq CreatureEqSO;
     [SerializeField] private Eq EqSO;
     [SerializeField] private GameObject[] PokemonTrainerCounter;
@@ -21,6 +22,12 @@ public class FightManager : MonoBehaviour
     [SerializeField] private Image enemyPokemonImage;
     [SerializeField] private TMP_Text enemyPokemonName;
 
+    [Header("DialogeWindow")]
+    [SerializeField] private GameObject dialogeWindow;
+    [SerializeField] private TMP_Text dialogeText;
+
+    [SerializeField] private Pokemon enemyPokemonActive;
+
     public int chosenPokemon = 0;
 
     private bool isTrainer;
@@ -28,6 +35,7 @@ public class FightManager : MonoBehaviour
 
     void Start()
     {
+        dialogeWindow.SetActive(false);
         CreatureEqSO.ActivePokemon = CreatureEqSO.Equipped[chosenPokemon];
         isTrainer = FightSO.isThisTrainer;
         if (isTrainer) SetTrainer();
@@ -35,8 +43,8 @@ public class FightManager : MonoBehaviour
 
     void Update()
     {
-
-        CreatureEqSO.ActivePokemon = CreatureEqSO.Equipped[chosenPokemon];
+        Debug.Log(CreatureEqSO.ActivePokemon.basicName);
+        //CreatureEqSO.ActivePokemon = CreatureEqSO.Equipped[chosenPokemon];
         setUpMyPokemon();
         setUpEnemyTrainerPokemon();
     }
@@ -72,18 +80,102 @@ public class FightManager : MonoBehaviour
 
     private void setUpEnemyPokemon()
     {
+        enemyPokemonActive = FightSO.pokemonToBattle;
         enemyPokemonImage.sprite = FightSO.pokemonToBattle.image;
         enemyPokemonName.text = FightSO.pokemonToBattle.PokemonNameOut();
     }
 
-    private void SetAttack()
-    {
 
+    public IEnumerator Attack(int attackSpeed, Attack atk, Pokemon pokemon)
+    {
+        dialogeText.text = "";
+        dialogeWindow.SetActive(true);
+
+        Attack enemyRandomAttack = enemyPokemonActive.GetRandomAttack();
+
+        string textDialoge;
+        int enemyAttackSpeed = enemyRandomAttack.howFastAttackIs(enemyPokemonActive);
+
+
+        if (attackSpeed >= enemyAttackSpeed)
+        {
+            textDialoge = SetAttack(pokemon,atk,enemyPokemonActive) + "^";
+            dialogeText.text = "";
+            for (int i = 0; i < textDialoge.Length;i++)
+            {
+                dialogeText.text += textDialoge[i];
+                yield return new WaitForSeconds(0.04f);
+            }
+            yield return new WaitForSeconds(1f);
+
+
+            textDialoge = SetAttack(enemyPokemonActive, enemyRandomAttack, pokemon) + "^";
+            dialogeText.text = "";
+            for (int i = 0; i < textDialoge.Length; i++)
+            {
+                dialogeText.text += textDialoge[i];
+                yield return new WaitForSeconds(0.04f);
+            }
+
+            yield return new WaitForSeconds(1f);
+            dialogeWindow.SetActive(false);
+        }
+        else
+        {
+            textDialoge = SetAttack(enemyPokemonActive, enemyRandomAttack, pokemon) + "^";
+            dialogeText.text = "";
+            for (int i = 0; i < textDialoge.Length; i++)
+            {
+                dialogeText.text += textDialoge[i];
+                yield return new WaitForSeconds(0.04f);
+            }
+            yield return new WaitForSeconds(1f);
+
+
+            textDialoge = SetAttack(pokemon, atk, enemyPokemonActive) + "^";
+            dialogeText.text = "";
+            for (int i = 0; i < textDialoge.Length; i++)
+            {
+                dialogeText.text += textDialoge[i];
+                yield return new WaitForSeconds(0.04f);
+            }
+
+            yield return new WaitForSeconds(1f);
+            dialogeWindow.SetActive(false);
+        
+        }
     }
 
-    public void Attack()
-    {
 
+
+
+    private string SetAttack(Pokemon pokemonAttacking, Attack atk, Pokemon pokemonDamaged)
+    {
+        if (pokemonDamaged.checkHit(atk))
+        {
+            DealDamage(atk.getDamage(pokemonAttacking), enemyPokemonActive);
+            return atk.attackName + " hitler" + enemyPokemonActive.PokemonNameOut();
+        }
+        else
+        {
+            return atk.attackName + " not hitler" + enemyPokemonActive.PokemonNameOut();
+        }
     }
+
+
+
+    private void DealDamage(int damage, Pokemon pokemon)
+    {
+        if (pokemon.def >= damage)
+            damage = pokemon.def + 1;
+        pokemon.hp = damage - pokemon.def;
+    }
+
+
+
+
+
+
+
 
 }

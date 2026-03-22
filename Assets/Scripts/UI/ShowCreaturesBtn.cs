@@ -6,7 +6,7 @@ public class ShowCreaturesBtn : MonoBehaviour
 {
     [SerializeField] private TMP_Text PokemonNameText;
     [SerializeField] private CreatureEq pokemons;
-    [SerializeField] private FightingPokemons fightingPokemons;
+    [SerializeField] private PokemonInFightSO fightingPokemons;
 
     [SerializeField] private int pokemonCounter;
 

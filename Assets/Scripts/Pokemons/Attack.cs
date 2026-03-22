@@ -27,4 +27,18 @@ public class Attack
 
     }
 
+
+    public int howFastAttackIs(Pokemon s) 
+    {
+        int r = speed*2;
+        r += s.speed;
+        return r;
+    }
+
+    public int getDamage(Pokemon s) 
+    {
+        int r = damage + s.atk;
+        return r;
+    }
+
 }

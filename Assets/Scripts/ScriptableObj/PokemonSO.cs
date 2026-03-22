@@ -3,8 +3,8 @@ using UnityEngine;
 
 
 
-[CreateAssetMenu(menuName = "ScriptableObjects/Creatures")]
-public class Creatures : ScriptableObject
+[CreateAssetMenu(menuName = "ScriptableObjects/PokemonSO")]
+public class PokemonSO : ScriptableObject
 {
     
     [Header("Info")]
@@ -29,7 +29,7 @@ public class Creatures : ScriptableObject
     public PokemonTypes E2type;
     public PokemonTypes E2type2;
 
-    public Attacks[] attacks = new Attacks[4];
+    public AttackSO[] attacks = new AttackSO[4];
 
     public Effects effects;
     [Header("Basic Stats")]
@@ -56,6 +56,6 @@ public class Creatures : ScriptableObject
     public int sAtkX;
     public int speedX;
 
-    public Attacks[] attacksOnLevelUps;
+    public AttackSO[] attacksOnLevelUps;
     public int[] attacksOnLevels;
 }

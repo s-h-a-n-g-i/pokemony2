@@ -6,7 +6,7 @@ public class FightBtn : MonoBehaviour
 {
     [SerializeField] private TMP_Text AttackNameText;
     [SerializeField] private CreatureEq pokemons;
-    [SerializeField] private FightingPokemons fightingPokemons;
+    [SerializeField] private PokemonInFightSO fightingPokemons;
     [SerializeField] private int attackCounter;
     [SerializeField] private FightManager fightManager;
     private Attack Attacks;
@@ -29,7 +29,7 @@ public class FightBtn : MonoBehaviour
 
     public void AttackUse()
     {
-        //fightManager.Attack(pokemon.AttacksActive[attackCounter]);
+        fightManager.Attack(pokemon.AttacksActive[attackCounter].howFastAttackIs(pokemon), pokemon.AttacksActive[attackCounter], pokemon);
     }
 
 }

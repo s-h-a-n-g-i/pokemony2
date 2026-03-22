@@ -4,7 +4,7 @@ using UnityEngine;
 public class FightTestUI : MonoBehaviour
 {
 
-    [SerializeField] private FightingPokemons f;
+    [SerializeField] private PokemonInFightSO f;
     
     TMP_Text text;
 

@@ -4,9 +4,9 @@ using UnityEngine.SceneManagement;
 public class FightNPC : MonoBehaviour
 {
 
-    [SerializeField] private Creatures[] pokemonToFight;
+    [SerializeField] private PokemonSO[] pokemonToFight;
     [SerializeField] private int level = 3;
-    [SerializeField] private FightingPokemons pokemonToFighting;
+    [SerializeField] private PokemonInFightSO pokemonToFighting;
     private Pokemon[] pokemon;
 
     void Start()

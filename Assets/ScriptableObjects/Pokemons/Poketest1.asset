@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15586245fe48fb0459c9c7bc8bb0f40d, type: 3}
-  m_Name: Poketest2
+  m_Name: Poketest1
   m_EditorClassIdentifier: Assembly-CSharp::PokemonSO
-  basicName: Lowca
-  image: {fileID: -8636221404721523813, guid: d250a524c19d91148bd7eb827722e4c6, type: 3}
-  type: 0
+  basicName: Clownigger
+  image: {fileID: 3803539384352201587, guid: 50ca1a7f838d02e4787075316a1a4299, type: 3}
+  type: 2
   type2: 0
   E1image: {fileID: 0}
   evoLevel1: -1
@@ -26,22 +26,22 @@ MonoBehaviour:
   E2type2: 0
   attacks:
   - {fileID: 11400000, guid: 012956b2c208e83458cd3e3283d3c3de, type: 2}
-  - {fileID: 11400000, guid: e3a2f746c112d2142acc04e1a43382cd, type: 2}
   - {fileID: 11400000, guid: 012956b2c208e83458cd3e3283d3c3de, type: 2}
   - {fileID: 11400000, guid: e3a2f746c112d2142acc04e1a43382cd, type: 2}
+  - {fileID: 11400000, guid: e3a2f746c112d2142acc04e1a43382cd, type: 2}
   effects: 0
-  hp: 20
-  atk: 1
-  def: 4
-  sDef: 1
+  hp: 30
+  atk: 5
+  def: 6
+  sDef: 2
   sAtk: 4
-  speed: 1
+  speed: 7
   hpIV: 4
   atkIV: 2
   defIV: 1
-  sDefIV: 0
-  sAtkIV: 4
-  speedIV: 1
+  sDefIV: 5
+  sAtkIV: 2
+  speedIV: 3
   atkX: 0
   defX: 0
   sDefX: 0

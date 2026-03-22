@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07577a4a9ac9c89418c9c1ee48334608, type: 3}
-  m_Name: PokeEqSO
+  m_Name: PokeEQ
   m_EditorClassIdentifier: Assembly-CSharp::CreatureEq

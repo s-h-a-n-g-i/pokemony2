@@ -97,7 +97,7 @@ public class Pokemon
         }
     }
 
-    public void CreatePokemon(Creatures c, int startingLevel = 0) 
+    public void CreatePokemon(PokemonSO c, int startingLevel = 0) 
     {
         maxHp = c.hp;
         hp = c.hp;
@@ -126,7 +126,7 @@ public class Pokemon
 
 }
 
-    private void ApplyAttacksToClass(Attacks[] s) 
+    private void ApplyAttacksToClass(AttackSO[] s) 
     {
         for (int i = 0; i < 4; i++) 
         {
@@ -211,7 +211,7 @@ public class Pokemon
 
     }
 
-    public bool GetDamage(Attacks atk) 
+    public bool checkHit(Attack atk) 
     {
         int roll = Random.Range(0,100);
 

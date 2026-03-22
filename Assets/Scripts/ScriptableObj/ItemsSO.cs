@@ -7,7 +7,7 @@ public enum itemsTypes
 }
 
 [CreateAssetMenu(menuName = "ScriptableObjects/Items")]
-public class Items : ScriptableObject
+public class ItemsSO : ScriptableObject
 {
     public string itemName;
     public itemsTypes type;

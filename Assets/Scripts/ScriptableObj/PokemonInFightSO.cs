@@ -1,7 +1,7 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "ScriptableObjects/Fight")]
-public class FightingPokemons : ScriptableObject
+[CreateAssetMenu(menuName = "ScriptableObjects/PokemonInFight")]
+public class PokemonInFightSO : ScriptableObject
 {
     public bool isThisTrainer = false;
     public Pokemon pokemonToBattle;

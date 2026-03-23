@@ -8,15 +8,13 @@ public class FightBtn : MonoBehaviour
     [SerializeField] private CreatureEq pokemons;
     [SerializeField] private PokemonInFightSO fightingPokemons;
     [SerializeField] private int attackCounter;
-    [SerializeField] private TrainerManager trainerManager;
-    private Attack Attacks;
-    private Pokemon pokemon;
+    [SerializeField] private FightSystemManager fightManager;
+    
 
 
     void Update()
     {
-        pokemon = pokemons.ActivePokemon;
-        UpdateAttack(pokemon.AttacksActive[attackCounter]);
+        UpdateAttack(pokemons.ActivePokemon.AttacksActive[attackCounter]);
     }
 
 
@@ -28,7 +26,7 @@ public class FightBtn : MonoBehaviour
 
     public void AttackUse()
     {
-        StartCoroutine(trainerManager.Attack(pokemon.AttacksActive[attackCounter].howFastAttackIs(pokemon), pokemon.AttacksActive[attackCounter], pokemon));
+        fightManager.Attacking(attackCounter);
     }
 
 }

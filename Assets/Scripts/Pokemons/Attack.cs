@@ -14,6 +14,8 @@ public class Attack
 
     public Effects effect;
 
+    bool isSuper = false;
+
     public Attack(string attackName, PokemonTypes attackType, int maxPp, int damage, int accuracy, int speed , string desc) 
     {
         this.attackName = attackName;
@@ -35,9 +37,18 @@ public class Attack
         return r;
     }
 
-    public int getDamage(Pokemon s) 
+    public int getDamage(Pokemon deal, Pokemon target) 
     {
-        int r = damage + s.atk;
+        int r;
+        if (!isSuper)
+            r = damage + deal.atk - target.def;
+        else
+            r = damage + deal.sAtk - target.sDef;
+        if (r < 0) 
+            if(isSuper)
+                r = 10;
+            else
+                r = 1;
         return r;
     }
 

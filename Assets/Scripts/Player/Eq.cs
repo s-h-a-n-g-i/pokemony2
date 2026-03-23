@@ -18,7 +18,9 @@ public class Eq : MonoBehaviour
 
         c.Equipped[2] = new Pokemon();
         c.Equipped[2].CreatePokemon(f, 5);
+
+
     }
 
-    public List<ItemsSO> itemsInEq;
+    //public List<ItemsSO> itemsInEq;
 }

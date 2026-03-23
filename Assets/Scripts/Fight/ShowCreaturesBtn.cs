@@ -7,7 +7,7 @@ public class ShowCreaturesBtn : MonoBehaviour
     [SerializeField] private TMP_Text PokemonNameText;
     [SerializeField] private CreatureEq pokemons;
     [SerializeField] private PokemonInFightSO fightingPokemons;
-
+    [SerializeField] private FightSystemManager fightSystemManager;
     [SerializeField] private int pokemonCounter;
 
     void Update()
@@ -25,6 +25,8 @@ public class ShowCreaturesBtn : MonoBehaviour
 
     public void ShowCreaturePressed() 
     {
+        fightSystemManager.chosenPokemonPlayer = pokemonCounter;
+        fightSystemManager.setUpMyPokemon();
         Debug.Log(pokemons.Equipped[pokemonCounter].PokemonNameOut());
     }
 }

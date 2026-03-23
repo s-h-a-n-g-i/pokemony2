@@ -8,10 +8,9 @@ public class FightBtn : MonoBehaviour
     [SerializeField] private CreatureEq pokemons;
     [SerializeField] private PokemonInFightSO fightingPokemons;
     [SerializeField] private int attackCounter;
-    [SerializeField] private FightManager fightManager;
+    [SerializeField] private TrainerManager trainerManager;
     private Attack Attacks;
     private Pokemon pokemon;
-    private string sperma = "poldek je sperme";
 
 
     void Update()
@@ -29,7 +28,7 @@ public class FightBtn : MonoBehaviour
 
     public void AttackUse()
     {
-        fightManager.Attack(pokemon.AttacksActive[attackCounter].howFastAttackIs(pokemon), pokemon.AttacksActive[attackCounter], pokemon);
+        StartCoroutine(trainerManager.Attack(pokemon.AttacksActive[attackCounter].howFastAttackIs(pokemon), pokemon.AttacksActive[attackCounter], pokemon));
     }
 
 }

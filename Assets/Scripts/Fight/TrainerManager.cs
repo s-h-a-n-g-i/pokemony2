@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FightManager : MonoBehaviour
+public class TrainerManager : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] private PokemonInFightSO FightSO;
@@ -90,60 +90,7 @@ public class FightManager : MonoBehaviour
     {
         dialogeText.text = "";
         dialogeWindow.SetActive(true);
-
-        Attack enemyRandomAttack = enemyPokemonActive.GetRandomAttack();
-
-        string textDialoge;
-        int enemyAttackSpeed = enemyRandomAttack.howFastAttackIs(enemyPokemonActive);
-
-
-        if (attackSpeed >= enemyAttackSpeed)
-        {
-            textDialoge = SetAttack(pokemon,atk,enemyPokemonActive) + "^";
-            dialogeText.text = "";
-            for (int i = 0; i < textDialoge.Length;i++)
-            {
-                dialogeText.text += textDialoge[i];
-                yield return new WaitForSeconds(0.04f);
-            }
-            yield return new WaitForSeconds(1f);
-
-
-            textDialoge = SetAttack(enemyPokemonActive, enemyRandomAttack, pokemon) + "^";
-            dialogeText.text = "";
-            for (int i = 0; i < textDialoge.Length; i++)
-            {
-                dialogeText.text += textDialoge[i];
-                yield return new WaitForSeconds(0.04f);
-            }
-
-            yield return new WaitForSeconds(1f);
-            dialogeWindow.SetActive(false);
-        }
-        else
-        {
-            textDialoge = SetAttack(enemyPokemonActive, enemyRandomAttack, pokemon) + "^";
-            dialogeText.text = "";
-            for (int i = 0; i < textDialoge.Length; i++)
-            {
-                dialogeText.text += textDialoge[i];
-                yield return new WaitForSeconds(0.04f);
-            }
-            yield return new WaitForSeconds(1f);
-
-
-            textDialoge = SetAttack(pokemon, atk, enemyPokemonActive) + "^";
-            dialogeText.text = "";
-            for (int i = 0; i < textDialoge.Length; i++)
-            {
-                dialogeText.text += textDialoge[i];
-                yield return new WaitForSeconds(0.04f);
-            }
-
-            yield return new WaitForSeconds(1f);
-            dialogeWindow.SetActive(false);
-        
-        }
+        yield return new WaitForSeconds(0f);
     }
 
 

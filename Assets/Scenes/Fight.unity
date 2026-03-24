@@ -1052,7 +1052,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 'kutas
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -1438,7 +1440,7 @@ MonoBehaviour:
   pokemons: {fileID: 11400000, guid: 13233f261c6176d4d9b0067f2b59e481, type: 2}
   fightingPokemons: {fileID: 11400000, guid: 570223b355f89e14a9c03926eec74a5e, type: 2}
   attackCounter: 1
-  trainerManager: {fileID: 0}
+  fightManager: {fileID: 1666646634}
 --- !u!1 &647305448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1847,7 +1849,7 @@ MonoBehaviour:
   pokemons: {fileID: 11400000, guid: 13233f261c6176d4d9b0067f2b59e481, type: 2}
   fightingPokemons: {fileID: 11400000, guid: 570223b355f89e14a9c03926eec74a5e, type: 2}
   attackCounter: 0
-  trainerManager: {fileID: 0}
+  fightManager: {fileID: 1666646634}
 --- !u!1 &763089990
 GameObject:
   m_ObjectHideFlags: 0
@@ -2239,7 +2241,7 @@ MonoBehaviour:
   pokemons: {fileID: 11400000, guid: 13233f261c6176d4d9b0067f2b59e481, type: 2}
   fightingPokemons: {fileID: 11400000, guid: 570223b355f89e14a9c03926eec74a5e, type: 2}
   attackCounter: 2
-  trainerManager: {fileID: 0}
+  fightManager: {fileID: 1666646634}
 --- !u!1 &1058434995
 GameObject:
   m_ObjectHideFlags: 0
@@ -4068,6 +4070,7 @@ GameObject:
   - component: {fileID: 1666646634}
   - component: {fileID: 1666646637}
   - component: {fileID: 1666646636}
+  - component: {fileID: 1666646638}
   m_Layer: 0
   m_Name: FightManager
   m_TagString: Untagged
@@ -4094,8 +4097,6 @@ MonoBehaviour:
   myPokemonName: {fileID: 1058434997}
   singleFight: {fileID: 1666646637}
   trainerFight: {fileID: 1666646636}
-  dialogeWindow: {fileID: 1111729798}
-  dialogeText: {fileID: 455883769}
   chosenPokemonPlayer: 0
 --- !u!4 &1666646635
 Transform:
@@ -4131,6 +4132,7 @@ MonoBehaviour:
   - {fileID: 28082053}
   - {fileID: 1109912723}
   - {fileID: 1962721966}
+  dialogeManager: {fileID: 1666646638}
   enemyPokemonImage: {fileID: 1913600371}
   enemyPokemonName: {fileID: 1462153694}
   chosenPokemon: 0
@@ -4149,6 +4151,26 @@ MonoBehaviour:
   FightSO: {fileID: 11400000, guid: 570223b355f89e14a9c03926eec74a5e, type: 2}
   enemyPokemonImage: {fileID: 1913600371}
   enemyPokemonName: {fileID: 1462153694}
+--- !u!114 &1666646638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666646633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54374996063bd2c47a15a729e00e7ac6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogeFightManager
+  dialogeWindow: {fileID: 1111729798}
+  dialogeText: {fileID: 455883769}
+  playerFirstAttack: 1
+  enemyDamage: 0
+  playerDamage: 0
+  dialogeFinished: 1
+  dialogeSkip: 0
+  canPlayNextDialoge: 1
 --- !u!1 &1679421827
 GameObject:
   m_ObjectHideFlags: 0
@@ -4728,7 +4750,7 @@ MonoBehaviour:
   pokemons: {fileID: 11400000, guid: 13233f261c6176d4d9b0067f2b59e481, type: 2}
   fightingPokemons: {fileID: 11400000, guid: 570223b355f89e14a9c03926eec74a5e, type: 2}
   attackCounter: 3
-  trainerManager: {fileID: 0}
+  fightManager: {fileID: 1666646634}
 --- !u!1 &1890989770
 GameObject:
   m_ObjectHideFlags: 0

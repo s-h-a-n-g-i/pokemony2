@@ -509,7 +509,6 @@ MonoBehaviour:
   d: {fileID: 11400000, guid: 2ed2e091b0946f846ad9b38ea47e8e7b, type: 2}
   f: {fileID: 11400000, guid: 6cc693109755d0044a672e5918e45ca6, type: 2}
   c: {fileID: 11400000, guid: 13233f261c6176d4d9b0067f2b59e481, type: 2}
-  itemsInEq: []
 --- !u!61 &1115949315
 BoxCollider2D:
   m_ObjectHideFlags: 0

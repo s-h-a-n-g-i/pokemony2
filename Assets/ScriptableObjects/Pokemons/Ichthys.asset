@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15586245fe48fb0459c9c7bc8bb0f40d, type: 3}
   m_Name: Ichthys
   m_EditorClassIdentifier: Assembly-CSharp::PokemonSO
-  basicName: 
-  image: {fileID: 0}
-  type: 0
+  basicName: Itcthys
+  image: {fileID: 8966945178157639174, guid: 5abc5b014136d8b4ba333b6cc70dc852, type: 3}
+  type: 1
   type2: 0
   E1image: {fileID: 0}
   evoLevel1: 0

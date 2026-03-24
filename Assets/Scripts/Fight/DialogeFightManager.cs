@@ -35,15 +35,36 @@ public class DialogeFightManager : MonoBehaviour
 
     public IEnumerator DialogeShow(string textToEnter)
     {
+        dialogeText.text = "";
+        dialogeFinished = false;
+        dialogeSkip = false;
 
-        dialogeWindow.SetActive(true);
 
         dialogeFinished = false;
 
-        yield return new WaitForSeconds(0.1f);
+        for (int i = 0; i < textToEnter.Length; i++) 
+        {
+            dialogeText.text += textToEnter[i];
+            yield return new WaitForSeconds(0.1f);
+
+        }
+
 
         dialogeSkip = false;
         dialogeFinished = true;
+    }
+
+    public IEnumerator FightPokemons(int playerAttackCounter)
+    {
+
+        dialogeWindow.SetActive(true);
+
+        yield return StartCoroutine(DialogeShow("cwel"));
+
+        yield return new WaitForSeconds(1);
+
+        yield return StartCoroutine(DialogeShow("nigger"));
+
         dialogeWindow.SetActive(false);
     }
 

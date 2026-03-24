@@ -7,4 +7,5 @@ public class CreatureEq : ScriptableObject
     public List<Pokemon> creaturesCaptured;
     public Pokemon[] Equipped = new Pokemon[5];
     public Pokemon ActivePokemon;
+    //oublic sperna
 }

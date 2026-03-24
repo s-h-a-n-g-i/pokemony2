@@ -10,6 +10,8 @@ public class TrainerManager : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private PokemonInFightSO FightSO;
     [SerializeField] private GameObject[] PokemonTrainerCounter;
+    [SerializeField] private DialogeFightManager dialogeManager;
+
 
     [Header("Enemy Pokemon")]
     [SerializeField] private Image enemyPokemonImage;
@@ -57,8 +59,8 @@ public class TrainerManager : MonoBehaviour
 
     public void Attack(int playerAttackCounter) 
     {
-        
-        
+
+        StartCoroutine(dialogeManager.FightPokemons(1));
     }
 
 

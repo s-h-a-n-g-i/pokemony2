@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System.Collections.Generic;
 using UnityEngine;
 public enum PokemonTypes
 {
@@ -155,12 +156,13 @@ public class Pokemon
 
     private void StatsUp()
     {
-        hp += hpIV;
+        maxHp += hpIV;
         atk += atkIV;
         def += defIV;
         sDef += sDefIV;
         sAtk += sAtkIV;
         speed += speedIV;
+        hp = maxHp;
     }
 
     private void IVsUp()
@@ -200,13 +202,16 @@ public class Pokemon
 
     public Attack GetRandomAttack() 
     {
-        Attack a;
-        do 
-        {
-            a = AttacksActive[Random.Range(0, 4)];
-        }
-        while (a != null || a.attackName != "None");
+        List<Attack> attacks = new List<Attack>();
+        foreach (Attack attack in AttacksActive)
+            attacks.Add(attack);
 
+        for (int i = 0; i < attacks.Count; i++) 
+            if (attacks[i].attackName == "None" || attacks[i] == null) attacks.Remove(attacks[i]);
+
+
+        Attack a = attacks[Random.Range(0, attacks.Count)];
+        
         return a;
 
     }
@@ -217,15 +222,13 @@ public class Pokemon
 
         if (atk.accuracy > roll) return false;
 
-        hp -= atk.damage;
-        
-        if (hp <= 0) 
-        {
-            pokemonDead();
-        }
-
-
         return true;
+        //hp -= atk.damage;
+        
+        //if (hp <= 0) 
+        //{
+        //    pokemonDead();
+        //}
     }
 
 

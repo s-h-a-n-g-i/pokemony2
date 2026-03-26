@@ -8,9 +8,14 @@ using static UnityEditor.Rendering.MaterialUpgrader;
 public class DialogeFightManager : MonoBehaviour
 {
 
-    [Header("DialogeWindow")]
+    [Header("dialoge window")]
     [SerializeField] private GameObject dialogeWindow;
     [SerializeField] private TMP_Text dialogeText;
+
+    [Header("Settings")]
+    [SerializeField] private PokemonInFightSO FightSO;
+    [SerializeField] private CreatureEq CreatureEqSO;
+    [SerializeField] private TrainerManager trainerManager;
 
 
     //[HideInInspector] public List<string> queueText = new List<string>();
@@ -20,7 +25,6 @@ public class DialogeFightManager : MonoBehaviour
     [HideInInspector] public int playerDamage;
 
     [HideInInspector] public bool dialogeFinished = true;
-    [HideInInspector] public bool dialogeSkip = false;
     [HideInInspector] public bool canPlayNextDialoge = true;
     void Start()
     {
@@ -37,10 +41,7 @@ public class DialogeFightManager : MonoBehaviour
     {
         dialogeText.text = "";
         dialogeFinished = false;
-        dialogeSkip = false;
 
-
-        dialogeFinished = false;
 
         for (int i = 0; i < textToEnter.Length; i++) 
         {
@@ -50,23 +51,67 @@ public class DialogeFightManager : MonoBehaviour
         }
 
 
-        dialogeSkip = false;
         dialogeFinished = true;
     }
 
     public IEnumerator FightPokemons(int playerAttackCounter)
     {
 
-        dialogeWindow.SetActive(true);
 
-        yield return StartCoroutine(DialogeShow("cwel"));
+        dialogeWindow.SetActive(true);
+        
+        yield return StartCoroutine(DialogeShow(DamageApplyTrainer(playerAttackCounter)));
 
         yield return new WaitForSeconds(1);
 
-        yield return StartCoroutine(DialogeShow("nigger"));
+        yield return StartCoroutine(DialogeShow(DamageApplyTrainer(playerAttackCounter,false)));
 
         dialogeWindow.SetActive(false);
     }
+
+    private string DamageApplyTrainer(int playerAttackCounter, bool firstRound = true) 
+    {
+        string output;
+
+        Pokemon enemyPokemon = FightSO.pokemonsToBattleTrainer[trainerManager.chosenPokemon];
+        Attack enemyAttack = enemyPokemon.GetRandomAttack();
+        
+        Pokemon playerPokemon = CreatureEqSO.ActivePokemon;
+        Attack playerAttack = playerPokemon.AttacksActive[playerAttackCounter];
+
+        if (playerAttack.howFastAttackIs(playerPokemon) >= enemyAttack.howFastAttackIs(enemyPokemon))
+        {
+            if (firstRound)
+            {
+                FightSO.pokemonsToBattleTrainer[trainerManager.chosenPokemon].hp -= playerAttack.getDamage(playerPokemon, enemyPokemon);
+                output = playerPokemon.PokemonNameOut() + " attacked " + enemyPokemon.PokemonNameOut() + " with " + playerAttack.attackName;
+            }
+            else
+            {
+                CreatureEqSO.ActivePokemon.hp -= enemyAttack.getDamage(enemyPokemon, playerPokemon);
+                output = enemyPokemon.PokemonNameOut() + " attacked " + playerPokemon.PokemonNameOut() + " with " + enemyAttack.attackName;
+            }
+
+        }
+        else 
+        {
+            if (firstRound)
+            {
+                CreatureEqSO.ActivePokemon.hp -= enemyAttack.getDamage(enemyPokemon, playerPokemon);
+                output = enemyPokemon.PokemonNameOut() + " attacked " + playerPokemon.PokemonNameOut() + " with " + enemyAttack.attackName;
+            }
+            else
+            {
+                FightSO.pokemonsToBattleTrainer[trainerManager.chosenPokemon].hp -= playerAttack.getDamage(playerPokemon, enemyPokemon);
+                output = playerPokemon.PokemonNameOut() + " attacked " + enemyPokemon.PokemonNameOut() + " with " + playerAttack.attackName;
+            }
+        }
+
+
+        //output = playerPokemon.PokemonNameOut() + " attacked " + enemyPokemon.PokemonNameOut();
+        return output;
+    }
+
 
 
 }

@@ -29,25 +29,25 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovementCheck() 
     {
-        if (Input.GetKey(KeyCode.UpArrow) && !isMoving)
+        if (Input.GetKey(KeyCode.UpArrow) && !isMoving && WallTest(Vector3.up))
         {
             isMoving = true;
             StartCoroutine(Move(Vector3.up));
         }
 
-        if (Input.GetKey(KeyCode.DownArrow) && !isMoving)
+        if (Input.GetKey(KeyCode.DownArrow) && !isMoving && WallTest(Vector3.up))
         {
             isMoving = true;
             StartCoroutine(Move(Vector3.down));
         }
 
-        if (Input.GetKey(KeyCode.RightArrow) && !isMoving)
+        if (Input.GetKey(KeyCode.RightArrow) && !isMoving && WallTest(Vector3.up))
         {
             isMoving = true;
             StartCoroutine(Move(Vector3.right));
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow) && !isMoving)
+        if (Input.GetKey(KeyCode.LeftArrow) && !isMoving && WallTest(Vector3.up))
         {
             isMoving = true; 
             StartCoroutine(Move(Vector3.left)); 
@@ -74,7 +74,14 @@ public class PlayerMovement : MonoBehaviour
         isMoving = false;
     }
 
+    private bool WallTest(Vector3 dir)
+    {
+        Ray raycastCheckObject = new Ray(transform.position, dir);
 
+        if (Physics.Raycast(raycastCheckObject, out RaycastHit hit, 1)) 
+            if (hit.collider.gameObject.tag == "Wall") return false;
+        return true;
+    }
 
 
 

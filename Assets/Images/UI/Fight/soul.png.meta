@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f4ab77f72af981349bfd87ab83aba98d
+guid: ef76fc8754b186f48bf34f6dfa96dc81
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8069619478552258361
-    second: slime1_0
+      213: -4856872790349125329
+    second: soul_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -74,8 +74,8 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
-    textureCompression: 2
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: slime1_0
+      name: soul_0
       rect:
         serializedVersion: 2
-        x: 16
+        x: 0
         y: 0
-        width: 32
-        height: 26
+        width: 100
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9372eab392c0dff60800000000000000
-      internalID: 8069619478552258361
+      spriteID: f29eaf31eebe89cb0800000000000000
+      internalID: -4856872790349125329
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: acdde5ba9c65a2c46a6d929bc7ffed22
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      slime1_0: 8069619478552258361
+      soul_0: -4856872790349125329
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

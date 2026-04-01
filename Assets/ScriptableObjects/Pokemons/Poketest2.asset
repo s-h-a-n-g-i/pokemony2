@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: Poketest2
   m_EditorClassIdentifier: Assembly-CSharp::PokemonSO
   basicName: Lowca
+  flying: 0
   image: {fileID: -8636221404721523813, guid: d250a524c19d91148bd7eb827722e4c6, type: 3}
-  type: 0
+  type: 2
   type2: 0
+  basicNameEvo1: 
   E1image: {fileID: 0}
   evoLevel1: -1
   E1type: 0
   E1type2: 0
+  basicNameEvo2: 
   E2image: {fileID: 0}
   evoLevel2: -1
   E2type: 0

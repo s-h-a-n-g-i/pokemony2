@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: Ichthys
   m_EditorClassIdentifier: Assembly-CSharp::PokemonSO
   basicName: Itcthys
+  flying: 0
   image: {fileID: 8966945178157639174, guid: 5abc5b014136d8b4ba333b6cc70dc852, type: 3}
   type: 1
   type2: 0
+  basicNameEvo1: 
   E1image: {fileID: 0}
   evoLevel1: 0
   E1type: 0
   E1type2: 0
+  basicNameEvo2: 
   E2image: {fileID: 0}
   evoLevel2: 0
   E2type: 0
@@ -30,18 +33,18 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   effects: 0
-  hp: 0
-  atk: 0
-  def: 0
-  sDef: 0
-  sAtk: 0
-  speed: 0
-  hpIV: 0
-  atkIV: 0
-  defIV: 0
-  sDefIV: 0
-  sAtkIV: 0
-  speedIV: 0
+  hp: 9
+  atk: 6
+  def: 2
+  sDef: 1
+  sAtk: 8
+  speed: 4
+  hpIV: 2
+  atkIV: 3
+  defIV: 2
+  sDefIV: 1
+  sAtkIV: 4
+  speedIV: 3
   atkX: 0
   defX: 0
   sDefX: 0

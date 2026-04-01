@@ -15,8 +15,6 @@ public class PokemonHPManager : MonoBehaviour
 
 
     [Header("Settings")]
-    [SerializeField] private PokemonInFightSO battle;
-    [SerializeField] private CreatureEq player;
     [SerializeField] private TrainerManager trainerManager;
 
     void Start()
@@ -27,7 +25,7 @@ public class PokemonHPManager : MonoBehaviour
     void Update()
     {
         PlayerUpdate();
-        if (battle.isThisTrainer)
+        if (_GlobalPokemon.isItTrainer)
             TrainerUpdate();
         else
             SinglePokemonUpdate();
@@ -35,9 +33,9 @@ public class PokemonHPManager : MonoBehaviour
 
     private void PlayerUpdate() 
     {
-        playerHP.text = player.ActivePokemon.maxHp +" / " + player.ActivePokemon.hp;
+        playerHP.text = _GlobalPokemon.ActivePokemon.maxHp +" / " + _GlobalPokemon.ActivePokemon.hp;
 
-        float hpsize = (float)player.ActivePokemon.hp / (float)player.ActivePokemon.maxHp;
+        float hpsize = (float)_GlobalPokemon.ActivePokemon.hp / (float)_GlobalPokemon.ActivePokemon.maxHp;
         float colorred = (hpsize * (-1) + 1);
 
         ImageLineHP_player.gameObject.transform.localScale = new Vector3(hpsize,1,1);
@@ -47,7 +45,7 @@ public class PokemonHPManager : MonoBehaviour
     }
     private void TrainerUpdate() 
     {
-        float hpsize = (float)battle.pokemonsToBattleTrainer[trainerManager.chosenPokemon].hp / (float)battle.pokemonsToBattleTrainer[trainerManager.chosenPokemon].maxHp;
+        float hpsize = (float)_GlobalPokemon.TrainerPokemons[trainerManager.chosenPokemon].hp / (float)_GlobalPokemon.TrainerPokemons[trainerManager.chosenPokemon].maxHp;
         float colorred = (hpsize * (-1) + 1);
 
         ImageLineHP_enemy.gameObject.transform.localScale = new Vector3(hpsize, 1, 1);
@@ -56,7 +54,7 @@ public class PokemonHPManager : MonoBehaviour
     }
     private void SinglePokemonUpdate() 
     {
-        float hpsize = (float)battle.pokemonToBattle.hp / (float)battle.pokemonToBattle.maxHp;
+        float hpsize = (float)_GlobalPokemon.EnemyPokemon.hp / (float)_GlobalPokemon.EnemyPokemon.maxHp;
         float colorred = (hpsize * (-1) + 1);
 
         ImageLineHP_enemy.gameObject.transform.localScale = new Vector3(hpsize, 1, 1);

@@ -5,6 +5,7 @@ public enum PokemonTypes
 {
     nothing,
     Angel,
+    Archangel,
     FallenAngel,
     Demon,
     Seraph,
@@ -12,6 +13,7 @@ public enum PokemonTypes
     Soulless,
     Nefilim
 }
+
 public enum Effects
 {
     None,
@@ -40,6 +42,7 @@ public class Pokemon
 
     [Header("Evolution 1")]
 
+    public string basicNameEvo1;
     public Sprite E1image;
     public int evoLevel1;
 
@@ -48,6 +51,7 @@ public class Pokemon
 
     [Header("Evolution 2")]
 
+    public string basicNameEvo2;
     public Sprite E2image;
     public int evoLevel2;
 
@@ -84,6 +88,8 @@ public class Pokemon
 
     public int level;
 
+    public bool flying;
+
     [HideInInspector] public int xpToNextLevel;
     [HideInInspector] public bool wasInFight = false;
 
@@ -98,7 +104,7 @@ public class Pokemon
         }
     }
 
-    public void CreatePokemon(PokemonSO c, int startingLevel = 0) 
+    public Pokemon(PokemonSO c, int startingLevel = 0) 
     {
         maxHp = c.hp;
         hp = c.hp;
@@ -109,15 +115,28 @@ public class Pokemon
         speed = c.speed;
         xp = 0;
 
-        hpIV = c.hpIV + +Random.Range(1, 4);
-        atkIV = c.atkIV + +Random.Range(1, 4);
-        defIV = c.defIV + +Random.Range(1, 4);
-        sDefIV = c.sDefIV + +Random.Range(1, 4);
-        sAtkIV = c.sAtkIV + +Random.Range(1, 4);
-        speedIV = c.speedIV + Random.Range(1, 4);
+        type = c.type;
+        type2 = c.type2;
+
+        E1type = c.E1type;
+        E1type = c.E1type2;
+
+        E2type = c.E2type;
+        E2type = c.E2type2;
+
+        hpIV = c.hpIV + +Random.Range(-1, 1);
+        atkIV = c.atkIV + +Random.Range(-1, 1);
+        defIV = c.defIV + +Random.Range(-1, 1);
+        sDefIV = c.sDefIV + +Random.Range(-1, 1);
+        sAtkIV = c.sAtkIV + +Random.Range(-1, 1);
+        speedIV = c.speedIV + Random.Range(-1, 1);
 
         image = c.image;
         basicName = c.basicName;
+        basicNameEvo1 = c.basicNameEvo1;
+        basicNameEvo2 = c.basicNameEvo2;
+
+        flying = c.flying;
 
         ApplyAttacksToClass(c.attacks);
 
@@ -129,7 +148,7 @@ public class Pokemon
 
     private void ApplyAttacksToClass(AttackSO[] s) 
     {
-        for (int i = 0; i < 4; i++) 
+        for (int i = 0; i < s.Length; i++) 
         {
             if (s[i] != null || s[i].name != "None") 
             {
@@ -152,6 +171,16 @@ public class Pokemon
         StatsUp();
         IVsUp();
         evoState++;
+        if (nickname != null || nickname != "") 
+            switch (evoState)
+            {
+                case 1:
+                    basicName = basicNameEvo1;
+                    break;
+                case 2:
+                    basicName = basicNameEvo2;
+                    break;
+            }
     }
 
     private void StatsUp()
@@ -175,9 +204,9 @@ public class Pokemon
         speedIV ++;
     }
 
-    public int giveXP() 
+    public int giveXP(int enemyPokemonLevel) 
     {
-        return level/2*3;
+        return enemyPokemonLevel / 2*3;
     }
 
     public PokemonTypes[] TypesOfPokemon()
@@ -237,3 +266,9 @@ public class Pokemon
         
     }
 }
+
+
+
+////////////////////////KALKULATOR//////////////////////////
+
+

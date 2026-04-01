@@ -12,36 +12,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15586245fe48fb0459c9c7bc8bb0f40d, type: 3}
   m_Name: Kriby
   m_EditorClassIdentifier: Assembly-CSharp::PokemonSO
-  basicName: 
-  image: {fileID: 0}
+  basicName: Kriby
+  flying: 0
+  image: {fileID: 8611607649075010630, guid: 289171aa41aa0fd46922a47830d53dd4, type: 3}
   type: 0
   type2: 0
+  basicNameEvo1: 
   E1image: {fileID: 0}
-  evoLevel1: 0
+  evoLevel1: -1
   E1type: 0
   E1type2: 0
+  basicNameEvo2: 
   E2image: {fileID: 0}
-  evoLevel2: 0
+  evoLevel2: -1
   E2type: 0
   E2type2: 0
   attacks:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 012956b2c208e83458cd3e3283d3c3de, type: 2}
+  - {fileID: 11400000, guid: c5075532e84359e4fb9a2a60aea8c17c, type: 2}
+  - {fileID: 11400000, guid: e3a2f746c112d2142acc04e1a43382cd, type: 2}
+  - {fileID: 11400000, guid: e3a2f746c112d2142acc04e1a43382cd, type: 2}
   effects: 0
-  hp: 0
-  atk: 0
-  def: 0
-  sDef: 0
-  sAtk: 0
-  speed: 0
-  hpIV: 0
-  atkIV: 0
-  defIV: 0
-  sDefIV: 0
-  sAtkIV: 0
-  speedIV: 0
+  hp: 20
+  atk: 4
+  def: 3
+  sDef: 2
+  sAtk: 3
+  speed: 2
+  hpIV: 3
+  atkIV: 2
+  defIV: 2
+  sDefIV: 1
+  sAtkIV: 1
+  speedIV: 1
   atkX: 0
   defX: 0
   sDefX: 0

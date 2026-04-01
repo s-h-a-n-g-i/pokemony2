@@ -13,12 +13,9 @@ public class DialogeFightManager : MonoBehaviour
     [SerializeField] private TMP_Text dialogeText;
 
     [Header("Settings")]
-    [SerializeField] private PokemonInFightSO FightSO;
-    [SerializeField] private CreatureEq CreatureEqSO;
     [SerializeField] private TrainerManager trainerManager;
 
 
-    //[HideInInspector] public List<string> queueText = new List<string>();
     [HideInInspector] public bool playerFirstAttack = true;
 
     [HideInInspector] public int enemyDamage;
@@ -46,71 +43,70 @@ public class DialogeFightManager : MonoBehaviour
         for (int i = 0; i < textToEnter.Length; i++) 
         {
             dialogeText.text += textToEnter[i];
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.05f);
 
         }
 
 
         dialogeFinished = true;
     }
-
-    public IEnumerator FightPokemons(int playerAttackCounter)
+    public IEnumerator PokemonFightCutscene(Pokemon dealingPokemon, Attack dealingAttack, Pokemon targetPokemon, Attack targetAttack)
     {
-
-
+        string output, action;
         dialogeWindow.SetActive(true);
-        
-        yield return StartCoroutine(DialogeShow(DamageApplyTrainer(playerAttackCounter)));
+
+        var atk1 = dealingAttack.getDamage(dealingPokemon, targetPokemon);
+        var atk2 = targetAttack.getDamage(targetPokemon, dealingPokemon);
+
+        targetPokemon.hp -= atk1.Item1;
+        if (targetPokemon.hp < 0)
+        { 
+            targetPokemon.hp = 0;
+            action = " killed ";
+        }
+        else
+            action = " attacked ";
+
+        output = dealingPokemon.PokemonNameOut() + action + targetPokemon.PokemonNameOut() + " with " + atk1.Item2 + dealingAttack.attackName;
+        yield return StartCoroutine(DialogeShow(output));
+
+
+        yield return new WaitForSeconds(1);
+        dealingPokemon.hp -= atk2.Item1;
+        if (dealingPokemon.hp < 0)
+        {
+            dealingPokemon.hp = 0;
+            action = " killed ";
+        }
+        else
+            action = " attacked ";
+
+        output = targetPokemon.PokemonNameOut() + action + dealingPokemon.PokemonNameOut() + " with " + atk2.Item2 + targetAttack.attackName;
+        yield return StartCoroutine(DialogeShow(output));
 
         yield return new WaitForSeconds(1);
 
-        yield return StartCoroutine(DialogeShow(DamageApplyTrainer(playerAttackCounter,false)));
-
         dialogeWindow.SetActive(false);
+
+        if (_GlobalPokemon.isItTrainer)
+            trainerManager.CheckAndSwapTrainer();
     }
 
-    private string DamageApplyTrainer(int playerAttackCounter, bool firstRound = true) 
+
+
+
+    /////////////////////////////////////////////////////////////////////////////////
+    private bool isPokemonDead(int pokemonHP, int pokemonDamage) 
     {
-        string output;
-
-        Pokemon enemyPokemon = FightSO.pokemonsToBattleTrainer[trainerManager.chosenPokemon];
-        Attack enemyAttack = enemyPokemon.GetRandomAttack();
+        if(pokemonHP-pokemonDamage<=0)
+            return true;
+        else
+            return false;
         
-        Pokemon playerPokemon = CreatureEqSO.ActivePokemon;
-        Attack playerAttack = playerPokemon.AttacksActive[playerAttackCounter];
-
-        if (playerAttack.howFastAttackIs(playerPokemon) >= enemyAttack.howFastAttackIs(enemyPokemon))
-        {
-            if (firstRound)
-            {
-                FightSO.pokemonsToBattleTrainer[trainerManager.chosenPokemon].hp -= playerAttack.getDamage(playerPokemon, enemyPokemon);
-                output = playerPokemon.PokemonNameOut() + " attacked " + enemyPokemon.PokemonNameOut() + " with " + playerAttack.attackName;
-            }
-            else
-            {
-                CreatureEqSO.ActivePokemon.hp -= enemyAttack.getDamage(enemyPokemon, playerPokemon);
-                output = enemyPokemon.PokemonNameOut() + " attacked " + playerPokemon.PokemonNameOut() + " with " + enemyAttack.attackName;
-            }
-
-        }
-        else 
-        {
-            if (firstRound)
-            {
-                CreatureEqSO.ActivePokemon.hp -= enemyAttack.getDamage(enemyPokemon, playerPokemon);
-                output = enemyPokemon.PokemonNameOut() + " attacked " + playerPokemon.PokemonNameOut() + " with " + enemyAttack.attackName;
-            }
-            else
-            {
-                FightSO.pokemonsToBattleTrainer[trainerManager.chosenPokemon].hp -= playerAttack.getDamage(playerPokemon, enemyPokemon);
-                output = playerPokemon.PokemonNameOut() + " attacked " + enemyPokemon.PokemonNameOut() + " with " + playerAttack.attackName;
-            }
-        }
-
-
-        //output = playerPokemon.PokemonNameOut() + " attacked " + enemyPokemon.PokemonNameOut();
-        return output;
     }
+
+
+
 
 
 

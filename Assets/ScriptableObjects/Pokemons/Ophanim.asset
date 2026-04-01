@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: Ophanim
   m_EditorClassIdentifier: Assembly-CSharp::PokemonSO
   basicName: 
-  image: {fileID: 0}
+  flying: 1
+  image: {fileID: 4226022105378688112, guid: 7e556d564c7080f46a6c03105b8aff44, type: 3}
   type: 0
   type2: 0
+  basicNameEvo1: 
   E1image: {fileID: 0}
   evoLevel1: 0
   E1type: 0
   E1type2: 0
+  basicNameEvo2: 
   E2image: {fileID: 0}
   evoLevel2: 0
   E2type: 0

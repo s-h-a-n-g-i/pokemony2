@@ -4,12 +4,7 @@ using UnityEngine.UI;
 
 public class FightSystemManager : MonoBehaviour
 {
-    [Header("Settings")]
-    [SerializeField] private PokemonInFightSO FightSO;
-    [SerializeField] private CreatureEq CreatureEqSO;
-    [SerializeField] private Eq EqSO;
-
-
+  
     [Header("My Pokemon")]
     [SerializeField] private Image myPokemonImage;
     [SerializeField] private TMP_Text myPokemonName;
@@ -26,7 +21,7 @@ public class FightSystemManager : MonoBehaviour
 
     private void Awake()
     {
-        if(FightSO.isThisTrainer)
+        if(_GlobalPokemon.isItTrainer)
             singleFight.enabled = false;
         else
             trainerFight.enabled = false;
@@ -46,18 +41,18 @@ public class FightSystemManager : MonoBehaviour
 
     public void setUpMyPokemon()
     {
-        if (CreatureEqSO.ActivePokemon != CreatureEqSO.Equipped[chosenPokemonPlayer]) 
+        if (_GlobalPokemon.ActivePokemon != _GlobalPokemon.EqPokemons[chosenPokemonPlayer]) 
         {
-            CreatureEqSO.ActivePokemon = CreatureEqSO.Equipped[chosenPokemonPlayer];
+            _GlobalPokemon.ActivePokemon = _GlobalPokemon.EqPokemons[chosenPokemonPlayer];
         }
 
-        myPokemonImage.sprite = CreatureEqSO.ActivePokemon.image;
-        myPokemonName.text = CreatureEqSO.ActivePokemon.PokemonNameOut();
+        myPokemonImage.sprite = _GlobalPokemon.ActivePokemon.image;
+        myPokemonName.text = _GlobalPokemon.ActivePokemon.PokemonNameOut();
     }
 
     public void Attacking(int playerAttackCounter) 
     {
-        if (FightSO.isThisTrainer)
+        if (_GlobalPokemon.isItTrainer)
             trainerFight.Attack(playerAttackCounter);
         //else
         //    singleFight.Attack();

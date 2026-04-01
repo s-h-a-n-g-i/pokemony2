@@ -8,7 +8,6 @@ public class TrainerManager : MonoBehaviour
 {
 
     [Header("Settings")]
-    [SerializeField] private PokemonInFightSO FightSO;
     [SerializeField] private GameObject[] PokemonTrainerCounter;
     [SerializeField] private DialogeFightManager dialogeManager;
 
@@ -24,14 +23,30 @@ public class TrainerManager : MonoBehaviour
     void Start()
     {
         SetTrainer();
+        //Debug.Log(_GlobalPokemon.TrainerPokemons.Length);
     }
 
     void Update()
     {
-        //Debug.Log(CreatureEqSO.ActivePokemon.basicName);
-        //CreatureEqSO.ActivePokemon = CreatureEqSO.Equipped[chosenPokemon];
-        
+
         setUpEnemyTrainerPokemon();
+    }
+
+
+    public void CheckAndSwapTrainer() 
+    {
+        if (_GlobalPokemon.TrainerPokemons[chosenPokemon].hp <= 0)
+            if (_GlobalPokemon.TrainerPokemons.Length > chosenPokemon + 1)
+            {
+                Debug.Log(chosenPokemon);
+                _GlobalPokemon.ActivePokemon.giveXP(_GlobalPokemon.TrainerPokemons[chosenPokemon].level);
+                chosenPokemon++;
+            }
+            else
+            {
+                _GlobalPokemon.ActivePokemon.giveXP(_GlobalPokemon.TrainerPokemons[chosenPokemon].level);
+                Debug.Log("DIED");
+            }
     }
 
 
@@ -43,7 +58,7 @@ public class TrainerManager : MonoBehaviour
             item.SetActive(false);
         }
 
-        for (int i = 0; i < FightSO.pokemonsToBattleTrainer.Length; i++)
+        for (int i = 0; i < _GlobalPokemon.TrainerPokemons.Length; i++)
         {
             PokemonTrainerCounter[i].SetActive(true);
         }
@@ -53,38 +68,29 @@ public class TrainerManager : MonoBehaviour
 
     private void setUpEnemyTrainerPokemon()
     {
-        enemyPokemonImage.sprite = FightSO.pokemonsToBattleTrainer[chosenPokemon].image;
-        enemyPokemonName.text = FightSO.pokemonsToBattleTrainer[chosenPokemon].PokemonNameOut();
+        enemyPokemonImage.sprite = _GlobalPokemon.TrainerPokemons[chosenPokemon].image;
+        enemyPokemonName.text = _GlobalPokemon.TrainerPokemons[chosenPokemon].PokemonNameOut();
     }
 
     public void Attack(int playerAttackCounter) 
     {
+        Pokemon enemyPokemon = _GlobalPokemon.TrainerPokemons[chosenPokemon];
+        Attack enemyAttack = enemyPokemon.GetRandomAttack();
 
-        StartCoroutine(dialogeManager.FightPokemons(1));
+        Pokemon playerPokemon = _GlobalPokemon.ActivePokemon;
+        Attack playerAttack = playerPokemon.AttacksActive[playerAttackCounter];
+
+        if (playerAttack.howFastAttackIs(playerPokemon)>= enemyAttack.howFastAttackIs(enemyPokemon))
+            StartCoroutine(dialogeManager.PokemonFightCutscene(_GlobalPokemon.ActivePokemon, playerPokemon.AttacksActive[playerAttackCounter], _GlobalPokemon.TrainerPokemons[chosenPokemon], enemyAttack));
+        else
+            StartCoroutine(dialogeManager.PokemonFightCutscene(_GlobalPokemon.TrainerPokemons[chosenPokemon], enemyAttack,_GlobalPokemon.ActivePokemon, playerPokemon.AttacksActive[playerAttackCounter]));
     }
 
+    public void ChangePokemon()
+    {
 
-    //private string SetAttack(Pokemon pokemonAttacking, Attack atk, Pokemon pokemonDamaged)
-    //{
-    //    if (pokemonDamaged.checkHit(atk))
-    //    {
-    //        DealDamage(atk.getDamage(pokemonAttacking), enemyPokemonActive);
-    //        return atk.attackName + " hitler" + enemyPokemonActive.PokemonNameOut();
-    //    }
-    //    else
-    //    {
-    //        return atk.attackName + " not hitler" + enemyPokemonActive.PokemonNameOut();
-    //    }
-    //}
-
-
-
-    //private void DealDamage(int damage, Pokemon pokemon)
-    //{
-    //    if (pokemon.def >= damage)
-    //        damage = pokemon.def + 1;
-    //    pokemon.hp = damage - pokemon.def;
-    //}
+        //StartCoroutine(dialogeManager.PokemonFightCutscene());
+    }
 
 
 }

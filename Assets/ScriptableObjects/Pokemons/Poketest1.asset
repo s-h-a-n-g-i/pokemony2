@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: Poketest1
   m_EditorClassIdentifier: Assembly-CSharp::PokemonSO
   basicName: Clownigger
+  flying: 0
   image: {fileID: 3803539384352201587, guid: 50ca1a7f838d02e4787075316a1a4299, type: 3}
   type: 2
   type2: 0
+  basicNameEvo1: 
   E1image: {fileID: 0}
   evoLevel1: -1
   E1type: 0
   E1type2: 0
+  basicNameEvo2: 
   E2image: {fileID: 0}
   evoLevel2: -1
   E2type: 0
@@ -30,12 +33,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e3a2f746c112d2142acc04e1a43382cd, type: 2}
   - {fileID: 11400000, guid: e3a2f746c112d2142acc04e1a43382cd, type: 2}
   effects: 0
-  hp: 30
-  atk: 5
-  def: 6
+  hp: 20
+  atk: 3
+  def: 2
   sDef: 2
   sAtk: 4
-  speed: 7
+  speed: 4
   hpIV: 4
   atkIV: 2
   defIV: 1

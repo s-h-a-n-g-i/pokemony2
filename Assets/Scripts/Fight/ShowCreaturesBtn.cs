@@ -5,20 +5,18 @@ using UnityEngine;
 public class ShowCreaturesBtn : MonoBehaviour
 {
     [SerializeField] private TMP_Text PokemonNameText;
-    [SerializeField] private CreatureEq pokemons;
-    [SerializeField] private PokemonInFightSO fightingPokemons;
     [SerializeField] private FightSystemManager fightSystemManager;
     [SerializeField] private int pokemonCounter;
 
     void Update()
     {
-        if (pokemons.Equipped[pokemonCounter] == null)
+        if (_GlobalPokemon.EqPokemons[pokemonCounter] == null)
         {   
             gameObject.SetActive(false);
             return; 
         }
 
-        PokemonNameText.text = pokemons.Equipped[pokemonCounter].PokemonNameOut() + "HP " + pokemons.Equipped[pokemonCounter].hp + "/" + pokemons.Equipped[pokemonCounter].hp;
+        PokemonNameText.text = _GlobalPokemon.EqPokemons[pokemonCounter].PokemonNameOut() + "HP " + _GlobalPokemon.EqPokemons[pokemonCounter].maxHp + "/" + _GlobalPokemon.EqPokemons[pokemonCounter].hp;
         
         
     }
@@ -27,6 +25,6 @@ public class ShowCreaturesBtn : MonoBehaviour
     {
         fightSystemManager.chosenPokemonPlayer = pokemonCounter;
         fightSystemManager.setUpMyPokemon();
-        Debug.Log(pokemons.Equipped[pokemonCounter].PokemonNameOut());
+        Debug.Log(_GlobalPokemon.EqPokemons[pokemonCounter].PokemonNameOut());
     }
 }

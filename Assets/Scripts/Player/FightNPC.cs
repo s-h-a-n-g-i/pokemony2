@@ -6,7 +6,7 @@ public class FightNPC : MonoBehaviour
 
     [SerializeField] private PokemonSO[] pokemonToFight;
     [SerializeField] private int level = 3;
-    [SerializeField] private PokemonInFightSO pokemonToFighting;
+    //[SerializeField] private PokemonInFightSO pokemonToFighting;
     private Pokemon[] pokemon;
 
     void Start()
@@ -17,9 +17,7 @@ public class FightNPC : MonoBehaviour
         //Debug.Log(pokemonToFight.name);
         for(int i = 0; i < pokemon.Length;i++)
         {
-            pokemon[i] = new Pokemon();
-            //Debug.Log(i);
-            pokemon[i].CreatePokemon(pokemonToFight[i], level);
+            pokemon[i] = new Pokemon(pokemonToFight[i], level);
         }
 
     }
@@ -31,8 +29,10 @@ public class FightNPC : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        pokemonToFighting.isThisTrainer = true;
-        pokemonToFighting.pokemonsToBattleTrainer = pokemon;
+        _GlobalPokemon.ResetBeforeFight();
+
+        _GlobalPokemon.isItTrainer = true;
+        _GlobalPokemon.TrainerPokemons = pokemon;
 
         SceneManager.LoadScene("Fight");
     }

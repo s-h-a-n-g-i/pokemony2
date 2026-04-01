@@ -1171,7 +1171,6 @@ GameObject:
   - component: {fileID: 1115949311}
   - component: {fileID: 1115949310}
   - component: {fileID: 1115949312}
-  - component: {fileID: 1115949314}
   - component: {fileID: 1115949315}
   - component: {fileID: 1115949316}
   m_Layer: 0
@@ -1268,22 +1267,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e21ccaf727f4e6148b0ec31947f7c2dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
---- !u!114 &1115949314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1115949309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55fad31f0c6afce4b80fab2943d7a1c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Eq
-  s: {fileID: 11400000, guid: 2ed2e091b0946f846ad9b38ea47e8e7b, type: 2}
-  d: {fileID: 11400000, guid: 2ed2e091b0946f846ad9b38ea47e8e7b, type: 2}
-  f: {fileID: 11400000, guid: 6cc693109755d0044a672e5918e45ca6, type: 2}
-  c: {fileID: 11400000, guid: 13233f261c6176d4d9b0067f2b59e481, type: 2}
 --- !u!61 &1115949315
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6492,8 +6475,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FightNPC
   pokemonToFight:
   - {fileID: 11400000, guid: 6cc693109755d0044a672e5918e45ca6, type: 2}
+  - {fileID: 11400000, guid: f935c99c38174134485dfa1deb611e7f, type: 2}
+  - {fileID: 11400000, guid: 6cc693109755d0044a672e5918e45ca6, type: 2}
   level: 5
-  pokemonToFighting: {fileID: 11400000, guid: 570223b355f89e14a9c03926eec74a5e, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

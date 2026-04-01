@@ -5,8 +5,6 @@ using UnityEngine.UI;
 public class FightBtn : MonoBehaviour
 {
     [SerializeField] private TMP_Text AttackNameText;
-    [SerializeField] private CreatureEq pokemons;
-    [SerializeField] private PokemonInFightSO fightingPokemons;
     [SerializeField] private int attackCounter;
     [SerializeField] private FightSystemManager fightManager;
     
@@ -14,7 +12,7 @@ public class FightBtn : MonoBehaviour
 
     void Update()
     {
-        UpdateAttack(pokemons.ActivePokemon.AttacksActive[attackCounter]);
+        UpdateAttack(_GlobalPokemon.ActivePokemon.AttacksActive[attackCounter]);
     }
 
 

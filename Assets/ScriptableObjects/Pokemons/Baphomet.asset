@@ -12,14 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15586245fe48fb0459c9c7bc8bb0f40d, type: 3}
   m_Name: Baphomet
   m_EditorClassIdentifier: Assembly-CSharp::PokemonSO
-  basicName: 
-  image: {fileID: 0}
+  basicName: Baphomet
+  flying: 0
+  image: {fileID: 8450473623852078061, guid: 75686b077917f3b4ab244fe85b1869b1, type: 3}
   type: 0
   type2: 0
+  basicNameEvo1: 
   E1image: {fileID: 0}
   evoLevel1: 0
   E1type: 0
   E1type2: 0
+  basicNameEvo2: 
   E2image: {fileID: 0}
   evoLevel2: 0
   E2type: 0

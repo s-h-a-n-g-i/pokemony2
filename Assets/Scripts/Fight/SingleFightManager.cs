@@ -5,8 +5,6 @@ using UnityEngine.UI;
 public class SingleFightManager : MonoBehaviour
 {
 
-    [Header("Settings")]
-    [SerializeField] private PokemonInFightSO FightSO; 
 
     [Header("Enemy Pokemon")]
     [SerializeField] private Image enemyPokemonImage;

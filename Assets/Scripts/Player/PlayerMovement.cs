@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,10 +10,31 @@ public class PlayerMovement : MonoBehaviour
 
     private bool hasRunningShoes = false;
 
+    private bool placed = false;
+
+
+    private void OnEnable()
+    {
+        if(!placed)
+            if (PlayerSave._playerPosition != null && PlayerSave._sceneName != SceneManager.GetActiveScene().name) 
+            {
+                placed = true;
+                transform.position = PlayerSave._playerPosition;
+            }
+    }
+
     void Update()
     {
-        MovementCheck();
+        if (!isMoving)
+            PlayerSaveUpdate();
         SprintCheck();
+        MovementCheck();
+    }
+
+    private void PlayerSaveUpdate() 
+    {
+        PlayerSave._playerPosition = transform.position;
+        PlayerSave._sceneName = SceneManager.GetActiveScene().name;
     }
 
       

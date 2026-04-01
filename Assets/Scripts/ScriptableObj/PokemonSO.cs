@@ -9,6 +9,7 @@ public class PokemonSO : ScriptableObject
     
     [Header("Info")]
     public string basicName;
+    public bool flying;
 
     public Sprite image;
 
@@ -17,6 +18,7 @@ public class PokemonSO : ScriptableObject
 
 
     [Header("1st Evolution")]
+    public string basicNameEvo1;
     public Sprite E1image;
     public int evoLevel1;
     public PokemonTypes E1type;
@@ -24,6 +26,7 @@ public class PokemonSO : ScriptableObject
 
 
     [Header("2nd Evolution")]
+    public string basicNameEvo2;
     public Sprite E2image;
     public int evoLevel2;
     public PokemonTypes E2type;

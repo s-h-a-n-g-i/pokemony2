@@ -50,6 +50,8 @@ public class DialogeFightManager : MonoBehaviour
 
         dialogeFinished = true;
     }
+
+
     public IEnumerator PokemonFightCutscene(Pokemon dealingPokemon, Attack dealingAttack, Pokemon targetPokemon, Attack targetAttack)
     {
         string output, action;

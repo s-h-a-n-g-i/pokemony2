@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 2ecdb8bb6d3050a4d966ed157ab1579f
+guid: 035acc2ee10aac34fb69ae9a4d2ec511
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5594795803783276247
-    second: firetileset2_0
+      213: -2705597995764985619
+    second: rocks_0
+  - first:
+      213: 8032301891362702160
+    second: rocks_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: firetileset2_0
+      name: rocks_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
+        x: 1
+        y: 4
+        width: 25
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,96 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 929d6a4ebda4b52b0800000000000000
-      internalID: -5594795803783276247
+      spriteID: de05b6d25f8c37ad0800000000000000
+      internalID: -2705597995764985619
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: firetileset2_1
+      name: rocks_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
+        x: 29
+        y: 3
+        width: 20
+        height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 087f1a25d952e354aa5970d1d414cc6a
-      internalID: 1598226682
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: firetileset2_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e23e8b666e880f488a4800cf719f294
-      internalID: -1652899143
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: firetileset2_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 243869a624365ef47b5bc5a79757a4d8
-      internalID: -1515166022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: firetileset2_4
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 077e1816b7c824845b4eaad9269cc4de
-      internalID: -564947376
+      spriteID: 0534f536308787f60800000000000000
+      internalID: 8032301891362702160
       vertices: []
       indices: 
       edges: []
@@ -213,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: cb9f2ab34a05d8543be37280ddfe851c
+    spriteID: 0925140fbde37dd489b67b25641e310e
     internalID: 0
     vertices: []
     indices: 
@@ -223,11 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      firetileset2_0: -5594795803783276247
-      firetileset2_1: 1598226682
-      firetileset2_2: -1652899143
-      firetileset2_3: -1515166022
-      firetileset2_4: -564947376
+      rocks_0: -2705597995764985619
+      rocks_1: 8032301891362702160
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

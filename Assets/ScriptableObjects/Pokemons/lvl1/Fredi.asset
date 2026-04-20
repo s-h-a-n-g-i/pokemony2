@@ -10,16 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15586245fe48fb0459c9c7bc8bb0f40d, type: 3}
-  m_Name: Slime
+  m_Name: Fredi
   m_EditorClassIdentifier: Assembly-CSharp::PokemonSO
-  basicName: 
-  image: {fileID: 0}
-  type: 0
+  basicName: Fredi
+  flying: 0
+  image: {fileID: 7935234321397735378, guid: f3dcee10a99240f4c841569220711fd0, type: 3}
+  type: 4
   type2: 0
+  basicNameEvo1: 
   E1image: {fileID: 0}
   evoLevel1: 0
   E1type: 0
   E1type2: 0
+  basicNameEvo2: 
   E2image: {fileID: 0}
   evoLevel2: 0
   E2type: 0

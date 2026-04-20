@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d250a524c19d91148bd7eb827722e4c6
+guid: dbc84edde3bfa8b4294ecbea29ae834b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8636221404721523813
-    second: sheep_0
+      213: -6123348057173556161
+    second: duch1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sheep_0
+      name: duch1_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 0
-        width: 45
-        height: 44
+        x: 15
+        y: 7
+        width: 36
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b93d2f9936af52880800000000000000
-      internalID: -8636221404721523813
+      spriteID: f348718826f750ba0800000000000000
+      internalID: -6123348057173556161
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sheep_0: -8636221404721523813
+      duch1_0: -6123348057173556161
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

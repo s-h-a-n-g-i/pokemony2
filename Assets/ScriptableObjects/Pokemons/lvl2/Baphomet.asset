@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PokemonSO
   basicName: Baphomet
   flying: 0
-  image: {fileID: 8450473623852078061, guid: 75686b077917f3b4ab244fe85b1869b1, type: 3}
-  type: 0
+  image: {fileID: -8636221404721523813, guid: d250a524c19d91148bd7eb827722e4c6, type: 3}
+  type: 5
   type2: 0
   basicNameEvo1: 
   E1image: {fileID: 0}

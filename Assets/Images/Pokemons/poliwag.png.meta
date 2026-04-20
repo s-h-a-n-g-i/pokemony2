@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: d250a524c19d91148bd7eb827722e4c6
+guid: fcccc1d5b65f9b145bb800c5910cc424
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8636221404721523813
-    second: sheep_0
+      213: 4369267411526393782
+    second: poliwag_0
+  - first:
+      213: 9193042089657751361
+    second: poliwag_1
+  - first:
+      213: -53247469265067816
+    second: poliwag_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sheep_0
+      name: poliwag_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 0
-        width: 45
-        height: 44
+        x: 8
+        y: 12
+        width: 12
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b93d2f9936af52880800000000000000
-      internalID: -8636221404721523813
+      spriteID: 6bf98b8bf81c2ac30800000000000000
+      internalID: 4369267411526393782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: poliwag_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 7
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 147d34fd21f349f70800000000000000
+      internalID: 9193042089657751361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: poliwag_2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 12
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d0644575b3d24ff0800000000000000
+      internalID: -53247469265067816
       vertices: []
       indices: 
       edges: []
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sheep_0: -8636221404721523813
+      poliwag_0: 4369267411526393782
+      poliwag_1: 9193042089657751361
+      poliwag_2: -53247469265067816
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

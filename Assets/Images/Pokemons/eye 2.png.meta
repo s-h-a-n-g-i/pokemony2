@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: e7004280d58801347b0db10293362b55
+guid: a76cc286a8aabca4d8477c4753684b6c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3660970633938089098
-    second: duch2_0
+      213: 4608767544301589614
+    second: eye 2_0
   - first:
-      213: -6839222021724335893
-    second: duch2_1
+      213: -6144806807204377037
+    second: eye 2_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: duch2_0
+      name: eye 2_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 0
-        width: 42
-        height: 51
+        x: 10
+        y: 16
+        width: 44
+        height: 33
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 67bcbf6ea9e913dc0800000000000000
-      internalID: -3660970633938089098
+      spriteID: e64127ac9a1a5ff30800000000000000
+      internalID: 4608767544301589614
       vertices: []
       indices: 
       edges: []
@@ -128,7 +128,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6276dadfabdee7f488aea9b49905d858
+    spriteID: d8ddd12adb3ae2e479bb73ed1c95ef0b
     internalID: 0
     vertices: []
     indices: 
@@ -138,8 +138,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      duch2_0: -3660970633938089098
-      duch2_1: -6839222021724335893
+      eye 2_0: 4608767544301589614
+      eye 2_1: -6144806807204377037
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -261,6 +261,16 @@ public class Pokemon
     }
 
 
+    public bool catchCheck() 
+    {
+        int s = Random.Range(0,maxHp);
+
+        if (s>=hp) 
+            return true;
+        return false;
+    }
+
+
     private void pokemonDead() 
     {
         

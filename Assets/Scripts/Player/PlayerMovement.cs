@@ -10,32 +10,25 @@ public class PlayerMovement : MonoBehaviour
 
     private bool hasRunningShoes = false;
 
-    private bool placed = false;
-
-
-    private void OnEnable()
+    private void Start()
     {
-        if(!placed)
-            if (PlayerSave._playerPosition != null && PlayerSave._sceneName != SceneManager.GetActiveScene().name) 
+        if (!PlayerSave.placed)
+            if (PlayerSave._playerPosition != Vector3.zero && PlayerSave._sceneName == SceneManager.GetActiveScene().name)
             {
-                placed = true;
+                PlayerSave.placed = true;
                 transform.position = PlayerSave._playerPosition;
             }
     }
 
+
     void Update()
     {
-        if (!isMoving)
-            PlayerSaveUpdate();
+        
         SprintCheck();
         MovementCheck();
-    }
-
-    private void PlayerSaveUpdate() 
-    {
-        PlayerSave._playerPosition = transform.position;
         PlayerSave._sceneName = SceneManager.GetActiveScene().name;
     }
+
 
       
     private void SprintCheck() 
@@ -57,19 +50,22 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(Move(Vector3.up));
         }
 
-        if (Input.GetKey(KeyCode.DownArrow) && !isMoving && WallTest(Vector3.up))
+        if (Input.GetKey(KeyCode.DownArrow) && !isMoving && WallTest(Vector3.down))
         {
             isMoving = true;
-            StartCoroutine(Move(Vector3.down));
+            if(JumpDownTest(Vector3.down))
+                StartCoroutine(Move(Vector3.down));
+            else
+                StartCoroutine(JumpDown());
         }
 
-        if (Input.GetKey(KeyCode.RightArrow) && !isMoving && WallTest(Vector3.up))
+        if (Input.GetKey(KeyCode.RightArrow) && !isMoving && WallTest(Vector3.right))
         {
             isMoving = true;
             StartCoroutine(Move(Vector3.right));
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow) && !isMoving && WallTest(Vector3.up))
+        if (Input.GetKey(KeyCode.LeftArrow) && !isMoving && WallTest(Vector3.left))
         {
             isMoving = true; 
             StartCoroutine(Move(Vector3.left)); 
@@ -77,14 +73,14 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    private IEnumerator Move(Vector3 dir) 
+    private IEnumerator Move(Vector3 dir)
     {
         float leftTime = 0;
 
         prevPos = transform.position;
         nextPos = prevPos + dir;
 
-        while (leftTime < speed) 
+        while (leftTime < speed)
         {
             transform.position = Vector3.Lerp(prevPos, nextPos, (leftTime / speed));
             leftTime += Time.deltaTime;
@@ -92,19 +88,53 @@ public class PlayerMovement : MonoBehaviour
         }
 
         transform.position = nextPos;
-
         isMoving = false;
+        PlayerSave._playerPosition = nextPos;
+    }
+
+    private IEnumerator JumpDown()
+    {
+        Vector3 dir = Vector3.down;
+        float leftTime = 0;
+
+        prevPos = transform.position;
+        nextPos = prevPos + dir*2;
+
+        while (leftTime < speed)
+        {
+            transform.position = Vector3.Lerp(prevPos, nextPos, (leftTime / speed));
+            leftTime += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.position = nextPos;
+        isMoving = false;
+        PlayerSave._playerPosition = nextPos;
+        //Debug.Log(PlayerSave._playerPosition);
     }
 
     private bool WallTest(Vector3 dir)
     {
-        Ray raycastCheckObject = new Ray(transform.position, dir);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position + dir / 2, dir ,0.2f);
+        if (hit)
+            if(hit.collider.gameObject.tag == "Wall") return false;
 
-        if (Physics.Raycast(raycastCheckObject, out RaycastHit hit, 1)) 
-            if (hit.collider.gameObject.tag == "Wall") return false;
+        if(dir == Vector3.down) return true;
+
+        if (hit)
+            if (hit.collider.gameObject.tag == "Jump") return false;
+        
         return true;
     }
 
+    private bool JumpDownTest(Vector3 dir)
+    {
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position + dir / 2, dir, 0.2f);
+        if (hit)
+            if (hit.collider.gameObject.tag == "Jump") return false;
+        return true;
+    }
 
 
 

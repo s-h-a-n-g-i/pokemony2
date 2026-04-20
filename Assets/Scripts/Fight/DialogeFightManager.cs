@@ -1,9 +1,6 @@
-using NUnit.Framework;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using static UnityEditor.Rendering.MaterialUpgrader;
 
 public class DialogeFightManager : MonoBehaviour
 {
@@ -51,65 +48,63 @@ public class DialogeFightManager : MonoBehaviour
         dialogeFinished = true;
     }
 
-
-    public IEnumerator PokemonFightCutscene(Pokemon dealingPokemon, Attack dealingAttack, Pokemon targetPokemon, Attack targetAttack)
+    ////////////// CALA SEKWENCJA ATAKU OBU POKEMONOW
+    public IEnumerator PokemonFightCutscene(Pokemon firstPokemon, Attack firstAttack, Pokemon secondPokemon, Attack secondAttack, bool changedPokemon = false)
     {
-        string output, action;
+
         dialogeWindow.SetActive(true);
 
-        var atk1 = dealingAttack.getDamage(dealingPokemon, targetPokemon);
-        var atk2 = targetAttack.getDamage(targetPokemon, dealingPokemon);
 
-        targetPokemon.hp -= atk1.Item1;
-        if (targetPokemon.hp < 0)
-        { 
-            targetPokemon.hp = 0;
-            action = " killed ";
-        }
-        else
-            action = " attacked ";
-
-        output = dealingPokemon.PokemonNameOut() + action + targetPokemon.PokemonNameOut() + " with " + atk1.Item2 + dealingAttack.attackName;
-        yield return StartCoroutine(DialogeShow(output));
-
-
-        yield return new WaitForSeconds(1);
-        dealingPokemon.hp -= atk2.Item1;
-        if (dealingPokemon.hp < 0)
+        if (!changedPokemon)
         {
-            dealingPokemon.hp = 0;
-            action = " killed ";
+            var atk1 = firstAttack.getDamage(firstPokemon, secondPokemon);
+
+            yield return StartCoroutine(DialogeShow(
+                ProvideAttack(firstPokemon, firstAttack, secondPokemon, atk1.Item1, atk1.Item2)));
         }
         else
-            action = " attacked ";
+            yield return StartCoroutine(DialogeShow("Pokemon changed to " + firstPokemon.PokemonNameOut()));
 
-        output = targetPokemon.PokemonNameOut() + action + dealingPokemon.PokemonNameOut() + " with " + atk2.Item2 + targetAttack.attackName;
-        yield return StartCoroutine(DialogeShow(output));
+
+
+        //////TEST CZY POKEMON MOZE ZAATAKOWAC (ZE NIE JEST MARTWY PO ATAKU)
+        if (secondPokemon.hp != 0)
+        {
+            yield return new WaitForSeconds(1);
+
+            var atk2 = secondAttack.getDamage(secondPokemon, firstPokemon);
+
+            yield return StartCoroutine(DialogeShow(
+                ProvideAttack(secondPokemon, secondAttack, firstPokemon, atk2.Item1, atk2.Item2)));
+
+        }
 
         yield return new WaitForSeconds(1);
-
-        dialogeWindow.SetActive(false);
 
         if (_GlobalPokemon.isItTrainer)
             trainerManager.CheckAndSwapTrainer();
+
+        dialogeWindow.SetActive(false);
+
     }
 
 
-
-
-    /////////////////////////////////////////////////////////////////////////////////
-    private bool isPokemonDead(int pokemonHP, int pokemonDamage) 
+    private string ProvideAttack(Pokemon dealingPokemon, Attack dealingAttack, Pokemon targetPokemon , int atkDamage, string atkPower) 
     {
-        if(pokemonHP-pokemonDamage<=0)
-            return true;
-        else
-            return false;
+        targetPokemon.hp -= atkDamage;
+        string action = CheckKill(targetPokemon);
+        return dealingPokemon.PokemonNameOut() + action + targetPokemon.PokemonNameOut() + " with " + atkPower + dealingAttack.attackName;
         
     }
 
-
-
-
-
-
+    private string CheckKill(Pokemon pokemonToCheck) 
+    {
+        if (pokemonToCheck.hp < 0)
+        {
+            pokemonToCheck.hp = 0;
+            return  " killed ";
+        }
+        else
+            return  " attacked ";
+    }
 }

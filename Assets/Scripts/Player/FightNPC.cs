@@ -34,6 +34,8 @@ public class FightNPC : MonoBehaviour
         _GlobalPokemon.isItTrainer = true;
         _GlobalPokemon.TrainerPokemons = pokemon;
 
+        PlayerSave.placed = false;
+
         SceneManager.LoadScene("Fight");
     }
 }

@@ -50,5 +50,6 @@ MonoBehaviour:
   sDefX: 0
   sAtkX: 0
   speedX: 0
-  attacksOnLevelUps: []
-  attacksOnLevels: 
+  attacksOnLevelUps:
+  - {fileID: 11400000, guid: 012956b2c208e83458cd3e3283d3c3de, type: 2}
+  attacksOnLevels: 02000000

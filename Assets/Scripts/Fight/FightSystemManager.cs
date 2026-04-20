@@ -25,17 +25,13 @@ public class FightSystemManager : MonoBehaviour
             singleFight.enabled = false;
         else
             trainerFight.enabled = false;
-    }
-
-    void Start()
-    {
+    
         setUpMyPokemon();
-        
     }
 
     void Update()
     {
-        
+
     }
 
 

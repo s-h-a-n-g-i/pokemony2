@@ -40,6 +40,7 @@ public class TrainerManager : MonoBehaviour
             {
                 Debug.Log(chosenPokemon);
                 _GlobalPokemon.ActivePokemon.giveXP(_GlobalPokemon.TrainerPokemons[chosenPokemon].level);
+                PokemonTrainerCounter[chosenPokemon].SetActive(false);
                 chosenPokemon++;
             }
             else
@@ -88,9 +89,15 @@ public class TrainerManager : MonoBehaviour
 
     public void ChangePokemon()
     {
+        Pokemon playerPokemon = _GlobalPokemon.ActivePokemon;
 
-        //StartCoroutine(dialogeManager.PokemonFightCutscene());
+        Pokemon enemyPokemon = _GlobalPokemon.TrainerPokemons[chosenPokemon];
+        Attack enemyAttack = enemyPokemon.GetRandomAttack();
+
+        StartCoroutine(dialogeManager.PokemonFightCutscene(_GlobalPokemon.ActivePokemon, null, _GlobalPokemon.TrainerPokemons[chosenPokemon], enemyAttack,true));
     }
+
+
 
 
 }

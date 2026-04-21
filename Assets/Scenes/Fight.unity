@@ -308,14 +308,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -376424611, guid: ef76fc8754b186f48bf34f6dfa96dc81, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -383,14 +383,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -376424611, guid: ef76fc8754b186f48bf34f6dfa96dc81, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -867,14 +867,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -376424611, guid: ef76fc8754b186f48bf34f6dfa96dc81, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1086,9 +1086,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShowCreaturesBtn
   PokemonNameText: {fileID: 243551137}
-  pokemons: {fileID: 11400000, guid: 13233f261c6176d4d9b0067f2b59e481, type: 2}
-  fightingPokemons: {fileID: 11400000, guid: 570223b355f89e14a9c03926eec74a5e, type: 2}
   fightSystemManager: {fileID: 1666646634}
+  trainerManager: {fileID: 1666646636}
   pokemonCounter: 1
 --- !u!1 &455883768
 GameObject:
@@ -1513,8 +1512,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FightBtn
   AttackNameText: {fileID: 21991019}
-  pokemons: {fileID: 11400000, guid: 13233f261c6176d4d9b0067f2b59e481, type: 2}
-  fightingPokemons: {fileID: 11400000, guid: 570223b355f89e14a9c03926eec74a5e, type: 2}
   attackCounter: 1
   fightManager: {fileID: 1666646634}
 --- !u!1 &647305448
@@ -1864,7 +1861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.08235294, g: 0.7176471, b: 0.9960785, a: 1}
+  m_Color: {r: 0.54901963, g: 0.13725491, b: 0.13725491, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2036,8 +2033,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FightBtn
   AttackNameText: {fileID: 1208839679}
-  pokemons: {fileID: 11400000, guid: 13233f261c6176d4d9b0067f2b59e481, type: 2}
-  fightingPokemons: {fileID: 11400000, guid: 570223b355f89e14a9c03926eec74a5e, type: 2}
   attackCounter: 0
   fightManager: {fileID: 1666646634}
 --- !u!1 &763089990
@@ -2051,6 +2046,7 @@ GameObject:
   - component: {fileID: 763089993}
   - component: {fileID: 763089992}
   - component: {fileID: 763089991}
+  - component: {fileID: 763089994}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2132,6 +2128,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &763089994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763089990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!1 &792446839
 GameObject:
   m_ObjectHideFlags: 0
@@ -2503,8 +2543,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FightBtn
   AttackNameText: {fileID: 1966323415}
-  pokemons: {fileID: 11400000, guid: 13233f261c6176d4d9b0067f2b59e481, type: 2}
-  fightingPokemons: {fileID: 11400000, guid: 570223b355f89e14a9c03926eec74a5e, type: 2}
   attackCounter: 2
   fightManager: {fileID: 1666646634}
 --- !u!1 &1058434995
@@ -2694,14 +2732,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -376424611, guid: ef76fc8754b186f48bf34f6dfa96dc81, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2770,7 +2808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.0990566, g: 0.7190955, b: 1, a: 1}
+  m_Color: {r: 0.5882353, g: 0.1533019, b: 0.1533019, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3079,9 +3117,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShowCreaturesBtn
   PokemonNameText: {fileID: 1890989772}
-  pokemons: {fileID: 11400000, guid: 13233f261c6176d4d9b0067f2b59e481, type: 2}
-  fightingPokemons: {fileID: 11400000, guid: 570223b355f89e14a9c03926eec74a5e, type: 2}
   fightSystemManager: {fileID: 1666646634}
+  trainerManager: {fileID: 1666646636}
   pokemonCounter: 4
 --- !u!1 &1208839677
 GameObject:
@@ -3448,9 +3485,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShowCreaturesBtn
   PokemonNameText: {fileID: 492346664}
-  pokemons: {fileID: 11400000, guid: 13233f261c6176d4d9b0067f2b59e481, type: 2}
-  fightingPokemons: {fileID: 11400000, guid: 570223b355f89e14a9c03926eec74a5e, type: 2}
   fightSystemManager: {fileID: 1666646634}
+  trainerManager: {fileID: 1666646636}
   pokemonCounter: 2
 --- !u!1 &1253888048
 GameObject:
@@ -3577,7 +3613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.08235294, g: 0.7176471, b: 0.9960785, a: 1}
+  m_Color: {r: 0.54901963, g: 0.13725491, b: 0.13725491, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4080,9 +4116,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShowCreaturesBtn
   PokemonNameText: {fileID: 1147593814}
-  pokemons: {fileID: 11400000, guid: 13233f261c6176d4d9b0067f2b59e481, type: 2}
-  fightingPokemons: {fileID: 11400000, guid: 570223b355f89e14a9c03926eec74a5e, type: 2}
   fightSystemManager: {fileID: 1666646634}
+  trainerManager: {fileID: 1666646636}
   pokemonCounter: 0
 --- !u!1 &1490843241
 GameObject:
@@ -4445,9 +4480,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShowCreaturesBtn
   PokemonNameText: {fileID: 647305450}
-  pokemons: {fileID: 11400000, guid: 13233f261c6176d4d9b0067f2b59e481, type: 2}
-  fightingPokemons: {fileID: 11400000, guid: 570223b355f89e14a9c03926eec74a5e, type: 2}
   fightSystemManager: {fileID: 1666646634}
+  trainerManager: {fileID: 1666646636}
   pokemonCounter: 3
 --- !u!1 &1621696624
 GameObject:
@@ -4586,6 +4620,7 @@ GameObject:
   - component: {fileID: 1666646637}
   - component: {fileID: 1666646636}
   - component: {fileID: 1666646638}
+  - component: {fileID: 1666646639}
   m_Layer: 0
   m_Name: FightManager
   m_TagString: Untagged
@@ -4605,9 +4640,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9020781de5ab18d4aa77cc2af5f5ad09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FightSystemManager
-  FightSO: {fileID: 11400000, guid: 570223b355f89e14a9c03926eec74a5e, type: 2}
-  CreatureEqSO: {fileID: 11400000, guid: 13233f261c6176d4d9b0067f2b59e481, type: 2}
-  EqSO: {fileID: 0}
   myPokemonImage: {fileID: 1253888051}
   myPokemonName: {fileID: 1058434997}
   singleFight: {fileID: 1666646637}
@@ -4640,8 +4672,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8e474ffa520f8043aac767bb3339b6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrainerManager
-  FightSO: {fileID: 11400000, guid: 570223b355f89e14a9c03926eec74a5e, type: 2}
-  CreatureEqSO: {fileID: 11400000, guid: 13233f261c6176d4d9b0067f2b59e481, type: 2}
   PokemonTrainerCounter:
   - {fileID: 45420218}
   - {fileID: 281954239}
@@ -4664,7 +4694,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250cbef8266b6b4418614307f78c2fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SingleFightManager
-  FightSO: {fileID: 11400000, guid: 570223b355f89e14a9c03926eec74a5e, type: 2}
   enemyPokemonImage: {fileID: 1913600371}
   enemyPokemonName: {fileID: 1462153694}
 --- !u!114 &1666646638
@@ -4681,14 +4710,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogeFightManager
   dialogeWindow: {fileID: 1111729798}
   dialogeText: {fileID: 455883769}
-  FightSO: {fileID: 11400000, guid: 570223b355f89e14a9c03926eec74a5e, type: 2}
-  CreatureEqSO: {fileID: 11400000, guid: 13233f261c6176d4d9b0067f2b59e481, type: 2}
   trainerManager: {fileID: 1666646636}
   playerFirstAttack: 1
   enemyDamage: 0
   playerDamage: 0
   dialogeFinished: 1
   canPlayNextDialoge: 1
+--- !u!114 &1666646639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666646633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 064c876cc592f5242ac219fe3fdd78f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeadPokemonOptions
+  fightSystemManager: {fileID: 1666646634}
+  imageObject: {fileID: 1253888051}
+  image: {fileID: -2391722850750093724, guid: 499d11ff903c70248a4f1f671a6d694b, type: 3}
+  attackBtn: {fileID: 792446841}
+  chosePokemon: {fileID: 185419203}
 --- !u!1 &1679421827
 GameObject:
   m_ObjectHideFlags: 0
@@ -4879,7 +4923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.0990566, g: 0.7190955, b: 1, a: 1}
+  m_Color: {r: 0.5882353, g: 0.15686275, b: 0.15686275, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4954,7 +4998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5442,8 +5486,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FightBtn
   AttackNameText: {fileID: 1490843243}
-  pokemons: {fileID: 11400000, guid: 13233f261c6176d4d9b0067f2b59e481, type: 2}
-  fightingPokemons: {fileID: 11400000, guid: 570223b355f89e14a9c03926eec74a5e, type: 2}
   attackCounter: 3
   fightManager: {fileID: 1666646634}
 --- !u!1 &1890989770
@@ -5852,14 +5894,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -376424611, guid: ef76fc8754b186f48bf34f6dfa96dc81, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6202,8 +6244,6 @@ MonoBehaviour:
   playerHP: {fileID: 1841472128}
   ImageLineHP_enemy: {fileID: 1538773433}
   ImageLineHPaddon_enemy: {fileID: 2078819422}
-  battle: {fileID: 11400000, guid: 570223b355f89e14a9c03926eec74a5e, type: 2}
-  player: {fileID: 11400000, guid: 13233f261c6176d4d9b0067f2b59e481, type: 2}
   trainerManager: {fileID: 1666646636}
 --- !u!1 &2042263936
 GameObject:

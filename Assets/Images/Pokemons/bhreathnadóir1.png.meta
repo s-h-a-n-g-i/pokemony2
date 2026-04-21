@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: fcccc1d5b65f9b145bb800c5910cc424
+guid: ceaaff47409736c489d5ef772f2beffa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4369267411526393782
-    second: poliwag_0
-  - first:
-      213: 9193042089657751361
-    second: poliwag_1
-  - first:
-      213: -53247469265067816
-    second: poliwag_2
+      213: -4810070912862828532
+    second: "bhreathnad\xF3ir1_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: poliwag_1
+      name: "bhreathnad\xF3ir1_0"
       rect:
         serializedVersion: 2
-        x: 8
-        y: 7
-        width: 48
-        height: 22
+        x: 17
+        y: 1
+        width: 30
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 147d34fd21f349f70800000000000000
-      internalID: 9193042089657751361
+      spriteID: c084f565df13f3db0800000000000000
+      internalID: -4810070912862828532
       vertices: []
       indices: 
       edges: []
@@ -131,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 0c8ecf91f3781c549bbb5a67bdb17b54
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -141,9 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      poliwag_0: 4369267411526393782
-      poliwag_1: 9193042089657751361
-      poliwag_2: -53247469265067816
+      "bhreathnad\xF3ir1_0": -4810070912862828532
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

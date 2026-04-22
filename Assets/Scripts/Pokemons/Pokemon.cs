@@ -1,6 +1,9 @@
 using JetBrains.Annotations;
+using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 public enum PokemonTypes
 {
     nothing,
@@ -263,7 +266,7 @@ public class Pokemon
 
     public bool catchCheck() 
     {
-        int s = Random.Range(0,maxHp);
+        int s = UnityEngine.Random.Range(0,maxHp);
 
         if (s>=hp) 
             return true;
@@ -275,6 +278,22 @@ public class Pokemon
     {
         
     }
+
+    public string GetPokemonTypes() 
+    {
+        switch (evoState) 
+        {
+            case 0:
+                return type + " " + type2;
+            case 1:
+                return E1type + " " + E1type2;
+            case 2:
+                return E2type + " " + E2type2;
+
+        }
+        return "";
+    }
+
 }
 
 

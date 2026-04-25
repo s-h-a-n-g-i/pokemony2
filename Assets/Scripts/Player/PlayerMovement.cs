@@ -58,31 +58,62 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovementCheck() 
     {
-        if (Input.GetKey(KeyCode.UpArrow) && !isMoving && WallTest(Vector3.up))
+        if (Input.GetKey(KeyCode.UpArrow) && !isMoving)
         {
-            isMoving = true;
-            StartCoroutine(Move(Vector3.up));
+            animator.SetFloat("LastInputX", 1);
+            animator.SetFloat("LastInputY", 0);
+
+            if (WallTest(Vector3.up))
+            {
+                isMoving = true;
+                StartCoroutine(Move(Vector3.up));
+            }
+            
         }
 
         if (Input.GetKey(KeyCode.DownArrow) && !isMoving && WallTest(Vector3.down))
+
         {
-            isMoving = true;
-            if(JumpDownTest(Vector3.down))
-                StartCoroutine(Move(Vector3.down));
-            else
-                StartCoroutine(JumpDown());
+            animator.SetFloat("LastInputX", 1);
+            animator.SetFloat("LastInputY", 0);
+
+            if (WallTest(Vector3.down))
+            {
+                isMoving = true;
+                if (JumpDownTest(Vector3.down))
+                    StartCoroutine(Move(Vector3.down));
+                else
+                    StartCoroutine(JumpDown());
+            }
+
+               
         }
 
         if (Input.GetKey(KeyCode.RightArrow) && !isMoving && WallTest(Vector3.right))
+
         {
-            isMoving = true;
-            StartCoroutine(Move(Vector3.right));
+            animator.SetFloat("LastInputX", 1);
+            animator.SetFloat("LastInputY", 0);
+
+            if (WallTest(Vector3.right))
+            {
+                isMoving = true;
+                StartCoroutine(Move(Vector3.right));
+            }
+                
         }
 
         if (Input.GetKey(KeyCode.LeftArrow) && !isMoving && WallTest(Vector3.left))
         {
-            isMoving = true; 
-            StartCoroutine(Move(Vector3.left)); 
+            animator.SetFloat("LastInputX", 1);
+            animator.SetFloat("LastInputY", 0);
+
+            if (WallTest(Vector3.left))
+            {
+                isMoving = true;
+                StartCoroutine(Move(Vector3.left));
+            }
+               
         }
     }
 

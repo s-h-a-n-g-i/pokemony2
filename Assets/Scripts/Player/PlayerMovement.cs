@@ -7,11 +7,16 @@ public class PlayerMovement : MonoBehaviour
     private bool isMoving = false;
     private Vector3 prevPos, nextPos;
     private float speed = 0.2f;
+    private Animator animator;
+    private Vector3 dirwalk;
 
     private bool hasRunningShoes = false;
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
+        dirwalk = Vector3.down;
+
         if (!PlayerSave.placed)
             if (PlayerSave._playerPosition != Vector3.zero && PlayerSave._sceneName == SceneManager.GetActiveScene().name)
             {
@@ -27,6 +32,15 @@ public class PlayerMovement : MonoBehaviour
         SprintCheck();
         MovementCheck();
         PlayerSave._sceneName = SceneManager.GetActiveScene().name;
+        animator.SetBool("isWalking", isMoving);
+        animator.SetFloat("InputX", dirwalk.x);
+        animator.SetFloat("InputY", dirwalk.y);
+        if (!isMoving)
+        {
+            animator.SetFloat("LastInputX", dirwalk.x);
+            animator.SetFloat("LastInputY", dirwalk.y);
+
+        }
     }
 
 
@@ -75,8 +89,9 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator Move(Vector3 dir)
     {
+        dirwalk = dir;
         float leftTime = 0;
-
+        
         prevPos = transform.position;
         nextPos = prevPos + dir;
 
@@ -95,6 +110,7 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator JumpDown()
     {
         Vector3 dir = Vector3.down;
+        dirwalk = dir;
         float leftTime = 0;
 
         prevPos = transform.position;

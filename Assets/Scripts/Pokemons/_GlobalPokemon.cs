@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 public static class _GlobalPokemon
 {
@@ -8,8 +9,11 @@ public static class _GlobalPokemon
     public static List<Pokemon> AllHavePokemons;
 
 
-    public static Pokemon EnemyPokemon;
+    public static Pokemon EnemyPokemon { get; set; }
 
+    public static bool TrainerFainted { get; set; }
+    public static string TrainerName { get; set; }
+    public static int TrainerID{ get; set; }
     public static int TrainerChosenPokemon = 0;
     public static Pokemon[] TrainerPokemons = new Pokemon[5];
     public static bool isItTrainer = false;
@@ -23,8 +27,10 @@ public static class _GlobalPokemon
     {
         EnemyPokemon = null;
 
+        TrainerName = null;
         TrainerPokemons = null;
         TrainerChosenPokemon = 0;
+        TrainerFainted = false;
 
         isItTrainer = false;
         EnemyAttack = null;

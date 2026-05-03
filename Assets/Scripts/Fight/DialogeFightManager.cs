@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogeFightManager : MonoBehaviour
 {
@@ -47,6 +48,17 @@ public class DialogeFightManager : MonoBehaviour
 
         dialogeFinished = true;
     }
+
+    ///////////////MARTWIAK
+    public IEnumerator EndedBattle(string nameDefeated)
+    {
+        yield return StartCoroutine(DialogeShow(nameDefeated + " has been defeated like a nigro back in 1800"));
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(PlayerSave._sceneName);
+    }
+
+
+
 
     ////////////// CALA SEKWENCJA ATAKU OBU POKEMONOW
     public IEnumerator PokemonFightCutscene(Pokemon firstPokemon, Attack firstAttack, Pokemon secondPokemon, Attack secondAttack, bool changedPokemon = false)

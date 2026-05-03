@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private bool isMoving = false;
+    [HideInInspector] public bool isMoving = false;
     private Vector3 prevPos, nextPos;
     private float speed = 0.2f;
     private Animator animator;
@@ -35,12 +35,11 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("isWalking", isMoving);
         animator.SetFloat("InputX", dirwalk.x);
         animator.SetFloat("InputY", dirwalk.y);
-        if (!isMoving)
-        {
-            animator.SetFloat("LastInputX", dirwalk.x);
-            animator.SetFloat("LastInputY", dirwalk.y);
-
-        }
+        //if (!isMoving)
+        //{
+        //    animator.SetFloat("LastInputX", dirwalk.x);
+        //    animator.SetFloat("LastInputY", dirwalk.y);
+        //}
     }
 
 
@@ -60,8 +59,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.UpArrow) && !isMoving)
         {
-            animator.SetFloat("LastInputX", 1);
-            animator.SetFloat("LastInputY", 0);
+            animator.SetFloat("LastInputX", 0);
+            animator.SetFloat("LastInputY", 1);
 
             if (WallTest(Vector3.up))
             {
@@ -71,11 +70,11 @@ public class PlayerMovement : MonoBehaviour
             
         }
 
-        if (Input.GetKey(KeyCode.DownArrow) && !isMoving && WallTest(Vector3.down))
+        if (Input.GetKey(KeyCode.DownArrow) && !isMoving)
 
         {
-            animator.SetFloat("LastInputX", 1);
-            animator.SetFloat("LastInputY", 0);
+            animator.SetFloat("LastInputX", 0);
+            animator.SetFloat("LastInputY", -1);
 
             if (WallTest(Vector3.down))
             {
@@ -89,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
                
         }
 
-        if (Input.GetKey(KeyCode.RightArrow) && !isMoving && WallTest(Vector3.right))
+        if (Input.GetKey(KeyCode.RightArrow) && !isMoving)
 
         {
             animator.SetFloat("LastInputX", 1);
@@ -103,9 +102,9 @@ public class PlayerMovement : MonoBehaviour
                 
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow) && !isMoving && WallTest(Vector3.left))
+        if (Input.GetKey(KeyCode.LeftArrow) && !isMoving)
         {
-            animator.SetFloat("LastInputX", 1);
+            animator.SetFloat("LastInputX", -1);
             animator.SetFloat("LastInputY", 0);
 
             if (WallTest(Vector3.left))

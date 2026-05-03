@@ -45,8 +45,10 @@ public class TrainerManager : MonoBehaviour
             }
             else
             {
+                _GlobalPokemon.TrainerFainted = true;
                 _GlobalPokemon.ActivePokemon.giveXP(_GlobalPokemon.TrainerPokemons[chosenPokemon].level);
                 Debug.Log("DIED");
+                StartCoroutine(dialogeManager.EndedBattle(_GlobalPokemon.TrainerName));
             }
     }
 

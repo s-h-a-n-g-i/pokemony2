@@ -3,7 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class FightNPC : MonoBehaviour
 {
-
+    [SerializeField] private int trainerID = 0;
+    public bool defeated = false;
     [SerializeField] private PokemonSO[] pokemonToFight;
     [SerializeField] private int level = 3;
     //[SerializeField] private PokemonInFightSO pokemonToFighting;
@@ -11,9 +12,9 @@ public class FightNPC : MonoBehaviour
 
     void Start()
     {
+        TrainerSetupNPC();
+
         pokemon = new Pokemon[pokemonToFight.Length];
-
-
         //Debug.Log(pokemonToFight.name);
         for(int i = 0; i < pokemon.Length;i++)
         {
@@ -27,10 +28,23 @@ public class FightNPC : MonoBehaviour
                 
     }
 
+    private void TrainerSetupNPC() 
+    {
+        Debug.Log(_GlobalPokemon.TrainerName + " " + _GlobalPokemon.TrainerFainted);
+
+        if (_GlobalPokemon.TrainerName == gameObject.name)
+            defeated = _GlobalPokemon.TrainerFainted;
+
+        if (defeated)
+            Destroy(gameObject);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         _GlobalPokemon.ResetBeforeFight();
 
+        _GlobalPokemon.TrainerID = trainerID;
+        _GlobalPokemon.TrainerName = gameObject.name;
         _GlobalPokemon.isItTrainer = true;
         _GlobalPokemon.TrainerPokemons = pokemon;
 

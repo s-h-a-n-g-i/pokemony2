@@ -207,9 +207,9 @@ public class Pokemon
         speedIV ++;
     }
 
-    public int giveXP(int enemyPokemonLevel) 
+    public void giveXP(int enemyPokemonLevel) 
     {
-        return enemyPokemonLevel / 2*3;
+        xp += enemyPokemonLevel / 2*3;
     }
 
     public PokemonTypes[] TypesOfPokemon()

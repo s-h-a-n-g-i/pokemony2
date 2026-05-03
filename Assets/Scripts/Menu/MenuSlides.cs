@@ -26,7 +26,7 @@ public class MenuSlides : MonoBehaviour
     public void CloseMenu()
     {
         
-        rTransform.localPosition = new Vector3(xBasic, 0, 0);
+        rTransform.localPosition = new Vector3(xBasic, 0, 0); 
     }
 
     private void MiddleRangeMenu()

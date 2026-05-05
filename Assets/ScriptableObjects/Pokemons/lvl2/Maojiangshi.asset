@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Maojiangshi
   m_EditorClassIdentifier: Assembly-CSharp::PokemonSO
   basicName: Mao Jiangshi
-  flying: 0
+  flying: 1
   image: {fileID: -4259928101470447457, guid: 97f00795a771d6d4581895b75de97243, type: 3}
   type: 6
   type2: 0
@@ -33,12 +33,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   effects: 0
-  hp: 0
-  atk: 0
-  def: 0
-  sDef: 0
-  sAtk: 0
-  speed: 0
+  hp: 15
+  atk: 6
+  def: 6
+  sDef: 6
+  sAtk: 6
+  speed: 6
   hpIV: 0
   atkIV: 0
   defIV: 0

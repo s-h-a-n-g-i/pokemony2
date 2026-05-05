@@ -29,7 +29,8 @@ public class DialogeFightManager : MonoBehaviour
 
     void Update()
     {
-        
+        //_NPCManager.Instance.GetComponent<_NPCManager>().NPCInBattle = "sperma";
+        //_NPCManager.Instance.NPCInBattle = "";
     }
 
     public IEnumerator DialogeShow(string textToEnter)
@@ -93,7 +94,7 @@ public class DialogeFightManager : MonoBehaviour
 
         yield return new WaitForSeconds(1);
 
-        if (_GlobalPokemon.isItTrainer)
+        if (_NPCManager.Instance.isItTrainer)
             trainerManager.CheckAndSwapTrainer();
 
         dialogeWindow.SetActive(false);

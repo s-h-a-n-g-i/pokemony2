@@ -6,9 +6,9 @@ public class _PokemonEQ : MonoBehaviour
     public static _PokemonEQ Instance;
 
 
-    public static Pokemon ActivePokemon;
-    public static Pokemon[] EqPokemons = new Pokemon[5];
-    public static List<Pokemon> AllHavePokemons;
+    public Pokemon ActivePokemon;
+    public Pokemon[] EqPokemons = new Pokemon[5];
+    public List<Pokemon> AllHavePokemons;
 
     void Awake()
     {
@@ -21,13 +21,10 @@ public class _PokemonEQ : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    void Start()
+
+    public void CatchedPokemon(Pokemon catched) 
     {
-        
+        AllHavePokemons.Add(catched);
     }
 
-    void Update()
-    {
-        
-    }
 }

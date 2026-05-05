@@ -12,7 +12,7 @@ public class FightBtn : MonoBehaviour
 
     void Update()
     {
-        UpdateAttack(_GlobalPokemon.ActivePokemon.AttacksActive[attackCounter]);
+        UpdateAttack(_PokemonEQ.Instance.ActivePokemon.AttacksActive[attackCounter]);
     }
 
 

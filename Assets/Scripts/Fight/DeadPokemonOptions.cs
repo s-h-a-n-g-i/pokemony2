@@ -18,12 +18,12 @@ public class DeadPokemonOptions : MonoBehaviour
 
     void Update()
     {
-        if (_GlobalPokemon.ActivePokemon.hp == 0)
+        if (_PokemonEQ.Instance.ActivePokemon.hp == 0)
         {
             attackBtn.interactable = false;
             chosePokemon.onClick.Invoke();
         }
-        else if(_GlobalPokemon.ActivePokemon.hp != 0) 
+        else if(_PokemonEQ.Instance.ActivePokemon.hp != 0) 
         {
             //checkOnce = true;
             attackBtn.interactable = true;

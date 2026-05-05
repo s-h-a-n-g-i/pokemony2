@@ -21,7 +21,7 @@ public class FightSystemManager : MonoBehaviour
 
     private void Awake()
     {
-        if(_GlobalPokemon.isItTrainer)
+        if(_NPCManager.Instance.isItTrainer)
             singleFight.enabled = false;
         else
             trainerFight.enabled = false;
@@ -37,18 +37,18 @@ public class FightSystemManager : MonoBehaviour
 
     public void setUpMyPokemon()
     {
-        if (_GlobalPokemon.ActivePokemon != _GlobalPokemon.EqPokemons[chosenPokemonPlayer]) 
+        if (_PokemonEQ.Instance.ActivePokemon != _PokemonEQ.Instance.EqPokemons[chosenPokemonPlayer]) 
         {
-            _GlobalPokemon.ActivePokemon = _GlobalPokemon.EqPokemons[chosenPokemonPlayer];
+            _PokemonEQ.Instance.ActivePokemon = _PokemonEQ.Instance.EqPokemons[chosenPokemonPlayer];
         }
 
-        myPokemonImage.sprite = _GlobalPokemon.ActivePokemon.image;
-        myPokemonName.text = _GlobalPokemon.ActivePokemon.PokemonNameOut();
+        myPokemonImage.sprite = _PokemonEQ.Instance.ActivePokemon.image;
+        myPokemonName.text = _PokemonEQ.Instance.ActivePokemon.PokemonNameOut();
     }
 
     public void Attacking(int playerAttackCounter) 
     {
-        if (_GlobalPokemon.isItTrainer)
+        if (_NPCManager.Instance.isItTrainer)
             trainerFight.Attack(playerAttackCounter);
         //else
         //    singleFight.Attack();

@@ -11,7 +11,7 @@ public class ShowCreaturesBtn : MonoBehaviour
 
     void Update()
     {
-        if (_GlobalPokemon.EqPokemons[pokemonCounter] == null)
+        if (_PokemonEQ.Instance.EqPokemons[pokemonCounter] == null)
         {
             PokemonNameText.text = "n ma nc";
             gameObject.GetComponent<Button>().interactable = false;
@@ -22,10 +22,10 @@ public class ShowCreaturesBtn : MonoBehaviour
             gameObject.GetComponent<Button>().interactable = true;
         }
 
-        if (_GlobalPokemon.EqPokemons[pokemonCounter] == _GlobalPokemon.ActivePokemon || _GlobalPokemon.EqPokemons[pokemonCounter].hp <=0)
+        if (_PokemonEQ.Instance.EqPokemons[pokemonCounter] == _PokemonEQ.Instance.ActivePokemon || _PokemonEQ.Instance.EqPokemons[pokemonCounter].hp <=0)
             gameObject.GetComponent<Button>().interactable = false;
 
-        PokemonNameText.text = _GlobalPokemon.EqPokemons[pokemonCounter].PokemonNameOut() + "HP " + _GlobalPokemon.EqPokemons[pokemonCounter].maxHp + "/" + _GlobalPokemon.EqPokemons[pokemonCounter].hp;
+        PokemonNameText.text = _PokemonEQ.Instance.EqPokemons[pokemonCounter].PokemonNameOut() + "HP " + _PokemonEQ.Instance.EqPokemons[pokemonCounter].maxHp + "/" + _PokemonEQ.Instance.EqPokemons[pokemonCounter].hp;
         
         
     }
@@ -36,12 +36,12 @@ public class ShowCreaturesBtn : MonoBehaviour
         fightSystemManager.chosenPokemonPlayer = pokemonCounter;
         fightSystemManager.setUpMyPokemon();
 
-        if (_GlobalPokemon.isItTrainer) 
+        if (_NPCManager.Instance.isItTrainer) 
         {
             trainerManager.ChangePokemon();
         }
 
 
-        Debug.Log(_GlobalPokemon.EqPokemons[pokemonCounter].PokemonNameOut());
+        Debug.Log(_PokemonEQ.Instance.EqPokemons[pokemonCounter].PokemonNameOut());
     }
 }

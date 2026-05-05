@@ -28,7 +28,7 @@ MonoBehaviour:
   E2type: 0
   E2type2: 0
   attacks:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 012956b2c208e83458cd3e3283d3c3de, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

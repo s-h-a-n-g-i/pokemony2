@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     [HideInInspector] public bool isMoving = false;
-    private Vector3 prevPos, nextPos;
+    [HideInInspector] public Vector3 prevPos, nextPos, lastDir;
     private float speed = 0.2f;
     private Animator animator;
     private Vector3 dirwalk;
@@ -59,8 +59,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.UpArrow) && !isMoving)
         {
-            animator.SetFloat("LastInputX", 0);
-            animator.SetFloat("LastInputY", 1);
+            lastDir = new Vector2(0,1);
+            animator.SetFloat("LastInputX", lastDir.x);
+            animator.SetFloat("LastInputY", lastDir.y);
 
             if (WallTest(Vector3.up))
             {
@@ -71,10 +72,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (Input.GetKey(KeyCode.DownArrow) && !isMoving)
-
         {
-            animator.SetFloat("LastInputX", 0);
-            animator.SetFloat("LastInputY", -1);
+            lastDir = new Vector2(0, -1);
+            animator.SetFloat("LastInputX", lastDir.x);
+            animator.SetFloat("LastInputY", lastDir.y);
 
             if (WallTest(Vector3.down))
             {
@@ -89,10 +90,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (Input.GetKey(KeyCode.RightArrow) && !isMoving)
-
         {
-            animator.SetFloat("LastInputX", 1);
-            animator.SetFloat("LastInputY", 0);
+            lastDir = new Vector2(1, 0);
+            animator.SetFloat("LastInputX", lastDir.x);
+            animator.SetFloat("LastInputY", lastDir.y);
 
             if (WallTest(Vector3.right))
             {
@@ -104,8 +105,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftArrow) && !isMoving)
         {
-            animator.SetFloat("LastInputX", -1);
-            animator.SetFloat("LastInputY", 0);
+            lastDir = new Vector2(-1, 0);
+            animator.SetFloat("LastInputX", lastDir.x);
+            animator.SetFloat("LastInputY", lastDir.y);
 
             if (WallTest(Vector3.left))
             {

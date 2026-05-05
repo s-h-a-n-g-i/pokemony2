@@ -27,7 +27,7 @@ public enum Effects
     Weakness,
     Buff
 }
-
+[System.Serializable]
 public class Pokemon
 {
     [SerializeField] private int pokemonLevelStarted;
@@ -153,10 +153,9 @@ public class Pokemon
     {
         for (int i = 0; i < s.Length; i++) 
         {
-            if (s[i] != null || s[i].name != "None") 
-            {
-                AttacksActive[i] = new Attack(s[i].name, s[i].attackType, s[i].maxPp, s[i].damage, s[i].accuracy, s[i].speed, s[i].desc);
-            }
+            if (s[i] != null) 
+                if(s[i].name != "None")
+                    AttacksActive[i] = new Attack(s[i].name, s[i].attackType, s[i].maxPp, s[i].damage, s[i].accuracy, s[i].speed, s[i].desc);
         }
     }
 
@@ -209,7 +208,12 @@ public class Pokemon
 
     public void giveXP(int enemyPokemonLevel) 
     {
-        xp += enemyPokemonLevel / 2*3;
+        float s = (float)enemyPokemonLevel / 2f*3f;
+        if (s <= 2) 
+        {
+            s = 2;
+        }
+        xp += (int)s;
     }
 
     public PokemonTypes[] TypesOfPokemon()

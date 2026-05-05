@@ -4,41 +4,6 @@ using UnityEngine;
 public static class _GlobalPokemon
 {
     
-    public static Pokemon ActivePokemon;
-    public static Pokemon[] EqPokemons = new Pokemon[5];
-    public static List<Pokemon> AllHavePokemons;
-
-
-    public static Pokemon EnemyPokemon { get; set; }
-
-    public static bool TrainerFainted { get; set; }
-    public static string TrainerName { get; set; }
-    public static int TrainerID{ get; set; }
-    public static int TrainerChosenPokemon = 0;
-    public static Pokemon[] TrainerPokemons = new Pokemon[5];
-    public static bool isItTrainer = false;
-
-
-    public static Attack PlayerAttack;
-    public static Attack EnemyAttack;
-
-
-    public static void ResetBeforeFight() 
-    {
-        EnemyPokemon = null;
-
-        TrainerName = null;
-        TrainerPokemons = null;
-        TrainerChosenPokemon = 0;
-        TrainerFainted = false;
-
-        isItTrainer = false;
-        EnemyAttack = null;
-        PlayerAttack = null;
-    }
-
-
-
     public static Dictionary<PokemonTypes, float> CALC_AngelDamage = new()
     {
         {PokemonTypes.Angel, 1},

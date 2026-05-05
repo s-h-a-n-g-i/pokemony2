@@ -58,13 +58,13 @@ public class PokemonCheck : MonoBehaviour
     public void SaveNameToPokemonButton() 
     {
         if(pokename.text != null && pokename.text != "")
-            _GlobalPokemon.EqPokemons[pokemonInEq].nickname = pokename.text;
+            _PokemonEQ.Instance.EqPokemons[pokemonInEq].nickname = pokename.text;
     }
 
     public void SetupPokemon(int s) 
     {
         desc.text = "";
-        chosenPokemon = _GlobalPokemon.EqPokemons[s];
+        chosenPokemon = _PokemonEQ.Instance.EqPokemons[s];
         pokemonInEq = s;
         if (chosenPokemon.basicName != chosenPokemon.nickname && (chosenPokemon.nickname!=null || chosenPokemon.nickname!=""))
             pokename.text = chosenPokemon.nickname;

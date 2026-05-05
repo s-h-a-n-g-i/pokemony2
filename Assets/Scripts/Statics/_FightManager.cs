@@ -3,9 +3,9 @@ using UnityEngine;
 public class _FightManager : MonoBehaviour
 {
     public static _FightManager Instance;
-
-    public static Attack PlayerAttack;
-    public static Attack EnemyAttack;
+    public Pokemon EnemyPokemon;
+    public Attack PlayerAttack;
+    public Attack EnemyAttack;
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -17,14 +17,9 @@ public class _FightManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    void Start()
+    public void SetupFight() 
     {
-        
+    
     }
 
-
-    void Update()
-    {
-        
-    }
 }

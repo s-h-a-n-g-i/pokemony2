@@ -25,7 +25,7 @@ public class PokemonHPManager : MonoBehaviour
     void Update()
     {
         PlayerUpdate();
-        if (_GlobalPokemon.isItTrainer)
+        if (_NPCManager.Instance.isItTrainer)
             TrainerUpdate();
         else
             SinglePokemonUpdate();
@@ -33,9 +33,9 @@ public class PokemonHPManager : MonoBehaviour
 
     private void PlayerUpdate() 
     {
-        playerHP.text = _GlobalPokemon.ActivePokemon.maxHp +" / " + _GlobalPokemon.ActivePokemon.hp;
+        playerHP.text = _PokemonEQ.Instance.ActivePokemon.hp +" / " + _PokemonEQ.Instance.ActivePokemon.maxHp;
 
-        float hpsize = (float)_GlobalPokemon.ActivePokemon.hp / (float)_GlobalPokemon.ActivePokemon.maxHp;
+        float hpsize = (float)_PokemonEQ.Instance.ActivePokemon.hp / (float)_PokemonEQ.Instance.ActivePokemon.maxHp;
         float colorred = (hpsize * (-1) + 1);
 
         ImageLineHP_player.gameObject.transform.localScale = new Vector3(hpsize,1,1);
@@ -45,7 +45,7 @@ public class PokemonHPManager : MonoBehaviour
     }
     private void TrainerUpdate() 
     {
-        float hpsize = (float)_GlobalPokemon.TrainerPokemons[trainerManager.chosenPokemon].hp / (float)_GlobalPokemon.TrainerPokemons[trainerManager.chosenPokemon].maxHp;
+        float hpsize = (float)_NPCManager.Instance.TrainerPokemons[trainerManager.chosenPokemon].hp / (float)_NPCManager.Instance.TrainerPokemons[trainerManager.chosenPokemon].maxHp;
         float colorred = (hpsize * (-1) + 1);
 
         ImageLineHP_enemy.gameObject.transform.localScale = new Vector3(hpsize, 1, 1);
@@ -54,7 +54,7 @@ public class PokemonHPManager : MonoBehaviour
     }
     private void SinglePokemonUpdate() 
     {
-        float hpsize = (float)_GlobalPokemon.EnemyPokemon.hp / (float)_GlobalPokemon.EnemyPokemon.maxHp;
+        float hpsize = (float)_FightManager.Instance.EnemyPokemon.hp / (float)_FightManager.Instance.EnemyPokemon.maxHp;
         float colorred = (hpsize * (-1) + 1);
 
         ImageLineHP_enemy.gameObject.transform.localScale = new Vector3(hpsize, 1, 1);

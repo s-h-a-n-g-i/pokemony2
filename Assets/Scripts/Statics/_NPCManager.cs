@@ -9,7 +9,7 @@ public class _NPCManager : MonoBehaviour
     public int TrainerChosenPokemon = 0;
     public Pokemon[] TrainerPokemons = new Pokemon[5];
     public bool isItTrainer = false;
-
+    public string TrainerName;
 
     private HashSet<string> defeatedNPCs = new HashSet<string>();
 
@@ -23,6 +23,16 @@ public class _NPCManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
+    public void ResetBeforeFight()
+    {
+
+        TrainerName = null;
+        TrainerPokemons = null;
+        TrainerChosenPokemon = 0;
+
+        isItTrainer = false;
+    }
+
 
     public void MarkDefeated(string npcId)
     {
@@ -33,5 +43,5 @@ public class _NPCManager : MonoBehaviour
     {
         return defeatedNPCs.Contains(npcId);
     }
-
+    
 }

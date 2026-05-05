@@ -11,14 +11,15 @@ public class CatchBtn : MonoBehaviour
 
     void Update()
     {
-        GetComponent<Button>().interactable = !_GlobalPokemon.isItTrainer;
+        GetComponent<Button>().interactable = !_NPCManager.Instance.isItTrainer;
     }
 
 
 
     public void Catching() 
     {
-        bool catchCheck = _GlobalPokemon.EnemyPokemon.catchCheck();
+        
+        bool catchCheck = _FightManager.Instance.EnemyPokemon.catchCheck();
 
         if (catchCheck) 
         {

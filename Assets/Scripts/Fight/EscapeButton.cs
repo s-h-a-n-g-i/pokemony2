@@ -5,6 +5,6 @@ public class EscapeButton : MonoBehaviour
 {
     public void Escape() 
     {
-        SceneManager.LoadScene(PlayerSave._sceneName);
+        SceneManager.LoadScene(PlayerSave.Instance._sceneName);
     }
 }

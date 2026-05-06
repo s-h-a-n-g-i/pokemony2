@@ -10,6 +10,7 @@ public class _PokemonEQ : MonoBehaviour
     public Pokemon[] EqPokemons = new Pokemon[5];
     public List<Pokemon> AllHavePokemons;
 
+    public List<int> pokemonUsedInFight = new List<int>();
     void Awake()
     {
         if (Instance != null && Instance != this)

@@ -18,7 +18,7 @@ public class TrainerManager : MonoBehaviour
 
     public int chosenPokemon = 0;
 
-
+    [HideInInspector] public bool FinishedBattle = true;
 
     void Start()
     {
@@ -28,26 +28,28 @@ public class TrainerManager : MonoBehaviour
 
     void Update()
     {
-
+        if(FinishedBattle)
+            CheckAndSwapTrainer();
         setUpEnemyTrainerPokemon();
     }
 
 
-    public void CheckAndSwapTrainer() 
+    public void CheckAndSwapTrainer()
     {
         if (_NPCManager.Instance.TrainerPokemons[chosenPokemon].hp <= 0)
             if (_NPCManager.Instance.TrainerPokemons.Length > chosenPokemon + 1)
             {
                 Debug.Log(chosenPokemon);
-                _PokemonEQ.Instance.ActivePokemon.giveXP(_NPCManager.Instance.TrainerPokemons[chosenPokemon].level);
+                //_PokemonEQ.Instance.ActivePokemon.giveXP(_NPCManager.Instance.TrainerPokemons[chosenPokemon].level);
                 PokemonTrainerCounter[chosenPokemon].SetActive(false);
                 chosenPokemon++;
+                dialogeManager.StartCoroutine(dialogeManager.DialogeShow(_NPCManager.Instance.name + " changed creature to " + _NPCManager.Instance.TrainerPokemons[chosenPokemon].basicName));
             }
             else
             {
+                Debug.Log("Dead"); 
+                FinishedBattle = false;
                 _NPCManager.Instance.MarkDefeated(_NPCManager.Instance.TrainerName);
-                _PokemonEQ.Instance.ActivePokemon.giveXP(_NPCManager.Instance.TrainerPokemons[chosenPokemon].level);
-                //Debug.Log("DIED");
                 dialogeManager.StopAllCoroutines();
                 dialogeManager.StartCoroutine(dialogeManager.EndedBattle(_NPCManager.Instance.TrainerName));
                 //StartCoroutine();
@@ -79,6 +81,7 @@ public class TrainerManager : MonoBehaviour
 
     public void Attack(int playerAttackCounter) 
     {
+        FinishedBattle = false;
         Pokemon enemyPokemon = _NPCManager.Instance.TrainerPokemons[chosenPokemon];
         Attack enemyAttack = enemyPokemon.GetRandomAttack();
 
@@ -89,6 +92,7 @@ public class TrainerManager : MonoBehaviour
             StartCoroutine(dialogeManager.PokemonFightCutscene(_PokemonEQ.Instance.ActivePokemon, playerPokemon.AttacksActive[playerAttackCounter], _NPCManager.Instance.TrainerPokemons[chosenPokemon], enemyAttack));
         else
             StartCoroutine(dialogeManager.PokemonFightCutscene(_NPCManager.Instance.TrainerPokemons[chosenPokemon], enemyAttack, _PokemonEQ.Instance.ActivePokemon, playerPokemon.AttacksActive[playerAttackCounter]));
+
     }
 
     public void ChangePokemon()

@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -89,7 +90,7 @@ public class Pokemon
     public int sAtkX;
     public int speedX;
 
-    public int level;
+    public int level = 0;
 
     public bool flying;
 
@@ -98,14 +99,7 @@ public class Pokemon
 
     public Effects effects;
 
-
-    private void PokemonSpawnLevelUp(int level) 
-    {
-        for (int i = 0; i < level; i++) 
-        {
-            LvLUp();
-        }
-    }
+    private Dictionary<int,Attack> AttackDict = new Dictionary<int,Attack>();
 
     public Pokemon(PokemonSO c, int startingLevel = 0) 
     {
@@ -117,13 +111,25 @@ public class Pokemon
         sAtk = c.sAtk;
         speed = c.speed;
         xp = 0;
+        xpToNextLevel = 4;
+
+        image = c.image;
+        basicName = c.basicName;
+        nickname = c.basicName;
 
         type = c.type;
         type2 = c.type2;
 
+        basicNameEvo1 = c.basicNameEvo1;
+        evoLevel1 = c.evoLevel1;
+        E1image = c.E1image;
         E1type = c.E1type;
         E1type = c.E1type2;
 
+
+        basicNameEvo2 = c.basicNameEvo2;
+        evoLevel2 = c.evoLevel2;
+        E2image = c.E2image;
         E2type = c.E2type;
         E2type = c.E2type2;
 
@@ -134,20 +140,27 @@ public class Pokemon
         sAtkIV = c.sAtkIV + +Random.Range(-1, 1);
         speedIV = c.speedIV + Random.Range(-1, 1);
 
-        image = c.image;
-        basicName = c.basicName;
-        basicNameEvo1 = c.basicNameEvo1;
-        basicNameEvo2 = c.basicNameEvo2;
 
         flying = c.flying;
 
         ApplyAttacksToClass(c.attacks);
 
-        level = startingLevel;
+        for (int i = 0; i < startingLevel; i++)
+        {
+            LvLUp();
+        }
 
-        PokemonSpawnLevelUp(level);
+        for (int i = 0; i < c.attacksOnLevels.Length;i++) 
+        {
+            AttackSO s = c.attacksOnLevelUps[i];
+            AttackDict.Add(
+                c.attacksOnLevels[i],
+                new Attack(s.name, s.attackType, s.maxPp, s.damage, s.accuracy, s.speed, s.desc));
 
-}
+        }
+        
+    }
+
 
     private void ApplyAttacksToClass(AttackSO[] s) 
     {
@@ -159,13 +172,42 @@ public class Pokemon
         }
     }
 
+    //////////////ALL ABOUT LEVEL 
+    
+    public bool CheckForLevelUp() 
+    {
+        if (xp < xpToNextLevel) return false;
+        return true;
+    }
+    public bool CheckForEvolution()
+    {
+        if (level == evoLevel1 || level == evoLevel2) return true;
+        return false;
+    }
+    public string CheckForAttacksAdded() 
+    {
+        if (AttackDict.TryGetValue(level, out Attack s)) 
+        {
+            for (int i = 0; i < 4; i++) 
+            {
+                if (AttacksActive[i] == null)
+                {
+                    AttacksActive[i] = s;
+                    return s.attackName;
+                }
+            }
+            return "-" + s.attackName;
+        }
+        return null;
+    }
 
     public void LvLUp() 
     {
-        xp = 0;
+        xp -= xpToNextLevel;
+        if(xp<0) xp = 0;
         xpToNextLevel = xpToNextLevel / 2 + xpToNextLevel;
+        level++;
         StatsUp();
-        if (level == evoLevel1 || level == evoLevel2) Evolution();
     }
 
     public void Evolution() 
@@ -173,16 +215,21 @@ public class Pokemon
         StatsUp();
         IVsUp();
         evoState++;
-        if (nickname != null || nickname != "") 
-            switch (evoState)
-            {
-                case 1:
-                    basicName = basicNameEvo1;
-                    break;
-                case 2:
-                    basicName = basicNameEvo2;
-                    break;
-            }
+        switch (evoState)
+        {
+            case 1:
+                basicName = basicNameEvo1;
+                if (nickname != basicName)
+                    nickname = basicNameEvo1;
+                image = E1image;
+                break;
+            case 2:
+                basicName = basicNameEvo2;
+                if (nickname != basicNameEvo1)
+                    nickname = basicNameEvo2;
+                image = E2image;
+                break;
+        }
     }
 
     private void StatsUp()
@@ -215,7 +262,16 @@ public class Pokemon
         }
         xp += (int)s;
     }
-
+    /////////////BASIC THINGS
+    public string PokemonNameOut() 
+    {
+        string n;
+        n = basicName;
+        if (nickname != null) n = nickname;
+        n += " (" + level + ")";
+        
+        return n;
+    }
     public PokemonTypes[] TypesOfPokemon()
     {
         if (evoState == 1)
@@ -226,29 +282,21 @@ public class Pokemon
             return new PokemonTypes[] { type, type2 };
     }
 
-    public string PokemonNameOut() 
+
+
+    public Attack GetRandomAttack()
     {
-        string n;
-        n = basicName;
-        if (nickname != null) n = nickname;
-        n += " (" + level + ")";
-        
-        return n;
-    }
+        List<Attack> attackAvaible = new List<Attack>();
 
-    public Attack GetRandomAttack() 
-    {
-        List<Attack> attacks = new List<Attack>();
-        foreach (Attack attack in AttacksActive)
-            attacks.Add(attack);
-
-        for (int i = 0; i < attacks.Count; i++) 
-            if (attacks[i].attackName == "None" || attacks[i] == null) attacks.Remove(attacks[i]);
+        for (int i = 0; i < AttacksActive.Count(); i++)
+            if (AttacksActive[i] != null)
+                if (AttacksActive[i].attackName != "None") 
+                {
+                    attackAvaible.Add(AttacksActive[i]);
+                }
 
 
-        Attack a = attacks[Random.Range(0, attacks.Count)];
-        
-        return a;
+        return attackAvaible[Random.Range(0, attackAvaible.Count)];
 
     }
 
@@ -259,12 +307,7 @@ public class Pokemon
         if (atk.accuracy > roll) return false;
 
         return true;
-        //hp -= atk.damage;
         
-        //if (hp <= 0) 
-        //{
-        //    pokemonDead();
-        //}
     }
 
 
@@ -278,10 +321,6 @@ public class Pokemon
     }
 
 
-    private void pokemonDead() 
-    {
-        
-    }
 
     public string GetPokemonTypes() 
     {

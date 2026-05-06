@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,7 +13,7 @@ public class DialogeFightManager : MonoBehaviour
 
     [Header("Settings")]
     [SerializeField] private TrainerManager trainerManager;
-
+    private FightSystemManager fightSystemManager;
 
     [HideInInspector] public bool playerFirstAttack = true;
 
@@ -23,6 +24,7 @@ public class DialogeFightManager : MonoBehaviour
     [HideInInspector] public bool canPlayNextDialoge = true;
     void Start()
     {
+        fightSystemManager = GetComponent<FightSystemManager>();
         dialogeText.text = string.Empty;
         dialogeWindow.SetActive(false);
     }
@@ -53,12 +55,60 @@ public class DialogeFightManager : MonoBehaviour
     ///////////////MARTWIAK
     public IEnumerator EndedBattle(string nameDefeated)
     {
-        yield return StartCoroutine(DialogeShow(nameDefeated + " has been defeated like a nigro back in 1800"));
-        yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(PlayerSave._sceneName);
+        dialogeWindow.SetActive(true);
+        yield return StartCoroutine(DialogeShow(nameDefeated + " has been defeated!"));
+
+        List<Pokemon> pokemonsInFight = new List<Pokemon>();
+        for (int i = 0; i < _PokemonEQ.Instance.pokemonUsedInFight.Count; i++)
+            pokemonsInFight.Add(_PokemonEQ.Instance.EqPokemons[_PokemonEQ.Instance.pokemonUsedInFight[i]]);
+
+        foreach (Pokemon p in pokemonsInFight)
+        {
+            if (_NPCManager.Instance.isItTrainer)
+                GiveXPToPokemonsFromTrainer(p);
+            while (p.CheckForLevelUp())
+            {
+                Debug.Log(p.evoLevel1);
+                p.LvLUp();
+                Debug.Log(p.evoLevel1);
+
+                yield return StartCoroutine(DialogeShow(p.PokemonNameOut() + " Leveled UP!"));
+                yield return new WaitForSeconds(0.5f);
+
+                if (p.CheckForEvolution())
+                {
+                    yield return StartCoroutine(DialogeShow(p.PokemonNameOut() + " EVOLVED!"));
+                    yield return new WaitForSeconds(0.5f);
+                    p.Evolution();
+                    fightSystemManager.setUpMyPokemon();
+                }
+                string newAttackName = p.CheckForAttacksAdded();
+                if (newAttackName != null)
+                {
+                    if (newAttackName[0] == '-')
+                    {
+                        newAttackName.Replace("-", "");
+                        yield return StartCoroutine(DialogeShow(p.PokemonNameOut() + " LEARNED NEW ATTACK! (" + newAttackName + ")"));
+                        yield return new WaitForSeconds(0.5f);
+
+                    }
+                    else
+                    {
+                        yield return StartCoroutine(DialogeShow(p.PokemonNameOut() + " LEARNED NEW ATTACK! (" + newAttackName + ")"));
+                        yield return new WaitForSeconds(0.5f);
+                    }
+                }
+            }
+        }
+        yield return new WaitForSeconds(2f);
+
+        SceneManager.LoadScene(PlayerSave.Instance._sceneName);
     }
 
-
+    private void GiveXPToPokemonsFromTrainer(Pokemon pokemon)
+    {
+        pokemon.giveXP(_NPCManager.Instance.TrainerPokemons[0].level / _PokemonEQ.Instance.pokemonUsedInFight.Count);
+    }
 
 
     ////////////// CALA SEKWENCJA ATAKU OBU POKEMONOW
@@ -93,12 +143,10 @@ public class DialogeFightManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(1);
-
+        if (secondPokemon.hp != 0)
+            dialogeWindow.SetActive(false);
         if (_NPCManager.Instance.isItTrainer)
-            trainerManager.CheckAndSwapTrainer();
-
-        dialogeWindow.SetActive(false);
-
+            trainerManager.FinishedBattle = true;
     }
 
 

@@ -43,7 +43,7 @@ public class FightNPC : MonoBehaviour
         _NPCManager.Instance.isItTrainer = true;
         _NPCManager.Instance.TrainerPokemons = pokemon;
 
-        PlayerSave.placed = false;
+        PlayerSave.Instance.placed = false;
 
         SceneManager.LoadScene("Fight");
     }

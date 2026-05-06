@@ -11,21 +11,27 @@ public class ShowCreaturesBtn : MonoBehaviour
 
     void Update()
     {
-        if (_PokemonEQ.Instance.EqPokemons[pokemonCounter] == null)
+        string s = "";
+
+        if (_PokemonEQ.Instance.EqPokemons[pokemonCounter] == null || _PokemonEQ.Instance.EqPokemons[pokemonCounter].basicName == string.Empty)
         {
-            PokemonNameText.text = "n ma nc";
+            s = "n ma nc";
             gameObject.GetComponent<Button>().interactable = false;
             return;
         }
         else 
         {
+            s = _PokemonEQ.Instance.EqPokemons[pokemonCounter].PokemonNameOut() + "HP " + _PokemonEQ.Instance.EqPokemons[pokemonCounter].maxHp + "/" + _PokemonEQ.Instance.EqPokemons[pokemonCounter].hp;
             gameObject.GetComponent<Button>().interactable = true;
         }
 
-        if (_PokemonEQ.Instance.EqPokemons[pokemonCounter] == _PokemonEQ.Instance.ActivePokemon || _PokemonEQ.Instance.EqPokemons[pokemonCounter].hp <=0)
+        if (_PokemonEQ.Instance.EqPokemons[pokemonCounter] == _PokemonEQ.Instance.ActivePokemon || _PokemonEQ.Instance.EqPokemons[pokemonCounter].hp <= 0)
+        { 
             gameObject.GetComponent<Button>().interactable = false;
+            s = _PokemonEQ.Instance.EqPokemons[pokemonCounter].PokemonNameOut() + "HP " + _PokemonEQ.Instance.EqPokemons[pokemonCounter].maxHp + "/" + _PokemonEQ.Instance.EqPokemons[pokemonCounter].hp;
+        }
 
-        PokemonNameText.text = _PokemonEQ.Instance.EqPokemons[pokemonCounter].PokemonNameOut() + "HP " + _PokemonEQ.Instance.EqPokemons[pokemonCounter].maxHp + "/" + _PokemonEQ.Instance.EqPokemons[pokemonCounter].hp;
+        PokemonNameText.text = s;
         
         
     }
@@ -33,9 +39,9 @@ public class ShowCreaturesBtn : MonoBehaviour
     public void ShowCreaturePressed() 
     {
 
+        _PokemonEQ.Instance.pokemonUsedInFight.Add(pokemonCounter);
         fightSystemManager.chosenPokemonPlayer = pokemonCounter;
         fightSystemManager.setUpMyPokemon();
-
         if (_NPCManager.Instance.isItTrainer) 
         {
             trainerManager.ChangePokemon();

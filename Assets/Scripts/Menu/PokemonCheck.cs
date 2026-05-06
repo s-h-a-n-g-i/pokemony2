@@ -35,7 +35,7 @@ public class PokemonCheck : MonoBehaviour
                     "SATK:" + chosenPokemon.sAtk + "\n" +
                     "DEF:" + chosenPokemon.def + "\n" +
                     "SDEF:" + chosenPokemon.sDef + "\n" +
-                    "XP:" + chosenPokemon.xp
+                    "XP:" + chosenPokemon.xp + "/" + chosenPokemon.xpToNextLevel
                     ;
                 break;
 

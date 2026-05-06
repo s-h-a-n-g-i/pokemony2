@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15586245fe48fb0459c9c7bc8bb0f40d, type: 3}
   m_Name: Poketest1
   m_EditorClassIdentifier: Assembly-CSharp::PokemonSO
-  basicName: Clownigger
+  basicName: Evo1
   flying: 0
-  image: {fileID: 3803539384352201587, guid: 50ca1a7f838d02e4787075316a1a4299, type: 3}
+  image: {fileID: 4226022105378688112, guid: 7e556d564c7080f46a6c03105b8aff44, type: 3}
   type: 2
   type2: 0
-  basicNameEvo1: 
-  E1image: {fileID: 0}
-  evoLevel1: -1
-  E1type: 0
+  basicNameEvo1: Evo2
+  E1image: {fileID: 8091654411001665142, guid: 630f3b0be70b5374b8dfc73708f3beb6, type: 3}
+  evoLevel1: 4
+  E1type: 2
   E1type2: 0
   basicNameEvo2: 
   E2image: {fileID: 0}
@@ -29,12 +29,12 @@ MonoBehaviour:
   E2type2: 0
   attacks:
   - {fileID: 11400000, guid: 012956b2c208e83458cd3e3283d3c3de, type: 2}
-  - {fileID: 11400000, guid: 012956b2c208e83458cd3e3283d3c3de, type: 2}
+  - {fileID: 11400000, guid: c5075532e84359e4fb9a2a60aea8c17c, type: 2}
   - {fileID: 11400000, guid: e3a2f746c112d2142acc04e1a43382cd, type: 2}
   - {fileID: 11400000, guid: e3a2f746c112d2142acc04e1a43382cd, type: 2}
   effects: 0
   hp: 20
-  atk: 3
+  atk: 40
   def: 2
   sDef: 2
   sAtk: 4
@@ -50,5 +50,6 @@ MonoBehaviour:
   sDefX: 0
   sAtkX: 0
   speedX: 0
-  attacksOnLevelUps: []
-  attacksOnLevels: 
+  attacksOnLevelUps:
+  - {fileID: 11400000, guid: 012956b2c208e83458cd3e3283d3c3de, type: 2}
+  attacksOnLevels: 04000000

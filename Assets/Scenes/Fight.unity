@@ -1663,6 +1663,7 @@ GameObject:
   - component: {fileID: 665700374}
   - component: {fileID: 665700373}
   - component: {fileID: 665700372}
+  - component: {fileID: 665700375}
   m_Layer: 5
   m_Name: Catch
   m_TagString: Untagged
@@ -1733,7 +1734,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 665700373}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 665700375}
+        m_TargetAssemblyTypeName: CatchBtn, Assembly-CSharp
+        m_MethodName: Catching
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &665700373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1772,6 +1785,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665700370}
   m_CullTransparentMesh: 1
+--- !u!114 &665700375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665700370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10713bbc616b83e439a07d8673162b80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CatchBtn
 --- !u!1 &679258907
 GameObject:
   m_ObjectHideFlags: 0

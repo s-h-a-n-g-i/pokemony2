@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [HideInInspector] public bool isMoving = false;
+    [HideInInspector] public bool isMoving = false, canMove = true;
     [HideInInspector] public Vector3 prevPos, nextPos, lastDir;
     private float speed = 0.2f;
     private Animator animator;
@@ -15,40 +15,44 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        dirwalk = Vector3.down;
+        PlayerSave.Instance._sceneName = SceneManager.GetActiveScene().name;
 
-        if (!PlayerSave.placed)
-            if (PlayerSave._playerPosition != Vector3.zero && PlayerSave._sceneName == SceneManager.GetActiveScene().name)
+        if (!PlayerSave.Instance.placed)
+            if (PlayerSave.Instance._playerPosition != Vector3.zero && PlayerSave.Instance._sceneName == SceneManager.GetActiveScene().name)
             {
-                PlayerSave.placed = true;
-                transform.position = PlayerSave._playerPosition;
+                dirwalk = PlayerSave.Instance._playerRotation;
+                lastDir = PlayerSave.Instance._playerRotation;
+                PlayerSave.Instance.placed = true;
+                transform.position = PlayerSave.Instance._playerPosition;
+                animator.SetFloat("LastInputX", lastDir.x);
+                animator.SetFloat("LastInputY", lastDir.y);
             }
     }
 
 
     void Update()
     {
-        
+        if (!canMove) return;
         SprintCheck();
         MovementCheck();
-        PlayerSave._sceneName = SceneManager.GetActiveScene().name;
+        animSet();
+
+
+    }
+    private void animSet() 
+    {
         animator.SetBool("isWalking", isMoving);
         animator.SetFloat("InputX", dirwalk.x);
         animator.SetFloat("InputY", dirwalk.y);
-        //if (!isMoving)
-        //{
-        //    animator.SetFloat("LastInputX", dirwalk.x);
-        //    animator.SetFloat("LastInputY", dirwalk.y);
-        //}
+        PlayerSave.Instance._playerRotation = dirwalk;
     }
-
 
       
     private void SprintCheck() 
     { 
         if (!hasRunningShoes) return;
 
-        if (Input.GetKey(KeyCode.X))
+        if (Input.GetKey(KeyCode.Z))
             speed = 0.1f;
         else 
             speed = 0.2f;
@@ -118,6 +122,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void StopMoving()
+    {
+        isMoving = false;
+        animator.SetBool("isWalking", false);
+    }
 
     private IEnumerator Move(Vector3 dir)
     {
@@ -136,7 +145,7 @@ public class PlayerMovement : MonoBehaviour
 
         transform.position = nextPos;
         isMoving = false;
-        PlayerSave._playerPosition = nextPos;
+        PlayerSave.Instance._playerPosition = nextPos;
     }
 
     private IEnumerator JumpDown()
@@ -157,7 +166,7 @@ public class PlayerMovement : MonoBehaviour
 
         transform.position = nextPos;
         isMoving = false;
-        PlayerSave._playerPosition = nextPos;
+        PlayerSave.Instance._playerPosition = nextPos;
         //Debug.Log(PlayerSave._playerPosition);
     }
 

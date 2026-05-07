@@ -30,8 +30,8 @@ MonoBehaviour:
   attacks:
   - {fileID: 11400000, guid: 012956b2c208e83458cd3e3283d3c3de, type: 2}
   - {fileID: 11400000, guid: c5075532e84359e4fb9a2a60aea8c17c, type: 2}
-  - {fileID: 11400000, guid: e3a2f746c112d2142acc04e1a43382cd, type: 2}
-  - {fileID: 11400000, guid: e3a2f746c112d2142acc04e1a43382cd, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   effects: 0
   hp: 20
   atk: 40
@@ -50,6 +50,10 @@ MonoBehaviour:
   sDefX: 0
   sAtkX: 0
   speedX: 0
-  attacksOnLevelUps:
-  - {fileID: 11400000, guid: 012956b2c208e83458cd3e3283d3c3de, type: 2}
-  attacksOnLevels: 04000000
+  attacksOnLevelUp:
+  - attack: {fileID: 11400000, guid: 012956b2c208e83458cd3e3283d3c3de, type: 2}
+    level: 4
+  - attack: {fileID: 11400000, guid: 012956b2c208e83458cd3e3283d3c3de, type: 2}
+    level: 5
+  - attack: {fileID: 11400000, guid: c5075532e84359e4fb9a2a60aea8c17c, type: 2}
+    level: 6

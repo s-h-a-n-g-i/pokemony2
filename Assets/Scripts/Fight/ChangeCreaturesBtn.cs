@@ -2,11 +2,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ShowCreaturesBtn : MonoBehaviour
+public class ChangeCreaturesBtn : MonoBehaviour
 {
     [SerializeField] private TMP_Text PokemonNameText;
     [SerializeField] private FightSystemManager fightSystemManager;
     [SerializeField] private TrainerManager trainerManager;
+    [SerializeField] private SingleFightManager singleManager;
     [SerializeField] private int pokemonCounter;
 
     void Update()
@@ -15,7 +16,7 @@ public class ShowCreaturesBtn : MonoBehaviour
 
         if (_PokemonEQ.Instance.EqPokemons[pokemonCounter] == null || _PokemonEQ.Instance.EqPokemons[pokemonCounter].basicName == string.Empty)
         {
-            s = "n ma nc";
+            s = "No Pokemon Available";
             gameObject.GetComponent<Button>().interactable = false;
             return;
         }
@@ -42,12 +43,11 @@ public class ShowCreaturesBtn : MonoBehaviour
         _PokemonEQ.Instance.pokemonUsedInFight.Add(pokemonCounter);
         fightSystemManager.chosenPokemonPlayer = pokemonCounter;
         fightSystemManager.setUpMyPokemon();
-        if (_NPCManager.Instance.isItTrainer) 
-        {
+        if (_NPCManager.Instance.isItTrainer)
             trainerManager.ChangePokemon();
-        }
+        else
+            singleManager.ChangePokemon();
 
-
-        Debug.Log(_PokemonEQ.Instance.EqPokemons[pokemonCounter].PokemonNameOut());
+            Debug.Log(_PokemonEQ.Instance.EqPokemons[pokemonCounter].PokemonNameOut());
     }
 }

@@ -39,15 +39,15 @@ public class TrainerManager : MonoBehaviour
         if (_NPCManager.Instance.TrainerPokemons[chosenPokemon].hp <= 0)
             if (_NPCManager.Instance.TrainerPokemons.Length > chosenPokemon + 1)
             {
-                Debug.Log(chosenPokemon);
+                //Debug.Log(chosenPokemon);
                 //_PokemonEQ.Instance.ActivePokemon.giveXP(_NPCManager.Instance.TrainerPokemons[chosenPokemon].level);
                 PokemonTrainerCounter[chosenPokemon].SetActive(false);
                 chosenPokemon++;
-                dialogeManager.StartCoroutine(dialogeManager.DialogeShow(_NPCManager.Instance.name + " changed creature to " + _NPCManager.Instance.TrainerPokemons[chosenPokemon].basicName));
+                dialogeManager.StartCoroutine(dialogeManager.DialogeShow(_NPCManager.Instance.name + " changed creature to <b>" + _NPCManager.Instance.TrainerPokemons[chosenPokemon].basicName + "</b>"));
             }
             else
             {
-                Debug.Log("Dead"); 
+                //Debug.Log("Dead"); 
                 FinishedBattle = false;
                 _NPCManager.Instance.MarkDefeated(_NPCManager.Instance.TrainerName);
                 dialogeManager.StopAllCoroutines();
@@ -70,6 +70,14 @@ public class TrainerManager : MonoBehaviour
             PokemonTrainerCounter[i].SetActive(true);
         }
 
+    }
+
+    public void ResetTrainer()
+    {
+        foreach (var item in PokemonTrainerCounter)
+        {
+            item.SetActive(false);
+        }
     }
 
 

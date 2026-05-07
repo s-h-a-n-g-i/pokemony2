@@ -9,7 +9,7 @@ public class _PokemonEQ : MonoBehaviour
     public Pokemon ActivePokemon;
     public Pokemon[] EqPokemons = new Pokemon[5];
     public List<Pokemon> AllHavePokemons;
-
+    public int LevelingUpPokemon;
     public List<int> pokemonUsedInFight = new List<int>();
     void Awake()
     {

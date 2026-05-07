@@ -59,6 +59,8 @@ public class PokemonSO : ScriptableObject
     public int sAtkX;
     public int speedX;
 
-    public AttackSO[] attacksOnLevelUps;
-    public int[] attacksOnLevels;
+    public AttacksLevelups[] attacksOnLevelUp;
+
+    //public AttackSO[] attacksOnLevelUps;
+    //public int[] attacksOnLevels;
 }

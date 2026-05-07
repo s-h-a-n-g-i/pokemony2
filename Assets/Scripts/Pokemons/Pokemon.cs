@@ -149,15 +149,15 @@ public class Pokemon
         {
             LvLUp();
         }
+        if(c.attacksOnLevelUp != null)
+            for (int i = 0; i < c.attacksOnLevelUp.Length;i++) 
+            {
+                AttackSO s = c.attacksOnLevelUp[i].attack;
+                AttackDict.Add(
+                    c.attacksOnLevelUp[i].level,
+                    new Attack(s.name, s.attackType, s.maxPp, s.damage, s.accuracy, s.speed, s.desc));
 
-        for (int i = 0; i < c.attacksOnLevels.Length;i++) 
-        {
-            AttackSO s = c.attacksOnLevelUps[i];
-            AttackDict.Add(
-                c.attacksOnLevels[i],
-                new Attack(s.name, s.attackType, s.maxPp, s.damage, s.accuracy, s.speed, s.desc));
-
-        }
+            }
         
     }
 
@@ -184,7 +184,7 @@ public class Pokemon
         if (level == evoLevel1 || level == evoLevel2) return true;
         return false;
     }
-    public string CheckForAttacksAdded() 
+    public Attack CheckForAttacksAdded() 
     {
         if (AttackDict.TryGetValue(level, out Attack s)) 
         {
@@ -193,10 +193,11 @@ public class Pokemon
                 if (AttacksActive[i] == null)
                 {
                     AttacksActive[i] = s;
-                    return s.attackName;
+                    return s;
                 }
-            }
-            return "-" + s.attackName;
+            };
+            s.hasSlot = false;
+            return s;
         }
         return null;
     }

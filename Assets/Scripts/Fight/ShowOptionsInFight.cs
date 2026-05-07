@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ShowAttacksBtn : MonoBehaviour
+public class ShowOptionsInFight : MonoBehaviour
 {
     [SerializeField] private GameObject ShowingCanvas;
     [SerializeField] private GameObject[] otherCanvases;

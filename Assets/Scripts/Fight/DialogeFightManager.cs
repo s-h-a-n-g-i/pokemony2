@@ -14,7 +14,8 @@ public class DialogeFightManager : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private TrainerManager trainerManager;
     private FightSystemManager fightSystemManager;
-
+    private SingleFightManager singleManager;
+    private AttackSwapToNew attackSwap;
     [HideInInspector] public bool playerFirstAttack = true;
 
     [HideInInspector] public int enemyDamage;
@@ -22,8 +23,12 @@ public class DialogeFightManager : MonoBehaviour
 
     [HideInInspector] public bool dialogeFinished = true;
     [HideInInspector] public bool canPlayNextDialoge = true;
+
+    [HideInInspector] public bool ChosenNewAttack = true;
     void Start()
     {
+        attackSwap = GetComponent<AttackSwapToNew>();
+        singleManager = GetComponent<SingleFightManager>();
         fightSystemManager = GetComponent<FightSystemManager>();
         dialogeText.text = string.Empty;
         dialogeWindow.SetActive(false);
@@ -39,16 +44,29 @@ public class DialogeFightManager : MonoBehaviour
     {
         dialogeText.text = "";
         dialogeFinished = false;
-
+        textToEnter.Replace("<b>", "|");
+        textToEnter.Replace("</b>", ";");
 
         for (int i = 0; i < textToEnter.Length; i++) 
         {
-            dialogeText.text += textToEnter[i];
+            switch (textToEnter[i]) 
+            {
+                case '|':
+                    dialogeText.text += "BOLD";
+                    break;
+                case ';':
+                    dialogeText.text += "BOLDnT";
+                    break;
+                default:
+                    dialogeText.text += textToEnter[i];
+                    break;
+            }
+
             yield return new WaitForSeconds(0.05f);
 
         }
 
-
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z));
         dialogeFinished = true;
     }
 
@@ -56,7 +74,9 @@ public class DialogeFightManager : MonoBehaviour
     public IEnumerator EndedBattle(string nameDefeated)
     {
         dialogeWindow.SetActive(true);
-        yield return StartCoroutine(DialogeShow(nameDefeated + " has been defeated!"));
+
+        yield return StartCoroutine(DialogeShow("<b>" + nameDefeated + "</b> has been defeated!"));
+
 
         List<Pokemon> pokemonsInFight = new List<Pokemon>();
         for (int i = 0; i < _PokemonEQ.Instance.pokemonUsedInFight.Count; i++)
@@ -66,41 +86,41 @@ public class DialogeFightManager : MonoBehaviour
         {
             if (_NPCManager.Instance.isItTrainer)
                 GiveXPToPokemonsFromTrainer(p);
+            else
+                p.giveXP(_FightManager.Instance.EnemyPokemon.level / _PokemonEQ.Instance.pokemonUsedInFight.Count);
             while (p.CheckForLevelUp())
             {
-                Debug.Log(p.evoLevel1);
+                ChosenNewAttack = true;
                 p.LvLUp();
-                Debug.Log(p.evoLevel1);
+                
 
-                yield return StartCoroutine(DialogeShow(p.PokemonNameOut() + " Leveled UP!"));
-                yield return new WaitForSeconds(0.5f);
+                yield return StartCoroutine(DialogeShow("<b>" + p.PokemonNameOut() + " Leveled UP!"));
 
                 if (p.CheckForEvolution())
                 {
-                    yield return StartCoroutine(DialogeShow(p.PokemonNameOut() + " EVOLVED!"));
-                    yield return new WaitForSeconds(0.5f);
+                    yield return StartCoroutine(DialogeShow("<b>" + p.PokemonNameOut() + " EVOLVED!"));
                     p.Evolution();
                     fightSystemManager.setUpMyPokemon();
+                    yield return StartCoroutine(DialogeShow("<b>"+p.PokemonNameOut() + " IS NEW EVOLUTION!"));
                 }
-                string newAttackName = p.CheckForAttacksAdded();
-                if (newAttackName != null)
+                Attack newAttack = p.CheckForAttacksAdded();
+                if (newAttack != null)
                 {
-                    if (newAttackName[0] == '-')
+                    if (newAttack.hasSlot)
                     {
-                        newAttackName.Replace("-", "");
-                        yield return StartCoroutine(DialogeShow(p.PokemonNameOut() + " LEARNED NEW ATTACK! (" + newAttackName + ")"));
-                        yield return new WaitForSeconds(0.5f);
+                        yield return StartCoroutine(DialogeShow(p.PokemonNameOut() + " LEARNED NEW ATTACK: <b>" + newAttack.attackName + "</b>"));
 
                     }
                     else
                     {
-                        yield return StartCoroutine(DialogeShow(p.PokemonNameOut() + " LEARNED NEW ATTACK! (" + newAttackName + ")"));
-                        yield return new WaitForSeconds(0.5f);
+                        ChosenNewAttack = false;
+                        yield return StartCoroutine(DialogeShow(p.PokemonNameOut() + " LEARNED NEW ATTACK: <b>" + newAttack.attackName + "</b>"));
+                        attackSwap.FullyAttackSwap(p,newAttack);
+                        yield return new WaitUntil(() => ChosenNewAttack);
                     }
                 }
             }
         }
-        yield return new WaitForSeconds(2f);
 
         SceneManager.LoadScene(PlayerSave.Instance._sceneName);
     }
@@ -109,6 +129,7 @@ public class DialogeFightManager : MonoBehaviour
     {
         pokemon.giveXP(_NPCManager.Instance.TrainerPokemons[0].level / _PokemonEQ.Instance.pokemonUsedInFight.Count);
     }
+
 
 
     ////////////// CALA SEKWENCJA ATAKU OBU POKEMONOW
@@ -126,14 +147,13 @@ public class DialogeFightManager : MonoBehaviour
                 ProvideAttack(firstPokemon, firstAttack, secondPokemon, atk1.Item1, atk1.Item2)));
         }
         else
-            yield return StartCoroutine(DialogeShow("Pokemon changed to " + firstPokemon.PokemonNameOut()));
+            yield return StartCoroutine(DialogeShow("Pokemon changed to <b>" + firstPokemon.PokemonNameOut() + "</b>"));
 
 
 
         //////TEST CZY POKEMON MOZE ZAATAKOWAC (ZE NIE JEST MARTWY PO ATAKU)
         if (secondPokemon.hp != 0)
         {
-            yield return new WaitForSeconds(1);
 
             var atk2 = secondAttack.getDamage(secondPokemon, firstPokemon);
 
@@ -142,11 +162,12 @@ public class DialogeFightManager : MonoBehaviour
 
         }
 
-        yield return new WaitForSeconds(1);
         if (secondPokemon.hp != 0)
             dialogeWindow.SetActive(false);
         if (_NPCManager.Instance.isItTrainer)
             trainerManager.FinishedBattle = true;
+        else
+            singleManager.FinishedBattle = true;
     }
 
 
@@ -154,7 +175,7 @@ public class DialogeFightManager : MonoBehaviour
     {
         targetPokemon.hp -= atkDamage;
         string action = CheckKill(targetPokemon);
-        return dealingPokemon.PokemonNameOut() + action + targetPokemon.PokemonNameOut() + " with " + atkPower + dealingAttack.attackName;
+        return dealingPokemon.PokemonNameOut() + action + targetPokemon.PokemonNameOut() + " with <b>" + atkPower + "</b> " + dealingAttack.attackName;
         
     }
 

@@ -17,6 +17,7 @@ public class Attack
 
     bool isSuper = false;
 
+    public bool hasSlot = true;
     public Attack(string attackName, PokemonTypes attackType, int maxPp, int damage, int accuracy, int speed , string desc) 
     {
         this.attackName = attackName;

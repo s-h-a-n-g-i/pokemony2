@@ -52,6 +52,7 @@ public class PokemonHPManager : MonoBehaviour
         ImageLineHP_enemy.color = new Color(colorred, hpsize, 1);
         ImageLineHPaddon_enemy.color = new Color(colorred, hpsize, 1);
     }
+
     private void SinglePokemonUpdate() 
     {
         float hpsize = (float)_FightManager.Instance.EnemyPokemon.hp / (float)_FightManager.Instance.EnemyPokemon.maxHp;

@@ -18,7 +18,10 @@ public class StarterButton : MonoBehaviour
     public void ButtonClicked() 
     {
         _PokemonEQ.Instance.EqPokemons[0] =  new Pokemon(Starter, 3);
-        //_PokemonEQ.Instance.EqPokemons[1] = new Pokemon(Starter, 3);
+        _PokemonEQ.Instance.EqPokemons[1] = new Pokemon(Starter, 3);
+        //_PokemonEQ.Instance.EqPokemons[2] = new Pokemon(Starter, 3);
+        //_PokemonEQ.Instance.EqPokemons[3] = new Pokemon(Starter, 3);
+        //_PokemonEQ.Instance.EqPokemons[4] = new Pokemon(Starter, 3);
 
         //SceneManager.LoadScene("SampleScene");
     }

@@ -59,12 +59,47 @@ public class SingleFightManager : MonoBehaviour
     }
     public void ChangePokemon()
     {
+        FinishedBattle = false;
         Pokemon playerPokemon = _PokemonEQ.Instance.ActivePokemon;
 
         Pokemon enemyPokemon = _FightManager.Instance.EnemyPokemon;
         Attack enemyAttack = enemyPokemon.GetRandomAttack();
 
-        StartCoroutine(dialogeManager.PokemonFightCutscene(_PokemonEQ.Instance.ActivePokemon, null, _FightManager.Instance.EnemyPokemon, enemyAttack, true));
+        StartCoroutine(dialogeManager.PokemonFightCutscene(_PokemonEQ.Instance.ActivePokemon, null, _FightManager.Instance.EnemyPokemon, enemyAttack, "Pokemon changed to <b>" + _PokemonEQ.Instance.ActivePokemon.PokemonNameOut() + "</b>"));
     }
+
+    public void CatchPokemonTrue()
+    {
+        FinishedBattle = false;
+        bool appliedPokemon = false;
+
+        for (int i = 0; i < _PokemonEQ.Instance.EqPokemons.Length; i++)
+        {
+            if (_PokemonEQ.Instance.EqPokemons[i] == null | _PokemonEQ.Instance.EqPokemons[i].basicName==string.Empty)
+            {
+                appliedPokemon = true;
+                _PokemonEQ.Instance.EqPokemons[i] = _FightManager.Instance.EnemyPokemon;
+                break;
+            }
+        }
+        if (!appliedPokemon) 
+        {
+            _PokemonEQ.Instance.AllHavePokemons.Add(_FightManager.Instance.EnemyPokemon);
+        }
+
+        dialogeManager.StartCoroutine(dialogeManager.PokemonCaught());
+    }
+    public void CatchPokemonFalse()
+    {
+        FinishedBattle = false;
+        Pokemon playerPokemon = _PokemonEQ.Instance.ActivePokemon;
+
+        Pokemon enemyPokemon = _FightManager.Instance.EnemyPokemon;
+        Attack enemyAttack = enemyPokemon.GetRandomAttack();
+
+        StartCoroutine(dialogeManager.PokemonFightCutscene(_PokemonEQ.Instance.ActivePokemon, null, _FightManager.Instance.EnemyPokemon, enemyAttack, "<b>" + enemyPokemon.basicName + "</b> has escaped from your soul"));
+    }
+
+
 
 }

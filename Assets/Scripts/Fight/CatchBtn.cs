@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class CatchBtn : MonoBehaviour
 {
-
+    [SerializeField] SingleFightManager singleManager;
     void Start()
     {
         
@@ -21,9 +21,13 @@ public class CatchBtn : MonoBehaviour
         
         bool catchCheck = _FightManager.Instance.EnemyPokemon.catchCheck();
 
-        if (catchCheck) 
+        if (catchCheck)
         {
-            
+            singleManager.CatchPokemonTrue();
+        }
+        else
+        {
+            singleManager.CatchPokemonFalse();
         }
     }
 }

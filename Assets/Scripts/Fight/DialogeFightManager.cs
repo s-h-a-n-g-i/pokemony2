@@ -40,22 +40,30 @@ public class DialogeFightManager : MonoBehaviour
         //_NPCManager.Instance.NPCInBattle = "";
     }
 
+
+
+
+
+
+
+
     public IEnumerator DialogeShow(string textToEnter)
     {
         dialogeText.text = "";
         dialogeFinished = false;
-        textToEnter.Replace("<b>", "|");
-        textToEnter.Replace("</b>", ";");
+        textToEnter = textToEnter.Replace("<b>", "|");
+        textToEnter = textToEnter.Replace("</b>", ";");
+        //Debug.Log(textToEnter);
 
         for (int i = 0; i < textToEnter.Length; i++) 
         {
             switch (textToEnter[i]) 
             {
                 case '|':
-                    dialogeText.text += "BOLD";
+                    dialogeText.text += "<b>";
                     break;
                 case ';':
-                    dialogeText.text += "BOLDnT";
+                    dialogeText.text += "</b>";
                     break;
                 default:
                     dialogeText.text += textToEnter[i];
@@ -77,7 +85,27 @@ public class DialogeFightManager : MonoBehaviour
 
         yield return StartCoroutine(DialogeShow("<b>" + nameDefeated + "</b> has been defeated!"));
 
+        yield return StartCoroutine(AddLevelUps());
 
+        SceneManager.LoadScene(PlayerSave.Instance._sceneName);
+    }
+
+
+    public IEnumerator PokemonCaught()
+    {
+        dialogeWindow.SetActive(true);
+
+        yield return StartCoroutine(DialogeShow("<b>" + _FightManager.Instance.EnemyPokemon + "</b> has been caught!"));
+
+        yield return StartCoroutine(AddLevelUps());
+
+        SceneManager.LoadScene(PlayerSave.Instance._sceneName);
+    }
+
+
+
+    private IEnumerator AddLevelUps() 
+    {
         List<Pokemon> pokemonsInFight = new List<Pokemon>();
         for (int i = 0; i < _PokemonEQ.Instance.pokemonUsedInFight.Count; i++)
             pokemonsInFight.Add(_PokemonEQ.Instance.EqPokemons[_PokemonEQ.Instance.pokemonUsedInFight[i]]);
@@ -92,7 +120,7 @@ public class DialogeFightManager : MonoBehaviour
             {
                 ChosenNewAttack = true;
                 p.LvLUp();
-                
+
 
                 yield return StartCoroutine(DialogeShow("<b>" + p.PokemonNameOut() + " Leveled UP!"));
 
@@ -101,7 +129,7 @@ public class DialogeFightManager : MonoBehaviour
                     yield return StartCoroutine(DialogeShow("<b>" + p.PokemonNameOut() + " EVOLVED!"));
                     p.Evolution();
                     fightSystemManager.setUpMyPokemon();
-                    yield return StartCoroutine(DialogeShow("<b>"+p.PokemonNameOut() + " IS NEW EVOLUTION!"));
+                    yield return StartCoroutine(DialogeShow("<b>" + p.PokemonNameOut() + " IS NEW EVOLUTION!"));
                 }
                 Attack newAttack = p.CheckForAttacksAdded();
                 if (newAttack != null)
@@ -115,15 +143,14 @@ public class DialogeFightManager : MonoBehaviour
                     {
                         ChosenNewAttack = false;
                         yield return StartCoroutine(DialogeShow(p.PokemonNameOut() + " LEARNED NEW ATTACK: <b>" + newAttack.attackName + "</b>"));
-                        attackSwap.FullyAttackSwap(p,newAttack);
+                        attackSwap.FullyAttackSwap(p, newAttack);
                         yield return new WaitUntil(() => ChosenNewAttack);
                     }
                 }
             }
         }
-
-        SceneManager.LoadScene(PlayerSave.Instance._sceneName);
     }
+
 
     private void GiveXPToPokemonsFromTrainer(Pokemon pokemon)
     {
@@ -133,13 +160,13 @@ public class DialogeFightManager : MonoBehaviour
 
 
     ////////////// CALA SEKWENCJA ATAKU OBU POKEMONOW
-    public IEnumerator PokemonFightCutscene(Pokemon firstPokemon, Attack firstAttack, Pokemon secondPokemon, Attack secondAttack, bool changedPokemon = false)
+    public IEnumerator PokemonFightCutscene(Pokemon firstPokemon, Attack firstAttack, Pokemon secondPokemon, Attack secondAttack, string dialogeSkipTurn = "")
     {
 
         dialogeWindow.SetActive(true);
 
 
-        if (!changedPokemon)
+        if (dialogeSkipTurn == "")
         {
             var atk1 = firstAttack.getDamage(firstPokemon, secondPokemon);
 
@@ -147,7 +174,7 @@ public class DialogeFightManager : MonoBehaviour
                 ProvideAttack(firstPokemon, firstAttack, secondPokemon, atk1.Item1, atk1.Item2)));
         }
         else
-            yield return StartCoroutine(DialogeShow("Pokemon changed to <b>" + firstPokemon.PokemonNameOut() + "</b>"));
+            yield return StartCoroutine(DialogeShow(dialogeSkipTurn));
 
 
 

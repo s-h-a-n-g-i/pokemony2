@@ -27,6 +27,14 @@ public class FightSystemManager : MonoBehaviour
             trainerFight.enabled = false;
         _PokemonEQ.Instance.pokemonUsedInFight.Clear();
         _PokemonEQ.Instance.pokemonUsedInFight.Add(0);
+        for (int i = 0; i < _PokemonEQ.Instance.EqPokemons.Length; i++) 
+        {
+            if (_PokemonEQ.Instance.EqPokemons[i].hp > 0) 
+            {
+                chosenPokemonPlayer = i;
+                break;
+            }
+        }
         setUpMyPokemon();
     }
 
@@ -37,7 +45,7 @@ public class FightSystemManager : MonoBehaviour
 
     public void setUpMyPokemon()
     {
-        if (_PokemonEQ.Instance.ActivePokemon != _PokemonEQ.Instance.EqPokemons[chosenPokemonPlayer]) 
+        if (_PokemonEQ.Instance.ActivePokemon != _PokemonEQ.Instance.EqPokemons[chosenPokemonPlayer])
         {
             _PokemonEQ.Instance.ActivePokemon = _PokemonEQ.Instance.EqPokemons[chosenPokemonPlayer];
         }

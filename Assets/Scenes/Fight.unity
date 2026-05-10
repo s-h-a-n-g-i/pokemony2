@@ -1237,7 +1237,7 @@ MonoBehaviour:
   PokemonNameText: {fileID: 243551137}
   fightSystemManager: {fileID: 1666646634}
   trainerManager: {fileID: 1666646636}
-  singleManager: {fileID: 0}
+  singleManager: {fileID: 1666646637}
   pokemonCounter: 1
 --- !u!1 &389264274
 GameObject:
@@ -2640,6 +2640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10713bbc616b83e439a07d8673162b80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CatchBtn
+  singleManager: {fileID: 1666646637}
 --- !u!1 &672855409
 GameObject:
   m_ObjectHideFlags: 0
@@ -4411,7 +4412,7 @@ MonoBehaviour:
   PokemonNameText: {fileID: 1890989772}
   fightSystemManager: {fileID: 1666646634}
   trainerManager: {fileID: 1666646636}
-  singleManager: {fileID: 0}
+  singleManager: {fileID: 1666646637}
   pokemonCounter: 4
 --- !u!1 &1208839677
 GameObject:
@@ -4780,7 +4781,7 @@ MonoBehaviour:
   PokemonNameText: {fileID: 492346664}
   fightSystemManager: {fileID: 1666646634}
   trainerManager: {fileID: 1666646636}
-  singleManager: {fileID: 0}
+  singleManager: {fileID: 1666646637}
   pokemonCounter: 2
 --- !u!1 &1253888048
 GameObject:
@@ -5545,7 +5546,7 @@ MonoBehaviour:
   PokemonNameText: {fileID: 1147593814}
   fightSystemManager: {fileID: 1666646634}
   trainerManager: {fileID: 1666646636}
-  singleManager: {fileID: 0}
+  singleManager: {fileID: 1666646637}
   pokemonCounter: 0
 --- !u!1 &1490843241
 GameObject:
@@ -6047,7 +6048,7 @@ MonoBehaviour:
   PokemonNameText: {fileID: 647305450}
   fightSystemManager: {fileID: 1666646634}
   trainerManager: {fileID: 1666646636}
-  singleManager: {fileID: 0}
+  singleManager: {fileID: 1666646637}
   pokemonCounter: 3
 --- !u!1 &1621696624
 GameObject:

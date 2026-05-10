@@ -8,7 +8,12 @@ public class TestInteract : MonoBehaviour
     }
     public void AddXp(int xp)
     {
-        _PokemonEQ.Instance.EqPokemons[0].xp+=xp;
+        _PokemonEQ.Instance.EqPokemons[0].xp += xp;
+        Debug.Log("Added XP:" + xp);
+    }
+    public void AddXpNdPokemon(int xp)
+    {
+        _PokemonEQ.Instance.EqPokemons[1].xp += xp;
         Debug.Log("Added XP:" + xp);
     }
 

@@ -341,6 +341,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: sign_11
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08dc47c68890ba44ea95b990f23d6728
+      internalID: 1891019041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -362,6 +384,7 @@ TextureImporter:
       sign_0: 7168540986364394743
       sign_1: -1638403756
       sign_10: -1058654879
+      sign_11: 1891019041
       sign_2: 1085198608
       sign_3: -166679199
       sign_4: 425393121

@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 7555e267daf5ab243a736a5c4e20b30e
+guid: c1b98695999becf41b5d6632917a23c0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7080945376844240261
-    second: rocks-export_0
-  - first:
-      213: 3211079622626296282
-    second: rocks-export_1
+      213: 7168540986364394743
+    second: sign_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,11 +100,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rocks-export_0
+      name: sign_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -118,14 +115,102 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b7a214b32bd6bbd90800000000000000
-      internalID: -7080945376844240261
+      spriteID: 7fcf31aeb06cb7360800000000000000
+      internalID: 7168540986364394743
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rocks-export_1
+      name: sign_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0134d709ea121a4ea7fab334526127f
+      internalID: -1638403756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sign_2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 665970ec12470bb499bbd97e20aab3d7
+      internalID: 1085198608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sign_3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1d31668f8a57fe479dea33173213374
+      internalID: -166679199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sign_4
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 988fdd9f377fd2e4cab298eeb9eb9047
+      internalID: 425393121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sign_5
       rect:
         serializedVersion: 2
         x: 16
@@ -138,20 +223,20 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ad1c22c57eb009c20800000000000000
-      internalID: 3211079622626296282
+      spriteID: b6b10d1542c2c8b4f9f8c4eb2f7cd352
+      internalID: 688333538
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rocks-export_2
+      name: sign_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 32
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -162,14 +247,36 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 961f5abc96cffa5449c5918c8399beae
-      internalID: -2032272896
+      spriteID: c4169f3a147ba5d4890cf650aab1a616
+      internalID: -739800249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rocks-export_3
+      name: sign_7
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798d6868edceffc489c268de5cab01c8
+      internalID: -1211621104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sign_8
       rect:
         serializedVersion: 2
         x: 16
@@ -184,14 +291,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5797cc07152ec3c49ad13fba5c1c42bb
-      internalID: 1121669168
+      spriteID: b02439434e4ab724aab041f4f05d030d
+      internalID: -448753522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rocks-export_4
+      name: sign_9
       rect:
         serializedVersion: 2
         x: 32
@@ -206,14 +313,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1a55711ea805ba41ae6f7b272d3dd42
-      internalID: -1093769064
+      spriteID: 9fadde5978526a046b92beb3c8353608
+      internalID: -29940336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rocks-export_5
+      name: sign_10
       rect:
         serializedVersion: 2
         x: 48
@@ -228,8 +335,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8e1c29b9e47f2240adc0b4b85b9bc2e
-      internalID: -630886974
+      spriteID: 3625b6c7e72bd964ca978783417d04da
+      internalID: -1058654879
       vertices: []
       indices: 
       edges: []
@@ -238,7 +345,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1c9c7ac6f8043f6439e5f62507a72099
+    spriteID: c212bdcd66e3c06469e161ada4365b5f
     internalID: 0
     vertices: []
     indices: 
@@ -247,15 +354,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries:
+      - key: SpriteEditor.SliceOnImport
+        value: False
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      rocks-export_0: -7080945376844240261
-      rocks-export_1: 3211079622626296282
-      rocks-export_2: -2032272896
-      rocks-export_3: 1121669168
-      rocks-export_4: -1093769064
-      rocks-export_5: -630886974
+      sign_0: 7168540986364394743
+      sign_1: -1638403756
+      sign_10: -1058654879
+      sign_2: 1085198608
+      sign_3: -166679199
+      sign_4: 425393121
+      sign_5: 688333538
+      sign_6: -739800249
+      sign_7: -1211621104
+      sign_8: -448753522
+      sign_9: -29940336
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

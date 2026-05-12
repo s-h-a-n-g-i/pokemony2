@@ -57,6 +57,8 @@ public class SingleFightManager : MonoBehaviour
             StartCoroutine(dialogeManager.PokemonFightCutscene(_FightManager.Instance.EnemyPokemon, enemyAttack, _PokemonEQ.Instance.ActivePokemon, playerPokemon.AttacksActive[playerAttackCounter]));
 
     }
+
+    //////////////////////////LAPANIE POKEMONOW!!!!
     public void ChangePokemon()
     {
         FinishedBattle = false;

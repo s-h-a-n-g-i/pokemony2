@@ -962,7 +962,9 @@ MonoBehaviour:
     wasInFight: 0
     effects: 0
   AllHavePokemons: []
+  LevelingUpPokemon: 0
   pokemonUsedInFight: 
+  IsAllPokemonAlive: 1
 --- !u!114 &869259369
 MonoBehaviour:
   m_ObjectHideFlags: 0

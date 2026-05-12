@@ -25,6 +25,9 @@ public class DialogeFightManager : MonoBehaviour
     [HideInInspector] public bool canPlayNextDialoge = true;
 
     [HideInInspector] public bool ChosenNewAttack = true;
+
+    private float speedwagon = 0.05f;
+
     void Start()
     {
         attackSwap = GetComponent<AttackSwapToNew>();
@@ -36,6 +39,11 @@ public class DialogeFightManager : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Z)) 
+        {
+            speedwagon = 0;
+        }
+
         //_NPCManager.Instance.GetComponent<_NPCManager>().NPCInBattle = "sperma";
         //_NPCManager.Instance.NPCInBattle = "";
     }
@@ -49,8 +57,10 @@ public class DialogeFightManager : MonoBehaviour
 
     public IEnumerator DialogeShow(string textToEnter)
     {
+        speedwagon = 0.05f;
         dialogeText.text = "";
         dialogeFinished = false;
+        string oryginal = textToEnter;
         textToEnter = textToEnter.Replace("<b>", "|");
         textToEnter = textToEnter.Replace("</b>", ";");
         //Debug.Log(textToEnter);
@@ -70,8 +80,12 @@ public class DialogeFightManager : MonoBehaviour
                     break;
             }
 
-            yield return new WaitForSeconds(0.05f);
-
+            yield return new WaitForSeconds(speedwagon);
+            if (speedwagon == 0)
+            {
+                dialogeText.text = oryginal;
+                break;
+            }
         }
 
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z));
@@ -89,7 +103,15 @@ public class DialogeFightManager : MonoBehaviour
 
         SceneManager.LoadScene(PlayerSave.Instance._sceneName);
     }
+    public IEnumerator AllPokemonPlayerDead()
+    {
+        dialogeWindow.SetActive(true);
 
+        yield return StartCoroutine(DialogeShow("<b> You </b> has been defeated!"));
+
+
+        SceneManager.LoadScene(PlayerSave.Instance._sceneName);
+    }
 
     public IEnumerator PokemonCaught()
     {
@@ -187,9 +209,10 @@ public class DialogeFightManager : MonoBehaviour
             yield return StartCoroutine(DialogeShow(
                 ProvideAttack(secondPokemon, secondAttack, firstPokemon, atk2.Item1, atk2.Item2)));
 
+            
         }
 
-        if (secondPokemon.hp != 0)
+        if (secondPokemon == _PokemonEQ.Instance.ActivePokemon || (secondPokemon != _PokemonEQ.Instance.ActivePokemon && secondPokemon.hp != 0))
             dialogeWindow.SetActive(false);
         if (_NPCManager.Instance.isItTrainer)
             trainerManager.FinishedBattle = true;

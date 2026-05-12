@@ -27,7 +27,7 @@ public class Bushes : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject == player)
+        if (collision.gameObject == player && _PokemonEQ.Instance.IsAllPokemonAlive)
             if (Random.Range(0, 100) < chanceToDrop)
             { 
                 Pokemon s = GetRandomPokemon();

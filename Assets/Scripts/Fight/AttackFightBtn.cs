@@ -27,7 +27,7 @@ public class AttackFightBtn : MonoBehaviour
         string s = "None";
         bool canpress = false;
         if (attack != null)
-            if (attack.attackName != "None")
+            if (attack.attackName != "None" )
             {
                 if (attack.pp > 0)
                 {
@@ -35,9 +35,9 @@ public class AttackFightBtn : MonoBehaviour
                 }
                 else 
                 {
-                    canpress = true;
+                    canpress = false;
                 }
-                s = attack.attackName + " (" + attack.maxPp + "/" + attack.pp + ")";
+                s = attack.attackName + " (" + attack.pp + "/" + attack.maxPp + ")";
             }
         btn.interactable = canpress;
         AttackNameText.text = s;

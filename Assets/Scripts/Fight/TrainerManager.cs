@@ -18,7 +18,8 @@ public class TrainerManager : MonoBehaviour
 
     public int chosenPokemon = 0;
 
-    [HideInInspector] public bool FinishedBattle = true;
+    //[HideInInspector] 
+    public bool FinishedBattle = true;
 
     void Start()
     {
@@ -41,6 +42,7 @@ public class TrainerManager : MonoBehaviour
             {
                 //Debug.Log(chosenPokemon);
                 //_PokemonEQ.Instance.ActivePokemon.giveXP(_NPCManager.Instance.TrainerPokemons[chosenPokemon].level);
+                FinishedBattle = false;
                 PokemonTrainerCounter[chosenPokemon].SetActive(false);
                 chosenPokemon++;
                 dialogeManager.StartCoroutine(dialogeManager.DialogeShow(_NPCManager.Instance.name + " changed creature to <b>" + _NPCManager.Instance.TrainerPokemons[chosenPokemon].basicName + "</b>"));
@@ -105,6 +107,7 @@ public class TrainerManager : MonoBehaviour
 
     public void ChangePokemon()
     {
+        FinishedBattle = false;
         Pokemon playerPokemon = _PokemonEQ.Instance.ActivePokemon;
 
         Pokemon enemyPokemon = _NPCManager.Instance.TrainerPokemons[chosenPokemon];

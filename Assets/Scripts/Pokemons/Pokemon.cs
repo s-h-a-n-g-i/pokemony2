@@ -219,14 +219,14 @@ public class Pokemon
         switch (evoState)
         {
             case 1:
-                basicName = basicNameEvo1;
-                if (nickname != basicName)
+                if (nickname == basicName)
                     nickname = basicNameEvo1;
+                basicName = basicNameEvo1;
                 image = E1image;
                 break;
             case 2:
                 basicName = basicNameEvo2;
-                if (nickname != basicNameEvo1)
+                if (nickname == basicNameEvo1)
                     nickname = basicNameEvo2;
                 image = E2image;
                 break;

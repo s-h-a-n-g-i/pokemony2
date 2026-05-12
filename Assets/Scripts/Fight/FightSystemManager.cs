@@ -15,13 +15,16 @@ public class FightSystemManager : MonoBehaviour
     [Header("Managers")]
     [SerializeField] private SingleFightManager singleFight;
     [SerializeField] private TrainerManager trainerFight;
-
+    private DialogeFightManager dialogeFightManager;
 
     public int chosenPokemonPlayer = 0;
 
+    private bool checkDeadOnce = true;
+
     private void Start()
     {
-        if(_NPCManager.Instance.isItTrainer)
+        dialogeFightManager = GetComponent<DialogeFightManager>();
+        if (_NPCManager.Instance.isItTrainer)
             singleFight.enabled = false;
         else
             trainerFight.enabled = false;
@@ -40,8 +43,33 @@ public class FightSystemManager : MonoBehaviour
 
     void Update()
     {
+        myPokemonCheckForDead();
+        //Debug.Log(trainerFight.FinishedBattle);
+    }
+
+
+    private void myPokemonCheckForDead()
+    {
+        if (_NPCManager.Instance.isItTrainer)
+            if(trainerFight.FinishedBattle)
+                checkDeadPkmn();
+        
+        else if(singleFight.FinishedBattle)
+                checkDeadPkmn();
 
     }
+
+    private void checkDeadPkmn() 
+    {
+        if (!_PokemonEQ.Instance.IsAllPokemonAlive && checkDeadOnce) 
+        {
+            Debug.Log("kurwanigger");
+            checkDeadOnce = false;
+            dialogeFightManager.StopAllCoroutines();
+            StartCoroutine(dialogeFightManager.AllPokemonPlayerDead());
+        }
+    }
+
 
     public void setUpMyPokemon()
     {
@@ -61,6 +89,5 @@ public class FightSystemManager : MonoBehaviour
         else
             singleFight.Attack(playerAttackCounter);
     }
-
 
 }

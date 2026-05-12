@@ -10,14 +10,17 @@ public class DeadPokemonOptions : MonoBehaviour
     [SerializeField] private Sprite image;
     [SerializeField] private Button attackBtn;
     [SerializeField] private Button chosePokemon;
-    //private bool checkOnce = false;
+    //private bool checkOnce = true;
+    DialogeFightManager dialogeManager;
+    FightSystemManager fight;
+    
     void Start()
     {
-        
     }
 
     void Update()
     {
+
         if (_PokemonEQ.Instance.ActivePokemon.hp == 0)
         {
             attackBtn.interactable = false;
@@ -29,4 +32,5 @@ public class DeadPokemonOptions : MonoBehaviour
             attackBtn.interactable = true;
         }
     }
+
 }

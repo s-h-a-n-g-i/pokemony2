@@ -147,8 +147,8 @@ TextureImporter:
       name: sign_2
       rect:
         serializedVersion: 2
-        x: 16
-        y: 32
+        x: 32
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -169,7 +169,7 @@ TextureImporter:
       name: sign_3
       rect:
         serializedVersion: 2
-        x: 32
+        x: 0
         y: 32
         width: 16
         height: 16
@@ -191,7 +191,7 @@ TextureImporter:
       name: sign_4
       rect:
         serializedVersion: 2
-        x: 48
+        x: 16
         y: 32
         width: 16
         height: 16
@@ -213,8 +213,8 @@ TextureImporter:
       name: sign_5
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
+        x: 32
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -235,8 +235,8 @@ TextureImporter:
       name: sign_6
       rect:
         serializedVersion: 2
-        x: 32
-        y: 16
+        x: 48
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -257,7 +257,7 @@ TextureImporter:
       name: sign_7
       rect:
         serializedVersion: 2
-        x: 48
+        x: 0
         y: 16
         width: 16
         height: 16
@@ -280,7 +280,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 0
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -302,7 +302,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 0
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -324,7 +324,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 0
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -345,12 +345,12 @@ TextureImporter:
       name: sign_11
       rect:
         serializedVersion: 2
-        x: 32
-        y: 48
+        x: 0
+        y: 0
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -359,6 +359,72 @@ TextureImporter:
       bones: []
       spriteID: 08dc47c68890ba44ea95b990f23d6728
       internalID: 1891019041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sign_12
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f637459ddd829304993e984119475b5b
+      internalID: -203548830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sign_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 295577dab1160b94e84b2aef06835820
+      internalID: 562734839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sign_14
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8efcd6eb1c401f4ea0df312c8a9c69b
+      internalID: -661042990
       vertices: []
       indices: 
       edges: []
@@ -385,6 +451,9 @@ TextureImporter:
       sign_1: -1638403756
       sign_10: -1058654879
       sign_11: 1891019041
+      sign_12: -203548830
+      sign_13: 562734839
+      sign_14: -661042990
       sign_2: 1085198608
       sign_3: -166679199
       sign_4: 425393121

@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 9a09845364546ee42b522c497228d619
+guid: cc8e7d9c81227f64abbe3ffd2d4037ac
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3480991264470612035
-    second: flying 1_0
+      213: -597293622536701203
+    second: angul_0
   - first:
-      213: 9162105567859111498
-    second: flying 1_1
+      213: 5056541522630077056
+    second: angul_1
+  - first:
+      213: -5598596643616713772
+    second: angul_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,7 +106,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: flying 1_0
+      name: angul_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,30 +121,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3483209ac17fe4030800000000000000
-      internalID: 3480991264470612035
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: flying 1_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a46fed69876562f70800000000000000
-      internalID: 9162105567859111498
+      spriteID: deaf71a6d9cf5b7f0800000000000000
+      internalID: -597293622536701203
       vertices: []
       indices: 
       edges: []
@@ -150,7 +131,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7aba58e4fab927344b7cfe7fd68db5d2
+    spriteID: 753cca88e76602747b6e5ca7bea6b279
     internalID: 0
     vertices: []
     indices: 
@@ -162,8 +143,7 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      flying 1_0: 3480991264470612035
-      flying 1_1: 9162105567859111498
+      angul_0: -597293622536701203
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

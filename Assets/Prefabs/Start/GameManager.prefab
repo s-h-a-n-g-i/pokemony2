@@ -1,0 +1,609 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8680908749133586902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1119126363016360061}
+  - component: {fileID: 5791508060148053161}
+  - component: {fileID: 7936279451543281469}
+  - component: {fileID: 5117332786158359995}
+  - component: {fileID: 1196531014385572423}
+  - component: {fileID: 6847963151728778339}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1119126363016360061
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8680908749133586902}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.56538, y: 2.04404, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5791508060148053161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8680908749133586902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13e7d2d8dfe4feb40999d272c6b0e790, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_NPCManager
+  NPCInBattle: 
+  TrainerChosenPokemon: 0
+  TrainerPokemons:
+  - pokemonLevelStarted: 0
+    basicName: 
+    nickname: 
+    evoState: 0
+    image: {fileID: 0}
+    type: 0
+    type2: 0
+    basicNameEvo1: 
+    E1image: {fileID: 0}
+    evoLevel1: 0
+    E1type: 0
+    E1type2: 0
+    basicNameEvo2: 
+    E2image: {fileID: 0}
+    evoLevel2: 0
+    E2type: 0
+    E2type2: 0
+    hp: 0
+    maxHp: 0
+    atk: 0
+    def: 0
+    sDef: 0
+    sAtk: 0
+    speed: 0
+    xp: 0
+    hpIV: 0
+    atkIV: 0
+    defIV: 0
+    sDefIV: 0
+    sAtkIV: 0
+    speedIV: 0
+    atkX: 0
+    defX: 0
+    sDefX: 0
+    sAtkX: 0
+    speedX: 0
+    level: 0
+    flying: 0
+    xpToNextLevel: 0
+    wasInFight: 0
+    effects: 0
+  - pokemonLevelStarted: 0
+    basicName: 
+    nickname: 
+    evoState: 0
+    image: {fileID: 0}
+    type: 0
+    type2: 0
+    basicNameEvo1: 
+    E1image: {fileID: 0}
+    evoLevel1: 0
+    E1type: 0
+    E1type2: 0
+    basicNameEvo2: 
+    E2image: {fileID: 0}
+    evoLevel2: 0
+    E2type: 0
+    E2type2: 0
+    hp: 0
+    maxHp: 0
+    atk: 0
+    def: 0
+    sDef: 0
+    sAtk: 0
+    speed: 0
+    xp: 0
+    hpIV: 0
+    atkIV: 0
+    defIV: 0
+    sDefIV: 0
+    sAtkIV: 0
+    speedIV: 0
+    atkX: 0
+    defX: 0
+    sDefX: 0
+    sAtkX: 0
+    speedX: 0
+    level: 0
+    flying: 0
+    xpToNextLevel: 0
+    wasInFight: 0
+    effects: 0
+  - pokemonLevelStarted: 0
+    basicName: 
+    nickname: 
+    evoState: 0
+    image: {fileID: 0}
+    type: 0
+    type2: 0
+    basicNameEvo1: 
+    E1image: {fileID: 0}
+    evoLevel1: 0
+    E1type: 0
+    E1type2: 0
+    basicNameEvo2: 
+    E2image: {fileID: 0}
+    evoLevel2: 0
+    E2type: 0
+    E2type2: 0
+    hp: 0
+    maxHp: 0
+    atk: 0
+    def: 0
+    sDef: 0
+    sAtk: 0
+    speed: 0
+    xp: 0
+    hpIV: 0
+    atkIV: 0
+    defIV: 0
+    sDefIV: 0
+    sAtkIV: 0
+    speedIV: 0
+    atkX: 0
+    defX: 0
+    sDefX: 0
+    sAtkX: 0
+    speedX: 0
+    level: 0
+    flying: 0
+    xpToNextLevel: 0
+    wasInFight: 0
+    effects: 0
+  - pokemonLevelStarted: 0
+    basicName: 
+    nickname: 
+    evoState: 0
+    image: {fileID: 0}
+    type: 0
+    type2: 0
+    basicNameEvo1: 
+    E1image: {fileID: 0}
+    evoLevel1: 0
+    E1type: 0
+    E1type2: 0
+    basicNameEvo2: 
+    E2image: {fileID: 0}
+    evoLevel2: 0
+    E2type: 0
+    E2type2: 0
+    hp: 0
+    maxHp: 0
+    atk: 0
+    def: 0
+    sDef: 0
+    sAtk: 0
+    speed: 0
+    xp: 0
+    hpIV: 0
+    atkIV: 0
+    defIV: 0
+    sDefIV: 0
+    sAtkIV: 0
+    speedIV: 0
+    atkX: 0
+    defX: 0
+    sDefX: 0
+    sAtkX: 0
+    speedX: 0
+    level: 0
+    flying: 0
+    xpToNextLevel: 0
+    wasInFight: 0
+    effects: 0
+  - pokemonLevelStarted: 0
+    basicName: 
+    nickname: 
+    evoState: 0
+    image: {fileID: 0}
+    type: 0
+    type2: 0
+    basicNameEvo1: 
+    E1image: {fileID: 0}
+    evoLevel1: 0
+    E1type: 0
+    E1type2: 0
+    basicNameEvo2: 
+    E2image: {fileID: 0}
+    evoLevel2: 0
+    E2type: 0
+    E2type2: 0
+    hp: 0
+    maxHp: 0
+    atk: 0
+    def: 0
+    sDef: 0
+    sAtk: 0
+    speed: 0
+    xp: 0
+    hpIV: 0
+    atkIV: 0
+    defIV: 0
+    sDefIV: 0
+    sAtkIV: 0
+    speedIV: 0
+    atkX: 0
+    defX: 0
+    sDefX: 0
+    sAtkX: 0
+    speedX: 0
+    level: 0
+    flying: 0
+    xpToNextLevel: 0
+    wasInFight: 0
+    effects: 0
+  isItTrainer: 0
+  TrainerName: 
+--- !u!114 &7936279451543281469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8680908749133586902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c33472283d7d04585db01a98403510, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_FightManager
+  EnemyPokemon:
+    pokemonLevelStarted: 0
+    basicName: 
+    nickname: 
+    evoState: 0
+    image: {fileID: 0}
+    type: 0
+    type2: 0
+    basicNameEvo1: 
+    E1image: {fileID: 0}
+    evoLevel1: 0
+    E1type: 0
+    E1type2: 0
+    basicNameEvo2: 
+    E2image: {fileID: 0}
+    evoLevel2: 0
+    E2type: 0
+    E2type2: 0
+    hp: 0
+    maxHp: 0
+    atk: 0
+    def: 0
+    sDef: 0
+    sAtk: 0
+    speed: 0
+    xp: 0
+    hpIV: 0
+    atkIV: 0
+    defIV: 0
+    sDefIV: 0
+    sAtkIV: 0
+    speedIV: 0
+    atkX: 0
+    defX: 0
+    sDefX: 0
+    sAtkX: 0
+    speedX: 0
+    level: 0
+    flying: 0
+    xpToNextLevel: 0
+    wasInFight: 0
+    effects: 0
+--- !u!114 &5117332786158359995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8680908749133586902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5bc4e2cfa211ef48bbb4cb9851614ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_PokemonEQ
+  ActivePokemon:
+    pokemonLevelStarted: 0
+    basicName: 
+    nickname: 
+    evoState: 0
+    image: {fileID: 0}
+    type: 0
+    type2: 0
+    basicNameEvo1: 
+    E1image: {fileID: 0}
+    evoLevel1: 0
+    E1type: 0
+    E1type2: 0
+    basicNameEvo2: 
+    E2image: {fileID: 0}
+    evoLevel2: 0
+    E2type: 0
+    E2type2: 0
+    hp: 0
+    maxHp: 0
+    atk: 0
+    def: 0
+    sDef: 0
+    sAtk: 0
+    speed: 0
+    xp: 0
+    hpIV: 0
+    atkIV: 0
+    defIV: 0
+    sDefIV: 0
+    sAtkIV: 0
+    speedIV: 0
+    atkX: 0
+    defX: 0
+    sDefX: 0
+    sAtkX: 0
+    speedX: 0
+    level: 0
+    flying: 0
+    xpToNextLevel: 0
+    wasInFight: 0
+    effects: 0
+  EqPokemons:
+  - pokemonLevelStarted: 0
+    basicName: 
+    nickname: 
+    evoState: 0
+    image: {fileID: 0}
+    type: 0
+    type2: 0
+    basicNameEvo1: 
+    E1image: {fileID: 0}
+    evoLevel1: 0
+    E1type: 0
+    E1type2: 0
+    basicNameEvo2: 
+    E2image: {fileID: 0}
+    evoLevel2: 0
+    E2type: 0
+    E2type2: 0
+    hp: 0
+    maxHp: 0
+    atk: 0
+    def: 0
+    sDef: 0
+    sAtk: 0
+    speed: 0
+    xp: 0
+    hpIV: 0
+    atkIV: 0
+    defIV: 0
+    sDefIV: 0
+    sAtkIV: 0
+    speedIV: 0
+    atkX: 0
+    defX: 0
+    sDefX: 0
+    sAtkX: 0
+    speedX: 0
+    level: 0
+    flying: 0
+    xpToNextLevel: 0
+    wasInFight: 0
+    effects: 0
+  - pokemonLevelStarted: 0
+    basicName: 
+    nickname: 
+    evoState: 0
+    image: {fileID: 0}
+    type: 0
+    type2: 0
+    basicNameEvo1: 
+    E1image: {fileID: 0}
+    evoLevel1: 0
+    E1type: 0
+    E1type2: 0
+    basicNameEvo2: 
+    E2image: {fileID: 0}
+    evoLevel2: 0
+    E2type: 0
+    E2type2: 0
+    hp: 0
+    maxHp: 0
+    atk: 0
+    def: 0
+    sDef: 0
+    sAtk: 0
+    speed: 0
+    xp: 0
+    hpIV: 0
+    atkIV: 0
+    defIV: 0
+    sDefIV: 0
+    sAtkIV: 0
+    speedIV: 0
+    atkX: 0
+    defX: 0
+    sDefX: 0
+    sAtkX: 0
+    speedX: 0
+    level: 0
+    flying: 0
+    xpToNextLevel: 0
+    wasInFight: 0
+    effects: 0
+  - pokemonLevelStarted: 0
+    basicName: 
+    nickname: 
+    evoState: 0
+    image: {fileID: 0}
+    type: 0
+    type2: 0
+    basicNameEvo1: 
+    E1image: {fileID: 0}
+    evoLevel1: 0
+    E1type: 0
+    E1type2: 0
+    basicNameEvo2: 
+    E2image: {fileID: 0}
+    evoLevel2: 0
+    E2type: 0
+    E2type2: 0
+    hp: 0
+    maxHp: 0
+    atk: 0
+    def: 0
+    sDef: 0
+    sAtk: 0
+    speed: 0
+    xp: 0
+    hpIV: 0
+    atkIV: 0
+    defIV: 0
+    sDefIV: 0
+    sAtkIV: 0
+    speedIV: 0
+    atkX: 0
+    defX: 0
+    sDefX: 0
+    sAtkX: 0
+    speedX: 0
+    level: 0
+    flying: 0
+    xpToNextLevel: 0
+    wasInFight: 0
+    effects: 0
+  - pokemonLevelStarted: 0
+    basicName: 
+    nickname: 
+    evoState: 0
+    image: {fileID: 0}
+    type: 0
+    type2: 0
+    basicNameEvo1: 
+    E1image: {fileID: 0}
+    evoLevel1: 0
+    E1type: 0
+    E1type2: 0
+    basicNameEvo2: 
+    E2image: {fileID: 0}
+    evoLevel2: 0
+    E2type: 0
+    E2type2: 0
+    hp: 0
+    maxHp: 0
+    atk: 0
+    def: 0
+    sDef: 0
+    sAtk: 0
+    speed: 0
+    xp: 0
+    hpIV: 0
+    atkIV: 0
+    defIV: 0
+    sDefIV: 0
+    sAtkIV: 0
+    speedIV: 0
+    atkX: 0
+    defX: 0
+    sDefX: 0
+    sAtkX: 0
+    speedX: 0
+    level: 0
+    flying: 0
+    xpToNextLevel: 0
+    wasInFight: 0
+    effects: 0
+  - pokemonLevelStarted: 0
+    basicName: 
+    nickname: 
+    evoState: 0
+    image: {fileID: 0}
+    type: 0
+    type2: 0
+    basicNameEvo1: 
+    E1image: {fileID: 0}
+    evoLevel1: 0
+    E1type: 0
+    E1type2: 0
+    basicNameEvo2: 
+    E2image: {fileID: 0}
+    evoLevel2: 0
+    E2type: 0
+    E2type2: 0
+    hp: 0
+    maxHp: 0
+    atk: 0
+    def: 0
+    sDef: 0
+    sAtk: 0
+    speed: 0
+    xp: 0
+    hpIV: 0
+    atkIV: 0
+    defIV: 0
+    sDefIV: 0
+    sAtkIV: 0
+    speedIV: 0
+    atkX: 0
+    defX: 0
+    sDefX: 0
+    sAtkX: 0
+    speedX: 0
+    level: 0
+    flying: 0
+    xpToNextLevel: 0
+    wasInFight: 0
+    effects: 0
+  AllHavePokemons: []
+  LevelingUpPokemon: 0
+  pokemonUsedInFight: 
+  IsAllPokemonAlive: 1
+--- !u!114 &1196531014385572423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8680908749133586902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe8caccab0eed804eac7eb3b01258480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerSave
+  placed: 1
+  _playerPosition: {x: 0, y: 0, z: 0}
+  _playerRotation: {x: 0, y: -1}
+  _sceneName: 
+--- !u!114 &6847963151728778339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8680908749133586902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab47bc325dd60114eb596b472cb29726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogeManager
+  dialogeObject: {fileID: 0}
+  dialogeText: {fileID: 0}
+  dialogeFinished: 1

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -35,8 +36,7 @@ public class Bushes : MonoBehaviour
                 _FightManager.Instance.EnemyPokemon = s;
 
                 PlayerSave.Instance.placed = false;
-
-                SceneManager.LoadScene("Fight");
+                StartCoroutine(StartBushFight());
             }
         
     }
@@ -58,5 +58,14 @@ public class Bushes : MonoBehaviour
         }
         return null;
     }
+
+    private IEnumerator StartBushFight() 
+    {
+        player.GetComponent<PlayerMovement>().StopPlayer();
+        yield return StartCoroutine(player.GetComponent<Bobles>().exclBobel());
+        SceneManager.LoadScene("Fight");
+
+    }
+
 
 }

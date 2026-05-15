@@ -12,8 +12,12 @@ public class PlayerMovement : MonoBehaviour
 
     private bool hasRunningShoes = false;
 
+    private GameObject gameManager;
+
     private void Start()
     {
+        gameManager = GameObject.Find("GameManager");
+
         animator = GetComponent<Animator>();
         PlayerSave.Instance._sceneName = SceneManager.GetActiveScene().name;
 
@@ -36,9 +40,20 @@ public class PlayerMovement : MonoBehaviour
         SprintCheck();
         MovementCheck();
         animSet();
-
-
     }
+
+    public void StopPlayer()
+    {
+        canMove = false;
+        animator.SetBool("isWalking", false);
+        StopAllCoroutines();
+    }
+    public void StartPlayer()
+    {
+        canMove = true;
+        StopAllCoroutines();
+    }
+
     private void animSet() 
     {
         animator.SetBool("isWalking", isMoving);

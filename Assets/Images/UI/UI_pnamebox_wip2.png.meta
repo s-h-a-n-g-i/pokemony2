@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: 94533dab1c857e74f8f567bd3eac45ec
+guid: b31648225b9ac7a46b28fde98188a938
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 190816186025448851
-    second: cut_0
+      213: -5879307454503960087
+    second: UI_pnamebox_wip2_0
   - first:
-      213: -6650478569710095083
-    second: cut_1
+      213: -976653652196380959
+    second: UI_pnamebox_wip2_1
+  - first:
+      213: 561348508749532714
+    second: UI_pnamebox_wip2_2
+  - first:
+      213: -6452316422908062411
+    second: UI_pnamebox_wip2_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,10 +81,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
-    resizeAlgorithm: 1
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: 4
-    textureCompression: 3
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,45 +109,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cut_0
+      name: UI_pnamebox_wip2_0
       rect:
         serializedVersion: 2
-        x: 17
+        x: 0
         y: 0
-        width: 30
-        height: 23
+        width: 130
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 39511796f4ae5a200800000000000000
-      internalID: 190816186025448851
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cut_1
-      rect:
-        serializedVersion: 2
-        x: 75
-        y: 0
-        width: 42
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 515f4120af0c4b3a0800000000000000
-      internalID: -6650478569710095083
+      spriteID: 9e14cf02501886ea0800000000000000
+      internalID: -5879307454503960087
       vertices: []
       indices: 
       edges: []
@@ -150,7 +134,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9d2012c8f46b0b24084fbf492b0ce309
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +144,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cut_0: 190816186025448851
-      cut_1: -6650478569710095083
+      UI_pnamebox_wip2_0: -5879307454503960087
+      UI_pnamebox_wip2_1: -976653652196380959
+      UI_pnamebox_wip2_2: 561348508749532714
+      UI_pnamebox_wip2_3: -6452316422908062411
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

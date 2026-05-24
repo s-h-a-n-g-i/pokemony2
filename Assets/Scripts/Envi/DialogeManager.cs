@@ -34,8 +34,12 @@ public class DialogeManager : MonoBehaviour
     private void Update()
     {
         dialogeObject.SetActive(!dialogeFinished);
-    }
 
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            speedwagon = 0;
+        }
+    }
 
     public IEnumerator DialogeShow(string textToEnter)
     {

@@ -2,11 +2,18 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class HealingMonument : MonoBehaviour
+public class I_HealingMonument : MonoBehaviour
 {
     private PlayerMovement playerMovement;
     private Bobles playerBobles;
     DialogeManager dialoge;
+    Interaction interaction;
+
+    private void Start()
+    {
+        interaction = GetComponent<Interaction>();
+    }
+
     public void HealAllPokemons() 
     {
         playerBobles = GameObject.Find("Player").GetComponent<Bobles>();
@@ -22,8 +29,9 @@ public class HealingMonument : MonoBehaviour
     private IEnumerator HealDialoge()
     {
         playerMovement.StopPlayer();
-        playerBobles.loveBobel();
-            yield return StartCoroutine(dialoge.DialogeShow("All Creatures Has been healed!"));
+        yield return StartCoroutine(playerBobles.loveBobel());
+        yield return StartCoroutine(dialoge.DialogeShow("All Creatures Has been healed!"));
         playerMovement.StartPlayer();
+        interaction.canInteract = true;
     }
 }

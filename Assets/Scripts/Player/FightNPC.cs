@@ -65,8 +65,8 @@ public class FightNPC : MonoBehaviour
 
     IEnumerator StartFight() 
     {
-        playerBobles.questBobel();
         playerMovement.StopPlayer();
+        yield return StartCoroutine(playerBobles.questBobel());
         foreach (DialogeLine dialogeLine in dialogeLines)
             yield return StartCoroutine(dialoge.DialogeShow(dialogeLine.whoSayes+": "+dialogeLine.whatSayes));
         SceneManager.LoadScene("Fight");

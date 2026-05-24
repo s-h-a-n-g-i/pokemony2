@@ -7,6 +7,9 @@ public class Interaction : MonoBehaviour
 
     private GameObject player;
     private PlayerMovement playerMovement;
+
+    public bool canInteract = true;
+
     private void Start()
     {
         player = GameObject.Find("Player");
@@ -15,8 +18,9 @@ public class Interaction : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z)) 
+        if (Input.GetKeyDown(KeyCode.Z) && canInteract)
         {
+            canInteract = false;
             RaycastHit2D hit = Physics2D.Raycast(player.transform.position + playerMovement.lastDir / 2, playerMovement.lastDir, 0.2f);
             if (hit)
                 if (hit.collider.gameObject == gameObject)

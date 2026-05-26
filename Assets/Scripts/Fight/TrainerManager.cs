@@ -34,6 +34,11 @@ public class TrainerManager : MonoBehaviour
         setUpEnemyTrainerPokemon();
     }
 
+    public void SetupPokemonAnimation()
+    {
+        dialogeManager.EnemyPokemonDead(_NPCManager.Instance.TrainerPokemons[chosenPokemon].hp <= 0);
+        dialogeManager.EnemyPokemonFly(_NPCManager.Instance.TrainerPokemons[chosenPokemon].flying);
+    }
 
     public void CheckAndSwapTrainer()
     {

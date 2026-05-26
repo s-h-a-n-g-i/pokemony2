@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Poketest1
   m_EditorClassIdentifier: Assembly-CSharp::PokemonSO
   basicName: Evo1
-  flying: 0
+  flying: 1
   image: {fileID: 4226022105378688112, guid: 7e556d564c7080f46a6c03105b8aff44, type: 3}
   type: 2
   type2: 0

@@ -12,6 +12,7 @@ public class FightSystemManager : MonoBehaviour
     [SerializeField] private TMP_Text myPokemonName;
 
 
+
     [Header("Managers")]
     [SerializeField] private SingleFightManager singleFight;
     [SerializeField] private TrainerManager trainerFight;
@@ -44,7 +45,17 @@ public class FightSystemManager : MonoBehaviour
     void Update()
     {
         myPokemonCheckForDead();
+
+        EnemyPokemonSetup();
         //Debug.Log(trainerFight.FinishedBattle);
+    }
+
+    private void EnemyPokemonSetup() 
+    {
+        if (_NPCManager.Instance.isItTrainer)
+            trainerFight.SetupPokemonAnimation();
+        else
+            singleFight.SetupPokemonAnimation();
     }
 
 
@@ -63,7 +74,7 @@ public class FightSystemManager : MonoBehaviour
     {
         if (!_PokemonEQ.Instance.IsAllPokemonAlive && checkDeadOnce) 
         {
-            Debug.Log("kurwanigger");
+            //Debug.Log("kurwanigger");
             checkDeadOnce = false;
             dialogeFightManager.StopAllCoroutines();
             StartCoroutine(dialogeFightManager.AllPokemonPlayerDead());

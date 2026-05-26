@@ -211,6 +211,173 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &150033047
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1119126363016360061, guid: 20eeca76552aa0f44bf5bb71608108da, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 219.86635
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119126363016360061, guid: 20eeca76552aa0f44bf5bb71608108da, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 125.9849
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119126363016360061, guid: 20eeca76552aa0f44bf5bb71608108da, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119126363016360061, guid: 20eeca76552aa0f44bf5bb71608108da, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119126363016360061, guid: 20eeca76552aa0f44bf5bb71608108da, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119126363016360061, guid: 20eeca76552aa0f44bf5bb71608108da, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119126363016360061, guid: 20eeca76552aa0f44bf5bb71608108da, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119126363016360061, guid: 20eeca76552aa0f44bf5bb71608108da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119126363016360061, guid: 20eeca76552aa0f44bf5bb71608108da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119126363016360061, guid: 20eeca76552aa0f44bf5bb71608108da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847963151728778339, guid: 20eeca76552aa0f44bf5bb71608108da, type: 3}
+      propertyPath: dialogeText
+      value: 
+      objectReference: {fileID: 2084702462}
+    - target: {fileID: 6847963151728778339, guid: 20eeca76552aa0f44bf5bb71608108da, type: 3}
+      propertyPath: dialogeObject
+      value: 
+      objectReference: {fileID: 232711550}
+    - target: {fileID: 8680908749133586902, guid: 20eeca76552aa0f44bf5bb71608108da, type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 20eeca76552aa0f44bf5bb71608108da, type: 3}
+--- !u!1 &232711550 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3780228846294544882, guid: d205a00590f88e44e860b60779db3038, type: 3}
+  m_PrefabInstance: {fileID: 233862842}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &233862842
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3780228846294544882, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_Name
+      value: DialogeCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325382764650001018, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325382764650001018, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325382764650001018, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325382764650001018, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325382764650001018, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325382764650001018, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325382764650001018, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325382764650001018, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325382764650001018, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325382764650001018, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325382764650001018, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325382764650001018, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325382764650001018, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325382764650001018, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325382764650001018, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325382764650001018, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325382764650001018, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325382764650001018, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325382764650001018, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4325382764650001018, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d205a00590f88e44e860b60779db3038, type: 3}
 --- !u!1 &389367242
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,593 +515,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389367242}
   m_CullTransparentMesh: 1
---- !u!1 &603897386
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 603897390}
-  - component: {fileID: 603897389}
-  - component: {fileID: 603897388}
-  - component: {fileID: 603897387}
-  - component: {fileID: 603897391}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &603897387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 603897386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5bc4e2cfa211ef48bbb4cb9851614ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_PokemonEQ
-  ActivePokemon:
-    pokemonLevelStarted: 0
-    basicName: 
-    nickname: 
-    evoState: 0
-    image: {fileID: 0}
-    type: 0
-    type2: 0
-    basicNameEvo1: 
-    E1image: {fileID: 0}
-    evoLevel1: 0
-    E1type: 0
-    E1type2: 0
-    basicNameEvo2: 
-    E2image: {fileID: 0}
-    evoLevel2: 0
-    E2type: 0
-    E2type2: 0
-    hp: 0
-    maxHp: 0
-    atk: 0
-    def: 0
-    sDef: 0
-    sAtk: 0
-    speed: 0
-    xp: 0
-    hpIV: 0
-    atkIV: 0
-    defIV: 0
-    sDefIV: 0
-    sAtkIV: 0
-    speedIV: 0
-    atkX: 0
-    defX: 0
-    sDefX: 0
-    sAtkX: 0
-    speedX: 0
-    level: 0
-    flying: 0
-    xpToNextLevel: 0
-    wasInFight: 0
-    effects: 0
-  EqPokemons:
-  - pokemonLevelStarted: 0
-    basicName: 
-    nickname: 
-    evoState: 0
-    image: {fileID: 0}
-    type: 0
-    type2: 0
-    basicNameEvo1: 
-    E1image: {fileID: 0}
-    evoLevel1: 0
-    E1type: 0
-    E1type2: 0
-    basicNameEvo2: 
-    E2image: {fileID: 0}
-    evoLevel2: 0
-    E2type: 0
-    E2type2: 0
-    hp: 0
-    maxHp: 0
-    atk: 0
-    def: 0
-    sDef: 0
-    sAtk: 0
-    speed: 0
-    xp: 0
-    hpIV: 0
-    atkIV: 0
-    defIV: 0
-    sDefIV: 0
-    sAtkIV: 0
-    speedIV: 0
-    atkX: 0
-    defX: 0
-    sDefX: 0
-    sAtkX: 0
-    speedX: 0
-    level: 0
-    flying: 0
-    xpToNextLevel: 0
-    wasInFight: 0
-    effects: 0
-  - pokemonLevelStarted: 0
-    basicName: 
-    nickname: 
-    evoState: 0
-    image: {fileID: 0}
-    type: 0
-    type2: 0
-    basicNameEvo1: 
-    E1image: {fileID: 0}
-    evoLevel1: 0
-    E1type: 0
-    E1type2: 0
-    basicNameEvo2: 
-    E2image: {fileID: 0}
-    evoLevel2: 0
-    E2type: 0
-    E2type2: 0
-    hp: 0
-    maxHp: 0
-    atk: 0
-    def: 0
-    sDef: 0
-    sAtk: 0
-    speed: 0
-    xp: 0
-    hpIV: 0
-    atkIV: 0
-    defIV: 0
-    sDefIV: 0
-    sAtkIV: 0
-    speedIV: 0
-    atkX: 0
-    defX: 0
-    sDefX: 0
-    sAtkX: 0
-    speedX: 0
-    level: 0
-    flying: 0
-    xpToNextLevel: 0
-    wasInFight: 0
-    effects: 0
-  - pokemonLevelStarted: 0
-    basicName: 
-    nickname: 
-    evoState: 0
-    image: {fileID: 0}
-    type: 0
-    type2: 0
-    basicNameEvo1: 
-    E1image: {fileID: 0}
-    evoLevel1: 0
-    E1type: 0
-    E1type2: 0
-    basicNameEvo2: 
-    E2image: {fileID: 0}
-    evoLevel2: 0
-    E2type: 0
-    E2type2: 0
-    hp: 0
-    maxHp: 0
-    atk: 0
-    def: 0
-    sDef: 0
-    sAtk: 0
-    speed: 0
-    xp: 0
-    hpIV: 0
-    atkIV: 0
-    defIV: 0
-    sDefIV: 0
-    sAtkIV: 0
-    speedIV: 0
-    atkX: 0
-    defX: 0
-    sDefX: 0
-    sAtkX: 0
-    speedX: 0
-    level: 0
-    flying: 0
-    xpToNextLevel: 0
-    wasInFight: 0
-    effects: 0
-  - pokemonLevelStarted: 0
-    basicName: 
-    nickname: 
-    evoState: 0
-    image: {fileID: 0}
-    type: 0
-    type2: 0
-    basicNameEvo1: 
-    E1image: {fileID: 0}
-    evoLevel1: 0
-    E1type: 0
-    E1type2: 0
-    basicNameEvo2: 
-    E2image: {fileID: 0}
-    evoLevel2: 0
-    E2type: 0
-    E2type2: 0
-    hp: 0
-    maxHp: 0
-    atk: 0
-    def: 0
-    sDef: 0
-    sAtk: 0
-    speed: 0
-    xp: 0
-    hpIV: 0
-    atkIV: 0
-    defIV: 0
-    sDefIV: 0
-    sAtkIV: 0
-    speedIV: 0
-    atkX: 0
-    defX: 0
-    sDefX: 0
-    sAtkX: 0
-    speedX: 0
-    level: 0
-    flying: 0
-    xpToNextLevel: 0
-    wasInFight: 0
-    effects: 0
-  - pokemonLevelStarted: 0
-    basicName: 
-    nickname: 
-    evoState: 0
-    image: {fileID: 0}
-    type: 0
-    type2: 0
-    basicNameEvo1: 
-    E1image: {fileID: 0}
-    evoLevel1: 0
-    E1type: 0
-    E1type2: 0
-    basicNameEvo2: 
-    E2image: {fileID: 0}
-    evoLevel2: 0
-    E2type: 0
-    E2type2: 0
-    hp: 0
-    maxHp: 0
-    atk: 0
-    def: 0
-    sDef: 0
-    sAtk: 0
-    speed: 0
-    xp: 0
-    hpIV: 0
-    atkIV: 0
-    defIV: 0
-    sDefIV: 0
-    sAtkIV: 0
-    speedIV: 0
-    atkX: 0
-    defX: 0
-    sDefX: 0
-    sAtkX: 0
-    speedX: 0
-    level: 0
-    flying: 0
-    xpToNextLevel: 0
-    wasInFight: 0
-    effects: 0
-  AllHavePokemons: []
---- !u!114 &603897388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 603897386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6c33472283d7d04585db01a98403510, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_FightManager
-  EnemyPokemon:
-    pokemonLevelStarted: 0
-    basicName: 
-    nickname: 
-    evoState: 0
-    image: {fileID: 0}
-    type: 0
-    type2: 0
-    basicNameEvo1: 
-    E1image: {fileID: 0}
-    evoLevel1: 0
-    E1type: 0
-    E1type2: 0
-    basicNameEvo2: 
-    E2image: {fileID: 0}
-    evoLevel2: 0
-    E2type: 0
-    E2type2: 0
-    hp: 0
-    maxHp: 0
-    atk: 0
-    def: 0
-    sDef: 0
-    sAtk: 0
-    speed: 0
-    xp: 0
-    hpIV: 0
-    atkIV: 0
-    defIV: 0
-    sDefIV: 0
-    sAtkIV: 0
-    speedIV: 0
-    atkX: 0
-    defX: 0
-    sDefX: 0
-    sAtkX: 0
-    speedX: 0
-    level: 0
-    flying: 0
-    xpToNextLevel: 0
-    wasInFight: 0
-    effects: 0
---- !u!114 &603897389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 603897386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13e7d2d8dfe4feb40999d272c6b0e790, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_NPCManager
-  NPCInBattle: 
-  TrainerChosenPokemon: 0
-  TrainerPokemons:
-  - pokemonLevelStarted: 0
-    basicName: 
-    nickname: 
-    evoState: 0
-    image: {fileID: 0}
-    type: 0
-    type2: 0
-    basicNameEvo1: 
-    E1image: {fileID: 0}
-    evoLevel1: 0
-    E1type: 0
-    E1type2: 0
-    basicNameEvo2: 
-    E2image: {fileID: 0}
-    evoLevel2: 0
-    E2type: 0
-    E2type2: 0
-    hp: 0
-    maxHp: 0
-    atk: 0
-    def: 0
-    sDef: 0
-    sAtk: 0
-    speed: 0
-    xp: 0
-    hpIV: 0
-    atkIV: 0
-    defIV: 0
-    sDefIV: 0
-    sAtkIV: 0
-    speedIV: 0
-    atkX: 0
-    defX: 0
-    sDefX: 0
-    sAtkX: 0
-    speedX: 0
-    level: 0
-    flying: 0
-    xpToNextLevel: 0
-    wasInFight: 0
-    effects: 0
-  - pokemonLevelStarted: 0
-    basicName: 
-    nickname: 
-    evoState: 0
-    image: {fileID: 0}
-    type: 0
-    type2: 0
-    basicNameEvo1: 
-    E1image: {fileID: 0}
-    evoLevel1: 0
-    E1type: 0
-    E1type2: 0
-    basicNameEvo2: 
-    E2image: {fileID: 0}
-    evoLevel2: 0
-    E2type: 0
-    E2type2: 0
-    hp: 0
-    maxHp: 0
-    atk: 0
-    def: 0
-    sDef: 0
-    sAtk: 0
-    speed: 0
-    xp: 0
-    hpIV: 0
-    atkIV: 0
-    defIV: 0
-    sDefIV: 0
-    sAtkIV: 0
-    speedIV: 0
-    atkX: 0
-    defX: 0
-    sDefX: 0
-    sAtkX: 0
-    speedX: 0
-    level: 0
-    flying: 0
-    xpToNextLevel: 0
-    wasInFight: 0
-    effects: 0
-  - pokemonLevelStarted: 0
-    basicName: 
-    nickname: 
-    evoState: 0
-    image: {fileID: 0}
-    type: 0
-    type2: 0
-    basicNameEvo1: 
-    E1image: {fileID: 0}
-    evoLevel1: 0
-    E1type: 0
-    E1type2: 0
-    basicNameEvo2: 
-    E2image: {fileID: 0}
-    evoLevel2: 0
-    E2type: 0
-    E2type2: 0
-    hp: 0
-    maxHp: 0
-    atk: 0
-    def: 0
-    sDef: 0
-    sAtk: 0
-    speed: 0
-    xp: 0
-    hpIV: 0
-    atkIV: 0
-    defIV: 0
-    sDefIV: 0
-    sAtkIV: 0
-    speedIV: 0
-    atkX: 0
-    defX: 0
-    sDefX: 0
-    sAtkX: 0
-    speedX: 0
-    level: 0
-    flying: 0
-    xpToNextLevel: 0
-    wasInFight: 0
-    effects: 0
-  - pokemonLevelStarted: 0
-    basicName: 
-    nickname: 
-    evoState: 0
-    image: {fileID: 0}
-    type: 0
-    type2: 0
-    basicNameEvo1: 
-    E1image: {fileID: 0}
-    evoLevel1: 0
-    E1type: 0
-    E1type2: 0
-    basicNameEvo2: 
-    E2image: {fileID: 0}
-    evoLevel2: 0
-    E2type: 0
-    E2type2: 0
-    hp: 0
-    maxHp: 0
-    atk: 0
-    def: 0
-    sDef: 0
-    sAtk: 0
-    speed: 0
-    xp: 0
-    hpIV: 0
-    atkIV: 0
-    defIV: 0
-    sDefIV: 0
-    sAtkIV: 0
-    speedIV: 0
-    atkX: 0
-    defX: 0
-    sDefX: 0
-    sAtkX: 0
-    speedX: 0
-    level: 0
-    flying: 0
-    xpToNextLevel: 0
-    wasInFight: 0
-    effects: 0
-  - pokemonLevelStarted: 0
-    basicName: 
-    nickname: 
-    evoState: 0
-    image: {fileID: 0}
-    type: 0
-    type2: 0
-    basicNameEvo1: 
-    E1image: {fileID: 0}
-    evoLevel1: 0
-    E1type: 0
-    E1type2: 0
-    basicNameEvo2: 
-    E2image: {fileID: 0}
-    evoLevel2: 0
-    E2type: 0
-    E2type2: 0
-    hp: 0
-    maxHp: 0
-    atk: 0
-    def: 0
-    sDef: 0
-    sAtk: 0
-    speed: 0
-    xp: 0
-    hpIV: 0
-    atkIV: 0
-    defIV: 0
-    sDefIV: 0
-    sAtkIV: 0
-    speedIV: 0
-    atkX: 0
-    defX: 0
-    sDefX: 0
-    sAtkX: 0
-    speedX: 0
-    level: 0
-    flying: 0
-    xpToNextLevel: 0
-    wasInFight: 0
-    effects: 0
-  isItTrainer: 0
-  TrainerName: 
---- !u!4 &603897390
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 603897386}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.56538, y: 2.04404, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &603897391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 603897386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe8caccab0eed804eac7eb3b01258480, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerSave
-  placed: 1
-  _playerPosition: {x: 0, y: 0, z: 0}
-  _sceneName: lvl1
 --- !u!1 &768512001
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,6 +1194,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eff0c629042af344aaac9faf19ed077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneLoadMenu
+--- !u!114 &2084702462 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6533635129053644161, guid: d205a00590f88e44e860b60779db3038, type: 3}
+  m_PrefabInstance: {fileID: 233862842}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1621,4 +1212,5 @@ SceneRoots:
   - {fileID: 76552368}
   - {fileID: 768512005}
   - {fileID: 1160179146}
-  - {fileID: 603897390}
+  - {fileID: 150033047}
+  - {fileID: 233862842}

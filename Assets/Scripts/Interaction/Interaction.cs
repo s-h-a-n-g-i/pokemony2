@@ -20,11 +20,13 @@ public class Interaction : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z) && canInteract)
         {
-            canInteract = false;
             RaycastHit2D hit = Physics2D.Raycast(player.transform.position + playerMovement.lastDir / 2, playerMovement.lastDir, 0.2f);
             if (hit)
                 if (hit.collider.gameObject == gameObject)
+                {
+                    canInteract = false;
                     interacted.Invoke();
+                } 
         }
     }
 }

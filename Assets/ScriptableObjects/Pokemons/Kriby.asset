@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Kriby
   m_EditorClassIdentifier: Assembly-CSharp::PokemonSO
   basicName: Kriby
-  flying: 0
+  flying: 1
   image: {fileID: 8611607649075010630, guid: 289171aa41aa0fd46922a47830d53dd4, type: 3}
   type: 0
   type2: 0
@@ -50,6 +50,4 @@ MonoBehaviour:
   sDefX: 0
   sAtkX: 0
   speedX: 0
-  attacksOnLevelUps:
-  - {fileID: 11400000, guid: 012956b2c208e83458cd3e3283d3c3de, type: 2}
-  attacksOnLevels: 02000000
+  attacksOnLevelUp: []

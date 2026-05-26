@@ -63,7 +63,7 @@ public class Bushes : MonoBehaviour
     {
         player.GetComponent<PlayerMovement>().StopPlayer();
         yield return StartCoroutine(player.GetComponent<Bobles>().exclBobel());
-        SceneManager.LoadScene("Fight");
+        SceneManager.LoadScene("FightNew");
 
     }
 

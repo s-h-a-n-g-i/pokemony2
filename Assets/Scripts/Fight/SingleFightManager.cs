@@ -24,6 +24,13 @@ public class SingleFightManager : MonoBehaviour
             CheckDeadPokemon();
     }
 
+    public void SetupPokemonAnimation()
+    {
+        dialogeManager.EnemyPokemonDead(_FightManager.Instance.EnemyPokemon.hp <= 0);
+        dialogeManager.EnemyPokemonFly(_FightManager.Instance.EnemyPokemon.flying);
+    }
+
+
     public void CheckDeadPokemon()
     {
         if (_FightManager.Instance.EnemyPokemon.hp <= 0)

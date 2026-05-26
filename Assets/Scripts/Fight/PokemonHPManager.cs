@@ -6,12 +6,12 @@ public class PokemonHPManager : MonoBehaviour
 {
     [Header("Player Pokemon")]
     [SerializeField] private Image ImageLineHP_player;
-    [SerializeField] private Image ImageLineHPaddon_player;
+    //[SerializeField] private Image ImageLineHPaddon_player;
     [SerializeField] private TMP_Text playerHP;
 
     [Header("Enemy Pokemon")]
     [SerializeField] private Image ImageLineHP_enemy;
-    [SerializeField] private Image ImageLineHPaddon_enemy;
+    //[SerializeField] private Image ImageLineHPaddon_enemy;
 
 
     [Header("Settings")]
@@ -40,7 +40,7 @@ public class PokemonHPManager : MonoBehaviour
 
         ImageLineHP_player.gameObject.transform.localScale = new Vector3(hpsize,1,1);
         ImageLineHP_player.color = new Color(colorred, hpsize, 1);
-        ImageLineHPaddon_player.color = new Color(colorred, hpsize, 1);
+        //ImageLineHPaddon_player.color = new Color(colorred, hpsize, 1);
 
     }
     private void TrainerUpdate() 
@@ -50,7 +50,7 @@ public class PokemonHPManager : MonoBehaviour
 
         ImageLineHP_enemy.gameObject.transform.localScale = new Vector3(hpsize, 1, 1);
         ImageLineHP_enemy.color = new Color(colorred, hpsize, 1);
-        ImageLineHPaddon_enemy.color = new Color(colorred, hpsize, 1);
+        //ImageLineHPaddon_enemy.color = new Color(colorred, hpsize, 1);
     }
 
     private void SinglePokemonUpdate() 
@@ -60,7 +60,7 @@ public class PokemonHPManager : MonoBehaviour
 
         ImageLineHP_enemy.gameObject.transform.localScale = new Vector3(hpsize, 1, 1);
         ImageLineHP_enemy.color = new Color(colorred,hpsize,1);
-        ImageLineHPaddon_enemy.color = new Color(colorred, hpsize, 1);
+        //ImageLineHPaddon_enemy.color = new Color(colorred, hpsize, 1);
     }
 
 

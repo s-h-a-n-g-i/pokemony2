@@ -48,6 +48,6 @@ public class ChangeCreaturesBtn : MonoBehaviour
         else
             singleManager.ChangePokemon();
 
-            Debug.Log(_PokemonEQ.Instance.EqPokemons[pokemonCounter].PokemonNameOut());
+            //Debug.Log(_PokemonEQ.Instance.EqPokemons[pokemonCounter].PokemonNameOut());
     }
 }

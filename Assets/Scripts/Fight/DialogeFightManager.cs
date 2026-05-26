@@ -26,6 +26,10 @@ public class DialogeFightManager : MonoBehaviour
 
     [HideInInspector] public bool ChosenNewAttack = true;
 
+    [Header("Animators")]
+    public Animator playerAnimator;
+    public Animator enemyAnimator;
+
     private float speedwagon = 0.05f;
 
     void Start()
@@ -43,16 +47,26 @@ public class DialogeFightManager : MonoBehaviour
         {
             speedwagon = 0;
         }
-
+        PlayerPokemonAnimationSetup();
         //_NPCManager.Instance.GetComponent<_NPCManager>().NPCInBattle = "sperma";
         //_NPCManager.Instance.NPCInBattle = "";
     }
 
+    private void PlayerPokemonAnimationSetup()
+    {
+        playerAnimator.SetBool("fly", _PokemonEQ.Instance.ActivePokemon.flying);
+        playerAnimator.SetBool("dead", _PokemonEQ.Instance.ActivePokemon.hp<=0);
+    }
 
 
-
-
-
+    public void EnemyPokemonDead(bool live) 
+    {
+        enemyAnimator.SetBool("dead", live);
+    }
+    public void EnemyPokemonFly(bool live)
+    {
+        enemyAnimator.SetBool("fly", live);
+    }
 
 
     public IEnumerator DialogeShow(string textToEnter)
@@ -116,7 +130,7 @@ public class DialogeFightManager : MonoBehaviour
     public IEnumerator PokemonCaught()
     {
         dialogeWindow.SetActive(true);
-
+        enemyAnimator.SetTrigger("zlapany");
         yield return StartCoroutine(DialogeShow("<b>" + _FightManager.Instance.EnemyPokemon + "</b> has been caught!"));
 
         yield return StartCoroutine(AddLevelUps());
@@ -128,6 +142,7 @@ public class DialogeFightManager : MonoBehaviour
 
     private IEnumerator AddLevelUps() 
     {
+        playerAnimator.SetBool("action", true);
         List<Pokemon> pokemonsInFight = new List<Pokemon>();
         for (int i = 0; i < _PokemonEQ.Instance.pokemonUsedInFight.Count; i++)
             pokemonsInFight.Add(_PokemonEQ.Instance.EqPokemons[_PokemonEQ.Instance.pokemonUsedInFight[i]]);
@@ -148,9 +163,11 @@ public class DialogeFightManager : MonoBehaviour
 
                 if (p.CheckForEvolution())
                 {
+                    playerAnimator.SetTrigger("evo");
                     yield return StartCoroutine(DialogeShow("<b>" + p.PokemonNameOut() + " EVOLVED!"));
                     p.Evolution();
                     fightSystemManager.setUpMyPokemon();
+                    playerAnimator.SetBool("evolved",true);
                     yield return StartCoroutine(DialogeShow("<b>" + p.PokemonNameOut() + " IS NEW EVOLUTION!"));
                 }
                 Attack newAttack = p.CheckForAttacksAdded();
@@ -184,6 +201,8 @@ public class DialogeFightManager : MonoBehaviour
     ////////////// CALA SEKWENCJA ATAKU OBU POKEMONOW
     public IEnumerator PokemonFightCutscene(Pokemon firstPokemon, Attack firstAttack, Pokemon secondPokemon, Attack secondAttack, string dialogeSkipTurn = "")
     {
+        playerAnimator.SetBool("action", true);
+        enemyAnimator.SetBool("action", true);
 
         dialogeWindow.SetActive(true);
 
@@ -208,21 +227,30 @@ public class DialogeFightManager : MonoBehaviour
 
             yield return StartCoroutine(DialogeShow(
                 ProvideAttack(secondPokemon, secondAttack, firstPokemon, atk2.Item1, atk2.Item2)));
-
-            
         }
 
         if (secondPokemon == _PokemonEQ.Instance.ActivePokemon || (secondPokemon != _PokemonEQ.Instance.ActivePokemon && secondPokemon.hp != 0))
             dialogeWindow.SetActive(false);
+
+        playerAnimator.SetBool("action", false); 
+        enemyAnimator.SetBool("action", false);
         if (_NPCManager.Instance.isItTrainer)
             trainerManager.FinishedBattle = true;
         else
             singleManager.FinishedBattle = true;
+
     }
 
 
     private string ProvideAttack(Pokemon dealingPokemon, Attack dealingAttack, Pokemon targetPokemon , int atkDamage, string atkPower) 
     {
+        Animator s;
+        if (targetPokemon == _PokemonEQ.Instance.ActivePokemon)
+            s = playerAnimator;
+        else
+            s = enemyAnimator;
+
+        s.SetTrigger("dmg");
         targetPokemon.hp -= atkDamage;
         string action = CheckKill(targetPokemon);
         return dealingPokemon.PokemonNameOut() + action + targetPokemon.PokemonNameOut() + " with <b>" + atkPower + "</b> " + dealingAttack.attackName;
@@ -239,4 +267,7 @@ public class DialogeFightManager : MonoBehaviour
         else
             return  " attacked ";
     }
+
+
+
 }

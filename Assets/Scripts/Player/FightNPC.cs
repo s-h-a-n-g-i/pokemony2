@@ -69,6 +69,6 @@ public class FightNPC : MonoBehaviour
         yield return StartCoroutine(playerBobles.questBobel());
         foreach (DialogeLine dialogeLine in dialogeLines)
             yield return StartCoroutine(dialoge.DialogeShow(dialogeLine.whoSayes+": "+dialogeLine.whatSayes));
-        SceneManager.LoadScene("Fight");
+        SceneManager.LoadScene("FightNew");
     }
 }

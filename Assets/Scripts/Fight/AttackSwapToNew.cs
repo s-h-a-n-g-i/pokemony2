@@ -27,7 +27,7 @@ public class AttackSwapToNew : MonoBehaviour
 
     public void ForgetAttack() 
     {
-        SceneManager.LoadScene(PlayerSave.Instance._sceneName);
+        SceneManager.LoadScene(_PlayerSave.Instance._sceneName);
     }
 
     public void ChangeAttack(int attackChangedCounter) 

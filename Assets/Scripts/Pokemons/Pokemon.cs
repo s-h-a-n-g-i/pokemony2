@@ -94,6 +94,9 @@ public class Pokemon
 
     public bool flying;
 
+    public string saveId;
+    public string uniqueId;
+
     [HideInInspector] public int xpToNextLevel;
     [HideInInspector] public bool wasInFight = false;
 
@@ -103,6 +106,8 @@ public class Pokemon
 
     public Pokemon(PokemonSO c, int startingLevel = 0) 
     {
+        saveId = c.name;
+        uniqueId = Guid.NewGuid().ToString();
         maxHp = c.hp;
         hp = c.hp;
         atk = c.atk;

@@ -39,7 +39,7 @@ public class PokemonHPManager : MonoBehaviour
         float colorred = (hpsize * (-1) + 1);
 
         ImageLineHP_player.gameObject.transform.localScale = new Vector3(hpsize,1,1);
-        ImageLineHP_player.color = new Color(colorred, hpsize, 1);
+        ImageLineHP_player.color = new Color(1, hpsize, hpsize);
         //ImageLineHPaddon_player.color = new Color(colorred, hpsize, 1);
 
     }
@@ -48,8 +48,8 @@ public class PokemonHPManager : MonoBehaviour
         float hpsize = (float)_NPCManager.Instance.TrainerPokemons[trainerManager.chosenPokemon].hp / (float)_NPCManager.Instance.TrainerPokemons[trainerManager.chosenPokemon].maxHp;
         float colorred = (hpsize * (-1) + 1);
 
-        ImageLineHP_enemy.gameObject.transform.localScale = new Vector3(hpsize, 1, 1);
-        ImageLineHP_enemy.color = new Color(colorred, hpsize, 1);
+        ImageLineHP_enemy.gameObject.transform.localScale = new Vector3(-hpsize, 1, 1);
+        ImageLineHP_enemy.color = new Color(1, hpsize, hpsize);
         //ImageLineHPaddon_enemy.color = new Color(colorred, hpsize, 1);
     }
 
@@ -58,8 +58,8 @@ public class PokemonHPManager : MonoBehaviour
         float hpsize = (float)_FightManager.Instance.EnemyPokemon.hp / (float)_FightManager.Instance.EnemyPokemon.maxHp;
         float colorred = (hpsize * (-1) + 1);
 
-        ImageLineHP_enemy.gameObject.transform.localScale = new Vector3(hpsize, 1, 1);
-        ImageLineHP_enemy.color = new Color(colorred,hpsize,1);
+        ImageLineHP_enemy.gameObject.transform.localScale = new Vector3(-hpsize, 1, 1);
+        ImageLineHP_enemy.color = new Color(1,hpsize, hpsize);
         //ImageLineHPaddon_enemy.color = new Color(colorred, hpsize, 1);
     }
 

@@ -19,15 +19,15 @@ public class PlayerMovement : MonoBehaviour
         gameManager = GameObject.Find("GameManager");
 
         animator = GetComponent<Animator>();
-        PlayerSave.Instance._sceneName = SceneManager.GetActiveScene().name;
+        _PlayerSave.Instance._sceneName = SceneManager.GetActiveScene().name;
 
-        if (!PlayerSave.Instance.placed)
-            if (PlayerSave.Instance._playerPosition != Vector3.zero && PlayerSave.Instance._sceneName == SceneManager.GetActiveScene().name)
+        if (!_PlayerSave.Instance.placed)
+            if (_PlayerSave.Instance._playerPosition != Vector3.zero && _PlayerSave.Instance._sceneName == SceneManager.GetActiveScene().name)
             {
-                dirwalk = PlayerSave.Instance._playerRotation;
-                lastDir = PlayerSave.Instance._playerRotation;
-                PlayerSave.Instance.placed = true;
-                transform.position = PlayerSave.Instance._playerPosition;
+                dirwalk = _PlayerSave.Instance._playerRotation;
+                lastDir = _PlayerSave.Instance._playerRotation;
+                _PlayerSave.Instance.placed = true;
+                transform.position = _PlayerSave.Instance._playerPosition;
                 animator.SetFloat("LastInputX", lastDir.x);
                 animator.SetFloat("LastInputY", lastDir.y);
             }
@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("isWalking", isMoving);
         animator.SetFloat("InputX", dirwalk.x);
         animator.SetFloat("InputY", dirwalk.y);
-        PlayerSave.Instance._playerRotation = dirwalk;
+        _PlayerSave.Instance._playerRotation = dirwalk;
     }
 
       
@@ -160,7 +160,7 @@ public class PlayerMovement : MonoBehaviour
 
         transform.position = nextPos;
         isMoving = false;
-        PlayerSave.Instance._playerPosition = nextPos;
+        _PlayerSave.Instance._playerPosition = nextPos;
     }
 
     private IEnumerator JumpDown()
@@ -181,7 +181,7 @@ public class PlayerMovement : MonoBehaviour
 
         transform.position = nextPos;
         isMoving = false;
-        PlayerSave.Instance._playerPosition = nextPos;
+        _PlayerSave.Instance._playerPosition = nextPos;
         //Debug.Log(PlayerSave._playerPosition);
     }
 

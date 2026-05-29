@@ -11,8 +11,9 @@ public class DialogeManager : MonoBehaviour
     [SerializeField] private GameObject dialogeObject;
     [SerializeField] private TMP_Text dialogeText;
     public bool dialogeFinished = true;
+    public bool saveChosen = true;
 
-
+    [SerializeField] private GameObject SaveButtons;
     float speedwagon = 0.05f;
     //ide srac
     void Awake()
@@ -46,6 +47,7 @@ public class DialogeManager : MonoBehaviour
         speedwagon = 0.05f;
         dialogeText.text = "";
         dialogeFinished = false;
+        textToEnter = textToEnter.Replace("player", _PlayerSave.Instance.playerName);
         string oryginal = textToEnter;
         textToEnter = textToEnter.Replace("<b>", "|");
         textToEnter = textToEnter.Replace("</b>", ";");
@@ -78,6 +80,15 @@ public class DialogeManager : MonoBehaviour
         dialogeFinished = true;
     }
 
-
+    public IEnumerator SaveGameMenu()
+    {
+        dialogeFinished = false;
+        SaveButtons.SetActive(true);
+        saveChosen = false;
+        dialogeText.text = "Save game on slot:";
+        yield return new WaitUntil(()=>saveChosen);
+        SaveButtons.SetActive(false);
+        dialogeFinished = true;
+    }
 
 }

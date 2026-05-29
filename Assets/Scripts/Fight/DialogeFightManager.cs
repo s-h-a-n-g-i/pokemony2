@@ -115,7 +115,7 @@ public class DialogeFightManager : MonoBehaviour
 
         yield return StartCoroutine(AddLevelUps());
 
-        SceneManager.LoadScene(PlayerSave.Instance._sceneName);
+        SceneManager.LoadScene(_PlayerSave.Instance._sceneName);
     }
     public IEnumerator AllPokemonPlayerDead()
     {
@@ -124,7 +124,7 @@ public class DialogeFightManager : MonoBehaviour
         yield return StartCoroutine(DialogeShow("<b> You </b> has been defeated!"));
 
 
-        SceneManager.LoadScene(PlayerSave.Instance._sceneName);
+        SceneManager.LoadScene(_PlayerSave.Instance._sceneName);
     }
 
     public IEnumerator PokemonCaught()
@@ -135,7 +135,7 @@ public class DialogeFightManager : MonoBehaviour
 
         yield return StartCoroutine(AddLevelUps());
 
-        SceneManager.LoadScene(PlayerSave.Instance._sceneName);
+        SceneManager.LoadScene(_PlayerSave.Instance._sceneName);
     }
 
 

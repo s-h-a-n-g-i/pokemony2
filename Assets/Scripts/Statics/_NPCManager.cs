@@ -43,5 +43,15 @@ public class _NPCManager : MonoBehaviour
     {
         return defeatedNPCs.Contains(npcId);
     }
-    
+
+    public List<string> GetDefeatedNPCs()
+    {
+        return new List<string>(defeatedNPCs);
+    }
+
+    public void SetDefeatedNPCs(List<string> npcIds)
+    {
+        defeatedNPCs = new HashSet<string>(npcIds ?? new List<string>());
+    }
+
 }

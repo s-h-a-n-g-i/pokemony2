@@ -35,7 +35,7 @@ public class Bushes : MonoBehaviour
                 _NPCManager.Instance.isItTrainer = false;
                 _FightManager.Instance.EnemyPokemon = s;
 
-                PlayerSave.Instance.placed = false;
+                _PlayerSave.Instance.placed = false;
                 StartCoroutine(StartBushFight());
             }
         

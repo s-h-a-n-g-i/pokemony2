@@ -8,6 +8,12 @@ public class FightNPC : MonoBehaviour
 {
     //[SerializeField] private int trainerID = 0;
 
+    [Header("Sprites")]
+    [SerializeField] private Sprite top;
+    [SerializeField] private Sprite right;
+    [SerializeField] private Sprite down;
+    [SerializeField] private Sprite left;
+
     [Header("Dialoge before fight")]
     [SerializeField] DialogeLine[] dialogeLines;
     [Header("what Pokemon has trainer")]
@@ -52,6 +58,37 @@ public class FightNPC : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
+        Transform s = collision.gameObject.transform;
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        float diffx = 0;
+        float diffy = 0;
+
+        diffx = s.position.x - transform.position.x;
+        if (s.position.x > transform.position.x)
+        { 
+            spriteRenderer.sprite = right; 
+        }
+
+        if (s.position.x < transform.position.x)
+        {
+            diffx = transform.position.x - s.position.x;
+            spriteRenderer.sprite = left; 
+        }
+
+        diffy = s.position.y - transform.position.y;
+        if (s.position.y > transform.position.y && diffy>diffx)
+        { 
+            spriteRenderer.sprite = top;
+        }
+
+        diffy = transform.position.y - s.position.y;
+        if (s.position.y < transform.position.y && diffy > diffx)
+        { 
+            spriteRenderer.sprite = down;
+        }
+
+
         //_GlobalPokemon.ResetBeforeFight();
 
         //_GlobalPokemon.TrainerID = trainerID;
@@ -59,7 +96,7 @@ public class FightNPC : MonoBehaviour
         _NPCManager.Instance.isItTrainer = true;
         _NPCManager.Instance.TrainerPokemons = pokemon;
 
-        PlayerSave.Instance.placed = false;
+        _PlayerSave.Instance.placed = false;
         StartCoroutine(StartFight());
     }
 

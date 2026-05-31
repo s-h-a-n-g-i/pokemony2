@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class StarterButton : MonoBehaviour
 {
     [SerializeField] PokemonSO Starter;
+    [SerializeField] PokemonSO Starter2;
+    [SerializeField] PokemonSO Starter3;
     [SerializeField] Image imageStarter;
     [SerializeField] TMP_Text nameStarter;
 
@@ -18,7 +20,8 @@ public class StarterButton : MonoBehaviour
     public void ButtonClicked() 
     {
         _PokemonEQ.Instance.EqPokemons[0] =  new Pokemon(Starter, 3);
-        _PokemonEQ.Instance.EqPokemons[1] = new Pokemon(Starter, 3);
+        _PokemonEQ.Instance.EqPokemons[1] = new Pokemon(Starter2, 3);
+        _PokemonEQ.Instance.EqPokemons[2] = new Pokemon(Starter3, 3);
         //_PokemonEQ.Instance.EqPokemons[2] = new Pokemon(Starter, 3);
         //_PokemonEQ.Instance.EqPokemons[3] = new Pokemon(Starter, 3);
         //_PokemonEQ.Instance.EqPokemons[4] = new Pokemon(Starter, 3);

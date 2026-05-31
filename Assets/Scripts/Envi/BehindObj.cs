@@ -4,11 +4,12 @@ using UnityEngine;
 public class BehindObj : MonoBehaviour
 {
     private GameObject player;
-    private SpriteRenderer sr;
+    [SerializeField] private SpriteRenderer sr;
     void Start()
     {
         player = GameObject.Find("Player");  
-        sr = GetComponent<SpriteRenderer>();
+        if(sr==null)
+            sr = GetComponent<SpriteRenderer>();
     }
 
     

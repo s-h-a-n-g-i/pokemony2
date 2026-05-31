@@ -7,7 +7,7 @@ public class _PokemonEQ : MonoBehaviour
 
 
     public Pokemon ActivePokemon;
-    public Pokemon[] EqPokemons = new Pokemon[5];
+    public Pokemon[] EqPokemons = {null,null,null,null,null};
     public List<Pokemon> AllHavePokemons;
     public int LevelingUpPokemon;
     public List<int> pokemonUsedInFight = new List<int>();
@@ -38,8 +38,8 @@ public class _PokemonEQ : MonoBehaviour
     private bool CheckAllPokemonLife() 
     {
         bool[] allChecked = { false, false, false, false, false };
-        for (int i = 0; i < EqPokemons.Length; i++)
-            if (EqPokemons[i] != null & EqPokemons[i].basicName != string.Empty)
+        for (int i = 0; i < 5; i++)
+            if (EqPokemons[i] != null &&( EqPokemons[i].basicName != string.Empty))
                 if(EqPokemons[i].hp>0) allChecked[i] = true;
 
         return allChecked[0] || allChecked[1] || allChecked[2] || allChecked[3] || allChecked[4];

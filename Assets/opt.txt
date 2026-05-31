@@ -1,0 +1,14 @@
+
+
+
+15 HP → gets 18 points to distribute
+
+20 HP → gets 15 points to distribute
+
+25 HP → gets 12 points to distribute
+
+max 4 in one stat
+
+aggressive build (15 HP)
+balanced build (20 HP)
+tank build (25 HP)

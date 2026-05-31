@@ -19,26 +19,26 @@ MonoBehaviour:
   type2: 0
   basicNameEvo1: Jiangshi
   E1image: {fileID: -3447102151616154709, guid: a1cb6c7d94e089f43ac5bfc4ddf327ba, type: 3}
-  evoLevel1: 0
+  evoLevel1: 7
   E1type: 6
   E1type2: 0
   basicNameEvo2: 
   E2image: {fileID: 0}
-  evoLevel2: 0
+  evoLevel2: -1
   E2type: 0
   E2type2: 0
   attacks:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 012956b2c208e83458cd3e3283d3c3de, type: 2}
+  - {fileID: 11400000, guid: c5075532e84359e4fb9a2a60aea8c17c, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   effects: 0
-  hp: 15
-  atk: 6
-  def: 6
-  sDef: 6
-  sAtk: 6
-  speed: 6
+  hp: 20
+  atk: 4
+  def: 3
+  sDef: 3
+  sAtk: 3
+  speed: 2
   hpIV: 0
   atkIV: 0
   defIV: 0
@@ -50,5 +50,4 @@ MonoBehaviour:
   sDefX: 0
   sAtkX: 0
   speedX: 0
-  attacksOnLevelUps: []
-  attacksOnLevels: 
+  attacksOnLevelUp: []

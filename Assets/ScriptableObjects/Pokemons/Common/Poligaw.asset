@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PokemonSO
   basicName: Poligaw
   flying: 1
-  image: {fileID: 4196024832388072200, guid: 3b7aac0b0731eb542adba65c57d241a7, type: 3}
+  image: {fileID: 9193042089657751361, guid: fcccc1d5b65f9b145bb800c5910cc424, type: 3}
   type: 1
   type2: 0
   basicNameEvo1: 

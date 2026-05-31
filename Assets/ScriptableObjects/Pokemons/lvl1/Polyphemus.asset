@@ -17,7 +17,7 @@ MonoBehaviour:
   image: {fileID: -8811351043549091532, guid: 2c77d4c04b150304e9ad1c28fc104df0, type: 3}
   type: 5
   type2: 0
-  basicNameEvo1: Sheeper
+  basicNameEvo1: Polyphemus
   E1image: {fileID: -6805924494963528800, guid: 908f64facedeb80449ce78d41254d96c, type: 3}
   evoLevel1: 0
   E1type: 5
@@ -50,5 +50,4 @@ MonoBehaviour:
   sDefX: 0
   sAtkX: 0
   speedX: 0
-  attacksOnLevelUps: []
-  attacksOnLevels: 
+  attacksOnLevelUp: []

@@ -15,36 +15,36 @@ MonoBehaviour:
   basicName: Buzzer
   flying: 1
   image: {fileID: -6642189541005656643, guid: 2e8a1073d36bb86499ad68e63357779a, type: 3}
-  type: 7
+  type: 8
   type2: 0
   basicNameEvo1: 
   E1image: {fileID: 0}
-  evoLevel1: 0
+  evoLevel1: -1
   E1type: 0
   E1type2: 0
   basicNameEvo2: 
   E2image: {fileID: 0}
-  evoLevel2: 0
+  evoLevel2: -1
   E2type: 0
   E2type2: 0
   attacks:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 012956b2c208e83458cd3e3283d3c3de, type: 2}
+  - {fileID: 11400000, guid: c5075532e84359e4fb9a2a60aea8c17c, type: 2}
+  - {fileID: 11400000, guid: ea923e8a76f197945aea3e03155c3055, type: 2}
   - {fileID: 0}
   effects: 0
-  hp: 0
-  atk: 0
-  def: 0
-  sDef: 0
-  sAtk: 0
-  speed: 0
-  hpIV: 0
-  atkIV: 0
-  defIV: 0
-  sDefIV: 0
-  sAtkIV: 0
-  speedIV: 0
+  hp: 15
+  atk: 4
+  def: 3
+  sDef: 3
+  sAtk: 4
+  speed: 4
+  hpIV: 3
+  atkIV: 3
+  defIV: 1
+  sDefIV: 1
+  sAtkIV: 2
+  speedIV: 2
   atkX: 0
   defX: 0
   sDefX: 0

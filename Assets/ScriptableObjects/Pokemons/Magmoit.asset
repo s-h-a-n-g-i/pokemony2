@@ -19,32 +19,32 @@ MonoBehaviour:
   type2: 0
   basicNameEvo1: 
   E1image: {fileID: -8661029434420068807, guid: 535ef67d51c4f004b881a20c8b62eedf, type: 3}
-  evoLevel1: 0
+  evoLevel1: 6
   E1type: 3
   E1type2: 0
   basicNameEvo2: 
   E2image: {fileID: -4223512811448726155, guid: 716a06ef0035e4149889f16f54476956, type: 3}
-  evoLevel2: 0
+  evoLevel2: 12
   E2type: 3
   E2type2: 0
   attacks:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 012956b2c208e83458cd3e3283d3c3de, type: 2}
+  - {fileID: 11400000, guid: c5075532e84359e4fb9a2a60aea8c17c, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   effects: 0
-  hp: 0
-  atk: 0
-  def: 0
-  sDef: 0
-  sAtk: 0
-  speed: 0
-  hpIV: 0
-  atkIV: 0
-  defIV: 0
-  sDefIV: 0
-  sAtkIV: 0
-  speedIV: 0
+  hp: 15
+  atk: 4
+  def: 4
+  sDef: 2
+  sAtk: 4
+  speed: 4
+  hpIV: 5
+  atkIV: 2
+  defIV: 2
+  sDefIV: 1
+  sAtkIV: 2
+  speedIV: 1
   atkX: 0
   defX: 0
   sDefX: 0

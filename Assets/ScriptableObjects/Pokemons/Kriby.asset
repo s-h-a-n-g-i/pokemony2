@@ -35,11 +35,11 @@ MonoBehaviour:
   effects: 0
   hp: 20
   atk: 4
-  def: 3
+  def: 2
   sDef: 2
-  sAtk: 3
-  speed: 2
-  hpIV: 3
+  sAtk: 4
+  speed: 3
+  hpIV: 4
   atkIV: 2
   defIV: 2
   sDefIV: 1

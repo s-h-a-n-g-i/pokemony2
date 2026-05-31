@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PokemonSO
   basicName: Slime
   flying: 0
-  image: {fileID: -7057305579449333878, guid: f7a4ccbb687631346af54a1961e1e0c3, type: 3}
+  image: {fileID: 8069619478552258361, guid: f4ab77f72af981349bfd87ab83aba98d, type: 3}
   type: 5
   type2: 0
   basicNameEvo1: Slimer

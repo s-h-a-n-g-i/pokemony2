@@ -2001,8 +2001,12 @@ MonoBehaviour:
   levelPokemon: {x: 1, y: 5}
   ChancesForBushes:
   - pokemon: {fileID: 11400000, guid: f935c99c38174134485dfa1deb611e7f, type: 2}
-    chances: 100
+    chances: 0
   - pokemon: {fileID: 11400000, guid: f935c99c38174134485dfa1deb611e7f, type: 2}
+    chances: 0
+  - pokemon: {fileID: 11400000, guid: 4324a6ec1f37c80429ed6ca55386b1b3, type: 2}
+    chances: 5
+  - pokemon: {fileID: 11400000, guid: b0e46322d13ec424e906bdd17e72fd19, type: 2}
     chances: 5
 --- !u!61 &1272354554
 BoxCollider2D:

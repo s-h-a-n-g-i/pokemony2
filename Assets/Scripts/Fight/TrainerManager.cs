@@ -18,6 +18,7 @@ public class TrainerManager : MonoBehaviour
 
     public int chosenPokemon = 0;
 
+    private bool changingPokemon = false;
     //[HideInInspector] 
     public bool FinishedBattle = true;
 
@@ -43,14 +44,17 @@ public class TrainerManager : MonoBehaviour
     public void CheckAndSwapTrainer()
     {
         if (_NPCManager.Instance.TrainerPokemons[chosenPokemon].hp <= 0)
-            if (_NPCManager.Instance.TrainerPokemons.Length > chosenPokemon + 1)
+            if (_NPCManager.Instance.TrainerPokemons.Length > chosenPokemon + 1 && !changingPokemon)
             {
-                //Debug.Log(chosenPokemon);
+                changingPokemon = true;
+                Debug.Log("TRENER ZMIENIA POKEMON");
                 //_PokemonEQ.Instance.ActivePokemon.giveXP(_NPCManager.Instance.TrainerPokemons[chosenPokemon].level);
                 FinishedBattle = false;
                 PokemonTrainerCounter[chosenPokemon].SetActive(false);
                 chosenPokemon++;
-                dialogeManager.StartCoroutine(dialogeManager.DialogeShow(_NPCManager.Instance.name + " changed creature to <b>" + _NPCManager.Instance.TrainerPokemons[chosenPokemon].basicName + "</b>"));
+                dialogeManager.StopAllCoroutines();
+                dialogeManager.StartCoroutine(dialogeManager.DialogeShow(_NPCManager.Instance.TrainerName + " changed creature to <b>" + _NPCManager.Instance.TrainerPokemons[chosenPokemon].basicName + "</b>", false));
+                changingPokemon = false;
             }
             else
             {

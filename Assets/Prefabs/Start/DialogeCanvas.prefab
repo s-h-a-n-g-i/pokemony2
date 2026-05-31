@@ -122,8 +122,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1980361893588547314}
-        m_TargetAssemblyTypeName: SaveAndDelete, Assembly-CSharp
+      - m_Target: {fileID: 6217257925394794191}
+        m_TargetAssemblyTypeName: SaveLoadGameButton, Assembly-CSharp
         m_MethodName: Save
         m_Mode: 1
         m_Arguments:
@@ -146,7 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd95d51b138c1d346bcf405156349f98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SaveAndDelete
-  manager: {fileID: 0}
   dialoge: {fileID: 0}
   saveId: 2
   buttontext: {fileID: 5463012460491842776}
@@ -1075,8 +1074,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1980361893588547314}
-        m_TargetAssemblyTypeName: SaveAndDelete, Assembly-CSharp
+      - m_Target: {fileID: 7651400923303008012}
+        m_TargetAssemblyTypeName: SaveLoadGameButton, Assembly-CSharp
         m_MethodName: Save
         m_Mode: 1
         m_Arguments:
@@ -1099,7 +1098,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd95d51b138c1d346bcf405156349f98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SaveAndDelete
-  manager: {fileID: 0}
   dialoge: {fileID: 0}
   saveId: 1
   buttontext: {fileID: 8939936468344766925}
@@ -1264,7 +1262,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1980361893588547314}
-        m_TargetAssemblyTypeName: SaveAndDelete, Assembly-CSharp
+        m_TargetAssemblyTypeName: SaveLoadGameButton, Assembly-CSharp
         m_MethodName: Save
         m_Mode: 1
         m_Arguments:
@@ -1287,7 +1285,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd95d51b138c1d346bcf405156349f98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SaveAndDelete
-  manager: {fileID: 0}
   dialoge: {fileID: 0}
   saveId: 3
   buttontext: {fileID: 4201052961798460330}

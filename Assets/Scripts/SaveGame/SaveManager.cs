@@ -27,7 +27,6 @@ public class SaveManager : MonoBehaviour
     public void SaveGameOnSlot(int slot)
     {
         if (!IsValidSlot(slot)) return;
-
         SaveData data = new SaveData();
 
         data.playerName = _PlayerSave.Instance.playerName;
@@ -44,6 +43,7 @@ public class SaveManager : MonoBehaviour
             data.allPokemons = SavePokemonList(_PokemonEQ.Instance.AllHavePokemons);
         }
 
+        Debug.Log(slot);
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(GetSlotPath(slot), json);
 
@@ -69,8 +69,8 @@ public class SaveManager : MonoBehaviour
     }
     public void LoadGameFromSlot(int slot)
     {
+        Debug.Log(slot);
         if (!IsValidSlot(slot)) return;
-
         string path = GetSlotPath(slot);
         if (!File.Exists(path))
         {

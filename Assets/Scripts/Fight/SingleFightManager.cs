@@ -38,7 +38,7 @@ public class SingleFightManager : MonoBehaviour
                 //Debug.Log("Dead"); 
                 FinishedBattle = false;
                 dialogeManager.StopAllCoroutines();
-                dialogeManager.StartCoroutine(dialogeManager.EndedBattle(_NPCManager.Instance.TrainerName));
+                dialogeManager.StartCoroutine(dialogeManager.EndedBattle(_FightManager.Instance.EnemyPokemon.basicName));
                 //StartCoroutine();
             }
     }

@@ -69,8 +69,10 @@ public class DialogeFightManager : MonoBehaviour
     }
 
 
-    public IEnumerator DialogeShow(string textToEnter)
+    public IEnumerator DialogeShow(string textToEnter, bool lastText = true)
     {
+        if (!lastText)
+            dialogeWindow.SetActive(true);
         speedwagon = 0.05f;
         dialogeText.text = "";
         dialogeFinished = false;
@@ -104,6 +106,15 @@ public class DialogeFightManager : MonoBehaviour
 
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z));
         dialogeFinished = true;
+        if (!lastText)
+        {
+            if (_NPCManager.Instance.isItTrainer)
+                trainerManager.FinishedBattle = true;
+            else
+                singleManager.FinishedBattle = true;
+            dialogeWindow.SetActive(false);
+        }
+
     }
 
     ///////////////MARTWIAK
@@ -130,8 +141,9 @@ public class DialogeFightManager : MonoBehaviour
     public IEnumerator PokemonCaught()
     {
         dialogeWindow.SetActive(true);
+        enemyAnimator.SetBool("action",true);
         enemyAnimator.SetTrigger("zlapany");
-        yield return StartCoroutine(DialogeShow("<b>" + _FightManager.Instance.EnemyPokemon + "</b> has been caught!"));
+        yield return StartCoroutine(DialogeShow("<b>" + _FightManager.Instance.EnemyPokemon.basicName + "</b> has been caught!"));
 
         yield return StartCoroutine(AddLevelUps());
 

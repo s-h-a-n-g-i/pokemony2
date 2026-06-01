@@ -574,7 +574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -1852,7 +1852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -1883,7 +1883,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 366670235}
+      - m_Target: {fileID: 1835084508}
         m_TargetAssemblyTypeName: SaveLoadGameButton, Assembly-CSharp
         m_MethodName: Load
         m_Mode: 1
@@ -2001,7 +2001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -2032,7 +2032,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 366670235}
+      - m_Target: {fileID: 1851965619}
         m_TargetAssemblyTypeName: SaveLoadGameButton, Assembly-CSharp
         m_MethodName: Load
         m_Mode: 1
@@ -2420,5 +2420,5 @@ SceneRoots:
   - {fileID: 669442390}
   - {fileID: 670265330}
   - {fileID: 1242874952}
-  - {fileID: 1363436591493068003}
   - {fileID: 3906538664877202903}
+  - {fileID: 1363436591493068003}

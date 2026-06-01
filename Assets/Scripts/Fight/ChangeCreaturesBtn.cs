@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+//using UnityEngine.UIElements;
 
 public class ChangeCreaturesBtn : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class ChangeCreaturesBtn : MonoBehaviour
     [SerializeField] private FightSystemManager fightSystemManager;
     [SerializeField] private TrainerManager trainerManager;
     [SerializeField] private SingleFightManager singleManager;
+    [SerializeField] private GameObject TextShow;
+    [SerializeField] private GameObject CreaturesChose;
     [SerializeField] private int pokemonCounter;
 
     void Update()
@@ -37,9 +40,10 @@ public class ChangeCreaturesBtn : MonoBehaviour
         
     }
 
-    public void ShowCreaturePressed() 
+    public void ShowCreaturePressed()
     {
-
+        TextShow.SetActive(true);
+        CreaturesChose.SetActive(false);
         _PokemonEQ.Instance.pokemonUsedInFight.Add(pokemonCounter);
         fightSystemManager.chosenPokemonPlayer = pokemonCounter;
         fightSystemManager.setUpMyPokemon();

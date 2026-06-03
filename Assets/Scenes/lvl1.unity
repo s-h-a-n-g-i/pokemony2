@@ -121995,7 +121995,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3091988127471008691, guid: 16293c435a0992743a47755f470de4b2, type: 3}
       propertyPath: y
-      value: 9
+      value: 8.5
       objectReference: {fileID: 0}
     - target: {fileID: 3091988127471008691, guid: 16293c435a0992743a47755f470de4b2, type: 3}
       propertyPath: sceneNameToTeleport
@@ -124041,7 +124041,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3091988127471008691, guid: 16293c435a0992743a47755f470de4b2, type: 3}
       propertyPath: y
-      value: 9
+      value: 8.5
       objectReference: {fileID: 0}
     - target: {fileID: 3091988127471008691, guid: 16293c435a0992743a47755f470de4b2, type: 3}
       propertyPath: sceneNameToTeleport
@@ -136010,7 +136010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3091988127471008691, guid: 16293c435a0992743a47755f470de4b2, type: 3}
       propertyPath: y
-      value: 9
+      value: 8.5
       objectReference: {fileID: 0}
     - target: {fileID: 3091988127471008691, guid: 16293c435a0992743a47755f470de4b2, type: 3}
       propertyPath: sceneNameToTeleport

@@ -38,4 +38,26 @@ public class Bobles : MonoBehaviour
         yield return new WaitForSeconds(0.6f);
         sr.sprite = none;
     }
+
+    public void loveBobelShow()
+    {
+        sr.sprite = love;
+    }
+    public void dotsBobelShow()
+    {
+        sr.sprite = dots;
+    }
+    public void questBobelShow()
+    {
+        sr.sprite = question;
+    }
+    public void exclBobelShow()
+    {
+        sr.sprite = exclamation;
+    }
+
+    public void clearBobels()
+    {
+        sr.sprite = none;
+    }
 }

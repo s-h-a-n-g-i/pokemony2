@@ -13,7 +13,7 @@ public class Pc_Canvas : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.X)) 
         {
-            player.canMove = true;
+            //player.canMove = true;
             gameObject.SetActive(false);
         }
     }

@@ -9,6 +9,7 @@ public class _PlayerSave : MonoBehaviour
     public Vector3 _playerPosition;
     public Vector2 _playerRotation = new Vector2(0,-1);
     public string _sceneName = "";
+    public bool male = true;
     void Awake()
     {
         if (Instance != null && Instance != this)

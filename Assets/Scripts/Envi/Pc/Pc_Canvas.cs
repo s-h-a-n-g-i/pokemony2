@@ -4,16 +4,18 @@ public class Pc_Canvas : MonoBehaviour
 {
     private PlayerMovement player;
 
+    private void Start()
+    {
+        player = GameObject.Find("Player").GetComponent<PlayerMovement>();
+    }
+
     void Update()
     {
-        if (player == null)
-            player = GameObject.Find("Player").GetComponent<PlayerMovement>();
-
         player.canMove = false;
 
-        if (Input.GetKeyDown(KeyCode.X)) 
+        if (Input.GetKeyDown(KeyCode.K)) 
         {
-            //player.canMove = true;
+            player.canMove = true;
             gameObject.SetActive(false);
         }
     }

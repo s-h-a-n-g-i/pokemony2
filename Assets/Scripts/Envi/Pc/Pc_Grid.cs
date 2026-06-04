@@ -25,9 +25,13 @@ public class Pc_Grid : MonoBehaviour
         }
     }
 
-    private void ResetPokemons() 
+
+    private void ResetPokemons()
     {
-        while (transform.childCount > 0) Destroy(transform.GetChild(0).gameObject);
+        for (int i = transform.childCount - 1; i >= 0; i--)
+        {
+            Destroy(transform.GetChild(i).gameObject);
+        }
     }
 
     public void AddPokemonToList(Pokemon p) 

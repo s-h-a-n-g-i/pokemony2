@@ -29,6 +29,7 @@ public class SaveManager : MonoBehaviour
         if (!IsValidSlot(slot)) return;
         SaveData data = new SaveData();
 
+        data.male = _PlayerSave.Instance.male;
         data.playerName = _PlayerSave.Instance.playerName;
         data.sceneName = _PlayerSave.Instance._sceneName;
         data.playerPosition = _PlayerSave.Instance._playerPosition;
@@ -81,6 +82,7 @@ public class SaveManager : MonoBehaviour
         string json = File.ReadAllText(path);
         SaveData data = JsonUtility.FromJson<SaveData>(json);
 
+        _PlayerSave.Instance.male = data.male;
         _PlayerSave.Instance.playerName = data.playerName;
         _PlayerSave.Instance._sceneName = data.sceneName;
         _PlayerSave.Instance._playerPosition = data.playerPosition;
@@ -288,6 +290,7 @@ public class SaveManager : MonoBehaviour
 [Serializable]
 public class SaveData
 {
+    public bool male;
     public string playerName;
     public string sceneName;
     public Vector3 playerPosition;

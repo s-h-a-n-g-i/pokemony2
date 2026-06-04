@@ -1299,9 +1299,9 @@ MonoBehaviour:
   fightSystemManager: {fileID: 1666646634}
   trainerManager: {fileID: 1666646636}
   singleManager: {fileID: 1666646637}
-  TextShow: {fileID: 0}
-  CreaturesChose: {fileID: 0}
-  pokemonCounter: 1
+  TextShow: {fileID: 1497335672}
+  CreaturesChose: {fileID: 1621696624}
+  pokemonCounter: 0
 --- !u!1 &389264274
 GameObject:
   m_ObjectHideFlags: 0
@@ -5252,8 +5252,8 @@ MonoBehaviour:
   fightSystemManager: {fileID: 1666646634}
   trainerManager: {fileID: 1666646636}
   singleManager: {fileID: 1666646637}
-  TextShow: {fileID: 0}
-  CreaturesChose: {fileID: 0}
+  TextShow: {fileID: 1497335672}
+  CreaturesChose: {fileID: 1621696624}
   pokemonCounter: 4
 --- !u!1 &1208839677
 GameObject:
@@ -5623,8 +5623,8 @@ MonoBehaviour:
   fightSystemManager: {fileID: 1666646634}
   trainerManager: {fileID: 1666646636}
   singleManager: {fileID: 1666646637}
-  TextShow: {fileID: 0}
-  CreaturesChose: {fileID: 0}
+  TextShow: {fileID: 1497335672}
+  CreaturesChose: {fileID: 1621696624}
   pokemonCounter: 2
 --- !u!1 &1253888048
 GameObject:
@@ -6338,9 +6338,9 @@ MonoBehaviour:
   fightSystemManager: {fileID: 1666646634}
   trainerManager: {fileID: 1666646636}
   singleManager: {fileID: 1666646637}
-  TextShow: {fileID: 0}
-  CreaturesChose: {fileID: 0}
-  pokemonCounter: 0
+  TextShow: {fileID: 1497335672}
+  CreaturesChose: {fileID: 1621696624}
+  pokemonCounter: 1
 --- !u!1 &1490843241
 GameObject:
   m_ObjectHideFlags: 0
@@ -6991,8 +6991,8 @@ MonoBehaviour:
   fightSystemManager: {fileID: 1666646634}
   trainerManager: {fileID: 1666646636}
   singleManager: {fileID: 1666646637}
-  TextShow: {fileID: 0}
-  CreaturesChose: {fileID: 0}
+  TextShow: {fileID: 1497335672}
+  CreaturesChose: {fileID: 1621696624}
   pokemonCounter: 3
 --- !u!1 &1621696624
 GameObject:

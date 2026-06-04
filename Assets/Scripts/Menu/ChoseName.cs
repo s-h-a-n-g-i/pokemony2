@@ -17,7 +17,7 @@ public class ChoseName : MonoBehaviour
 
     public void NameChosenGoNext() 
     {
-        _PlayerSave.Instance.name = input.text;
+        _PlayerSave.Instance.playerName = input.text;
         SceneManager.LoadScene("Starter");
     }
 }

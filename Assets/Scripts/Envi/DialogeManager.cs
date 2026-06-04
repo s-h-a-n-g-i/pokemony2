@@ -2,9 +2,6 @@ using JetBrains.Annotations;
 using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem.Utilities;
-using UnityEngine.InputSystem.XR;
-using static UnityEditor.Rendering.MaterialUpgrader;
 
 public class DialogeManager : MonoBehaviour
 {

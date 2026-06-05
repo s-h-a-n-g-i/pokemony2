@@ -44,12 +44,12 @@ public class SaveManager : MonoBehaviour
             data.allPokemons = SavePokemonList(_PokemonEQ.Instance.AllHavePokemons);
         }
 
-        Debug.Log(slot);
+        //Debug.Log(slot);
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(GetSlotPath(slot), json);
 
-        Debug.Log("Game saved on slot " + slot);
-        Debug.Log(GetSlotPath(slot));
+        //Debug.Log("Game saved on slot " + slot);
+        //Debug.Log(GetSlotPath(slot));
     }
 
     public string GetPlayerNameFromSlot(int slot) 
@@ -59,7 +59,7 @@ public class SaveManager : MonoBehaviour
         string path = GetSlotPath(slot);
         if (!File.Exists(path))
         {
-            Debug.LogWarning("Save slot " + slot + " does not exist.");
+            //Debug.LogWarning("Save slot " + slot + " does not exist.");
             return null;
         }
         string json = File.ReadAllText(path);
@@ -70,12 +70,12 @@ public class SaveManager : MonoBehaviour
     }
     public void LoadGameFromSlot(int slot)
     {
-        Debug.Log(slot);
+        //Debug.Log(slot);
         if (!IsValidSlot(slot)) return;
         string path = GetSlotPath(slot);
         if (!File.Exists(path))
         {
-            Debug.LogWarning("Save slot " + slot + " does not exist.");
+            //Debug.LogWarning("Save slot " + slot + " does not exist.");
             return;
         }
 
@@ -112,7 +112,7 @@ public class SaveManager : MonoBehaviour
         }
 
 
-        Debug.Log("Game loaded from slot " + slot);
+        //Debug.Log("Game loaded from slot " + slot);
     }
 
     public bool HasSave(int slot)
@@ -209,7 +209,7 @@ public class SaveManager : MonoBehaviour
         PokemonSO pokemonSO = FindPokemonSO(data.saveId);
         if (pokemonSO == null)
         {
-            Debug.LogWarning("Missing PokemonSO for save id: " + data.saveId);
+            //Debug.LogWarning("Missing PokemonSO for save id: " + data.saveId);
             return null;
         }
 

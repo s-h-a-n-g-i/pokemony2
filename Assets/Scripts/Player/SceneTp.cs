@@ -16,6 +16,7 @@ public class SceneTp : MonoBehaviour
     private PlayerMovement movement;
     void Start()
     {
+
         blinkingAnim = GameObject.Find("BinkTransform").GetComponent<Animator>();
         player = GameObject.Find("Player");
         playerTransform = player.transform;

@@ -10,6 +10,7 @@ public class AttackFightBtn : MonoBehaviour
     private Attack atk;
     private Button btn;
 
+
     private void Start()
     {
         atk = _PokemonEQ.Instance.ActivePokemon.AttacksActive[attackCounter];

@@ -85,7 +85,7 @@ public class Attack
         float s = 1;
         PokemonTypes poketype1 = target.type;
         PokemonTypes poketype2 = target.type2;
-        Debug.Log(target.basicName + " " + poketype1 + " " + poketype2);
+        //Debug.Log(target.basicName + " " + poketype1 + " " + poketype2);
         Dictionary<PokemonTypes,float> dict = new Dictionary<PokemonTypes,float>();
         switch (target.evoState)
         {
@@ -127,7 +127,7 @@ public class Attack
 
         if (poketype1 == PokemonTypes.nothing && poketype2 == PokemonTypes.nothing)
         {
-            Debug.Log("normal?");
+            //Debug.Log("normal?");
             return 1;
         }
         else if (poketype1 == PokemonTypes.nothing)
@@ -137,7 +137,7 @@ public class Attack
         else
             s = dict[poketype1] > dict[poketype2] ? dict[poketype1] : dict[poketype2];
         
-        Debug.Log(s);
+        //Debug.Log(s);
         return s;
     }
 

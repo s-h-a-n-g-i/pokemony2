@@ -47,7 +47,7 @@ public class TrainerManager : MonoBehaviour
             if (_NPCManager.Instance.TrainerPokemons.Length > chosenPokemon + 1 && !changingPokemon)
             {
                 changingPokemon = true;
-                Debug.Log("TRENER ZMIENIA POKEMON");
+                //Debug.Log("TRENER ZMIENIA POKEMON");
                 //_PokemonEQ.Instance.ActivePokemon.giveXP(_NPCManager.Instance.TrainerPokemons[chosenPokemon].level);
                 FinishedBattle = false;
                 PokemonTrainerCounter[chosenPokemon].SetActive(false);

@@ -20,7 +20,7 @@ public class SaveLoadGameButton : MonoBehaviour
         }
         else
         {
-            buttontext.text = "Empty slot " + saveId;
+            buttontext.text = "Slot " + saveId;
             if(loadgame) GetComponent<Button>().interactable = false;
         }
     }

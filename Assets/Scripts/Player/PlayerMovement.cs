@@ -14,6 +14,9 @@ public class PlayerMovement : MonoBehaviour
 
     private GameObject gameManager;
 
+    private AnimatorControllerParameter maleAnimator;
+    private AnimatorControllerParameter femaleAnimator;
+
     private void Start()
     {
         gameManager = GameObject.Find("GameManager");
@@ -31,6 +34,9 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetFloat("LastInputX", lastDir.x);
                 animator.SetFloat("LastInputY", lastDir.y);
             }
+
+        //if (_PlayerSave.Instance.male)
+            
     }
 
 

@@ -49,7 +49,7 @@ public class SaveManager : MonoBehaviour
         File.WriteAllText(GetSlotPath(slot), json);
 
         //Debug.Log("Game saved on slot " + slot);
-        //Debug.Log(GetSlotPath(slot));
+        Debug.Log(GetSlotPath(slot));
     }
 
     public string GetPlayerNameFromSlot(int slot) 

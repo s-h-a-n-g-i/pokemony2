@@ -25,7 +25,7 @@ public class PokemonCheckButton : MonoBehaviour
 
     public void ButtonCheckPressed() 
     {
+        pokeCheck.ResetDesc();
         pokeCheck.SetupPokemon(pokemonChosen);
-        
     }
 }

@@ -13,6 +13,8 @@ public class PokemonCheck : MonoBehaviour
 
     [SerializeField] private TMP_InputField pokename;
     private int pokemonInEq = 0;
+
+    [SerializeField] private GameObject AttacksObj;
     void Start()
     {
         SetupPokemon(0);
@@ -21,10 +23,11 @@ public class PokemonCheck : MonoBehaviour
     void Update()
     {
         string s = "";
+        bool attackActive = false;
         switch (mode)
         {
             case 0:
-                s = chosenPokemon.basicName+" is "+ chosenPokemon.GetPokemonTypes()+". "+" Pokemon is on level "+ chosenPokemon.level + ".";
+                s = chosenPokemon.basicName + " is " + chosenPokemon.GetPokemonTypes() + ". " + " Pokemon is on level " + chosenPokemon.level + ".";
                 break;
 
             case 1:
@@ -50,23 +53,24 @@ public class PokemonCheck : MonoBehaviour
                 break;
 
             case 3:
+                attackActive = true;
                 break;
         }
-
+        AttacksObj.SetActive(attackActive);
         desc.text = s;
     }
-    public void SaveNameToPokemonButton() 
+    public void SaveNameToPokemonButton()
     {
-        if(pokename.text != null && pokename.text != "")
+        if (pokename.text != null && pokename.text != "")
             _PokemonEQ.Instance.EqPokemons[pokemonInEq].nickname = pokename.text;
     }
 
-    public void SetupPokemon(int s) 
+    public void SetupPokemon(int s)
     {
         desc.text = "";
         chosenPokemon = _PokemonEQ.Instance.EqPokemons[s];
         pokemonInEq = s;
-        if (chosenPokemon.basicName != chosenPokemon.nickname && (chosenPokemon.nickname!=null || chosenPokemon.nickname!=""))
+        if (chosenPokemon.basicName != chosenPokemon.nickname && (chosenPokemon.nickname != null || chosenPokemon.nickname != ""))
             pokename.text = chosenPokemon.nickname;
         else
             pokename.text = chosenPokemon.basicName;
@@ -84,6 +88,26 @@ public class PokemonCheck : MonoBehaviour
                 break;
         }
 
+    }
+
+    public string Attack(int s)
+    {
+        return desc.text = chosenPokemon.AttacksActive[s].desc;
+    }
+
+    public string IsThisAttackAviable(int s)
+    {
+        if(chosenPokemon.AttacksActive == null) return "No Attack";
+        if (chosenPokemon.AttacksActive[s] != null)
+            if (chosenPokemon.AttacksActive[s].attackName != string.Empty)
+            return chosenPokemon.AttacksActive[s].attackName + " "+ chosenPokemon.AttacksActive[s].pp + "/" + chosenPokemon.AttacksActive[s].maxPp;
+        return "No Attack";
+    }
+
+    public void ResetDesc() 
+    {
+        desc.text = "";
+        AttacksObj.SetActive(false);
     }
 
 }

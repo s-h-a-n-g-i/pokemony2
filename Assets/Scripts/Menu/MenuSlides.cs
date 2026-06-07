@@ -1,11 +1,11 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuSlides : MonoBehaviour
 {
-
+    [SerializeField] private PokemonCheck check;
     [SerializeField] private int state = 0;
     [SerializeField] Animator animator;
-
 
     void Start()
     {
@@ -19,6 +19,7 @@ public class MenuSlides : MonoBehaviour
         if (Input.GetKey(KeyCode.X) && state == 0) 
         {
             state = 1;
+            check.chosenPokemon = _PokemonEQ.Instance.EqPokemons[0];
         }
     }
 
@@ -32,4 +33,14 @@ public class MenuSlides : MonoBehaviour
         state = 2;
     }
 
+
+    public void LeaveToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

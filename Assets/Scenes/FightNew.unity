@@ -1451,7 +1451,7 @@ GameObject:
   - component: {fileID: 453185774}
   - component: {fileID: 453185773}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Chart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

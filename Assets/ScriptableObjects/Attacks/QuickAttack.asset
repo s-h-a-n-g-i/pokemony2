@@ -16,8 +16,8 @@ MonoBehaviour:
   attackType: 0
   pp: 20
   maxPp: 20
-  damage: 10
+  damage: 6
   accuracy: 100
   speed: 100
-  desc: Fast attack
+  desc: Fastest attack in the Hell
   effect: 0

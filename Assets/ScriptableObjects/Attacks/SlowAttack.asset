@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10176c9fd97c32c49be86f24f3b1f732, type: 3}
   m_Name: SlowAttack
   m_EditorClassIdentifier: Assembly-CSharp::AttackSO
-  attackName: EffectiveAttack
+  attackName: Spooky Punch
   attackType: 6
-  pp: 20
-  maxPp: 20
-  damage: 7
+  pp: 15
+  maxPp: 15
+  damage: 8
   accuracy: 100
   speed: 5
   desc: 

@@ -13,12 +13,12 @@ public class AttackFightBtn : MonoBehaviour
 
     private void Start()
     {
-        atk = _PokemonEQ.Instance.ActivePokemon.AttacksActive[attackCounter];
         btn = GetComponent<Button>();    
     }
 
     void Update()
     {
+        atk = _PokemonEQ.Instance.ActivePokemon.AttacksActive[attackCounter];
         UpdateAttack(atk);
     }
 

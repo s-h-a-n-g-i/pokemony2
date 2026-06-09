@@ -32,7 +32,7 @@ public enum Effects
 public class Pokemon
 {
     [SerializeField] private int pokemonLevelStarted;
-
+    [HideInInspector] public int turnsToClearEffect = 0;
     [Header("Info")]
     public string basicName;
     public string nickname;
@@ -89,6 +89,7 @@ public class Pokemon
     public int sDefX;
     public int sAtkX;
     public int speedX;
+    public int accuracyX;
 
     public int level = 0;
 
@@ -160,7 +161,7 @@ public class Pokemon
                 AttackSO s = c.attacksOnLevelUp[i].attack;
                 AttackDict.Add(
                     c.attacksOnLevelUp[i].level,
-                    new Attack(s.name, s.attackType, s.maxPp, s.damage, s.accuracy, s.speed, s.desc));
+                    new Attack(s.attackName, s.attackType, s.maxPp, s.damage, s.accuracy, s.speed, s.desc, s.effect)); 
 
             }
         
@@ -171,9 +172,9 @@ public class Pokemon
     {
         for (int i = 0; i < s.Length; i++) 
         {
-            if (s[i] != null) 
+            if (s[i] != null)  
                 if(s[i].name != "None")
-                    AttacksActive[i] = new Attack(s[i].name, s[i].attackType, s[i].maxPp, s[i].damage, s[i].accuracy, s[i].speed, s[i].desc);
+                    AttacksActive[i] = new Attack(s[i].attackName, s[i].attackType, s[i].maxPp, s[i].damage, s[i].accuracy, s[i].speed, s[i].desc, s[i].effect);
         }
     }
 

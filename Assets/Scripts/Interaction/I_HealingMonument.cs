@@ -21,7 +21,16 @@ public class I_HealingMonument : MonoBehaviour
         dialoge = GameObject.Find("GameManager").GetComponent<DialogeManager>();
 
         foreach (Pokemon s in _PokemonEQ.Instance.EqPokemons)
+        {
+            s.effects = Effects.None;
+            s.atkX = 0;
+            s.defX = 0;
+            s.sDefX = 0;
+            s.sAtkX = 0;
+            s.speedX = 0;
+            s.accuracyX = 0;
             s.hp = s.maxHp;
+        }
         StartCoroutine(HealDialoge());
     }
 

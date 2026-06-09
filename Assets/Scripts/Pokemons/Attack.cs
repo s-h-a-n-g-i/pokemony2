@@ -18,8 +18,9 @@ public class Attack
     bool isSuper = false;
 
     public bool hasSlot = true;
-    public Attack(string attackName, PokemonTypes attackType, int maxPp, int damage, int accuracy, int speed , string desc) 
+    public Attack(string attackName, PokemonTypes attackType, int maxPp, int damage, int accuracy, int speed , string desc, Effects effect) 
     {
+        this.effect = effect;
         this.attackName = attackName;
         this.attackType = attackType;
         this.maxPp = maxPp;
@@ -72,8 +73,43 @@ public class Attack
                 output = "(SUPER Effective)";
                 break;
         }
-
+        int rand = Random.Range(0,100);
+        //Debug.Log(rand+" na " + (accuracy + deal.accuracyX));
+        //Debug.Log(rand > (accuracy + deal.accuracyX));
+        if (rand > accuracy+deal.accuracyX)
+            dmgTemp = 0;
+        //Debug.Log(r);
+        
+        if (target.effects == Effects.None && dmgTemp != 0)
+            if (effect != Effects.None) 
+            {
+                Debug.Log(target.PokemonNameOut() + "got a stroke " + effect + EffectTurnStay());
+                target.effects = effect; 
+                target.turnsToClearEffect = EffectTurnStay(); 
+            } 
         return (Mathf.CeilToInt(dmgTemp), output);
+    }
+
+    private int EffectTurnStay() 
+    {
+        switch (effect)
+        {
+            case Effects.Blind:
+                return 3;
+
+            case Effects.Weakness:
+                return 5;
+
+            case Effects.Buff:
+                return 5;
+
+            case Effects.Poison:
+                return 10;
+
+            case Effects.Burn:
+                return 3;
+        }
+        return 0;
     }
 
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static UnityEngine.GraphicsBuffer;
 
 public class DialogeFightManager : MonoBehaviour
 {
@@ -117,6 +118,50 @@ public class DialogeFightManager : MonoBehaviour
 
     }
 
+    public IEnumerator EffectApply(Pokemon p) 
+    {
+        if (p.turnsToClearEffect == 0)
+        {
+            Debug.Log(p.PokemonNameOut() + "sperma?");
+            p.effects = Effects.None;
+        }
+        else
+        {
+            Debug.Log(p.PokemonNameOut() + "got a stroke");
+            switch (p.effects)
+            {
+                case Effects.Poison:
+                    p.turnsToClearEffect--;
+                    p.hp-=1;
+                    if(p.hp<=0)p.hp=0;
+                    yield return StartCoroutine(DialogeShow(p.PokemonNameOut()+" is poisoned"));
+                    break;
+                case Effects.Weakness:
+
+                    break;
+                case Effects.Blind:
+                    p.accuracyX = -90;
+                    yield return StartCoroutine(DialogeShow(p.PokemonNameOut() + " is blinded"));
+                    p.turnsToClearEffect--;
+
+                    break;
+                case Effects.Burn:
+                    p.hp -= 5;
+                    if (p.hp <= 0) p.hp = 0;
+                    yield return StartCoroutine(DialogeShow(p.PokemonNameOut() + " is burning"));
+                    p.turnsToClearEffect--;
+
+                    break;
+                case Effects.Buff:
+                    
+                    p.turnsToClearEffect--;
+                    break;
+            }
+        }
+        yield return new WaitForSeconds(0); 
+    }
+
+
     ///////////////MARTWIAK
     public IEnumerator EndedBattle(string nameDefeated)
     {
@@ -218,24 +263,27 @@ public class DialogeFightManager : MonoBehaviour
 
         dialogeWindow.SetActive(true);
 
+        yield return StartCoroutine(EffectApply(firstPokemon));
 
         if (dialogeSkipTurn == "")
         {
             var atk1 = firstAttack.getDamage(firstPokemon, secondPokemon);
-
+            Debug.Log(atk1.Item1);
             yield return StartCoroutine(DialogeShow(
                 ProvideAttack(firstPokemon, firstAttack, secondPokemon, atk1.Item1, atk1.Item2)));
         }
         else
             yield return StartCoroutine(DialogeShow(dialogeSkipTurn));
 
-
+        if (secondPokemon.hp != 0)
+            yield return StartCoroutine(EffectApply(secondPokemon));
 
         //////TEST CZY POKEMON MOZE ZAATAKOWAC (ZE NIE JEST MARTWY PO ATAKU)
         if (secondPokemon.hp != 0)
         {
 
             var atk2 = secondAttack.getDamage(secondPokemon, firstPokemon);
+            Debug.Log(atk2.Item1);
 
             yield return StartCoroutine(DialogeShow(
                 ProvideAttack(secondPokemon, secondAttack, firstPokemon, atk2.Item1, atk2.Item2)));
@@ -261,12 +309,17 @@ public class DialogeFightManager : MonoBehaviour
             s = playerAnimator;
         else
             s = enemyAnimator;
-
-        s.SetTrigger("dmg");
-        targetPokemon.hp -= atkDamage;
-        string action = CheckKill(targetPokemon);
-        return dealingPokemon.PokemonNameOut() + action + targetPokemon.PokemonNameOut() + " with <b>" + atkPower + "</b> " + dealingAttack.attackName;
-        
+        if (atkDamage > 0)
+        {
+            s.SetTrigger("dmg");
+            targetPokemon.hp -= atkDamage;
+            string action = CheckKill(targetPokemon);
+            return dealingPokemon.PokemonNameOut() + action + targetPokemon.PokemonNameOut() + " with <b>" + atkPower + "</b> " + dealingAttack.attackName;
+        }
+        else 
+        {
+            return dealingPokemon.PokemonNameOut() + " missed " + targetPokemon.PokemonNameOut() + " with " + dealingAttack.attackName;
+        }
     }
 
     private string CheckKill(Pokemon pokemonToCheck) 

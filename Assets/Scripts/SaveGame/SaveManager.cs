@@ -442,7 +442,7 @@ public class AttackSaveData
         if (isEmpty)
             return null;
 
-        Attack attack = new Attack(attackName, attackType, maxPp, damage, accuracy, speed, desc);
+        Attack attack = new Attack(attackName, attackType, maxPp, damage, accuracy, speed, desc, effect);
         attack.pp = pp;
         attack.effect = effect;
 

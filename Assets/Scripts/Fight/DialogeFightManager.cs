@@ -69,7 +69,7 @@ public class DialogeFightManager : MonoBehaviour
         enemyAnimator.SetBool("fly", live);
     }
 
-
+    //////POKAZYWANIE DIALOGOW W WALCE ?????????
     public IEnumerator DialogeShow(string textToEnter, bool lastText = true)
     {
         if (!lastText)
@@ -122,33 +122,33 @@ public class DialogeFightManager : MonoBehaviour
     {
         if (p.turnsToClearEffect == 0)
         {
-            Debug.Log(p.PokemonNameOut() + "sperma?");
+            //Debug.Log(p.PokemonNameOut() + "sperma?");
             p.effects = Effects.None;
         }
         else
         {
-            Debug.Log(p.PokemonNameOut() + "got a stroke");
+            //Debug.Log(p.PokemonNameOut() + "got a stroke");
             switch (p.effects)
             {
                 case Effects.Poison:
                     p.turnsToClearEffect--;
                     p.hp-=1;
                     if(p.hp<=0)p.hp=0;
-                    yield return StartCoroutine(DialogeShow(p.PokemonNameOut()+" is poisoned"));
+                    yield return StartCoroutine(DialogeShow(p.PokemonNameOut()+" is poisoned!"));
                     break;
                 case Effects.Weakness:
 
                     break;
                 case Effects.Blind:
                     p.accuracyX = -90;
-                    yield return StartCoroutine(DialogeShow(p.PokemonNameOut() + " is blinded"));
+                    yield return StartCoroutine(DialogeShow(p.PokemonNameOut() + " is blinded!"));
                     p.turnsToClearEffect--;
 
                     break;
                 case Effects.Burn:
                     p.hp -= 5;
                     if (p.hp <= 0) p.hp = 0;
-                    yield return StartCoroutine(DialogeShow(p.PokemonNameOut() + " is burning"));
+                    yield return StartCoroutine(DialogeShow(p.PokemonNameOut() + " is burning!"));
                     p.turnsToClearEffect--;
 
                     break;
@@ -162,7 +162,7 @@ public class DialogeFightManager : MonoBehaviour
     }
 
 
-    ///////////////MARTWIAK
+    ///////////////MARTWIAK ??????
     public IEnumerator EndedBattle(string nameDefeated)
     {
         dialogeWindow.SetActive(true);
@@ -255,7 +255,7 @@ public class DialogeFightManager : MonoBehaviour
 
 
 
-    ////////////// CALA SEKWENCJA ATAKU OBU POKEMONOW
+    ////////////// CALA SEKWENCJA ATAKU OBU POKEMONOWkys negro
     public IEnumerator PokemonFightCutscene(Pokemon firstPokemon, Attack firstAttack, Pokemon secondPokemon, Attack secondAttack, string dialogeSkipTurn = "")
     {
         playerAnimator.SetBool("action", true);

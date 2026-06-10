@@ -17,6 +17,7 @@ public class FightNPC : MonoBehaviour
     [Header("Dialoge before fight")]
     [SerializeField] DialogeLine[] dialogeLines;
     [Header("what Pokemon has trainer")]
+    [SerializeField] private bool canEscape = true;
     [HideInInspector] public bool defeated = false;
     [SerializeField] private PokemonSO[] pokemonToFight;
     [SerializeField] private int level = 3;
@@ -92,6 +93,7 @@ public class FightNPC : MonoBehaviour
         //_GlobalPokemon.ResetBeforeFight();
 
         //_GlobalPokemon.TrainerID = trainerID;
+        _NPCManager.Instance.canescape = canEscape;
         _NPCManager.Instance.TrainerName = gameObject.name;
         _NPCManager.Instance.isItTrainer = true;
         _NPCManager.Instance.TrainerPokemons = pokemon;

@@ -10,7 +10,7 @@ public class _NPCManager : MonoBehaviour
     public Pokemon[] TrainerPokemons = new Pokemon[5];
     public bool isItTrainer = false;
     public string TrainerName;
-
+    public bool canescape = true;
     private HashSet<string> defeatedNPCs = new HashSet<string>();
 
     void Awake()

@@ -18,6 +18,6 @@ MonoBehaviour:
   maxPp: 25
   damage: 11
   accuracy: 100
-  speed: 15
+  speed: 1000
   desc: Sperma jest jadalna
-  effect: 0
+  effect: 2

@@ -275,6 +275,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8680908749133586902, guid: 20eeca76552aa0f44bf5bb71608108da, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -439,6 +443,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1502868223415923880, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1298.1222
+      objectReference: {fileID: 0}
+    - target: {fileID: 1502868223415923880, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 210.0135
+      objectReference: {fileID: 0}
+    - target: {fileID: 1502868223415923880, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 3.736
+      objectReference: {fileID: 0}
+    - target: {fileID: 1502868223415923880, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -396.8662
+      objectReference: {fileID: 0}
     - target: {fileID: 1980361893588547314, guid: d205a00590f88e44e860b60779db3038, type: 3}
       propertyPath: dialoge
       value: 
@@ -535,6 +555,14 @@ PrefabInstance:
       propertyPath: dialoge
       value: 
       objectReference: {fileID: 1663660676}
+    - target: {fileID: 6533635129053644161, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_fontSize
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533635129053644161, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 7651400923303008012, guid: d205a00590f88e44e860b60779db3038, type: 3}
       propertyPath: dialoge
       value: 

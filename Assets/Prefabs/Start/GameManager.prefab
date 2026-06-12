@@ -51,6 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::_PokemonEQ
   ActivePokemon:
     pokemonLevelStarted: 0
+    turnsToClearEffect: 0
     basicName: 
     nickname: 
     evoState: 0
@@ -86,6 +87,7 @@ MonoBehaviour:
     sDefX: 0
     sAtkX: 0
     speedX: 0
+    accuracyX: 0
     level: 0
     flying: 0
     saveId: 
@@ -95,6 +97,7 @@ MonoBehaviour:
     effects: 0
   EqPokemons:
   - pokemonLevelStarted: 0
+    turnsToClearEffect: 0
     basicName: 
     nickname: 
     evoState: 0
@@ -130,6 +133,7 @@ MonoBehaviour:
     sDefX: 0
     sAtkX: 0
     speedX: 0
+    accuracyX: 0
     level: 0
     flying: 0
     saveId: 
@@ -138,6 +142,7 @@ MonoBehaviour:
     wasInFight: 0
     effects: 0
   - pokemonLevelStarted: 0
+    turnsToClearEffect: 0
     basicName: 
     nickname: 
     evoState: 0
@@ -173,6 +178,7 @@ MonoBehaviour:
     sDefX: 0
     sAtkX: 0
     speedX: 0
+    accuracyX: 0
     level: 0
     flying: 0
     saveId: 
@@ -181,6 +187,7 @@ MonoBehaviour:
     wasInFight: 0
     effects: 0
   - pokemonLevelStarted: 0
+    turnsToClearEffect: 0
     basicName: 
     nickname: 
     evoState: 0
@@ -216,6 +223,7 @@ MonoBehaviour:
     sDefX: 0
     sAtkX: 0
     speedX: 0
+    accuracyX: 0
     level: 0
     flying: 0
     saveId: 
@@ -224,6 +232,7 @@ MonoBehaviour:
     wasInFight: 0
     effects: 0
   - pokemonLevelStarted: 0
+    turnsToClearEffect: 0
     basicName: 
     nickname: 
     evoState: 0
@@ -259,6 +268,7 @@ MonoBehaviour:
     sDefX: 0
     sAtkX: 0
     speedX: 0
+    accuracyX: 0
     level: 0
     flying: 0
     saveId: 
@@ -267,6 +277,7 @@ MonoBehaviour:
     wasInFight: 0
     effects: 0
   - pokemonLevelStarted: 0
+    turnsToClearEffect: 0
     basicName: 
     nickname: 
     evoState: 0
@@ -302,6 +313,7 @@ MonoBehaviour:
     sDefX: 0
     sAtkX: 0
     speedX: 0
+    accuracyX: 0
     level: 0
     flying: 0
     saveId: 
@@ -329,6 +341,7 @@ MonoBehaviour:
   TrainerChosenPokemon: 0
   TrainerPokemons:
   - pokemonLevelStarted: 0
+    turnsToClearEffect: 0
     basicName: 
     nickname: 
     evoState: 0
@@ -364,6 +377,7 @@ MonoBehaviour:
     sDefX: 0
     sAtkX: 0
     speedX: 0
+    accuracyX: 0
     level: 0
     flying: 0
     saveId: 
@@ -372,6 +386,7 @@ MonoBehaviour:
     wasInFight: 0
     effects: 0
   - pokemonLevelStarted: 0
+    turnsToClearEffect: 0
     basicName: 
     nickname: 
     evoState: 0
@@ -407,6 +422,7 @@ MonoBehaviour:
     sDefX: 0
     sAtkX: 0
     speedX: 0
+    accuracyX: 0
     level: 0
     flying: 0
     saveId: 
@@ -415,6 +431,7 @@ MonoBehaviour:
     wasInFight: 0
     effects: 0
   - pokemonLevelStarted: 0
+    turnsToClearEffect: 0
     basicName: 
     nickname: 
     evoState: 0
@@ -450,6 +467,7 @@ MonoBehaviour:
     sDefX: 0
     sAtkX: 0
     speedX: 0
+    accuracyX: 0
     level: 0
     flying: 0
     saveId: 
@@ -458,6 +476,7 @@ MonoBehaviour:
     wasInFight: 0
     effects: 0
   - pokemonLevelStarted: 0
+    turnsToClearEffect: 0
     basicName: 
     nickname: 
     evoState: 0
@@ -493,6 +512,7 @@ MonoBehaviour:
     sDefX: 0
     sAtkX: 0
     speedX: 0
+    accuracyX: 0
     level: 0
     flying: 0
     saveId: 
@@ -501,6 +521,7 @@ MonoBehaviour:
     wasInFight: 0
     effects: 0
   - pokemonLevelStarted: 0
+    turnsToClearEffect: 0
     basicName: 
     nickname: 
     evoState: 0
@@ -536,6 +557,7 @@ MonoBehaviour:
     sDefX: 0
     sAtkX: 0
     speedX: 0
+    accuracyX: 0
     level: 0
     flying: 0
     saveId: 
@@ -545,6 +567,7 @@ MonoBehaviour:
     effects: 0
   isItTrainer: 0
   TrainerName: 
+  canescape: 1
 --- !u!114 &7936279451543281469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,6 +582,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::_FightManager
   EnemyPokemon:
     pokemonLevelStarted: 0
+    turnsToClearEffect: 0
     basicName: 
     nickname: 
     evoState: 0
@@ -594,6 +618,7 @@ MonoBehaviour:
     sDefX: 0
     sAtkX: 0
     speedX: 0
+    accuracyX: 0
     level: 0
     flying: 0
     saveId: 
@@ -648,3 +673,4 @@ MonoBehaviour:
   _playerPosition: {x: 0, y: 0, z: 0}
   _playerRotation: {x: 0, y: -1}
   _sceneName: 
+  male: 1

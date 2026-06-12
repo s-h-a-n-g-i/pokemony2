@@ -546,6 +546,34 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4201052961798460330, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_text
+      value: SLOT 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201052961798460330, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_fontSize
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201052961798460330, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201052961798460330, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201052961798460330, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201052961798460330, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201052961798460330, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
     - target: {fileID: 4325382764650001018, guid: d205a00590f88e44e860b60779db3038, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -626,10 +654,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5463012460491842776, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_text
+      value: SLOT 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463012460491842776, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_fontSize
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463012460491842776, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463012460491842776, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463012460491842776, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463012460491842776, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463012460491842776, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
     - target: {fileID: 6217257925394794191, guid: d205a00590f88e44e860b60779db3038, type: 3}
       propertyPath: dialoge
       value: 
       objectReference: {fileID: 1663660676}
+    - target: {fileID: 6386085984998684546, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6533635129053644161, guid: d205a00590f88e44e860b60779db3038, type: 3}
       propertyPath: m_fontSize
       value: 70
@@ -642,6 +702,34 @@ PrefabInstance:
       propertyPath: dialoge
       value: 
       objectReference: {fileID: 1663660676}
+    - target: {fileID: 8939936468344766925, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_text
+      value: SLOT 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939936468344766925, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_fontSize
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939936468344766925, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939936468344766925, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939936468344766925, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939936468344766925, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939936468344766925, guid: d205a00590f88e44e860b60779db3038, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1067,7 +1155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -684, y: 403}
+  m_AnchoredPosition: {x: -684, y: 387}
   m_SizeDelta: {x: 15, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &943645710
@@ -1454,7 +1542,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: 477}
+  m_AnchoredPosition: {x: 1, y: 479}
   m_SizeDelta: {x: 22, y: 7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1372745166
@@ -1529,7 +1617,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.7739, y: 384.4309}
+  m_AnchoredPosition: {x: 8.7739, y: 368.4309}
   m_SizeDelta: {x: 1273.0635, y: 107.1265}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1398642004
@@ -1666,7 +1754,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 684, y: 403}
+  m_AnchoredPosition: {x: 684, y: 387}
   m_SizeDelta: {x: 15, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1425986315

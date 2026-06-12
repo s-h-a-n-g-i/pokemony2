@@ -372,7 +372,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -381,6 +381,50 @@ TextureImporter:
       bones: []
       spriteID: fa6ed2a6b95cdb54badd5ee960695e61
       internalID: -72104431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dziurka_13
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b5f949dd2379d43b38b9056dcfd4dc
+      internalID: -1246262898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dziurka_14
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f274d4a93f880446831967f214df642
+      internalID: -97244988
       vertices: []
       indices: 
       edges: []
@@ -406,6 +450,8 @@ TextureImporter:
       dziurka_10: 1308541082
       dziurka_11: -151370103
       dziurka_12: -72104431
+      dziurka_13: -1246262898
+      dziurka_14: -97244988
       dziurka_2: -499843371
       dziurka_3: 1986631698
       dziurka_4: 610726854

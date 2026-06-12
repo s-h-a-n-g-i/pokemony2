@@ -527,7 +527,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: -419498860598657971, guid: 12c0a35bf7eea3f48b4a8f971ea6230f, type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 2172012299387091119, guid: 3d1de60253a436b49950ed1517e3cfe1, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -2717,14 +2717,14 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.254717, g: 0.254717, b: 0.254717, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: -419498860598657971, guid: 12c0a35bf7eea3f48b4a8f971ea6230f, type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 2172012299387091119, guid: 3d1de60253a436b49950ed1517e3cfe1, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -3989,7 +3989,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: -419498860598657971, guid: 12c0a35bf7eea3f48b4a8f971ea6230f, type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 2172012299387091119, guid: 3d1de60253a436b49950ed1517e3cfe1, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -6526,14 +6526,14 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.25490198, g: 0.25490198, b: 0.25490198, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: -419498860598657971, guid: 12c0a35bf7eea3f48b4a8f971ea6230f, type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 2172012299387091119, guid: 3d1de60253a436b49950ed1517e3cfe1, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -8031,6 +8031,7 @@ MonoBehaviour:
   text: {fileID: 389264276}
   pokemon:
     pokemonLevelStarted: 0
+    turnsToClearEffect: 0
     basicName: 
     nickname: 
     evoState: 0
@@ -8066,6 +8067,7 @@ MonoBehaviour:
     sDefX: 0
     sAtkX: 0
     speedX: 0
+    accuracyX: 0
     level: 0
     flying: 0
     saveId: 

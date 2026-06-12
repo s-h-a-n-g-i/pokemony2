@@ -232,13 +232,13 @@ public class DialogeFightManager : MonoBehaviour
                 {
                     if (newAttack.hasSlot)
                     {
-                        yield return StartCoroutine(DialogeShow(p.PokemonNameOut() + " LEARNED NEW ATTACK: <b>" + newAttack.attackName + "</b>"));
+                        yield return StartCoroutine(DialogeShow(p.PokemonNameOut() + " LEARNED NEW ATTACK: <b>" + newAttack.attackName + "</b>!"));
 
                     }
                     else
                     {
                         ChosenNewAttack = false;
-                        yield return StartCoroutine(DialogeShow(p.PokemonNameOut() + " LEARNED NEW ATTACK: <b>" + newAttack.attackName + "</b>"));
+                        yield return StartCoroutine(DialogeShow(p.PokemonNameOut() + " LEARNED NEW ATTACK: <b>" + newAttack.attackName + "</b>!"));
                         attackSwap.FullyAttackSwap(p, newAttack);
                         yield return new WaitUntil(() => ChosenNewAttack);
                     }
@@ -314,11 +314,11 @@ public class DialogeFightManager : MonoBehaviour
             s.SetTrigger("dmg");
             targetPokemon.hp -= atkDamage;
             string action = CheckKill(targetPokemon);
-            return dealingPokemon.PokemonNameOut() + action + targetPokemon.PokemonNameOut() + " with <b>" + atkPower + "</b> " + dealingAttack.attackName;
+            return dealingPokemon.PokemonNameOut() + action + targetPokemon.PokemonNameOut() + " with <b>" + atkPower + "</b> " + dealingAttack.attackName + "!";
         }
         else 
         {
-            return dealingPokemon.PokemonNameOut() + " missed " + targetPokemon.PokemonNameOut() + " with " + dealingAttack.attackName;
+            return dealingPokemon.PokemonNameOut() + " missed " + targetPokemon.PokemonNameOut() + " with " + dealingAttack.attackName + "!";
         }
     }
 

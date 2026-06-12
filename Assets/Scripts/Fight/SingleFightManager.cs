@@ -74,7 +74,7 @@ public class SingleFightManager : MonoBehaviour
         Pokemon enemyPokemon = _FightManager.Instance.EnemyPokemon;
         Attack enemyAttack = enemyPokemon.GetRandomAttack();
 
-        StartCoroutine(dialogeManager.PokemonFightCutscene(_PokemonEQ.Instance.ActivePokemon, null, _FightManager.Instance.EnemyPokemon, enemyAttack, "Pokemon changed to <b>" + _PokemonEQ.Instance.ActivePokemon.PokemonNameOut() + "</b>"));
+        StartCoroutine(dialogeManager.PokemonFightCutscene(_PokemonEQ.Instance.ActivePokemon, null, _FightManager.Instance.EnemyPokemon, enemyAttack, "Pokemon changed to <b>" + _PokemonEQ.Instance.ActivePokemon.PokemonNameOut() + "</b>!"));
     }
 
     public void CatchPokemonTrue()
@@ -106,7 +106,7 @@ public class SingleFightManager : MonoBehaviour
         Pokemon enemyPokemon = _FightManager.Instance.EnemyPokemon;
         Attack enemyAttack = enemyPokemon.GetRandomAttack();
 
-        StartCoroutine(dialogeManager.PokemonFightCutscene(_PokemonEQ.Instance.ActivePokemon, null, _FightManager.Instance.EnemyPokemon, enemyAttack, "<b>" + enemyPokemon.basicName + "</b> has escaped from your soul"));
+        StartCoroutine(dialogeManager.PokemonFightCutscene(_PokemonEQ.Instance.ActivePokemon, null, _FightManager.Instance.EnemyPokemon, enemyAttack, "<b>" + enemyPokemon.basicName + "</b> has escaped from your soul!"));
     }
 
 

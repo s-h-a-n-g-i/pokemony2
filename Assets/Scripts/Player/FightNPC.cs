@@ -53,7 +53,7 @@ public class FightNPC : MonoBehaviour
 
     private void TrainerSetupNPC()
     {
-        if (_NPCManager.Instance.IsDefeated(gameObject.name))
+        if (_NPCManager.Instance.IsDefeated(gameObject.name) || _PlayerSave.Instance.playerName == "Death")
             Destroy(gameObject);
     }
 

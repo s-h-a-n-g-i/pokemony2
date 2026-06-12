@@ -18,6 +18,8 @@ public class ChoseName : MonoBehaviour
     public void NameChosenGoNext() 
     {
         _PlayerSave.Instance.playerName = input.text;
+        if (_PlayerSave.Instance.playerName == "")
+            _PlayerSave.Instance.playerName = "Nameless hero";
         SceneManager.LoadScene("Starter");
     }
 }

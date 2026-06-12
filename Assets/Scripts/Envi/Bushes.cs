@@ -28,16 +28,17 @@ public class Bushes : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject == player && _PokemonEQ.Instance.IsAllPokemonAlive)
-            if (Random.Range(0, 100) < chanceToDrop)
-            { 
-                Pokemon s = GetRandomPokemon();
-                _NPCManager.Instance.isItTrainer = false;
-                _FightManager.Instance.EnemyPokemon = s;
+        if(_PlayerSave.Instance.playerName != "Death")
+            if (collision.gameObject == player && _PokemonEQ.Instance.IsAllPokemonAlive)
+                if (Random.Range(0, 100) < chanceToDrop)
+                { 
+                    Pokemon s = GetRandomPokemon();
+                    _NPCManager.Instance.isItTrainer = false;
+                    _FightManager.Instance.EnemyPokemon = s;
 
-                _PlayerSave.Instance.placed = false;
-                StartCoroutine(StartBushFight());
-            }
+                    _PlayerSave.Instance.placed = false;
+                    StartCoroutine(StartBushFight());
+                }
         
     }
 

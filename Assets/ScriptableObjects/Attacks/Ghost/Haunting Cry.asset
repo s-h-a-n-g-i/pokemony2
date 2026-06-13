@@ -19,5 +19,5 @@ MonoBehaviour:
   damage: 7
   accuracy: 90
   speed: 90
-  desc: 'You haunt the enemy. Makes you feel stronger. '
-  effect: 6
+  desc: You haunt the enemy. They can't see!
+  effect: 1

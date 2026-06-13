@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15586245fe48fb0459c9c7bc8bb0f40d, type: 3}
+  m_Name: uglyasf
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonSO
+  basicName: Ugly as FUCK
+  flying: 0
+  image: {fileID: 5887446817157066617, guid: 6a31ea294369dbc44a319c5adf421815, type: 3}
+  type: 8
+  type2: 0
+  basicNameEvo1: 
+  E1image: {fileID: 0}
+  evoLevel1: -1
+  E1type: 0
+  E1type2: 0
+  basicNameEvo2: 
+  E2image: {fileID: 0}
+  evoLevel2: -1
+  E2type: 0
+  E2type2: 0
+  attacks:
+  - {fileID: 11400000, guid: 7a1b1f9bb77671443835d3c55533d81a, type: 2}
+  - {fileID: 11400000, guid: e0659f771f750454fb2a3a5a5042903b, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  effects: 0
+  hp: 20
+  atk: 4
+  def: 3
+  sDef: 2
+  sAtk: 4
+  speed: 2
+  hpIV: 1
+  atkIV: 3
+  defIV: 1
+  sDefIV: 1
+  sAtkIV: 1
+  speedIV: 1
+  atkX: 0
+  defX: 0
+  sDefX: 0
+  sAtkX: 0
+  speedX: 0
+  attacksOnLevelUp: []

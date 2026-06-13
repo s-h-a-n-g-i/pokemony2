@@ -19,5 +19,5 @@ MonoBehaviour:
   damage: 5
   accuracy: 100
   speed: 100
-  desc: for buzzer
+  desc: You STING your enemy! Ouch...
   effect: 3

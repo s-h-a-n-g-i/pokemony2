@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a1781b309fff5bb419079bac28f61b39
+guid: 2f4a8ec9c06e45345af5f33e1501bbdb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3507109496339355177
-    second: ui_pc2_0
+      213: -5878732566532262612
+    second: kmskmskms_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ui_pc2_0
+      name: kmskmskms_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 25
-        height: 25
+        width: 16
+        height: 22
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 926d4b56181cba030800000000000000
-      internalID: 3507109496339355177
+      spriteID: c25f25aa0eb8a6ea0800000000000000
+      internalID: -5878732566532262612
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8c6cf4147d2a6e442a38bd3f70c0dbe1
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ui_pc2_0: 3507109496339355177
+      kmskmskms_0: -5878732566532262612
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

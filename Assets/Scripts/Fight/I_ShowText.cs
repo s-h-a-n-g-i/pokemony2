@@ -28,9 +28,10 @@ public class I_ShowText : MonoBehaviour
 
     private IEnumerator StartText()
     {
-        playerBobles.exclBobelShow();
+        playerBobles.questBobelShow();
         playerMovement.StopPlayer();
-        foreach(string s in textToShow)
+        playerMovement.StopMoving();
+        foreach (string s in textToShow)
             yield return StartCoroutine(dialoge.DialogeShow(s));
         playerMovement.StartPlayer();
         playerBobles.clearBobels();

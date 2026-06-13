@@ -97,6 +97,7 @@ public class DialogeFightManager : MonoBehaviour
                     break;
             }
 
+            AudioManager.Instance.PlayOneShot(FMODEvents.Instance.dialogeSound, transform.position);
             yield return new WaitForSeconds(speedwagon);
             if (speedwagon == 0)
             {
@@ -134,6 +135,7 @@ public class DialogeFightManager : MonoBehaviour
                     p.turnsToClearEffect--;
                     p.hp-=1;
                     if(p.hp<=0)p.hp=0;
+                    AudioManager.Instance.PlayOneShot(FMODEvents.Instance.hurt, transform.position);
                     yield return StartCoroutine(DialogeShow(p.PokemonNameOut()+" is poisoned!"));
                     break;
                 case Effects.Weakness:
@@ -148,6 +150,7 @@ public class DialogeFightManager : MonoBehaviour
                 case Effects.Burn:
                     p.hp -= 5;
                     if (p.hp <= 0) p.hp = 0;
+                    AudioManager.Instance.PlayOneShot(FMODEvents.Instance.hurt, transform.position);
                     yield return StartCoroutine(DialogeShow(p.PokemonNameOut() + " is burning!"));
                     p.turnsToClearEffect--;
 
@@ -170,7 +173,6 @@ public class DialogeFightManager : MonoBehaviour
         yield return StartCoroutine(DialogeShow("<b>" + nameDefeated + "</b> has been defeated!"));
 
         yield return StartCoroutine(AddLevelUps());
-
         SceneManager.LoadScene(_PlayerSave.Instance._sceneName);
     }
     public IEnumerator AllPokemonPlayerDead()
@@ -185,6 +187,7 @@ public class DialogeFightManager : MonoBehaviour
 
     public IEnumerator PokemonCaught()
     {
+        AudioManager.Instance.PlayOneShot(FMODEvents.Instance.Catch, transform.position);
         dialogeWindow.SetActive(true);
         enemyAnimator.SetBool("action",true);
         enemyAnimator.SetTrigger("zlapany");
@@ -287,6 +290,12 @@ public class DialogeFightManager : MonoBehaviour
 
             yield return StartCoroutine(DialogeShow(
                 ProvideAttack(secondPokemon, secondAttack, firstPokemon, atk2.Item1, atk2.Item2)));
+            if(firstPokemon.hp==0)
+                AudioManager.Instance.PlayOneShot(FMODEvents.Instance.Death, transform.position);
+        }
+        else 
+        {
+            AudioManager.Instance.PlayOneShot(FMODEvents.Instance.Death, transform.position);
         }
 
         if (secondPokemon == _PokemonEQ.Instance.ActivePokemon || (secondPokemon != _PokemonEQ.Instance.ActivePokemon && secondPokemon.hp != 0))
@@ -304,6 +313,8 @@ public class DialogeFightManager : MonoBehaviour
 
     private string ProvideAttack(Pokemon dealingPokemon, Attack dealingAttack, Pokemon targetPokemon , int atkDamage, string atkPower) 
     {
+        AudioManager.Instance.PlayOneShot(FMODEvents.Instance.punch, transform.position);
+
         Animator s;
         if (targetPokemon == _PokemonEQ.Instance.ActivePokemon)
             s = playerAnimator;
@@ -311,13 +322,15 @@ public class DialogeFightManager : MonoBehaviour
             s = enemyAnimator;
         if (atkDamage > 0)
         {
+            AudioManager.Instance.PlayOneShot(FMODEvents.Instance.hurt, transform.position);
             s.SetTrigger("dmg");
             targetPokemon.hp -= atkDamage;
             string action = CheckKill(targetPokemon);
             return dealingPokemon.PokemonNameOut() + action + targetPokemon.PokemonNameOut() + " with <b>" + atkPower + "</b> " + dealingAttack.attackName + "!";
         }
-        else 
+        else
         {
+            AudioManager.Instance.PlayOneShot(FMODEvents.Instance.missed, transform.position);
             return dealingPokemon.PokemonNameOut() + " missed " + targetPokemon.PokemonNameOut() + " with " + dealingAttack.attackName + "!";
         }
     }

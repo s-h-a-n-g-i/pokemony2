@@ -15,17 +15,6 @@ public class DialogeManager : MonoBehaviour
     //ide srac
     void Awake()
     {
-        //DialogeManager[] myItems = FindObjectsByType<DialogeManager>(FindObjectsSortMode.None);
-
-        //foreach (DialogeManager item in myItems)
-        //{
-        //    if (item.gameObject != this)
-        //    {
-        //        Destroy(dialogeObject);
-        //        Destroy(this);
-        //    }
-        //}
-        //DontDestroyOnLoad(this);
         DontDestroyOnLoad(dialogeObject);
     }
 
@@ -65,6 +54,8 @@ public class DialogeManager : MonoBehaviour
                     break;
             }
 
+            AudioManager.Instance.PlayOneShot(FMODEvents.Instance.dialogeSound, transform.position);
+
             yield return new WaitForSeconds(speedwagon);
             if (speedwagon == 0)
             {
@@ -86,6 +77,11 @@ public class DialogeManager : MonoBehaviour
         yield return new WaitUntil(()=>saveChosen);
         SaveButtons.SetActive(false);
         dialogeFinished = true;
+    }
+
+    private void OnDestroy()
+    {
+        Destroy(dialogeObject);
     }
 
 }

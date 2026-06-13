@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using FMOD.Studio;
 
 public class FightSystemManager : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class FightSystemManager : MonoBehaviour
     [SerializeField] private SingleFightManager singleFight;
     [SerializeField] private TrainerManager trainerFight;
     private DialogeFightManager dialogeFightManager;
+
+
 
     public int chosenPokemonPlayer = 0;
 
@@ -49,6 +52,8 @@ public class FightSystemManager : MonoBehaviour
         EnemyPokemonSetup();
         //Debug.Log(trainerFight.FinishedBattle);
     }
+
+
 
     private void EnemyPokemonSetup() 
     {

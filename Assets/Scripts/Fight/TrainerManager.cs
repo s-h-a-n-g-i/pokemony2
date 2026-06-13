@@ -49,6 +49,8 @@ public class TrainerManager : MonoBehaviour
                 changingPokemon = true;
                 //Debug.Log("TRENER ZMIENIA POKEMON");
                 //_PokemonEQ.Instance.ActivePokemon.giveXP(_NPCManager.Instance.TrainerPokemons[chosenPokemon].level);
+
+                AudioManager.Instance.PlayOneShot(FMODEvents.Instance.swap, transform.position);
                 FinishedBattle = false;
                 PokemonTrainerCounter[chosenPokemon].SetActive(false);
                 chosenPokemon++;

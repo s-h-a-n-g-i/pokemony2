@@ -1,5 +1,5 @@
+using FMOD.Studio;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,11 +17,11 @@ public class PlayerMovement : MonoBehaviour
     private AnimatorControllerParameter maleAnimator;
     private AnimatorControllerParameter femaleAnimator;
 
-    private bool moveSoundPlayed = false;
+    private EventInstance walkingSound;
 
     private void Start()
     {
-
+        walkingSound = AudioManager.Instance.CreateInstance(FMODEvents.Instance.walkingSound);
         animator = GetComponent<Animator>();
         _PlayerSave.Instance._sceneName = SceneManager.GetActiveScene().name;
 
@@ -45,8 +45,19 @@ public class PlayerMovement : MonoBehaviour
     {
         
         if (!canMove) return;
-        if (!moveSoundPlayed && isMoving)
-            StartCoroutine(PlaySoundWalk());
+        if (isMoving)
+        {
+            PLAYBACK_STATE playbackState;
+            walkingSound.getPlaybackState(out playbackState);
+            if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+            {
+                walkingSound.start();
+            }
+        }
+        else 
+        {
+            walkingSound.stop(STOP_MODE.IMMEDIATE);
+        }
         SprintCheck();
         MovementCheck();
         animSet();
@@ -60,13 +71,11 @@ public class PlayerMovement : MonoBehaviour
     }
     public void StartPlayer()
     {
-        moveSoundPlayed = false;
         canMove = true;
         StopAllCoroutines();
     }
     public void StopMoving()
     {
-        moveSoundPlayed = true;
         isMoving = false;
         animator.SetBool("isWalking", false);
     }
@@ -199,13 +208,7 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log(PlayerSave._playerPosition);
     }
 
-    IEnumerator PlaySoundWalk() 
-    {
-        moveSoundPlayed = true;
-        AudioManager.Instance.PlayOneShot(FMODEvents.Instance.walkingSound, transform.position);
-        yield return new WaitForSeconds(0.5f);
-        moveSoundPlayed = false;
-    }
+   
 
 
     private bool WallTest(Vector3 dir)

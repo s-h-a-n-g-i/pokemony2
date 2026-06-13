@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 public class EscapeButton : MonoBehaviour
 {
+
+    [SerializeField] private FightSystemManager fightsystem;
+
     public void OnEnable()
     {
         if (_NPCManager.Instance.canescape)

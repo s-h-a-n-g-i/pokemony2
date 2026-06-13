@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3847117116892313677}
   - component: {fileID: 8489408705213847406}
   - component: {fileID: 3943580913855302437}
+  - component: {fileID: 1241866305005733260}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -707,3 +708,99 @@ MonoBehaviour:
       Data3: -804402550
       Data4: 496301362
     Path: event:/Ingame/WalkingCave
+  <healingSound>k__BackingField:
+    Guid:
+      Data1: 64327193
+      Data2: 1248364085
+      Data3: 1661426619
+      Data4: 830601079
+    Path: event:/Ingame/HealingSound
+  <Catch>k__BackingField:
+    Guid:
+      Data1: 278314292
+      Data2: 1172491887
+      Data3: 1490365333
+      Data4: 385590945
+    Path: event:/Fight/Catch
+  <Death>k__BackingField:
+    Guid:
+      Data1: -616121553
+      Data2: 1263354022
+      Data3: 385196693
+      Data4: 1463433212
+    Path: event:/Fight/Death
+  <hurt>k__BackingField:
+    Guid:
+      Data1: -1238591703
+      Data2: 1242983277
+      Data3: -1752338794
+      Data4: -1393905566
+    Path: event:/Fight/Hurt
+  <missed>k__BackingField:
+    Guid:
+      Data1: -27070589
+      Data2: 1206807804
+      Data3: -1573266510
+      Data4: -2065368029
+    Path: event:/Fight/Missed
+  <punch>k__BackingField:
+    Guid:
+      Data1: -193901494
+      Data2: 1216792934
+      Data3: 997544895
+      Data4: -1105029697
+    Path: event:/Fight/Punch
+  <swap>k__BackingField:
+    Guid:
+      Data1: 415082351
+      Data2: 1267551802
+      Data3: 1977110204
+      Data4: -660840523
+    Path: event:/Fight/Swap
+  <fightMusic>k__BackingField:
+    Guid:
+      Data1: -2013925021
+      Data2: 1162858121
+      Data3: 383267489
+      Data4: -1948880015
+    Path: event:/Fight/Fight Music
+  <bgMusic>k__BackingField:
+    Guid:
+      Data1: 886423858
+      Data2: 1129123962
+      Data3: 1250691000
+      Data4: 1555490831
+    Path: event:/Ingame/BgMusic
+  <pressedButton>k__BackingField:
+    Guid:
+      Data1: 80029817
+      Data2: 1083719350
+      Data3: -2083212103
+      Data4: 1935044572
+    Path: event:/Menu/Buttons/Pressed
+  <selectButton>k__BackingField:
+    Guid:
+      Data1: -627640211
+      Data2: 1319357306
+      Data3: -1026063182
+      Data4: 1267419196
+    Path: event:/Menu/Buttons/Selected
+  <dialogeSound>k__BackingField:
+    Guid:
+      Data1: 1995798176
+      Data2: 1326078807
+      Data3: 1529591981
+      Data4: 712747612
+    Path: event:/Menu/Dialogue/DialogueType
+--- !u!114 &1241866305005733260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8680908749133586902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d113e508dfaf7fb4f9d93470ac1eb1aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuSongStart

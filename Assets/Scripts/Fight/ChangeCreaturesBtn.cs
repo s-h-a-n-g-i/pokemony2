@@ -42,6 +42,8 @@ public class ChangeCreaturesBtn : MonoBehaviour
 
     public void ShowCreaturePressed()
     {
+
+        AudioManager.Instance.PlayOneShot(FMODEvents.Instance.swap, transform.position);
         TextShow.SetActive(true);
         CreaturesChose.SetActive(false);
         _PokemonEQ.Instance.pokemonUsedInFight.Add(pokemonCounter);

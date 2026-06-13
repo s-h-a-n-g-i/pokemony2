@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,14 +13,14 @@ public class PlayerMovement : MonoBehaviour
 
     private bool hasRunningShoes = false;
 
-    private GameObject gameManager;
 
     private AnimatorControllerParameter maleAnimator;
     private AnimatorControllerParameter femaleAnimator;
 
+    private bool moveSoundPlayed = false;
+
     private void Start()
     {
-        gameManager = GameObject.Find("GameManager");
 
         animator = GetComponent<Animator>();
         _PlayerSave.Instance._sceneName = SceneManager.GetActiveScene().name;
@@ -42,7 +43,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        
         if (!canMove) return;
+        if (!moveSoundPlayed && isMoving)
+            StartCoroutine(PlaySoundWalk());
         SprintCheck();
         MovementCheck();
         animSet();
@@ -56,8 +60,15 @@ public class PlayerMovement : MonoBehaviour
     }
     public void StartPlayer()
     {
+        moveSoundPlayed = false;
         canMove = true;
         StopAllCoroutines();
+    }
+    public void StopMoving()
+    {
+        moveSoundPlayed = true;
+        isMoving = false;
+        animator.SetBool("isWalking", false);
     }
 
     private void animSet() 
@@ -82,6 +93,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovementCheck() 
     {
+
         if (Input.GetKey(KeyCode.UpArrow) && !isMoving)
         {
             lastDir = new Vector2(0,1);
@@ -111,7 +123,6 @@ public class PlayerMovement : MonoBehaviour
                     StartCoroutine(JumpDown());
             }
 
-               
         }
 
         if (Input.GetKey(KeyCode.RightArrow) && !isMoving)
@@ -139,18 +150,14 @@ public class PlayerMovement : MonoBehaviour
                 isMoving = true;
                 StartCoroutine(Move(Vector3.left));
             }
+
                
         }
     }
 
-    public void StopMoving()
-    {
-        isMoving = false;
-        animator.SetBool("isWalking", false);
-    }
-
     private IEnumerator Move(Vector3 dir)
     {
+        
         dirwalk = dir;
         float leftTime = 0;
         
@@ -167,6 +174,7 @@ public class PlayerMovement : MonoBehaviour
         transform.position = nextPos;
         isMoving = false;
         _PlayerSave.Instance._playerPosition = nextPos;
+
     }
 
     private IEnumerator JumpDown()
@@ -191,8 +199,18 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log(PlayerSave._playerPosition);
     }
 
+    IEnumerator PlaySoundWalk() 
+    {
+        moveSoundPlayed = true;
+        AudioManager.Instance.PlayOneShot(FMODEvents.Instance.walkingSound, transform.position);
+        yield return new WaitForSeconds(0.5f);
+        moveSoundPlayed = false;
+    }
+
+
     private bool WallTest(Vector3 dir)
     {
+
         RaycastHit2D hit = Physics2D.Raycast(transform.position + dir / 2, dir ,0.2f);
         if (hit)
             if(hit.collider.gameObject.tag == "Wall") return false;

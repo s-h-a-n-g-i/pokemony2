@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{1848d936-ece6-4b45-b58c-1b4f7b20153d}">
+		<property name="assetPath">
+			<value>freesound_gamestudio-attack-sound-1-384908.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.47020408163265304</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{128fd761-4d71-45a2-9e1b-db0674b0c612}</destination>
+		</relationship>
+	</object>
+</objects>

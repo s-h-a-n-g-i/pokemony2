@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{b4cd3acf-98b4-406f-99db-9ddb80271594}">
+		<property name="assetPath">
+			<value>Minifantasy_Dungeon_SFX/05_door_open_1.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.4106122448979592</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{128fd761-4d71-45a2-9e1b-db0674b0c612}</destination>
+		</relationship>
+	</object>
+</objects>

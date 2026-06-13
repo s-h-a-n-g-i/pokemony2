@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 6847963151728778339}
   - component: {fileID: 7862816767571216464}
   - component: {fileID: 3847117116892313677}
+  - component: {fileID: 8489408705213847406}
+  - component: {fileID: 3943580913855302437}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -674,3 +676,34 @@ MonoBehaviour:
   _playerRotation: {x: 0, y: -1}
   _sceneName: 
   male: 1
+--- !u!114 &8489408705213847406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8680908749133586902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134bcc732eb4d4b44b75c83f2adab634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+--- !u!114 &3943580913855302437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8680908749133586902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43b2e79f01f3e7e49aea0da7f12f818f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FMODEvents
+  <walkingSound>k__BackingField:
+    Guid:
+      Data1: -211097503
+      Data2: 1078189070
+      Data3: -804402550
+      Data4: 496301362
+    Path: event:/Ingame/WalkingCave

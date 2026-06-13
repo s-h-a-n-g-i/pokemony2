@@ -19,7 +19,7 @@ MonoBehaviour:
   type2: 0
   basicNameEvo1: Jiangshi
   E1image: {fileID: -3447102151616154709, guid: a1cb6c7d94e089f43ac5bfc4ddf327ba, type: 3}
-  evoLevel1: 7
+  evoLevel1: 8
   E1type: 6
   E1type2: 0
   basicNameEvo2: 
@@ -39,12 +39,12 @@ MonoBehaviour:
   sDef: 3
   sAtk: 3
   speed: 2
-  hpIV: 0
-  atkIV: 0
-  defIV: 0
-  sDefIV: 0
-  sAtkIV: 0
-  speedIV: 0
+  hpIV: 4
+  atkIV: 3
+  defIV: 1
+  sDefIV: 1
+  sAtkIV: 2
+  speedIV: 1
   atkX: 0
   defX: 0
   sDefX: 0

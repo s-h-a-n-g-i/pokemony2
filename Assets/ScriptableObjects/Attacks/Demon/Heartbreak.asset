@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10176c9fd97c32c49be86f24f3b1f732, type: 3}
   m_Name: Heartbreak
   m_EditorClassIdentifier: Assembly-CSharp::AttackSO
-  attackName: Heartbreak
+  attackName: Demonic Heartbreak
   attackType: 4
-  pp: 0
-  maxPp: 0
-  damage: 0
-  accuracy: 0
-  speed: 0
-  desc: 
+  pp: 6
+  maxPp: 6
+  damage: 13
+  accuracy: 80
+  speed: 70
+  desc: Break your heart, Break my heart~
   effect: 5

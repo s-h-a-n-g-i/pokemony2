@@ -39,12 +39,12 @@ MonoBehaviour:
   sDef: 2
   sAtk: 2
   speed: 3
-  hpIV: 0
-  atkIV: 0
-  defIV: 0
-  sDefIV: 0
-  sAtkIV: 0
-  speedIV: 0
+  hpIV: 4
+  atkIV: 2
+  defIV: 3
+  sDefIV: 1
+  sAtkIV: 1
+  speedIV: 1
   atkX: 0
   defX: 0
   sDefX: 0

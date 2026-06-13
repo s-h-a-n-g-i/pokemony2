@@ -177,5 +177,12 @@ public class Attack
         return s;
     }
 
+    public bool CheckAttackPP() 
+    {
+        if (pp == 0)
+            return false;
+        return true;
+    }
+
 
 }

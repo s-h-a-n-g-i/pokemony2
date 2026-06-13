@@ -329,6 +329,19 @@ public class Pokemon
 
 
 
+    public void CheckPokemonHasAttacks() 
+    {
+        bool[] test = { true, true, true, true };
+        for (int i = 0; i < 4; i++) 
+        {
+            if (AttacksActive[i] != null)
+                if (AttacksActive[i].CheckAttackPP())
+                    test[i] = false;
+        }
+        if (test[0] && test[1] && test[2] && test[3])
+            hp = 0;
+    }
+
     public string GetPokemonTypes() 
     {
         switch (evoState) 

@@ -47,6 +47,8 @@ public class FightSystemManager : MonoBehaviour
 
     void Update()
     {
+        _PokemonEQ.Instance.ActivePokemon.CheckPokemonHasAttacks();
+
         myPokemonCheckForDead();
 
         EnemyPokemonSetup();

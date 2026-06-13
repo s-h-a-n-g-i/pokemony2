@@ -168,15 +168,24 @@ public class DialogeFightManager : MonoBehaviour
     ///////////////MARTWIAK ??????
     public IEnumerator EndedBattle(string nameDefeated)
     {
+        if(_NPCManager.Instance.TrainerName == "Devil")
+            SceneManager.LoadScene("Win");
+        
         dialogeWindow.SetActive(true);
 
         yield return StartCoroutine(DialogeShow("<b>" + nameDefeated + "</b> has been defeated!"));
 
+
         yield return StartCoroutine(AddLevelUps());
+
         SceneManager.LoadScene(_PlayerSave.Instance._sceneName);
     }
     public IEnumerator AllPokemonPlayerDead()
     {
+
+        if (_NPCManager.Instance.TrainerName == "Devil")
+            SceneManager.LoadScene("Lose");
+
         dialogeWindow.SetActive(true);
 
         yield return StartCoroutine(DialogeShow("<b> You </b> has been defeated!"));

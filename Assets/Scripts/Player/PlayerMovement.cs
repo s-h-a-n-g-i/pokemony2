@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     {
         walkingSound = AudioManager.Instance.CreateInstance(FMODEvents.Instance.walkingSound);
         animator = GetComponent<Animator>();
+        animator.SetBool("male",_PlayerSave.Instance.male);
         _PlayerSave.Instance._sceneName = SceneManager.GetActiveScene().name;
 
         if (!_PlayerSave.Instance.placed)

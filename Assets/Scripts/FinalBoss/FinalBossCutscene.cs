@@ -20,6 +20,7 @@ public class FinalBossCutscene : MonoBehaviour
 
     private void Start()
     {
+        pokemon = new Pokemon[pokemonToFight.Length];
         dialoge = GameObject.Find("GameManager").GetComponent<DialogeManager>();
         for (int i = 0; i < pokemon.Length; i++)
         {
@@ -44,9 +45,6 @@ public class FinalBossCutscene : MonoBehaviour
 
     IEnumerator StartFightCutscene() 
     {
-        foreach(DialogeLine d in dialogeLines)
-            yield return dialoge.DialogeShow(d.whoSayes +": "+d.whatSayes);
-
         _NPCManager.Instance.canescape = false;
         _NPCManager.Instance.TrainerName = "Devil";
         _NPCManager.Instance.isItTrainer = true;

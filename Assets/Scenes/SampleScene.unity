@@ -9241,7 +9241,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3091988127471008691, guid: 16293c435a0992743a47755f470de4b2, type: 3}
       propertyPath: sceneNameToTeleport
-      value: lvl1
+      value: FinalBoss
+      objectReference: {fileID: 0}
+    - target: {fileID: 4375030233113525841, guid: 16293c435a0992743a47755f470de4b2, type: 3}
+      propertyPath: m_Size.x
+      value: 2.07
       objectReference: {fileID: 0}
     - target: {fileID: 5082407823006932896, guid: 16293c435a0992743a47755f470de4b2, type: 3}
       propertyPath: m_LocalPosition.x

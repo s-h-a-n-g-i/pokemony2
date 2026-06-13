@@ -15,26 +15,31 @@ public class MenuSongStart : MonoBehaviour
 
     void Update()
     {
-        if (SceneManager.GetActiveScene().name != "FightNew" || SceneManager.GetActiveScene().name != "FinalBoss")
-        {
-            fightSound.stop(STOP_MODE.IMMEDIATE);
-            PLAYBACK_STATE playbackState;
-            bgsound.getPlaybackState(out playbackState);
-            if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+        if (SceneManager.GetActiveScene().name != "FinalBoss")
+            if (SceneManager.GetActiveScene().name != "FightNew")
             {
-                bgsound.start();
+                fightSound.stop(STOP_MODE.IMMEDIATE);
+                PLAYBACK_STATE playbackState;
+                bgsound.getPlaybackState(out playbackState);
+                if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+                {
+                    bgsound.start();
+                }
             }
-        }
-        else if(SceneManager.GetActiveScene().name == "FightNew")
+            else
+            {
+                bgsound.stop(STOP_MODE.IMMEDIATE);
+                PLAYBACK_STATE playbackState;
+                fightSound.getPlaybackState(out playbackState);
+                if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+                {
+                    fightSound.start();
+                }
+            }
+        else
         {
             bgsound.stop(STOP_MODE.IMMEDIATE);
-            PLAYBACK_STATE playbackState;
-            fightSound.getPlaybackState(out playbackState);
-            if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
-            {
-                fightSound.start();
-            }
+            fightSound.stop(STOP_MODE.IMMEDIATE);
         }
-        
     }
 }

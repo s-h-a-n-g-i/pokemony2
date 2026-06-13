@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 5b8720a0a9a2a7e43a8e7984c80694a4
+guid: 4dd9679e1b8ed8847b27917ff7d74506
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9155117101766601920
-    second: DevilPokemon_0
+      213: 7893484233865869060
+    second: devilssoul_0
+  - first:
+      213: 5398948072944879012
+    second: devilssoul_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +103,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DevilPokemon_0
+      name: devilssoul_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0cce6e78f728d0f70800000000000000
-      internalID: 9155117101766601920
+      spriteID: 407b8b7d61a4b8d60800000000000000
+      internalID: 7893484233865869060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: devilssoul_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a5c8a0eaaaecea40800000000000000
+      internalID: 5398948072944879012
       vertices: []
       indices: 
       edges: []
@@ -125,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9395e1516f8a4b445b8c3ce2369ce8f5
+    spriteID: 5c813528efd8f074c987e909edb036a4
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DevilPokemon_0: 9155117101766601920
+      devilssoul_0: 7893484233865869060
+      devilssoul_1: 5398948072944879012
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

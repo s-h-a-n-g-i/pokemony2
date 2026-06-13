@@ -4780,6 +4780,7 @@ GameObject:
   - component: {fileID: 898474448}
   - component: {fileID: 898474450}
   - component: {fileID: 898474449}
+  - component: {fileID: 898474451}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -4859,7 +4860,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -4906,6 +4907,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 898474447}
   m_CullTransparentMesh: 1
+--- !u!114 &898474451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898474447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe896c5ba6c664144aa782d96efa67d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TextBeforeFight
 --- !u!1 &903262913
 GameObject:
   m_ObjectHideFlags: 0
@@ -10509,6 +10522,7 @@ GameObject:
   - component: {fileID: 2044261495}
   - component: {fileID: 2044261497}
   - component: {fileID: 2044261496}
+  - component: {fileID: 2044261498}
   m_Layer: 5
   m_Name: Background (1)
   m_TagString: Untagged
@@ -10573,6 +10587,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2044261494}
   m_CullTransparentMesh: 1
+--- !u!114 &2044261498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044261494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94e7c118b88381446bbf12c0d3156423, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BgChangeDevilFight
+  img: {fileID: 2044261496}
+  netherBg: {fileID: 1511901657761797388, guid: a253ea1fb2c2d0f49b2bbe538f6b6def, type: 3}
 --- !u!1 &2101794885
 GameObject:
   m_ObjectHideFlags: 0

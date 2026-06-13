@@ -9,7 +9,7 @@ public class I_ShowText : MonoBehaviour
     private Bobles playerBobles;
 
     [TextArea(10, 30)]
-    [SerializeField] private string textToShow;
+    [SerializeField] private string[] textToShow;
 
     void Start()
     {
@@ -22,17 +22,18 @@ public class I_ShowText : MonoBehaviour
         playerBobles = GameObject.Find("Player").GetComponent<Bobles>();
         playerMovement = GameObject.Find("Player").GetComponent<PlayerMovement>();
 
-        dialoge.StartCoroutine(dialoge.DialogeShow(textToShow));
         StartCoroutine(StartText());
     }
 
 
     private IEnumerator StartText()
     {
+        playerBobles.exclBobelShow();
         playerMovement.StopPlayer();
-        yield return StartCoroutine(playerBobles.dotsBobel());
-        yield return StartCoroutine(dialoge.DialogeShow(textToShow));
+        foreach(string s in textToShow)
+            yield return StartCoroutine(dialoge.DialogeShow(s));
         playerMovement.StartPlayer();
+        playerBobles.clearBobels();
         interaction.canInteract = true;
     }
 }

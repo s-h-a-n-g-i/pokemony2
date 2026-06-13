@@ -10,6 +10,16 @@ public class SettingsSliders : MonoBehaviour
     private void Start()
     {
         slider = GetComponent<Slider>();
+        switch (settings)
+        {
+            case 0:
+                slider.value = AudioManager.Instance.musicVolume; break;
+            case 1:
+                slider.value = AudioManager.Instance.sfxVolume; break;
+            case 2:
+                slider.value = AudioManager.Instance.uiVolume; break;
+
+        }
     }
 
     void Update()

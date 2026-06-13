@@ -1,6 +1,7 @@
 using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
+using Unity.VisualScripting;
 
 public class AudioManager : MonoBehaviour
 {
@@ -22,7 +23,8 @@ public class AudioManager : MonoBehaviour
 
         if (Instance != null) 
         {
-            Debug.LogError("Za duzo manageruw audio");
+            return;
+            //Debug.LogError("Za duzo manageruw audio");
         }
         Instance = this;
 

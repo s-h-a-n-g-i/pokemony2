@@ -277,6 +277,10 @@ PrefabInstance:
       value: 0.6431373
       objectReference: {fileID: 0}
     - target: {fileID: 5084091562962565954, guid: 2e96e92c23a6a9a49815bf4af0699c81, type: 3}
+      propertyPath: btn
+      value: 
+      objectReference: {fileID: 1526539116}
+    - target: {fileID: 5084091562962565954, guid: 2e96e92c23a6a9a49815bf4af0699c81, type: 3}
       propertyPath: Starter
       value: 
       objectReference: {fileID: 11400000, guid: ae174d45c7ad34246b7bc45ea45f647b, type: 2}
@@ -790,6 +794,10 @@ PrefabInstance:
       value: 0.6431373
       objectReference: {fileID: 0}
     - target: {fileID: 5084091562962565954, guid: 2e96e92c23a6a9a49815bf4af0699c81, type: 3}
+      propertyPath: btn
+      value: 
+      objectReference: {fileID: 1526539116}
+    - target: {fileID: 5084091562962565954, guid: 2e96e92c23a6a9a49815bf4af0699c81, type: 3}
       propertyPath: Starter
       value: 
       objectReference: {fileID: 11400000, guid: 4324a6ec1f37c80429ed6ca55386b1b3, type: 2}
@@ -1180,6 +1188,7 @@ GameObject:
   - component: {fileID: 1526539115}
   - component: {fileID: 1526539114}
   - component: {fileID: 1526539113}
+  - component: {fileID: 1526539116}
   - component: {fileID: 1526539112}
   m_Layer: 5
   m_Name: Button
@@ -1314,6 +1323,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526539110}
   m_CullTransparentMesh: 1
+--- !u!114 &1526539116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526539110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbef0b49375b1584cb9f01a1d0d47708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonButtonChosen
+  picked: 0
 --- !u!1 &1605472612
 GameObject:
   m_ObjectHideFlags: 0
@@ -1415,13 +1437,17 @@ PrefabInstance:
       value: 0.6415094
       objectReference: {fileID: 0}
     - target: {fileID: 5084091562962565954, guid: 2e96e92c23a6a9a49815bf4af0699c81, type: 3}
+      propertyPath: btn
+      value: 
+      objectReference: {fileID: 1526539116}
+    - target: {fileID: 5084091562962565954, guid: 2e96e92c23a6a9a49815bf4af0699c81, type: 3}
       propertyPath: Starter
       value: 
       objectReference: {fileID: 11400000, guid: f935c99c38174134485dfa1deb611e7f, type: 2}
     - target: {fileID: 5084091562962565954, guid: 2e96e92c23a6a9a49815bf4af0699c81, type: 3}
       propertyPath: Starter2
       value: 
-      objectReference: {fileID: 11400000, guid: 2ed2e091b0946f846ad9b38ea47e8e7b, type: 2}
+      objectReference: {fileID: 11400000, guid: 408e072b23e98bd498482a5f793bd80d, type: 2}
     - target: {fileID: 5084091562962565954, guid: 2e96e92c23a6a9a49815bf4af0699c81, type: 3}
       propertyPath: Starter3
       value: 

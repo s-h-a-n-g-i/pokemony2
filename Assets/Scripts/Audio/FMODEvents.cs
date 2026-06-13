@@ -31,6 +31,7 @@ public class FMODEvents : MonoBehaviour
         if (Instance != null)
         {
             Debug.LogError("Za duzo manageruw audio");
+            return;
         }
         Instance = this;
     }

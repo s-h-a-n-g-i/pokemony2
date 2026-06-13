@@ -28,10 +28,8 @@ MonoBehaviour:
   E2type: 0
   E2type2: 0
   attacks:
-  - {fileID: 11400000, guid: 012956b2c208e83458cd3e3283d3c3de, type: 2}
-  - {fileID: 11400000, guid: c5075532e84359e4fb9a2a60aea8c17c, type: 2}
+  - {fileID: 11400000, guid: e0659f771f750454fb2a3a5a5042903b, type: 2}
   - {fileID: 11400000, guid: ea923e8a76f197945aea3e03155c3055, type: 2}
-  - {fileID: 0}
   effects: 0
   hp: 15
   atk: 4

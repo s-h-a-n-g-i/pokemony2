@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 658448618}
   - component: {fileID: 658448617}
+  - component: {fileID: 658448619}
   m_Layer: 0
   m_Name: sprite girl_back3
   m_TagString: Untagged
@@ -210,6 +211,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &658448619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658448616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9cceeeace8b60c488c17e25d8be3ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SquareToCharacter
+  female: {fileID: 4812496102229112945, guid: 27e223e5711b31b4086bcb63c7eaa13f, type: 3}
+  male: {fileID: -190907986, guid: 27e223e5711b31b4086bcb63c7eaa13f, type: 3}
 --- !u!1 &1007976643
 GameObject:
   m_ObjectHideFlags: 0

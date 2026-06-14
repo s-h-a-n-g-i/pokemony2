@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{2977f23d-b4e6-4a3c-a180-6889a661f01c}">
+		<property name="assetPath">
+			<value>FreeSteps/Gravel/Steps_gravel-005.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.19315192743764173</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{128fd761-4d71-45a2-9e1b-db0674b0c612}</destination>
+		</relationship>
+	</object>
+</objects>

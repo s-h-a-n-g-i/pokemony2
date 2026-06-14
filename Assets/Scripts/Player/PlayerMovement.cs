@@ -11,17 +11,18 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private Vector3 dirwalk;
 
-    private bool hasRunningShoes = false;
+    [SerializeField] private bool hasRunningShoes = false;
 
 
     private AnimatorControllerParameter maleAnimator;
     private AnimatorControllerParameter femaleAnimator;
 
-    private EventInstance walkingSound;
-
+    //private EventInstance walkingSound;
+    [SerializeField] private float walkingSoundtimer = 0;
+    [SerializeField] private float walkingSoundtimestamp = 0.5f;
     private void Start()
     {
-        walkingSound = AudioManager.Instance.CreateInstance(FMODEvents.Instance.walkingSound);
+        //walkingSound = AudioManager.Instance.CreateInstance(FMODEvents.Instance.walkingSound);
         animator = GetComponent<Animator>();
         animator.SetBool("male",_PlayerSave.Instance.male);
         _PlayerSave.Instance._sceneName = SceneManager.GetActiveScene().name;
@@ -46,18 +47,10 @@ public class PlayerMovement : MonoBehaviour
     {
         
         if (!canMove) return;
-        if (isMoving)
+        if (isMoving && walkingSoundtimer<Time.timeSinceLevelLoad)
         {
-            PLAYBACK_STATE playbackState;
-            walkingSound.getPlaybackState(out playbackState);
-            if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
-            {
-                walkingSound.start();
-            }
-        }
-        else 
-        {
-            walkingSound.stop(STOP_MODE.IMMEDIATE);
+            walkingSoundtimer = Time.timeSinceLevelLoad + walkingSoundtimestamp;
+            AudioManager.Instance.PlayOneShot(FMODEvents.Instance.walkingSound, transform.position);
         }
         SprintCheck();
         MovementCheck();

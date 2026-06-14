@@ -30,6 +30,8 @@ MonoBehaviour:
   attacks:
   - {fileID: 11400000, guid: e0659f771f750454fb2a3a5a5042903b, type: 2}
   - {fileID: 11400000, guid: ea923e8a76f197945aea3e03155c3055, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   effects: 0
   hp: 15
   atk: 4

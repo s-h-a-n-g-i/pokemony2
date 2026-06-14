@@ -328,6 +328,14 @@ public class Pokemon
     }
 
 
+    public void resetAttacksPPs() 
+    {
+        for (int i = 0; i < AttacksActive.Count(); i++)
+            if (AttacksActive[i] != null)
+                if (AttacksActive[i].attackName != "None")
+                    AttacksActive[i].resetPP();
+    }
+
 
     public void CheckPokemonHasAttacks() 
     {

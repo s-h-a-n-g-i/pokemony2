@@ -122895,7 +122895,7 @@ MonoBehaviour:
   m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 1}
   m_Intensity: 0.7
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
@@ -136328,6 +136328,10 @@ PrefabInstance:
     - target: {fileID: 2710121205127764054, guid: d3fc28f47cc084a4ab9fa9d67a1b2839, type: 3}
       propertyPath: m_Name
       value: USUN NA RELEASE
+      objectReference: {fileID: 0}
+    - target: {fileID: 2710121205127764054, guid: d3fc28f47cc084a4ab9fa9d67a1b2839, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8800480866391799317, guid: d3fc28f47cc084a4ab9fa9d67a1b2839, type: 3}
       propertyPath: m_LocalPosition.x

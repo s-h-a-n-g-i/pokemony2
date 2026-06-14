@@ -19,5 +19,5 @@ MonoBehaviour:
   damage: 6
   accuracy: 90
   speed: 95
-  desc: You deliver justice that slows down the enemy.
+  desc: Delivers justice that slows down the enemy.
   effect: 4

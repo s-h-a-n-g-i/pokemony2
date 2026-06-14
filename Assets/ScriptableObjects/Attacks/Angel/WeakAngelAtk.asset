@@ -17,7 +17,7 @@ MonoBehaviour:
   pp: 25
   maxPp: 25
   damage: 11
-  accuracy: 100
-  speed: 1000
-  desc: Sperma jest jadalna
+  accuracy: 90
+  speed: 50
+  desc: 'Strikes the enemy! Causes Burn. '
   effect: 2

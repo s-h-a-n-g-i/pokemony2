@@ -1006,7 +1006,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1324191937
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1041,10 +1041,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cutscene
   dialogeLines:
-  - whoSayes: God
-    whatSayes: yo whats up homie, whachu doin here nga boy?
-  - whoSayes: player
-    whatSayes: im retard
+  - whoSayes: GOD
+    whatSayes: Ah, my child... my faithful little Lamb.
+  - whoSayes: GOD
+    whatSayes: I have summoned you because a matter of great importance demands your
+      aid.
+  - whoSayes: GOD
+    whatSayes: 'For some time now, the depths below have fallen into chaos.
+
+'
+  - whoSayes: GOD
+    whatSayes: Its self-proclaimed ruler, the Devil, has grown bold.
+  - whoSayes: GOD
+    whatSayes: Therefore, I command you to descend into Hell and confront him.
+  - whoSayes: GOD
+    whatSayes: You will not face this trial alone.
+  - whoSayes: GOD
+    whatSayes: As you journey through the infernal depths, you shall gather the souls
+      of the fallen. Their strength will aid you in the battles that lie ahead.
+  - whoSayes: GOD
+    whatSayes: To begin your quest, I shall entrust one soul to you myself.
+  - whoSayes: GOD
+    whatSayes: Take it, and let it guide your first steps.
+  - whoSayes: GOD
+    whatSayes: Go now, my little Lamb.
+  - whoSayes: GOD
+    whatSayes: May my light watch over you, even in the darkest abyss.
   wholeUI: {fileID: 1324191936}
 --- !u!222 &1324191939
 CanvasRenderer:

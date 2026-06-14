@@ -29,7 +29,7 @@ MonoBehaviour:
   E2type2: 0
   attacks:
   - {fileID: 11400000, guid: 7a1b1f9bb77671443835d3c55533d81a, type: 2}
-  - {fileID: 11400000, guid: e0659f771f750454fb2a3a5a5042903b, type: 2}
+  - {fileID: 11400000, guid: fcdd6fecc6e62fb4884e446a1e4b5fde, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   effects: 0
@@ -50,4 +50,6 @@ MonoBehaviour:
   sDefX: 0
   sAtkX: 0
   speedX: 0
-  attacksOnLevelUp: []
+  attacksOnLevelUp:
+  - attack: {fileID: 11400000, guid: 95bfa43a18ce9a24298e2cb539322fd2, type: 2}
+    level: 7

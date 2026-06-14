@@ -19,5 +19,5 @@ MonoBehaviour:
   damage: 12
   accuracy: 85
   speed: 70
-  desc: You pierce  the enemy with Holy Lance.
+  desc: Pierces the enemy with Holy Lance.
   effect: 0

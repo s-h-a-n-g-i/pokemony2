@@ -19,5 +19,5 @@ MonoBehaviour:
   damage: 15
   accuracy: 95
   speed: 60
-  desc: You strike the enemy with broken Judgment.
+  desc: Strikes the enemy with broken Judgment.
   effect: 0

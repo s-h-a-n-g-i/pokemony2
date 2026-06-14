@@ -10600,7 +10600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BgChangeDevilFight
   img: {fileID: 2044261496}
-  netherBg: {fileID: 1511901657761797388, guid: a253ea1fb2c2d0f49b2bbe538f6b6def, type: 3}
+  netherBg: {fileID: -5412910156287300836, guid: 2dfe1e82fb6679d4596c8e575def895b, type: 3}
 --- !u!1 &2101794885
 GameObject:
   m_ObjectHideFlags: 0

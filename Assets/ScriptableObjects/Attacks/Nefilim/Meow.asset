@@ -19,5 +19,5 @@ MonoBehaviour:
   damage: -1000
   accuracy: 100
   speed: 100
-  desc: You meow at your enemy. That's cute!
+  desc: Meows at your enemy. That's cute! Meow...
   effect: 0

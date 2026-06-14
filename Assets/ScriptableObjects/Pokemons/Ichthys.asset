@@ -28,7 +28,7 @@ MonoBehaviour:
   E2type: 0
   E2type2: 0
   attacks:
-  - {fileID: 11400000, guid: 012956b2c208e83458cd3e3283d3c3de, type: 2}
+  - {fileID: 11400000, guid: 7a1b1f9bb77671443835d3c55533d81a, type: 2}
   - {fileID: 11400000, guid: 64a1f27f76a5c76458aeb6847ed9d5a2, type: 2}
   - {fileID: 0}
   - {fileID: 0}
@@ -50,4 +50,8 @@ MonoBehaviour:
   sDefX: 0
   sAtkX: 0
   speedX: 0
-  attacksOnLevelUp: []
+  attacksOnLevelUp:
+  - attack: {fileID: 11400000, guid: b68f92812a9d25549b6f57b182df959f, type: 2}
+    level: 7
+  - attack: {fileID: 11400000, guid: 7f6e6291d584fac45ba695b08b295abd, type: 2}
+    level: 15

@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AttackSO
   attackName: Soul Drain
   attackType: 6
-  pp: 0
-  maxPp: 0
-  damage: 0
-  accuracy: 0
-  speed: 0
-  desc: You posses the enemy and drain their livespan. Causes Weakness.
+  pp: 20
+  maxPp: 20
+  damage: 7
+  accuracy: 90
+  speed: 40
+  desc: Possess the enemy and drain their livespan. Causes Weakness.
   effect: 5

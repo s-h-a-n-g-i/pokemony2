@@ -19,7 +19,7 @@ public class I_HealingMonument : MonoBehaviour
         playerBobles = GameObject.Find("Player").GetComponent<Bobles>();
         playerMovement = GameObject.Find("Player").GetComponent<PlayerMovement>();
         dialoge = GameObject.Find("GameManager").GetComponent<DialogeManager>();
-
+        AudioManager.Instance.PlayOneShot(FMODEvents.Instance.healingSound,transform.position);
         foreach (Pokemon s in _PokemonEQ.Instance.EqPokemons)
         {
             s.effects = Effects.None;
@@ -30,6 +30,7 @@ public class I_HealingMonument : MonoBehaviour
             s.speedX = 0;
             s.accuracyX = 0;
             s.hp = s.maxHp;
+            s.resetAttacksPPs();
         }
         StartCoroutine(HealDialoge());
     }

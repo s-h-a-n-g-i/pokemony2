@@ -50,6 +50,4 @@ MonoBehaviour:
   sDefX: 0
   sAtkX: 0
   speedX: 0
-  attacksOnLevelUp:
-  - attack: {fileID: 0}
-    level: 6
+  attacksOnLevelUp: []

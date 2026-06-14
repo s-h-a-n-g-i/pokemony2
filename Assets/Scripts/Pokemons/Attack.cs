@@ -184,5 +184,9 @@ public class Attack
         return true;
     }
 
+    public void resetPP() 
+    {
+        pp = maxPp;
+    }
 
 }

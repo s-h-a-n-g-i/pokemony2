@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{77061f59-0c2b-4f47-9dea-7453bd7488f0}">
 		<property name="assetPath">
-			<value>music/Pix - Lava monsters.mp3</value>
+			<value>music/lava.mp3</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

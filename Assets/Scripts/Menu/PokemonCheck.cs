@@ -56,8 +56,9 @@ public class PokemonCheck : MonoBehaviour
                 attackActive = true;
                 break;
         }
+        if (!attackActive)
+            desc.text = s;
         AttacksObj.SetActive(attackActive);
-        desc.text = s;
     }
     public void SaveNameToPokemonButton()
     {
@@ -90,9 +91,10 @@ public class PokemonCheck : MonoBehaviour
 
     }
 
-    public string Attack(int s)
+    public void Attack(int s)
     {
-        return desc.text = chosenPokemon.AttacksActive[s].desc;
+        //Debug.Log(chosenPokemon.AttacksActive[s].desc);
+        desc.text = chosenPokemon.AttacksActive[s].desc;
     }
 
     public string IsThisAttackAviable(int s)

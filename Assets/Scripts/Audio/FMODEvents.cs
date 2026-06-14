@@ -19,6 +19,9 @@ public class FMODEvents : MonoBehaviour
     [field: Header("Music")]
     [field: SerializeField] public EventReference fightMusic { get; private set; }
     [field: SerializeField] public EventReference bgMusic { get; private set; }
+    [field: SerializeField] public EventReference caveMusic { get; private set; }
+    [field: SerializeField] public EventReference lavaMusic { get; private set; }
+    [field: SerializeField] public EventReference poisonMusic { get; private set; }
 
     [field: Header("UI")]
     [field: SerializeField] public EventReference pressedButton { get; private set; }

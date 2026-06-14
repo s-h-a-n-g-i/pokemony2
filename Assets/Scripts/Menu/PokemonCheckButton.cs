@@ -11,15 +11,23 @@ public class PokemonCheckButton : MonoBehaviour
 
     private void Update()
     {
-        if (_PokemonEQ.Instance.EqPokemons[pokemonChosen] == null)
+        if (_PokemonEQ.Instance.EqPokemons[pokemonChosen] != null)
         {
-            GetComponent<Button>().interactable = false;
-            pokeName.text = "No Pokemon Avible";
+            if (_PokemonEQ.Instance.EqPokemons[pokemonChosen].basicName == string.Empty)
+            {
+                GetComponent<Button>().interactable = false;
+                pokeName.text = "No Pokemon Avible";
+            }
+            else
+            {
+                GetComponent<Button>().interactable = true;
+                pokeName.text = _PokemonEQ.Instance.EqPokemons[pokemonChosen].PokemonNameOut();
+            }
         }
         else
         {
-            GetComponent<Button>().interactable = true;
-            pokeName.text = _PokemonEQ.Instance.EqPokemons[pokemonChosen].PokemonNameOut();
+            GetComponent<Button>().interactable = false;
+            pokeName.text = "No Pokemon Avible";
         }
     }
 

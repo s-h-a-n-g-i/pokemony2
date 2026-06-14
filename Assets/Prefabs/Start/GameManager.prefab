@@ -689,6 +689,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 134bcc732eb4d4b44b75c83f2adab634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  musicVolume: 1
+  sfxVolume: 1
+  uiVolume: 1
 --- !u!114 &3943580913855302437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -771,6 +774,27 @@ MonoBehaviour:
       Data3: 1250691000
       Data4: 1555490831
     Path: event:/Ingame/BgMusic
+  <caveMusic>k__BackingField:
+    Guid:
+      Data1: -94295149
+      Data2: 1195436995
+      Data3: -898192995
+      Data4: -1250718980
+    Path: event:/Ingame/CaveMusic
+  <lavaMusic>k__BackingField:
+    Guid:
+      Data1: 1623355307
+      Data2: 1081966165
+      Data3: 892434101
+      Data4: 617933007
+    Path: event:/Ingame/LavaLvlMusic
+  <poisonMusic>k__BackingField:
+    Guid:
+      Data1: -446881982
+      Data2: 1202898024
+      Data3: 1784592821
+      Data4: 1420298052
+    Path: event:/Ingame/GreenLvlMusic
   <pressedButton>k__BackingField:
     Guid:
       Data1: 80029817

@@ -369,17 +369,24 @@ public class Pokemon
 
     public string GetPokemonTypes() 
     {
-        switch (evoState) 
+        string k = "", l = "";
+        switch (evoState)
         {
             case 0:
-                return type + " " + type2;
+                if (type != PokemonTypes.nothing) k = type + "";
+                if (type != PokemonTypes.nothing) l = type2 + "";
+                break;
             case 1:
-                return E1type + " " + E1type2;
+                if (type != PokemonTypes.nothing) k = E1type + "";
+                if (type != PokemonTypes.nothing) l = E1type2 + "";
+                break;
             case 2:
-                return E2type + " " + E2type2;
+                if (type != PokemonTypes.nothing) k = E2type + "";
+                if (type != PokemonTypes.nothing) l = E2type2 + "";
+                break;
 
         }
-        return "";
+        return (k + " " + l).ToUpper();
     }
 
 }

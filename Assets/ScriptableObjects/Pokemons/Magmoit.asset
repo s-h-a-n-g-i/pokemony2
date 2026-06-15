@@ -17,16 +17,16 @@ MonoBehaviour:
   image: {fileID: 8627488498050553176, guid: b5bbe50546a3a6b4f95c1584e4e91db8, type: 3}
   type: 3
   type2: 0
-  basicNameEvo1: 
+  basicNameEvo1: Magmiter
   E1image: {fileID: -8661029434420068807, guid: 535ef67d51c4f004b881a20c8b62eedf, type: 3}
   evoLevel1: 6
   E1type: 3
   E1type2: 0
-  basicNameEvo2: 
+  basicNameEvo2: Magamentum
   E2image: {fileID: -4223512811448726155, guid: 716a06ef0035e4149889f16f54476956, type: 3}
   evoLevel2: 12
   E2type: 3
-  E2type2: 0
+  E2type2: 4
   attacks:
   - {fileID: 11400000, guid: 012956b2c208e83458cd3e3283d3c3de, type: 2}
   - {fileID: 11400000, guid: c5075532e84359e4fb9a2a60aea8c17c, type: 2}

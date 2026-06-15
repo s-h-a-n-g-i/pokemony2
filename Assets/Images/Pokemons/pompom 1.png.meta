@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: b314afe1c0cbf29479659c7344cb063f
+guid: 037347a8716322d4ca82d6aa97c87578
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8148120139562100871
-    second: rabiner_0
+      213: -8609051721522556062
+    second: pompom 1_0
+  - first:
+      213: -4971195160835383419
+    second: pompom 1_1
+  - first:
+      213: -8940132156278962536
+    second: pompom 1_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 1
     textureFormat: 4
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,23 +106,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rabiner_0
+      name: pompom 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
+        x: 20
+        y: 2
+        width: 25
+        height: 21
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 977d13657ef0cee80800000000000000
-      internalID: -8148120139562100871
+      spriteID: 263dead6211868880800000000000000
+      internalID: -8609051721522556062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pompom 1_1
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 2
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58f1449f654c20bb0800000000000000
+      internalID: -4971195160835383419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pompom 1_2
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 2
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89602f3bb254ee380800000000000000
+      internalID: -8940132156278962536
       vertices: []
       indices: 
       edges: []
@@ -125,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 22c653a953728974eb13b680855ff8e1
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      rabiner_0: -8148120139562100871
+      pompom 1_0: -8609051721522556062
+      pompom 1_1: -4971195160835383419
+      pompom 1_2: -8940132156278962536
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

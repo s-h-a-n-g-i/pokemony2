@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b314afe1c0cbf29479659c7344cb063f
+guid: f11f893ff5ca71e48bfa5e2ffa7da2bf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8148120139562100871
-    second: rabiner_0
+      213: -2334290230874840448
+    second: ironpok3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 1
     textureFormat: 4
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rabiner_0
+      name: ironpok3_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 977d13657ef0cee80800000000000000
-      internalID: -8148120139562100871
+      spriteID: 0826a02176fea9fd0800000000000000
+      internalID: -2334290230874840448
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 22c653a953728974eb13b680855ff8e1
+    spriteID: 6d91829f6b01f22478f4b370a0920435
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      rabiner_0: -8148120139562100871
+      ironpok3_0: -2334290230874840448
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

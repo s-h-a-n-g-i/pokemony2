@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: b81f91b1d795d4c4890d4fb889b8e872
+guid: 927ff34948c8da04ca15d66c208257d4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8426900733428547902
-    second: 0f6b587e13c487c0652060df542f66e1_0
-  - first:
-      213: -620531779282416454
-    second: 0f6b587e13c487c0652060df542f66e1_1
-  - first:
-      213: 8560979256746302286
-    second: 0f6b587e13c487c0652060df542f66e1_2
-  - first:
-      213: 39479014302826518
-    second: 0f6b587e13c487c0652060df542f66e1_3
-  - first:
-      213: 8148073596850549786
-    second: 0f6b587e13c487c0652060df542f66e1_4
+      213: -4755326126404421545
+    second: new_mainmeu_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -112,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 0f6b587e13c487c0652060df542f66e1_0
+      name: new_mainmeu_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 999
-        height: 144
+        x: 0
+        y: 1
+        width: 280
+        height: 323
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e31cc75c19d52f470800000000000000
-      internalID: 8426900733428547902
+      spriteID: 758b7843510b10eb0800000000000000
+      internalID: -4755326126404421545
       vertices: []
       indices: 
       edges: []
@@ -137,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b6f1d3d5cb1948441ba1285b2fbec384
+    spriteID: 20baa1b2965a11d40aa7a916767cbadc
     internalID: 0
     vertices: []
     indices: 
@@ -147,11 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      0f6b587e13c487c0652060df542f66e1_0: 8426900733428547902
-      0f6b587e13c487c0652060df542f66e1_1: -620531779282416454
-      0f6b587e13c487c0652060df542f66e1_2: 8560979256746302286
-      0f6b587e13c487c0652060df542f66e1_3: 39479014302826518
-      0f6b587e13c487c0652060df542f66e1_4: 8148073596850549786
+      new_mainmeu_0: -4755326126404421545
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -299,6 +299,9 @@ MonoBehaviour:
   prevPos: {x: 0, y: 0, z: 0}
   nextPos: {x: 0, y: 0, z: 0}
   lastDir: {x: 0, y: 0, z: 0}
+  hasRunningShoes: 0
+  walkingSoundtimer: 0
+  walkingSoundtimestamp: 0.5
 --- !u!61 &8844539682193100991
 BoxCollider2D:
   m_ObjectHideFlags: 0

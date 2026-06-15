@@ -1236,7 +1236,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8
+  m_fontSize: 7.9
   m_fontSizeBase: 9
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1275,7 +1275,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 2.8974, y: 0, z: 3.4509354, w: 0}
+  m_margin: {x: 2.8974, y: 0.96894217, z: 3.4509354, w: 1.1304369}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1585,6 +1585,7 @@ GameObject:
   - component: {fileID: 7550401207863217932}
   - component: {fileID: 3406476662804153928}
   - component: {fileID: 6139918325543673066}
+  - component: {fileID: 6749772416067746392}
   m_Layer: 5
   m_Name: Pokemon
   m_TagString: Untagged
@@ -1706,6 +1707,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6749772416067746392}
+        m_TargetAssemblyTypeName: ButtonSoundPressed, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6139918325543673066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1721,6 +1734,18 @@ MonoBehaviour:
   pokeName: {fileID: 4662381573965192331}
   pokeCheck: {fileID: 3677601312936859274}
   pokemonChosen: 0
+--- !u!114 &6749772416067746392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922697665973999316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f8a0021f3e28941b11869a22352d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSoundPressed
 --- !u!1 &968906425577809200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1849,7 +1874,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8
+  m_fontSize: 7.9
   m_fontSizeBase: 9
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1888,7 +1913,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 2.8974, y: 0, z: 3.4509354, w: 0}
+  m_margin: {x: 2.8974, y: 0.96894217, z: 3.4509354, w: 1.1304369}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2123,7 +2148,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8
+  m_fontSize: 7.9
   m_fontSizeBase: 9
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2162,7 +2187,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 2.8974, y: 0, z: 3.4509354, w: 0}
+  m_margin: {x: 2.8974, y: 0.96894217, z: 3.4509354, w: 1.1304369}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2180,6 +2205,7 @@ GameObject:
   - component: {fileID: 8290090939894864774}
   - component: {fileID: 5313821930338568229}
   - component: {fileID: 6670211776868493434}
+  - component: {fileID: 3388402588432126290}
   m_Layer: 5
   m_Name: QuitToMenu
   m_TagString: Untagged
@@ -2301,6 +2327,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3388402588432126290}
+        m_TargetAssemblyTypeName: ButtonSoundPressed, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3388402588432126290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345371219948663271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f8a0021f3e28941b11869a22352d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSoundPressed
 --- !u!1 &1352812429078574456
 GameObject:
   m_ObjectHideFlags: 0
@@ -2314,6 +2364,7 @@ GameObject:
   - component: {fileID: 2075213800262595712}
   - component: {fileID: 9136897179468029522}
   - component: {fileID: 4099484432677027497}
+  - component: {fileID: 4744443278179220905}
   m_Layer: 5
   m_Name: AttackDesc3
   m_TagString: Untagged
@@ -2435,6 +2486,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4744443278179220905}
+        m_TargetAssemblyTypeName: ButtonSoundPressed, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4099484432677027497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2450,6 +2513,18 @@ MonoBehaviour:
   desc: {fileID: 3677601312936859274}
   buttonText: {fileID: 1297188894845986523}
   attackId: 3
+--- !u!114 &4744443278179220905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352812429078574456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f8a0021f3e28941b11869a22352d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSoundPressed
 --- !u!1 &1688736915188661166
 GameObject:
   m_ObjectHideFlags: 0
@@ -3150,6 +3225,7 @@ GameObject:
   - component: {fileID: 4324777824380768161}
   - component: {fileID: 6435706476400541280}
   - component: {fileID: 6737935793741096497}
+  - component: {fileID: 2652933040306229070}
   m_Layer: 5
   m_Name: Pokemon (3)
   m_TagString: Untagged
@@ -3271,6 +3347,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2652933040306229070}
+        m_TargetAssemblyTypeName: ButtonSoundPressed, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6737935793741096497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3286,6 +3374,18 @@ MonoBehaviour:
   pokeName: {fileID: 2039857857541602662}
   pokeCheck: {fileID: 3677601312936859274}
   pokemonChosen: 3
+--- !u!114 &2652933040306229070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2263787325010022068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f8a0021f3e28941b11869a22352d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSoundPressed
 --- !u!1 &2412482080608336446
 GameObject:
   m_ObjectHideFlags: 0
@@ -3557,8 +3657,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8
-  m_fontSizeBase: 8
+  m_fontSize: 9
+  m_fontSizeBase: 9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3692,6 +3792,7 @@ GameObject:
   - component: {fileID: 4260242219454302252}
   - component: {fileID: 8578575042873578829}
   - component: {fileID: 2125760580109254408}
+  - component: {fileID: 8434525798624401532}
   m_Layer: 5
   m_Name: AttacksButton
   m_TagString: Untagged
@@ -3813,6 +3914,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8434525798624401532}
+        m_TargetAssemblyTypeName: ButtonSoundPressed, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2125760580109254408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3827,6 +3940,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PokemonChangeMode
   mode: 3
   pokeCheck: {fileID: 3677601312936859274}
+--- !u!114 &8434525798624401532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2631871827798714531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f8a0021f3e28941b11869a22352d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSoundPressed
 --- !u!1 &2661956404247274651
 GameObject:
   m_ObjectHideFlags: 0
@@ -3840,6 +3965,7 @@ GameObject:
   - component: {fileID: 6385664563797368784}
   - component: {fileID: 6824258815811803407}
   - component: {fileID: 2341755945789620960}
+  - component: {fileID: 2945969280319620853}
   m_Layer: 5
   m_Name: IVsButton
   m_TagString: Untagged
@@ -3961,6 +4087,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2945969280319620853}
+        m_TargetAssemblyTypeName: ButtonSoundPressed, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2341755945789620960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3975,6 +4113,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PokemonChangeMode
   mode: 2
   pokeCheck: {fileID: 3677601312936859274}
+--- !u!114 &2945969280319620853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2661956404247274651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f8a0021f3e28941b11869a22352d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSoundPressed
 --- !u!1 &2975291219125707582
 GameObject:
   m_ObjectHideFlags: 0
@@ -4125,6 +4275,7 @@ GameObject:
   - component: {fileID: 5007970840965208859}
   - component: {fileID: 2839852352391321797}
   - component: {fileID: 3172082933332209671}
+  - component: {fileID: 8585452961441126715}
   m_Layer: 5
   m_Name: Pokemon (2)
   m_TagString: Untagged
@@ -4246,6 +4397,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8585452961441126715}
+        m_TargetAssemblyTypeName: ButtonSoundPressed, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3172082933332209671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4261,6 +4424,18 @@ MonoBehaviour:
   pokeName: {fileID: 2722559059689445613}
   pokeCheck: {fileID: 3677601312936859274}
   pokemonChosen: 2
+--- !u!114 &8585452961441126715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3274695958091070843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f8a0021f3e28941b11869a22352d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSoundPressed
 --- !u!1 &3289140000630850302
 GameObject:
   m_ObjectHideFlags: 0
@@ -4313,6 +4488,7 @@ GameObject:
   - component: {fileID: 381218260127510506}
   - component: {fileID: 6036085985346277383}
   - component: {fileID: 5261749764835733245}
+  - component: {fileID: 7829154821710995477}
   m_Layer: 5
   m_Name: Pokemon (4)
   m_TagString: Untagged
@@ -4434,6 +4610,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7829154821710995477}
+        m_TargetAssemblyTypeName: ButtonSoundPressed, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5261749764835733245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4449,6 +4637,18 @@ MonoBehaviour:
   pokeName: {fileID: 2952407857829818872}
   pokeCheck: {fileID: 3677601312936859274}
   pokemonChosen: 4
+--- !u!114 &7829154821710995477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3295405650821458673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f8a0021f3e28941b11869a22352d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSoundPressed
 --- !u!1 &3410850893210642223
 GameObject:
   m_ObjectHideFlags: 0
@@ -4474,16 +4674,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3410850893210642223}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.70710695, w: 0.7071067}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7964986728538798037}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1.322998, y: 0}
+  m_AnchoredPosition: {x: -1.3219604, y: -0.000038146973}
   m_SizeDelta: {x: 67.605, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4802367674556376336
@@ -4537,6 +4737,7 @@ GameObject:
   - component: {fileID: 1099617142971837136}
   - component: {fileID: 6248311266956966509}
   - component: {fileID: 1309669654351104931}
+  - component: {fileID: 2021644105613281971}
   m_Layer: 5
   m_Name: DescriptionButton
   m_TagString: Untagged
@@ -4658,6 +4859,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2021644105613281971}
+        m_TargetAssemblyTypeName: ButtonSoundPressed, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1309669654351104931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4672,6 +4885,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PokemonChangeMode
   mode: 0
   pokeCheck: {fileID: 3677601312936859274}
+--- !u!114 &2021644105613281971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3431142535768518057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f8a0021f3e28941b11869a22352d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSoundPressed
 --- !u!1 &3629628395166556916
 GameObject:
   m_ObjectHideFlags: 0
@@ -4764,7 +4989,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8
+  m_fontSize: 7.9
   m_fontSizeBase: 9
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4803,7 +5028,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 2.8974, y: 0, z: 3.4509354, w: 0}
+  m_margin: {x: 2.8974, y: 0.96894217, z: 3.4509354, w: 1.1304369}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4822,6 +5047,7 @@ GameObject:
   - component: {fileID: 8471173128057634458}
   - component: {fileID: 3187989234883671949}
   - component: {fileID: 7344229646201084393}
+  - component: {fileID: 7038211085965965017}
   m_Layer: 5
   m_Name: AttackDesc2
   m_TagString: Untagged
@@ -4943,6 +5169,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7038211085965965017}
+        m_TargetAssemblyTypeName: ButtonSoundPressed, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7344229646201084393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4958,6 +5196,18 @@ MonoBehaviour:
   desc: {fileID: 3677601312936859274}
   buttonText: {fileID: 8762218078326921441}
   attackId: 2
+--- !u!114 &7038211085965965017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3663949881724499390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f8a0021f3e28941b11869a22352d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSoundPressed
 --- !u!1 &3881636434108547217
 GameObject:
   m_ObjectHideFlags: 0
@@ -5200,16 +5450,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4078429260465983543}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.70710677, w: 0.7071069}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4015126394083937449}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1.322998, y: 0}
+  m_AnchoredPosition: {x: -1.3225403, y: -0.000038146973}
   m_SizeDelta: {x: 67.605, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4041187743297696266
@@ -5612,6 +5862,7 @@ GameObject:
   - component: {fileID: 3435969527630474640}
   - component: {fileID: 4671363863089570701}
   - component: {fileID: 3122357645255338219}
+  - component: {fileID: 6123474098794560761}
   m_Layer: 5
   m_Name: StatsButton
   m_TagString: Untagged
@@ -5733,6 +5984,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6123474098794560761}
+        m_TargetAssemblyTypeName: ButtonSoundPressed, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3122357645255338219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5747,6 +6010,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PokemonChangeMode
   mode: 1
   pokeCheck: {fileID: 3677601312936859274}
+--- !u!114 &6123474098794560761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4530928606628532031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f8a0021f3e28941b11869a22352d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSoundPressed
 --- !u!1 &4606946501675177177
 GameObject:
   m_ObjectHideFlags: 0
@@ -5759,6 +6034,7 @@ GameObject:
   - component: {fileID: 8520019841633294309}
   - component: {fileID: 6227756925986207665}
   - component: {fileID: 560511520177259360}
+  - component: {fileID: 6402925086677398266}
   m_Layer: 5
   m_Name: ExitToMenuButton
   m_TagString: Untagged
@@ -5880,6 +6156,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6402925086677398266}
+        m_TargetAssemblyTypeName: ButtonSoundPressed, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6402925086677398266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4606946501675177177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f8a0021f3e28941b11869a22352d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSoundPressed
 --- !u!1 &4612489783955603521
 GameObject:
   m_ObjectHideFlags: 0
@@ -6279,6 +6579,7 @@ GameObject:
   - component: {fileID: 6244254745058095587}
   - component: {fileID: 7038064265727185601}
   - component: {fileID: 424152160808669354}
+  - component: {fileID: 8638484089841265608}
   m_Layer: 5
   m_Name: AttackDesc1
   m_TagString: Untagged
@@ -6400,6 +6701,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8638484089841265608}
+        m_TargetAssemblyTypeName: ButtonSoundPressed, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &424152160808669354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6415,6 +6728,18 @@ MonoBehaviour:
   desc: {fileID: 3677601312936859274}
   buttonText: {fileID: 2754474043863486528}
   attackId: 1
+--- !u!114 &8638484089841265608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5498166226136883166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f8a0021f3e28941b11869a22352d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSoundPressed
 --- !u!1 &5631855741018910874
 GameObject:
   m_ObjectHideFlags: 0
@@ -6473,7 +6798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.7647059}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.69411767}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6793,6 +7118,7 @@ GameObject:
   - component: {fileID: 2881864846615558825}
   - component: {fileID: 8678453110543523121}
   - component: {fileID: 8212588027429909544}
+  - component: {fileID: 46437642206859424}
   m_Layer: 5
   m_Name: Pokemon (1)
   m_TagString: Untagged
@@ -6914,6 +7240,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 46437642206859424}
+        m_TargetAssemblyTypeName: ButtonSoundPressed, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8212588027429909544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6929,6 +7267,18 @@ MonoBehaviour:
   pokeName: {fileID: 6817696848180277504}
   pokeCheck: {fileID: 3677601312936859274}
   pokemonChosen: 1
+--- !u!114 &46437642206859424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5996843369920523952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f8a0021f3e28941b11869a22352d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSoundPressed
 --- !u!1 &6181161871918732707
 GameObject:
   m_ObjectHideFlags: 0
@@ -6978,6 +7328,7 @@ GameObject:
   - component: {fileID: 8005368910938167596}
   - component: {fileID: 79377524936503755}
   - component: {fileID: 6297484731822486786}
+  - component: {fileID: 8695561340303750616}
   m_Layer: 5
   m_Name: AttackDesc0
   m_TagString: Untagged
@@ -7099,6 +7450,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8695561340303750616}
+        m_TargetAssemblyTypeName: ButtonSoundPressed, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6297484731822486786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7114,6 +7477,18 @@ MonoBehaviour:
   desc: {fileID: 3677601312936859274}
   buttonText: {fileID: 5297552273392789074}
   attackId: 0
+--- !u!114 &8695561340303750616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6311359892997339868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f8a0021f3e28941b11869a22352d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSoundPressed
 --- !u!1 &6387767770452246731
 GameObject:
   m_ObjectHideFlags: 0
@@ -7338,6 +7713,7 @@ GameObject:
   - component: {fileID: 7682306699389931626}
   - component: {fileID: 8935739311179828636}
   - component: {fileID: 6487491663232685728}
+  - component: {fileID: 7355735998772461211}
   m_Layer: 5
   m_Name: CloseMenuButton
   m_TagString: Untagged
@@ -7459,6 +7835,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7355735998772461211}
+        m_TargetAssemblyTypeName: ButtonSoundPressed, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7355735998772461211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6491188878788533834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f8a0021f3e28941b11869a22352d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSoundPressed
 --- !u!1 &6945375218614353089
 GameObject:
   m_ObjectHideFlags: 0
@@ -7732,6 +8132,7 @@ GameObject:
   - component: {fileID: 3132177800558684}
   - component: {fileID: 8399986582469158443}
   - component: {fileID: 8631304725938599255}
+  - component: {fileID: 3356928000036940688}
   m_Layer: 5
   m_Name: LookUpPokemonButton
   m_TagString: Untagged
@@ -7853,6 +8254,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3356928000036940688}
+        m_TargetAssemblyTypeName: ButtonSoundPressed, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3356928000036940688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7255748232128323193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f8a0021f3e28941b11869a22352d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSoundPressed
 --- !u!1 &7691206814916184395
 GameObject:
   m_ObjectHideFlags: 0
@@ -8223,16 +8648,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8904027672869293936}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071058, w: 0.70710784}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8324167512710761169}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1.322998, y: 0}
+  m_AnchoredPosition: {x: -1.3225403, y: -0.000038146973}
   m_SizeDelta: {x: 67.605, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2028890015816820866

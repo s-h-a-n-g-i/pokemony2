@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8763193293297455432}
   - component: {fileID: 3643568266705283138}
   - component: {fileID: 6217257925394794191}
+  - component: {fileID: 9175609854730817984}
   m_Layer: 5
   m_Name: SaveButton2
   m_TagString: Untagged
@@ -134,6 +135,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 9175609854730817984}
+        m_TargetAssemblyTypeName: ButtonSoundPressed, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6217257925394794191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,6 +163,18 @@ MonoBehaviour:
   loadgame: 0
   saveId: 2
   buttontext: {fileID: 5463012460491842776}
+--- !u!114 &9175609854730817984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733803889718829552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f8a0021f3e28941b11869a22352d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSoundPressed
 --- !u!1 &1036515683062288357
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,6 +991,7 @@ GameObject:
   - component: {fileID: 938581652014594009}
   - component: {fileID: 3149845826140504537}
   - component: {fileID: 7651400923303008012}
+  - component: {fileID: 4448978050850236403}
   m_Layer: 5
   m_Name: SaveButton1
   m_TagString: Untagged
@@ -1087,6 +1113,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4448978050850236403}
+        m_TargetAssemblyTypeName: ButtonSoundPressed, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7651400923303008012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1103,6 +1141,18 @@ MonoBehaviour:
   loadgame: 0
   saveId: 1
   buttontext: {fileID: 8939936468344766925}
+--- !u!114 &4448978050850236403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3935277985331277082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f8a0021f3e28941b11869a22352d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSoundPressed
 --- !u!1 &6386085984998684546
 GameObject:
   m_ObjectHideFlags: 0
@@ -1154,6 +1204,7 @@ GameObject:
   - component: {fileID: 4910637352644568078}
   - component: {fileID: 4396277220075893020}
   - component: {fileID: 1980361893588547314}
+  - component: {fileID: 3926154498902873355}
   m_Layer: 5
   m_Name: SaveButton3
   m_TagString: Untagged
@@ -1275,6 +1326,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3926154498902873355}
+        m_TargetAssemblyTypeName: ButtonSoundPressed, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1980361893588547314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1291,3 +1354,15 @@ MonoBehaviour:
   loadgame: 0
   saveId: 3
   buttontext: {fileID: 4201052961798460330}
+--- !u!114 &3926154498902873355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8634963218130504381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f8a0021f3e28941b11869a22352d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSoundPressed

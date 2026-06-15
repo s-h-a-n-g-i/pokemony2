@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bb69a76af251ebc428cd570dc84c4cb4
+guid: 768b482c8e338fe40bb08d6dc974899e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1409485059424152983
-    second: CASE-TARS2_0
+      213: 8471789127980918335
+    second: ironpok2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -73,9 +73,9 @@ TextureImporter:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
+    resizeAlgorithm: 1
+    textureFormat: 4
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CASE-TARS2_0
+      name: ironpok2_0
       rect:
         serializedVersion: 2
-        x: 8
+        x: 12
         y: 0
-        width: 48
-        height: 51
+        width: 39
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9629dc46ec0807ce0800000000000000
-      internalID: -1409485059424152983
+      spriteID: f36a1519357d19570800000000000000
+      internalID: 8471789127980918335
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CASE-TARS2_0: -1409485059424152983
+      ironpok2_0: 8471789127980918335
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

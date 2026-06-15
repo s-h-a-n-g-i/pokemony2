@@ -218,10 +218,12 @@ public class DialogeFightManager : MonoBehaviour
 
         foreach (Pokemon p in pokemonsInFight)
         {
-            if (_NPCManager.Instance.isItTrainer)
-                GiveXPToPokemonsFromTrainer(p);
-            else
-                p.giveXP(_FightManager.Instance.EnemyPokemon.level / _PokemonEQ.Instance.pokemonUsedInFight.Count);
+            /////TO W NORMALNEJ WERSJI ZAMIAST TEGO:
+            p.xp = p.xpToNextLevel;
+            //if (_NPCManager.Instance.isItTrainer)
+            //    GiveXPToPokemonsFromTrainer(p);
+            //else
+            //    p.giveXP(_FightManager.Instance.EnemyPokemon.level / _PokemonEQ.Instance.pokemonUsedInFight.Count);
             while (p.CheckForLevelUp())
             {
                 ChosenNewAttack = true;
@@ -262,7 +264,7 @@ public class DialogeFightManager : MonoBehaviour
 
     private void GiveXPToPokemonsFromTrainer(Pokemon pokemon)
     {
-        pokemon.giveXP(_NPCManager.Instance.TrainerPokemons[0].level / _PokemonEQ.Instance.pokemonUsedInFight.Count);
+        pokemon.giveXP(_NPCManager.Instance.TrainerPokemons[0].level * _NPCManager.Instance.TrainerPokemons.Length / _PokemonEQ.Instance.pokemonUsedInFight.Count);
     }
 
 

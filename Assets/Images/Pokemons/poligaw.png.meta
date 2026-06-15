@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: b314afe1c0cbf29479659c7344cb063f
+guid: e5572f1ed51574746a2770b9d39dd091
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8148120139562100871
-    second: rabiner_0
+      213: -1629596552438972960
+    second: poligaw_0
+  - first:
+      213: 4284402003607220546
+    second: poligaw_1
+  - first:
+      213: 163311550870961296
+    second: poligaw_2
+  - first:
+      213: 5456064315176760206
+    second: poligaw_3
+  - first:
+      213: -7098511181854815687
+    second: poligaw_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +87,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 1
     textureFormat: 4
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,23 +112,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rabiner_0
+      name: poligaw_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
+        x: 8
+        y: 12
+        width: 12
+        height: 10
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 977d13657ef0cee80800000000000000
-      internalID: -8148120139562100871
+      spriteID: 0ed7cacc1928269e0800000000000000
+      internalID: -1629596552438972960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: poligaw_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 7
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 241fafb2ce0457b30800000000000000
+      internalID: 4284402003607220546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: poligaw_2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 12
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09cb1618df2344200800000000000000
+      internalID: 163311550870961296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: poligaw_3
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e83bbc15695d7bb40800000000000000
+      internalID: 5456064315176760206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: poligaw_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 7
+        width: 59
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93ac76b80b50d7d90800000000000000
+      internalID: -7098511181854815687
       vertices: []
       indices: 
       edges: []
@@ -125,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 22c653a953728974eb13b680855ff8e1
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      rabiner_0: -8148120139562100871
+      poligaw_0: -1629596552438972960
+      poligaw_1: 4284402003607220546
+      poligaw_2: 163311550870961296
+      poligaw_3: 5456064315176760206
+      poligaw_4: -7098511181854815687
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

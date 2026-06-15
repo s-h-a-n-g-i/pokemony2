@@ -1,8 +1,6 @@
-using JetBrains.Annotations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 public enum PokemonTypes
@@ -208,13 +206,15 @@ public class Pokemon
         return null;
     }
 
-    public void LvLUp() 
+    public void LvLUp()//bool CreatePokemon = false) 
     {
         xp -= xpToNextLevel;
         if(xp<0) xp = 0;
-        xpToNextLevel = xpToNextLevel / 2 + xpToNextLevel;
+        xpToNextLevel = (int)(xpToNextLevel * 1.5f);
         level++;
+        if (level % 5 == 0) IVsUp();
         StatsUp();
+        //if (CreatePokemon) { }
     }
 
     public void Evolution() 
@@ -252,17 +252,17 @@ public class Pokemon
 
     private void IVsUp()
     {
-        hpIV ++;
-        atkIV ++;
-        defIV ++;
-        sDefIV ++;
-        sAtkIV ++;
-        speedIV ++;
+        hpIV +=Random.Range(1,3);
+        atkIV += Random.Range(1, 3);
+        defIV += Random.Range(1, 3);
+        sDefIV += Random.Range(1, 3);
+        sAtkIV += Random.Range(1, 3);
+        speedIV += Random.Range(1, 3);
     }
 
-    public void giveXP(int enemyPokemonLevel) 
+    public void giveXP(int xp) 
     {
-        float s = (float)enemyPokemonLevel / 2f*3f;
+        float s = (float)xp * 2f;
         if (s <= 2) 
         {
             s = 2;

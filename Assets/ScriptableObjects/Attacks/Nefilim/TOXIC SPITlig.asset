@@ -17,7 +17,9 @@ MonoBehaviour:
   pp: 10
   maxPp: 10
   damage: 6
+  heal: 0
   accuracy: 70
-  speed: 60
+  speed: 6
   desc: Spits on the enemy with toxins!
+  isSuper: 0
   effect: 3

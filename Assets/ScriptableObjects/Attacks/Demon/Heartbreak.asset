@@ -17,7 +17,9 @@ MonoBehaviour:
   pp: 6
   maxPp: 6
   damage: 13
+  heal: 0
   accuracy: 80
-  speed: 70
+  speed: 7
   desc: Break your heart, Break my heart~
+  isSuper: 0
   effect: 5

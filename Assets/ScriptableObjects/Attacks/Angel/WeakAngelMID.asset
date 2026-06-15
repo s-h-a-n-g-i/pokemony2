@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AttackSO
   attackName: Flying Strike
   attackType: 0
-  pp: 15
-  maxPp: 15
-  damage: 11
+  pp: 10
+  maxPp: 10
+  damage: 15
+  heal: 0
   accuracy: 90
-  speed: 50
+  speed: 5
   desc: 'Strikes the enemy! Causes Burn. '
+  isSuper: 0
   effect: 2

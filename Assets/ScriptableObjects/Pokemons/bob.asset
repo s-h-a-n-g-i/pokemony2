@@ -19,12 +19,12 @@ MonoBehaviour:
   type2: 0
   basicNameEvo1: Bober
   E1image: {fileID: 4058500632094824262, guid: e5f14a703b4d0e94aab0fa01579dba24, type: 3}
-  evoLevel1: 6
+  evoLevel1: 8
   E1type: 5
   E1type2: 0
   basicNameEvo2: Bobson
   E2image: {fileID: 6661852246698698781, guid: e5f14a703b4d0e94aab0fa01579dba24, type: 3}
-  evoLevel2: 12
+  evoLevel2: 16
   E2type: 5
   E2type2: 0
   attacks:
@@ -33,15 +33,15 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   effects: 0
-  hp: 15
-  atk: 1
-  def: 2
-  sDef: 3
+  hp: 14
+  atk: 4
+  def: 6
+  sDef: 5
   sAtk: 4
-  speed: 2
+  speed: 7
   hpIV: 4
-  atkIV: 2
-  defIV: 3
+  atkIV: 4
+  defIV: 2
   sDefIV: 1
   sAtkIV: 1
   speedIV: 1
@@ -55,3 +55,5 @@ MonoBehaviour:
     level: 6
   - attack: {fileID: 11400000, guid: 1372c053eb73bff4d8aa2b14782ebf7c, type: 2}
     level: 11
+  - attack: {fileID: 11400000, guid: f3434d63883109e4284c9a489452a993, type: 2}
+    level: 17

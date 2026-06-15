@@ -17,7 +17,9 @@ MonoBehaviour:
   pp: 100
   maxPp: 100
   damage: 7
+  heal: -1
   accuracy: 0
   speed: 1000
   desc: 
+  isSuper: 0
   effect: 0

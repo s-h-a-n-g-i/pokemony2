@@ -19,7 +19,7 @@ MonoBehaviour:
   type2: 0
   basicNameEvo1: Erelim
   E1image: {fileID: 8091654411001665142, guid: 630f3b0be70b5374b8dfc73708f3beb6, type: 3}
-  evoLevel1: 6
+  evoLevel1: 12
   E1type: 2
   E1type2: 0
   basicNameEvo2: 
@@ -33,21 +33,29 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e3a2f746c112d2142acc04e1a43382cd, type: 2}
   - {fileID: 11400000, guid: e3a2f746c112d2142acc04e1a43382cd, type: 2}
   effects: 0
-  hp: 5
-  atk: 4
-  def: 3
-  sDef: 3
-  sAtk: 4
-  speed: 4
-  hpIV: 2
-  atkIV: 3
-  defIV: 1
+  hp: 12
+  atk: 3
+  def: 13
+  sDef: 4
+  sAtk: 1
+  speed: 7
+  hpIV: 1
+  atkIV: 4
+  defIV: 2
   sDefIV: 1
-  sAtkIV: 3
-  speedIV: 1
+  sAtkIV: 2
+  speedIV: 2
   atkX: 0
   defX: 0
   sDefX: 0
   sAtkX: 0
   speedX: 0
-  attacksOnLevelUp: []
+  attacksOnLevelUp:
+  - attack: {fileID: 11400000, guid: 632cd3cdefaccd9429970b0e950c4339, type: 2}
+    level: 5
+  - attack: {fileID: 11400000, guid: 64a1f27f76a5c76458aeb6847ed9d5a2, type: 2}
+    level: 7
+  - attack: {fileID: 11400000, guid: d9c2d7c4f0bed1a4aa0faed5bc32c11f, type: 2}
+    level: 13
+  - attack: {fileID: 11400000, guid: 2d0537c7637ebb74c9519c348b6aec0f, type: 2}
+    level: 15

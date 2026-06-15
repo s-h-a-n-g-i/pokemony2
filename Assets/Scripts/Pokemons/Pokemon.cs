@@ -103,7 +103,7 @@ public class Pokemon
 
     private Dictionary<int,Attack> AttackDict = new Dictionary<int,Attack>();
 
-    public Pokemon(PokemonSO c, int startingLevel = 0) 
+    public Pokemon(PokemonSO c, int startingLevel = 0, bool wild = false) 
     {
         saveId = c.name;
         uniqueId = Guid.NewGuid().ToString();
@@ -151,7 +151,7 @@ public class Pokemon
 
         for (int i = 0; i < startingLevel; i++)
         {
-            LvLUp();
+            LvLUp(wild);
         }
         if(c.attacksOnLevelUp != null)
             for (int i = 0; i < c.attacksOnLevelUp.Length;i++) 
@@ -159,7 +159,7 @@ public class Pokemon
                 AttackSO s = c.attacksOnLevelUp[i].attack;
                 AttackDict.Add(
                     c.attacksOnLevelUp[i].level,
-                    new Attack(s.attackName, s.attackType, s.maxPp, s.damage, s.accuracy, s.speed, s.desc, s.effect)); 
+                    new Attack(s.attackName, s.attackType, s.maxPp, s.damage, s.accuracy, s.speed, s.desc, s.effect,s.heal,s.isSuper)); 
 
             }
         
@@ -172,7 +172,7 @@ public class Pokemon
         {
             if (s[i] != null)  
                 if(s[i].name != "None")
-                    AttacksActive[i] = new Attack(s[i].attackName, s[i].attackType, s[i].maxPp, s[i].damage, s[i].accuracy, s[i].speed, s[i].desc, s[i].effect);
+                    AttacksActive[i] = new Attack(s[i].attackName, s[i].attackType, s[i].maxPp, s[i].damage, s[i].accuracy, s[i].speed, s[i].desc, s[i].effect, s[i].heal, s[i].isSuper);
         }
     }
 
@@ -206,7 +206,7 @@ public class Pokemon
         return null;
     }
 
-    public void LvLUp()//bool CreatePokemon = false) 
+    public void LvLUp(bool CreatePokemon = false) 
     {
         xp -= xpToNextLevel;
         if(xp<0) xp = 0;
@@ -214,8 +214,25 @@ public class Pokemon
         level++;
         if (level % 5 == 0) IVsUp();
         StatsUp();
-        //if (CreatePokemon) { }
+        if (CreatePokemon)        
+        {
+            if (CheckForAttacksAdded() != null)
+                applyRandomAttack();
+
+            if (CheckForEvolution())
+                Evolution();
+        }
     }
+
+    private void applyRandomAttack() 
+    {
+        int rand = Random.Range(0, 6);
+        if (rand < 4) 
+        {
+            AttacksActive[rand] = CheckForAttacksAdded();
+        }
+    }
+
 
     public void Evolution() 
     {
@@ -252,12 +269,12 @@ public class Pokemon
 
     private void IVsUp()
     {
-        hpIV +=Random.Range(1,3);
-        atkIV += Random.Range(1, 3);
-        defIV += Random.Range(1, 3);
-        sDefIV += Random.Range(1, 3);
-        sAtkIV += Random.Range(1, 3);
-        speedIV += Random.Range(1, 3);
+        hpIV ++;
+        atkIV ++;
+        defIV ++;
+        sDefIV ++;
+        sAtkIV ++;
+        speedIV ++;
     }
 
     public void giveXP(int xp) 

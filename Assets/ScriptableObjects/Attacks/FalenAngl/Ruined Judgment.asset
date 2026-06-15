@@ -16,8 +16,10 @@ MonoBehaviour:
   attackType: 3
   pp: 8
   maxPp: 8
-  damage: 15
+  damage: 14
+  heal: 0
   accuracy: 95
-  speed: 60
+  speed: 6
   desc: Strikes the enemy with broken Judgment.
+  isSuper: 0
   effect: 0

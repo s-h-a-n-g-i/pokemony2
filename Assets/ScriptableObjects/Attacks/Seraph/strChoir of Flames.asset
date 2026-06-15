@@ -17,7 +17,9 @@ MonoBehaviour:
   pp: 4
   maxPp: 4
   damage: 20
+  heal: 0
   accuracy: 70
-  speed: 30
+  speed: 6
   desc: The sun burns heavier than ever!
+  isSuper: 1
   effect: 2

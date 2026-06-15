@@ -17,7 +17,9 @@ MonoBehaviour:
   pp: 5
   maxPp: 5
   damage: 12
+  heal: 0
   accuracy: 90
-  speed: 90
+  speed: 9
   desc: Haunts the enemy. They can't see!
+  isSuper: 0
   effect: 1

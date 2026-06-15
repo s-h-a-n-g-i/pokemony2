@@ -17,7 +17,9 @@ MonoBehaviour:
   pp: 15
   maxPp: 15
   damage: 8
+  heal: 0
   accuracy: 90
-  speed: 80
+  speed: 8
   desc: KICKES your enemy!
+  isSuper: 0
   effect: 0

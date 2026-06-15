@@ -17,7 +17,9 @@ MonoBehaviour:
   pp: 7
   maxPp: 7
   damage: 6
+  heal: 0
   accuracy: 90
-  speed: 40
+  speed: 4
   desc: Creature's aura burns the enemy!
+  isSuper: 0
   effect: 2

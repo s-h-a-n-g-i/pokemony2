@@ -17,37 +17,43 @@ MonoBehaviour:
   image: {fileID: -6642189541005656643, guid: 2e8a1073d36bb86499ad68e63357779a, type: 3}
   type: 8
   type2: 0
-  basicNameEvo1: 
-  E1image: {fileID: 0}
-  evoLevel1: -1
-  E1type: 0
+  basicNameEvo1: Buzzzer
+  E1image: {fileID: -1049601479266713366, guid: 17cd136c1dbbc3746a420186adf483ca, type: 3}
+  evoLevel1: 6
+  E1type: 8
   E1type2: 0
-  basicNameEvo2: 
-  E2image: {fileID: 0}
-  evoLevel2: -1
-  E2type: 0
-  E2type2: 0
+  basicNameEvo2: Buzzzzer
+  E2image: {fileID: -4077345294413397589, guid: 262ee327316e8144880a14926b5b9494, type: 3}
+  evoLevel2: 12
+  E2type: 8
+  E2type2: 1
   attacks:
   - {fileID: 11400000, guid: 7a1b1f9bb77671443835d3c55533d81a, type: 2}
   - {fileID: 11400000, guid: ea923e8a76f197945aea3e03155c3055, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   effects: 0
-  hp: 5
-  atk: 4
-  def: 3
-  sDef: 3
-  sAtk: 4
-  speed: 4
-  hpIV: 2
-  atkIV: 3
-  defIV: 1
+  hp: 6
+  atk: 7
+  def: 6
+  sDef: 7
+  sAtk: 6
+  speed: 8
+  hpIV: 3
+  atkIV: 2
+  defIV: 2
   sDefIV: 1
-  sAtkIV: 2
+  sAtkIV: 1
   speedIV: 2
   atkX: 0
   defX: 0
   sDefX: 0
   sAtkX: 0
   speedX: 0
-  attacksOnLevelUp: []
+  attacksOnLevelUp:
+  - attack: {fileID: 11400000, guid: e0659f771f750454fb2a3a5a5042903b, type: 2}
+    level: 4
+  - attack: {fileID: 11400000, guid: 95bfa43a18ce9a24298e2cb539322fd2, type: 2}
+    level: 8
+  - attack: {fileID: 11400000, guid: 64a1f27f76a5c76458aeb6847ed9d5a2, type: 2}
+    level: 14

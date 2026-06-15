@@ -12,13 +12,14 @@ public class Attack
     public int accuracy;
     public int speed;
     public string desc;
+    public int heal;
 
     public Effects effect;
 
-    bool isSuper = false;
+    public bool isSuper = false;
 
     public bool hasSlot = true;
-    public Attack(string attackName, PokemonTypes attackType, int maxPp, int damage, int accuracy, int speed , string desc, Effects effect) 
+    public Attack(string attackName, PokemonTypes attackType, int maxPp, int damage, int accuracy, int speed , string desc, Effects effect,int heal, bool isSuper) 
     {
         this.effect = effect;
         this.attackName = attackName;
@@ -29,7 +30,8 @@ public class Attack
         this.accuracy = accuracy;
         this.speed = speed;
         this.desc = desc;
-
+        this.heal = heal;
+        this.isSuper = isSuper;
     }
 
 
@@ -79,14 +81,22 @@ public class Attack
         if (rand > accuracy+deal.accuracyX)
             dmgTemp = 0;
         //Debug.Log(r);
-        
+        if (dmgTemp != 0)
+        {
+            if (heal == -1)
+                deal.hp += Mathf.CeilToInt(dmgTemp);
+            else
+                deal.hp += heal;
+            if (deal.hp > deal.maxHp)
+                deal.hp = deal.maxHp;
+        }
         if (target.effects == Effects.None && dmgTemp != 0)
-            if (effect != Effects.None) 
-            {
-                Debug.Log(target.PokemonNameOut() + "got a stroke " + effect + EffectTurnStay());
-                target.effects = effect; 
-                target.turnsToClearEffect = EffectTurnStay(); 
-            } 
+        if (effect != Effects.None) 
+        {
+            Debug.Log(target.PokemonNameOut() + "got a stroke " + effect + EffectTurnStay());
+            target.effects = effect; 
+            target.turnsToClearEffect = EffectTurnStay(); 
+        } 
         return (Mathf.CeilToInt(dmgTemp), output);
     }
 

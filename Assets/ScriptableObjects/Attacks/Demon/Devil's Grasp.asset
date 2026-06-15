@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AttackSO
   attackName: Devil's Grasp
   attackType: 4
-  pp: 2
-  maxPp: 2
+  pp: 4
+  maxPp: 4
   damage: 18
+  heal: 0
   accuracy: 100
-  speed: 50
+  speed: 4
   desc: You borrow the Hells flames to burn the enemy.
+  isSuper: 0
   effect: 2

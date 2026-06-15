@@ -17,7 +17,9 @@ MonoBehaviour:
   pp: 20
   maxPp: 20
   damage: 8
+  heal: 0
   accuracy: 90
-  speed: 70
+  speed: 7
   desc: PUNCHES the enemy!
+  isSuper: 0
   effect: 0

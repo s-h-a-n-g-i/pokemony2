@@ -41,7 +41,7 @@ public class FightNPC : MonoBehaviour
         //Debug.Log(pokemonToFight.name);
         for(int i = 0; i < pokemon.Length;i++)
         {
-            pokemon[i] = new Pokemon(pokemonToFight[i], level);
+            pokemon[i] = new Pokemon(pokemonToFight[i], level,true);
         }
 
     }

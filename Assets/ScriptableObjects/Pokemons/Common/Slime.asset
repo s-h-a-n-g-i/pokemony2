@@ -19,7 +19,7 @@ MonoBehaviour:
   type2: 0
   basicNameEvo1: Slimer
   E1image: {fileID: 538079202415156762, guid: c7469c20368da894aaa9008950e40334, type: 3}
-  evoLevel1: 6
+  evoLevel1: 8
   E1type: 5
   E1type2: 0
   basicNameEvo2: 
@@ -33,21 +33,29 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   effects: 0
-  hp: 10
-  atk: 3
-  def: 4
+  hp: 20
+  atk: 2
+  def: 7
   sDef: 4
-  sAtk: 3
+  sAtk: 6
   speed: 1
-  hpIV: 3
+  hpIV: 2
   atkIV: 1
-  defIV: 3
+  defIV: 2
   sDefIV: 2
-  sAtkIV: 1
-  speedIV: 1
+  sAtkIV: 2
+  speedIV: 3
   atkX: 0
   defX: 0
   sDefX: 0
   sAtkX: 0
   speedX: 0
-  attacksOnLevelUp: []
+  attacksOnLevelUp:
+  - attack: {fileID: 11400000, guid: 95bfa43a18ce9a24298e2cb539322fd2, type: 2}
+    level: 7
+  - attack: {fileID: 11400000, guid: a293f05e403aed140a35aad7b012f670, type: 2}
+    level: 11
+  - attack: {fileID: 11400000, guid: 378ec32f248310747bb134206b4853c2, type: 2}
+    level: 14
+  - attack: {fileID: 11400000, guid: f3434d63883109e4284c9a489452a993, type: 2}
+    level: 17

@@ -17,7 +17,9 @@ MonoBehaviour:
   pp: 10
   maxPp: 10
   damage: 6
+  heal: 0
   accuracy: 90
-  speed: 95
+  speed: 5
   desc: Delivers justice that slows down the enemy.
+  isSuper: 0
   effect: 4

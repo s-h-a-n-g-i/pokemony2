@@ -33,21 +33,31 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   effects: 0
-  hp: 10
-  atk: 3
-  def: 4
-  sDef: 4
-  sAtk: 3
-  speed: 1
+  hp: 14
+  atk: 6
+  def: 6
+  sDef: 3
+  sAtk: 4
+  speed: 7
   hpIV: 3
-  atkIV: 1
+  atkIV: 2
   defIV: 2
-  sDefIV: 2
-  sAtkIV: 1
+  sDefIV: 1
+  sAtkIV: 3
   speedIV: 1
   atkX: 0
   defX: 0
   sDefX: 0
   sAtkX: 0
   speedX: 0
-  attacksOnLevelUp: []
+  attacksOnLevelUp:
+  - attack: {fileID: 11400000, guid: c5075532e84359e4fb9a2a60aea8c17c, type: 2}
+    level: 4
+  - attack: {fileID: 11400000, guid: 64f93601404a56f4cbab633c1e85001b, type: 2}
+    level: 6
+  - attack: {fileID: 11400000, guid: 1372c053eb73bff4d8aa2b14782ebf7c, type: 2}
+    level: 8
+  - attack: {fileID: 11400000, guid: 29164141c9294674baf930cc8d3057bc, type: 2}
+    level: 10
+  - attack: {fileID: 11400000, guid: 632cd3cdefaccd9429970b0e950c4339, type: 2}
+    level: 12

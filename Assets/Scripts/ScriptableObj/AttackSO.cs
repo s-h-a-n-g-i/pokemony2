@@ -9,9 +9,12 @@ public class AttackSO : ScriptableObject
     public int pp;
     public int maxPp;
     public int damage;
+    public int heal;
     public int accuracy;
     public int speed;
     public string desc;
+
+    public bool isSuper;
 
     public Effects effect;
 

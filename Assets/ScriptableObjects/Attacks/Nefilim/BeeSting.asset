@@ -17,7 +17,9 @@ MonoBehaviour:
   pp: 5
   maxPp: 5
   damage: 5
+  heal: 0
   accuracy: 100
-  speed: 100
+  speed: 10
   desc: Stings your enemy! Ouch...
+  isSuper: 0
   effect: 3

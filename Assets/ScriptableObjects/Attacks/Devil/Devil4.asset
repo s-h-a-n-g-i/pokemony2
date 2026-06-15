@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AttackSO
   attackName: EXECUTE
   attackType: 0
-  pp: 1000
-  maxPp: 1000
+  pp: 100
+  maxPp: 100
   damage: 100000
-  accuracy: 5
-  speed: 0
-  desc: 
+  heal: 0
+  accuracy: 10
+  speed: 200
+  desc: Low chance but still executes
+  isSuper: 0
   effect: 0

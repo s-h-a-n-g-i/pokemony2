@@ -33,12 +33,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7f6e6291d584fac45ba695b08b295abd, type: 2}
   - {fileID: 11400000, guid: 64f93601404a56f4cbab633c1e85001b, type: 2}
   effects: 0
-  hp: 99
-  atk: 99
-  def: 99
-  sDef: 99
-  sAtk: 99
-  speed: 99
+  hp: 10
+  atk: 10
+  def: 10
+  sDef: 10
+  sAtk: 10
+  speed: 10
   hpIV: 1
   atkIV: 1
   defIV: 1

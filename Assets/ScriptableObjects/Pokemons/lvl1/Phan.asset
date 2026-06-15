@@ -20,7 +20,7 @@ MonoBehaviour:
   basicNameEvo1: Phantom
   E1image: {fileID: -3660970633938089098, guid: e7004280d58801347b0db10293362b55, type: 3}
   evoLevel1: 10
-  E1type: 0
+  E1type: 6
   E1type2: 0
   basicNameEvo2: 
   E2image: {fileID: 0}
@@ -33,21 +33,31 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   effects: 0
-  hp: 15
-  atk: 1
-  def: 3
-  sDef: 2
-  sAtk: 3
-  speed: 1
-  hpIV: 4
-  atkIV: 1
-  defIV: 2
+  hp: 9
+  atk: 7
+  def: 7
+  sDef: 4
+  sAtk: 5
+  speed: 8
+  hpIV: 2
+  atkIV: 2
+  defIV: 3
   sDefIV: 1
   sAtkIV: 2
-  speedIV: 1
+  speedIV: 2
   atkX: 0
   defX: 0
   sDefX: 0
   sAtkX: 0
   speedX: 0
-  attacksOnLevelUp: []
+  attacksOnLevelUp:
+  - attack: {fileID: 11400000, guid: 7a1b1f9bb77671443835d3c55533d81a, type: 2}
+    level: 6
+  - attack: {fileID: 11400000, guid: 95bfa43a18ce9a24298e2cb539322fd2, type: 2}
+    level: 8
+  - attack: {fileID: 11400000, guid: 1372c053eb73bff4d8aa2b14782ebf7c, type: 2}
+    level: 12
+  - attack: {fileID: 11400000, guid: 632cd3cdefaccd9429970b0e950c4339, type: 2}
+    level: 15
+  - attack: {fileID: 11400000, guid: b68f92812a9d25549b6f57b182df959f, type: 2}
+    level: 17

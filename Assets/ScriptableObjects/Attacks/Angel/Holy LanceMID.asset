@@ -16,8 +16,10 @@ MonoBehaviour:
   attackType: 1
   pp: 7
   maxPp: 7
-  damage: 12
+  damage: 15
+  heal: 0
   accuracy: 85
-  speed: 70
-  desc: Pierces the enemy with Holy Lance.
+  speed: 7
+  desc: Super attack that Pierces the enemy with Holy Lance.
+  isSuper: 1
   effect: 0

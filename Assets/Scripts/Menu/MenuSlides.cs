@@ -21,12 +21,8 @@ public class MenuSlides : MonoBehaviour
             if (state == 0)
             {
                 state = 1;
+                check.chosenPokemon = _PokemonEQ.Instance.EqPokemons[0];
             }
-            else 
-            {
-                state = 0;
-            }
-            check.chosenPokemon = _PokemonEQ.Instance.EqPokemons[0];
         }
     }
 

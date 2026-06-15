@@ -33,18 +33,18 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   effects: 0
-  hp: 10
-  atk: 4
-  def: 3
-  sDef: 1
-  sAtk: 4
-  speed: 3
-  hpIV: 3
+  hp: 9
+  atk: 7
+  def: 7
+  sDef: 4
+  sAtk: 5
+  speed: 8
+  hpIV: 2
   atkIV: 2
-  defIV: 2
+  defIV: 3
   sDefIV: 1
   sAtkIV: 2
-  speedIV: 1
+  speedIV: 2
   atkX: 0
   defX: 0
   sDefX: 0

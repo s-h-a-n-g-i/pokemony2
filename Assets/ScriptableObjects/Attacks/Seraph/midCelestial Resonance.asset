@@ -17,7 +17,9 @@ MonoBehaviour:
   pp: 7
   maxPp: 7
   damage: 13
+  heal: 0
   accuracy: 85
-  speed: 60
+  speed: 6
   desc: Celestial soul wounds the enemy!
+  isSuper: 0
   effect: 0

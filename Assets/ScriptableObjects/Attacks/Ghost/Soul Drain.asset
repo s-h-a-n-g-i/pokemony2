@@ -17,7 +17,9 @@ MonoBehaviour:
   pp: 20
   maxPp: 20
   damage: 7
+  heal: 5
   accuracy: 90
-  speed: 40
+  speed: 4
   desc: Possess the enemy and drain their livespan. Causes Weakness.
+  isSuper: 0
   effect: 5

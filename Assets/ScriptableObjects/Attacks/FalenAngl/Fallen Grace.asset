@@ -16,8 +16,10 @@ MonoBehaviour:
   attackType: 3
   pp: 10
   maxPp: 10
-  damage: 10
+  damage: 12
+  heal: 0
   accuracy: 80
-  speed: 30
+  speed: 4
   desc: Poisons the enemy with corruption.
+  isSuper: 0
   effect: 3

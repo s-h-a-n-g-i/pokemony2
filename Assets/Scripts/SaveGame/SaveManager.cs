@@ -417,11 +417,12 @@ public class AttackSaveData
     public int pp;
     public int maxPp;
     public int damage;
+    public int heal;
     public int accuracy;
     public int speed;
     public string desc;
     public Effects effect;
-
+    public bool isSuper;
     public static AttackSaveData FromAttack(Attack attack)
     {
         AttackSaveData data = new AttackSaveData();
@@ -437,10 +438,12 @@ public class AttackSaveData
         data.pp = attack.pp;
         data.maxPp = attack.maxPp;
         data.damage = attack.damage;
+        data.heal = attack.heal;
         data.accuracy = attack.accuracy;
         data.speed = attack.speed;
         data.desc = attack.desc;
         data.effect = attack.effect;
+        data.isSuper = attack.isSuper;
 
         return data;
     }
@@ -450,7 +453,7 @@ public class AttackSaveData
         if (isEmpty)
             return null;
 
-        Attack attack = new Attack(attackName, attackType, maxPp, damage, accuracy, speed, desc, effect);
+        Attack attack = new Attack(attackName, attackType, maxPp, damage, accuracy, speed, desc, effect, heal, isSuper);
         attack.pp = pp;
         attack.effect = effect;
 

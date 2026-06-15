@@ -20,8 +20,11 @@ public class I_HealingMonument : MonoBehaviour
         playerMovement = GameObject.Find("Player").GetComponent<PlayerMovement>();
         dialoge = GameObject.Find("GameManager").GetComponent<DialogeManager>();
         AudioManager.Instance.PlayOneShot(FMODEvents.Instance.healingSound,transform.position);
+        StartCoroutine(HealDialoge());
         foreach (Pokemon s in _PokemonEQ.Instance.EqPokemons)
         {
+            if(s==null) return;
+            if (s.basicName == string.Empty) return;
             s.effects = Effects.None;
             s.atkX = 0;
             s.defX = 0;
@@ -32,7 +35,6 @@ public class I_HealingMonument : MonoBehaviour
             s.hp = s.maxHp;
             s.resetAttacksPPs();
         }
-        StartCoroutine(HealDialoge());
     }
 
 
@@ -40,7 +42,7 @@ public class I_HealingMonument : MonoBehaviour
     {
         playerMovement.StopPlayer();
         yield return StartCoroutine(playerBobles.loveBobel());
-        yield return StartCoroutine(dialoge.DialogeShow("All Creatures Has been healed!"));
+        yield return StartCoroutine(dialoge.DialogeShow("This fountain warms you up and restores your health.\r\n"));
         playerMovement.StartPlayer();
         interaction.canInteract = true;
     }

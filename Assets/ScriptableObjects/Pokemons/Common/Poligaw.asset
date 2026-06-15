@@ -17,15 +17,15 @@ MonoBehaviour:
   image: {fileID: 9193042089657751361, guid: fcccc1d5b65f9b145bb800c5910cc424, type: 3}
   type: 1
   type2: 0
-  basicNameEvo1: 
-  E1image: {fileID: 0}
-  evoLevel1: -1
-  E1type: 0
-  E1type2: 0
-  basicNameEvo2: 
-  E2image: {fileID: 0}
-  evoLevel2: -1
-  E2type: 0
+  basicNameEvo1: Polirwill
+  E1image: {fileID: 5456064315176760206, guid: e5572f1ed51574746a2770b9d39dd091, type: 3}
+  evoLevel1: 6
+  E1type: 1
+  E1type2: 4
+  basicNameEvo2: Polibrain
+  E2image: {fileID: -7098511181854815687, guid: e5572f1ed51574746a2770b9d39dd091, type: 3}
+  evoLevel2: 18
+  E2type: 4
   E2type2: 0
   attacks:
   - {fileID: 11400000, guid: 64a1f27f76a5c76458aeb6847ed9d5a2, type: 2}
@@ -33,21 +33,31 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   effects: 0
-  hp: 5
-  atk: 4
-  def: 3
-  sDef: 4
+  hp: 10
+  atk: 3
+  def: 6
+  sDef: 5
   sAtk: 4
-  speed: 3
-  hpIV: 2
-  atkIV: 3
-  defIV: 1
-  sDefIV: 2
-  sAtkIV: 2
-  speedIV: 1
+  speed: 5
+  hpIV: 4
+  atkIV: 4
+  defIV: 3
+  sDefIV: 1
+  sAtkIV: 3
+  speedIV: 4
   atkX: 0
   defX: 0
   sDefX: 0
   sAtkX: 0
   speedX: 0
-  attacksOnLevelUp: []
+  attacksOnLevelUp:
+  - attack: {fileID: 11400000, guid: b68f92812a9d25549b6f57b182df959f, type: 2}
+    level: 12
+  - attack: {fileID: 11400000, guid: b6199277965e6ca4ab3ef61cd02b4460, type: 2}
+    level: 18
+  - attack: {fileID: 11400000, guid: 9fe4e3e577579a24f9dd964f7c7c1de2, type: 2}
+    level: 19
+  - attack: {fileID: 11400000, guid: a3f920e7a8b12094d8516015ec52b1f9, type: 2}
+    level: 20
+  - attack: {fileID: 11400000, guid: 349ee542fc2fed8478904c748769edcf, type: 2}
+    level: 21

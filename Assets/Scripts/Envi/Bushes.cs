@@ -54,7 +54,7 @@ public class Bushes : MonoBehaviour
         foreach (var p in ChancesForBushes)
         {
             if (randomWeight < p.chances)
-                return new Pokemon(p.pokemon,(int)Random.Range(levelPokemon.x, levelPokemon.y));
+                return new Pokemon(p.pokemon,(int)Random.Range(levelPokemon.x, levelPokemon.y),true);
             randomWeight -= p.chances;
         }
         return null;

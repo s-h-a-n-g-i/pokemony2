@@ -16,7 +16,7 @@ public class PokemonCheckButton : MonoBehaviour
             if (_PokemonEQ.Instance.EqPokemons[pokemonChosen].basicName == string.Empty)
             {
                 GetComponent<Button>().interactable = false;
-                pokeName.text = "No Pokemon Avible";
+                pokeName.text = "EMPTY";
             }
             else
             {
@@ -27,7 +27,7 @@ public class PokemonCheckButton : MonoBehaviour
         else
         {
             GetComponent<Button>().interactable = false;
-            pokeName.text = "No Pokemon Avible";
+            pokeName.text = "EMPTY";
         }
     }
 

@@ -1,3 +1,4 @@
+using Mono.Cecil.Cil;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -44,7 +45,7 @@ public class SaveManager : MonoBehaviour
             data.allPokemons = SavePokemonList(_PokemonEQ.Instance.AllHavePokemons);
         }
 
-        //Debug.Log(slot);
+        Debug.Log(slot);
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(GetSlotPath(slot), json);
 
@@ -97,7 +98,8 @@ public class SaveManager : MonoBehaviour
             Dictionary<string, Pokemon> loadedPokemons = new Dictionary<string, Pokemon>();
 
             _PokemonEQ.Instance.AllHavePokemons = LoadPokemonList(data.allPokemons, loadedPokemons);
-            _PokemonEQ.Instance.EqPokemons = LoadPokemonArray(data.eqPokemons, 5, loadedPokemons);
+            //_PokemonEQ.Instance.EqPokemons = 
+            LoadPokemonArray(data.eqPokemons, 5, loadedPokemons);
 
             _PokemonEQ.Instance.ActivePokemon = null;
 
@@ -155,20 +157,22 @@ public class SaveManager : MonoBehaviour
         return saved;
     }
 
-    private Pokemon[] LoadPokemonArray(
+    private void LoadPokemonArray(
         List<PokemonSaveData> savedPokemons,
         int size,
         Dictionary<string, Pokemon> loadedPokemons)
     {
-        Pokemon[] pokemons = new Pokemon[size];
 
         if (savedPokemons == null)
-            return pokemons;
+            return;
 
         for (int i = 0; i < savedPokemons.Count && i < size; i++)
-            pokemons[i] = LoadPokemon(savedPokemons[i], loadedPokemons);
-
-        return pokemons;
+            if (!savedPokemons[i].isEmpty)
+                _PokemonEQ.Instance.EqPokemons[i] = LoadPokemon(savedPokemons[i], loadedPokemons);
+            else
+            {
+                Debug.Log("Pustak");
+            }
     }
 
     private List<Pokemon> LoadPokemonList(

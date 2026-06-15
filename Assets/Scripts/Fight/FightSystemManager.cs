@@ -97,7 +97,7 @@ public class FightSystemManager : MonoBehaviour
         }
 
         myPokemonImage.sprite = _PokemonEQ.Instance.ActivePokemon.image;
-        myPokemonName.text = _PokemonEQ.Instance.ActivePokemon.PokemonNameOut();
+        myPokemonName.text = _PokemonEQ.Instance.ActivePokemon.PokemonNameOut(true);
     }
 
     public void Attacking(int playerAttackCounter) 

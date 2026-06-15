@@ -137,12 +137,12 @@ public class Pokemon
         E2type = c.E2type;
         E2type = c.E2type2;
 
-        hpIV = c.hpIV + +Random.Range(-1, 1);
-        atkIV = c.atkIV + +Random.Range(-1, 1);
-        defIV = c.defIV + +Random.Range(-1, 1);
-        sDefIV = c.sDefIV + +Random.Range(-1, 1);
-        sAtkIV = c.sAtkIV + +Random.Range(-1, 1);
-        speedIV = c.speedIV + Random.Range(-1, 1);
+        hpIV   = Random.Range(0, 2);
+        atkIV  = Random.Range(0, 2);
+        defIV  = Random.Range(0, 2);
+        sDefIV = Random.Range(0, 2);
+        sAtkIV = Random.Range(0, 2);
+        speedIV= Random.Range(0, 2);
 
 
         flying = c.flying;
@@ -212,7 +212,7 @@ public class Pokemon
         if(xp<0) xp = 0;
         xpToNextLevel = (int)(xpToNextLevel * 1.5f);
         level++;
-        if (level % 5 == 0) IVsUp();
+        if (level % 10 == 0) IVsUp();
         StatsUp();
         if (CreatePokemon)        
         {
@@ -287,13 +287,14 @@ public class Pokemon
         xp += (int)s;
     }
     /////////////BASIC THINGS
-    public string PokemonNameOut() 
+    public string PokemonNameOut(bool withTypes = false) 
     {
         string n;
         n = basicName;
         if (nickname != null) n = nickname;
         n += " (" + level + ")";
-        
+        if (withTypes)
+            n += " " + TypesOfPokemonString();
         return n;
     }
     public PokemonTypes[] TypesOfPokemon()
@@ -304,6 +305,68 @@ public class Pokemon
             return new PokemonTypes[] { E2type, E2type2 };
         else
             return new PokemonTypes[] { type, type2 };
+    }
+
+    public string TypesOfPokemonString() 
+    {
+        string s = "";
+        switch (evoState)
+        {
+            case 0:
+                s = GetTypeString(type) + " " + GetTypeString(type2);
+                break;
+            case 1:
+                s = GetTypeString(E1type) + " " + GetTypeString(E1type2);
+                break;
+            case 2:
+                s = GetTypeString(E2type) + " " + GetTypeString(E2type2);
+                break;
+
+        }
+
+        return s;
+    }
+
+
+    private string GetTypeString(PokemonTypes s) 
+    {
+        string c;
+        switch (s)
+        {
+            case PokemonTypes.Angel:
+                c = "ANG";
+                break;
+
+            case PokemonTypes.FallenAngel:
+                c = "FAL";
+                break;
+
+            case PokemonTypes.Nefilim:
+                c = "NEF";
+                break;
+
+            case PokemonTypes.Demon:
+                c = "DEM";
+                break;
+
+            case PokemonTypes.Archangel:
+                c = "ARH";
+                break;
+
+            case PokemonTypes.Ghost:
+                c = "GHO";
+                break;
+
+            case PokemonTypes.Seraph:
+                c = "SRH";
+                break;
+
+            default:
+                c = "";
+                break;
+        }
+        return c;
+        
     }
 
 

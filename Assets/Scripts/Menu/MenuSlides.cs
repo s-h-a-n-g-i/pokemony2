@@ -16,9 +16,16 @@ public class MenuSlides : MonoBehaviour
     {
         animator.SetInteger("state", state);
 
-        if (Input.GetKey(KeyCode.X) && state == 0) 
+        if (Input.GetKey(KeyCode.X) ) 
         {
-            state = 1;
+            if (state == 0)
+            {
+                state = 1;
+            }
+            else 
+            {
+                state = 0;
+            }
             check.chosenPokemon = _PokemonEQ.Instance.EqPokemons[0];
         }
     }

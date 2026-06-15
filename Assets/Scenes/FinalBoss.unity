@@ -285,7 +285,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b3d4222e35c1c4648a4e8dbc672724cb, type: 2}
   - {fileID: 11400000, guid: ccc8e2ed7f63dc743aa55beb2cce9224, type: 2}
   - {fileID: 11400000, guid: c8fa4e9c2f1a42c45827690aae75ca37, type: 2}
-  level: 3
+  level: 20
   StartFight: 0
   StepSound: 0
 --- !u!212 &1007976646

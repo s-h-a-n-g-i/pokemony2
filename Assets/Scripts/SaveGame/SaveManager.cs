@@ -191,10 +191,10 @@ public class SaveManager : MonoBehaviour
     }
 
     private Pokemon LoadPokemon(
-        PokemonSaveData data,
-        Dictionary<string, Pokemon> loadedPokemons)
+    PokemonSaveData data,
+    Dictionary<string, Pokemon> loadedPokemons)
     {
-        if (data == null || data.isEmpty)
+        if (IsEmptyPokemonSave(data))
             return null;
 
         if (string.IsNullOrEmpty(data.uniqueId))
@@ -209,7 +209,7 @@ public class SaveManager : MonoBehaviour
         PokemonSO pokemonSO = FindPokemonSO(data.saveId);
         if (pokemonSO == null)
         {
-            //Debug.LogWarning("Missing PokemonSO for save id: " + data.saveId);
+            Debug.LogWarning("Missing PokemonSO for save id: " + data.saveId);
             return null;
         }
 
@@ -218,6 +218,14 @@ public class SaveManager : MonoBehaviour
 
         loadedPokemons.Add(pokemon.uniqueId, pokemon);
         return pokemon;
+    }
+
+    private bool IsEmptyPokemonSave(PokemonSaveData data)
+    {
+        return data == null
+            || data.isEmpty
+            || string.IsNullOrWhiteSpace(data.saveId)
+            || string.IsNullOrWhiteSpace(data.basicName);
     }
 
     private void ApplyPokemonData(Pokemon pokemon, PokemonSaveData data)

@@ -12,6 +12,7 @@ public class CatchBtn : MonoBehaviour
     void Update()
     {
         GetComponent<Button>().interactable = !_NPCManager.Instance.isItTrainer;
+        GetComponent<Button>().interactable = (_PokemonEQ.Instance.ActivePokemon.hp>0);
     }
 
 

@@ -62,6 +62,7 @@ public class Bushes : MonoBehaviour
 
     private IEnumerator StartBushFight() 
     {
+        _NPCManager.Instance.canescape = true;
         player.GetComponent<PlayerMovement>().StopPlayer();
         yield return StartCoroutine(player.GetComponent<Bobles>().exclBobel());
         SceneManager.LoadScene("FightNew");

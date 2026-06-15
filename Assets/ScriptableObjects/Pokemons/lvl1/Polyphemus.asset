@@ -19,7 +19,7 @@ MonoBehaviour:
   type2: 0
   basicNameEvo1: Polyphemus
   E1image: {fileID: -6805924494963528800, guid: 908f64facedeb80449ce78d41254d96c, type: 3}
-  evoLevel1: 12
+  evoLevel1: 10
   E1type: 5
   E1type2: 4
   basicNameEvo2: Polyphemus
@@ -28,8 +28,8 @@ MonoBehaviour:
   E2type: 5
   E2type2: 4
   attacks:
-  - {fileID: 11400000, guid: 012956b2c208e83458cd3e3283d3c3de, type: 2}
-  - {fileID: 11400000, guid: c5075532e84359e4fb9a2a60aea8c17c, type: 2}
+  - {fileID: 11400000, guid: e0659f771f750454fb2a3a5a5042903b, type: 2}
+  - {fileID: 11400000, guid: a293f05e403aed140a35aad7b012f670, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   effects: 0
@@ -50,4 +50,10 @@ MonoBehaviour:
   sDefX: 0
   sAtkX: 0
   speedX: 0
-  attacksOnLevelUp: []
+  attacksOnLevelUp:
+  - attack: {fileID: 11400000, guid: f3434d63883109e4284c9a489452a993, type: 2}
+    level: 15
+  - attack: {fileID: 11400000, guid: 64f93601404a56f4cbab633c1e85001b, type: 2}
+    level: 4
+  - attack: {fileID: 11400000, guid: 378ec32f248310747bb134206b4853c2, type: 2}
+    level: 7

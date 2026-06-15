@@ -16,7 +16,7 @@ MonoBehaviour:
   attackType: 6
   pp: 5
   maxPp: 5
-  damage: 7
+  damage: 12
   accuracy: 90
   speed: 90
   desc: Haunts the enemy. They can't see!

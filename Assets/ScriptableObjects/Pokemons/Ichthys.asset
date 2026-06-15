@@ -17,11 +17,11 @@ MonoBehaviour:
   image: {fileID: 8966945178157639174, guid: 5abc5b014136d8b4ba333b6cc70dc852, type: 3}
   type: 1
   type2: 0
-  basicNameEvo1: 
-  E1image: {fileID: 0}
+  basicNameEvo1: 10
+  E1image: {fileID: -5077633804033807834, guid: 6b9da32ccd2e10a4d8208d76d1e8f714, type: 3}
   evoLevel1: -1
-  E1type: 0
-  E1type2: 0
+  E1type: 1
+  E1type2: 5
   basicNameEvo2: 
   E2image: {fileID: 0}
   evoLevel2: -1
@@ -29,7 +29,7 @@ MonoBehaviour:
   E2type2: 0
   attacks:
   - {fileID: 11400000, guid: 7a1b1f9bb77671443835d3c55533d81a, type: 2}
-  - {fileID: 11400000, guid: 64a1f27f76a5c76458aeb6847ed9d5a2, type: 2}
+  - {fileID: 11400000, guid: b68f92812a9d25549b6f57b182df959f, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   effects: 0
@@ -51,7 +51,9 @@ MonoBehaviour:
   sAtkX: 0
   speedX: 0
   attacksOnLevelUp:
-  - attack: {fileID: 11400000, guid: b68f92812a9d25549b6f57b182df959f, type: 2}
-    level: 7
+  - attack: {fileID: 11400000, guid: 64a1f27f76a5c76458aeb6847ed9d5a2, type: 2}
+    level: 6
   - attack: {fileID: 11400000, guid: 7f6e6291d584fac45ba695b08b295abd, type: 2}
     level: 15
+  - attack: {fileID: 11400000, guid: 64f93601404a56f4cbab633c1e85001b, type: 2}
+    level: 4

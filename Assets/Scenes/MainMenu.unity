@@ -2672,6 +2672,7 @@ GameObject:
   - component: {fileID: 1695537730}
   - component: {fileID: 1695537729}
   - component: {fileID: 1695537728}
+  - component: {fileID: 1695537732}
   - component: {fileID: 1695537731}
   m_Layer: 5
   m_Name: Button
@@ -2756,6 +2757,18 @@ MonoBehaviour:
           m_StringArgument: Name
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1695537732}
+        m_TargetAssemblyTypeName: ButtonSoundPressed, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1695537729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2806,6 +2819,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eff0c629042af344aaac9faf19ed077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneLoadMenu
+--- !u!114 &1695537732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695537726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f8a0021f3e28941b11869a22352d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSoundPressed
 --- !u!1 &1696664193
 GameObject:
   m_ObjectHideFlags: 0

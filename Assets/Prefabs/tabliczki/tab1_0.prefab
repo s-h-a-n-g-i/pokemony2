@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5172127761296470151}
   - component: {fileID: 6402881737762028104}
   - component: {fileID: 4695567802940884387}
+  - component: {fileID: 4878834891857434738}
+  - component: {fileID: 8476212973130194840}
   m_Layer: 0
   m_Name: tab1_0
   m_TagString: Wall
@@ -153,6 +155,48 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.7060785, y: 0.94329643}
   m_EdgeRadius: 0
+--- !u!114 &4878834891857434738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8216957776700576928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10ce960dbf259e844b252cc7664c5ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::I_ShowText
+  textToShow:
+  - This area gives an uneasy feeling...
+--- !u!114 &8476212973130194840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8216957776700576928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e9b065a1f339604fbf759c9e2e567a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interaction
+  interacted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4878834891857434738}
+        m_TargetAssemblyTypeName: I_ShowText, Assembly-CSharp
+        m_MethodName: ShowText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  canInteract: 1
 --- !u!1 &8569423934694687457
 GameObject:
   m_ObjectHideFlags: 0

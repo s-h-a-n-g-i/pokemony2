@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1786768136726658950}
   - component: {fileID: 1604382845061439060}
   - component: {fileID: 4364836691308934083}
+  - component: {fileID: 1207288515331615020}
+  - component: {fileID: 6447184398409393466}
   m_Layer: 0
   m_Name: tab2_0
   m_TagString: Wall
@@ -153,6 +155,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BehindObj
   sr: {fileID: 0}
+--- !u!114 &1207288515331615020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7730673616045829862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e9b065a1f339604fbf759c9e2e567a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interaction
+  interacted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6447184398409393466}
+        m_TargetAssemblyTypeName: I_ShowText, Assembly-CSharp
+        m_MethodName: ShowText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  canInteract: 1
+--- !u!114 &6447184398409393466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7730673616045829862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10ce960dbf259e844b252cc7664c5ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::I_ShowText
+  textToShow:
+  - This area gives an uneasy feeling...
 --- !u!1 &9135318046296278352
 GameObject:
   m_ObjectHideFlags: 0

@@ -119,7 +119,15 @@ public class DialogeFightManager : MonoBehaviour
 
     }
 
-    public IEnumerator EffectApply(Pokemon p) 
+
+    public IEnumerator ChangePokemon(string s)
+    {
+        dialogeWindow.SetActive(true);
+        yield return StartCoroutine(DialogeShow(s));
+        dialogeWindow.SetActive(false);
+    }
+
+    public IEnumerator EffectApply(Pokemon p)
     {
         if (p.turnsToClearEffect == 0)
         {
@@ -219,11 +227,12 @@ public class DialogeFightManager : MonoBehaviour
         foreach (Pokemon p in pokemonsInFight)
         {
             /////TO W NORMALNEJ WERSJI ZAMIAST TEGO:
-            //p.xp = p.xpToNextLevel;
-            if (_NPCManager.Instance.isItTrainer)
-                GiveXPToPokemonsFromTrainer(p);
-            else
-                p.giveXP(_FightManager.Instance.EnemyPokemon.level / _PokemonEQ.Instance.pokemonUsedInFight.Count);
+            p.xp = p.xpToNextLevel;
+            //if (_NPCManager.Instance.isItTrainer)
+            //    GiveXPToPokemonsFromTrainer(p);
+            //else
+            //    p.giveXP((_FightManager.Instance.EnemyPokemon.level) / _PokemonEQ.Instance.pokemonUsedInFight.Count);
+
             while (p.CheckForLevelUp())
             {
                 ChosenNewAttack = true;

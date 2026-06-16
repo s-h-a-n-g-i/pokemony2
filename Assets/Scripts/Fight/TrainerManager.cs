@@ -124,7 +124,8 @@ public class TrainerManager : MonoBehaviour
         Pokemon enemyPokemon = _NPCManager.Instance.TrainerPokemons[chosenPokemon];
         Attack enemyAttack = enemyPokemon.GetRandomAttack();
 
-        StartCoroutine(dialogeManager.PokemonFightCutscene(_PokemonEQ.Instance.ActivePokemon, null, _NPCManager.Instance.TrainerPokemons[chosenPokemon], enemyAttack, "Pokemon changed to <b>" + _PokemonEQ.Instance.ActivePokemon.PokemonNameOut() + "</b>!"));
+        //StartCoroutine(dialogeManager.PokemonFightCutscene(_PokemonEQ.Instance.ActivePokemon, null, _NPCManager.Instance.TrainerPokemons[chosenPokemon], enemyAttack, "Pokemon changed to <b>" + _PokemonEQ.Instance.ActivePokemon.PokemonNameOut() + "</b>!"));
+        StartCoroutine(dialogeManager.ChangePokemon("Soul changed to <b>" + _PokemonEQ.Instance.ActivePokemon.PokemonNameOut() + "</b>!"));
     }
 
 

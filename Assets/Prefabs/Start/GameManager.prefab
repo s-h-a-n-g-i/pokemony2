@@ -689,6 +689,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f489ce00228102c4fb03ae2684732b14, type: 2}
   - {fileID: 11400000, guid: 5a53af77332070f49b64678eb8dd954a, type: 2}
   - {fileID: 11400000, guid: d347b0c14ab82584ea658b8a5399e767, type: 2}
+  - {fileID: 11400000, guid: 414d18b390704094ba7a465215e5f244, type: 2}
 --- !u!114 &3847117116892313677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -702,6 +703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_PlayerSave
   placed: 1
+  shoes: 0
   playerName: Shangi
   _playerPosition: {x: 0, y: 0, z: 0}
   _playerRotation: {x: 0, y: -1}

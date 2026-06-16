@@ -107,8 +107,8 @@ public class Pokemon
     {
         saveId = c.name;
         uniqueId = Guid.NewGuid().ToString();
-        maxHp = c.hp;
-        hp = c.hp;
+        maxHp = c.hp+30;
+        hp = c.hp + 30;
         atk = c.atk;
         def = c.def;
         sDef = c.sDef;
@@ -137,12 +137,12 @@ public class Pokemon
         E2type = c.E2type;
         E2type = c.E2type2;
 
-        hpIV   = Random.Range(0, 2);
-        atkIV  = Random.Range(0, 2);
-        defIV  = Random.Range(0, 2);
-        sDefIV = Random.Range(0, 2);
-        sAtkIV = Random.Range(0, 2);
-        speedIV= Random.Range(0, 2);
+        hpIV   = Random.Range(1, 2);
+        atkIV  = Random.Range(1, 2);
+        defIV  = Random.Range(1, 2);
+        sDefIV = Random.Range(1, 2);
+        sAtkIV = Random.Range(1, 2);
+        speedIV= Random.Range(1, 2);
 
 
         flying = c.flying;
@@ -277,14 +277,14 @@ public class Pokemon
         speedIV ++;
     }
 
-    public void giveXP(int xp) 
+    public void giveXP(int xpGet) 
     {
-        float s = (float)xp * 2f;
+        int s = xpGet * 2;
         if (s <= 2) 
         {
             s = 2;
         }
-        xp += (int)s;
+        xp += s;
     }
     /////////////BASIC THINGS
     public string PokemonNameOut(bool withTypes = false) 

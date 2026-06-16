@@ -19,7 +19,7 @@ public class ChangeCreaturesBtn : MonoBehaviour
 
         if (_PokemonEQ.Instance.EqPokemons[pokemonCounter] == null || _PokemonEQ.Instance.EqPokemons[pokemonCounter].basicName == string.Empty)
         {
-            s = "No Pokemon Available";
+            s = "EMPTY";
             gameObject.GetComponent<Button>().interactable = false;
             return;
         }

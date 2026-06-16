@@ -27,7 +27,7 @@ public class PokemonCheck : MonoBehaviour
         switch (mode)
         {
             case 0:
-                s = chosenPokemon.basicName + " is " + chosenPokemon.GetPokemonTypes() + ". " + " Pokemon is on level " + chosenPokemon.level + ".";
+                s = chosenPokemon.basicName + " is " + chosenPokemon.TypesOfPokemonString() + ". " + " soul is on level " + chosenPokemon.level + ".";
                 break;
 
             case 1:

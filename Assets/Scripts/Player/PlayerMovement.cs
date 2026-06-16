@@ -70,6 +70,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void StopMoving()
     {
+        transform.position = new Vector3(Mathf.Floor(transform.position.x) + 0.5f, Mathf.Floor(transform.position.y) + 0.5f+ transform.position.z);
         isMoving = false;
         animator.SetBool("isWalking", false);
     }

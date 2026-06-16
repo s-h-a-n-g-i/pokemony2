@@ -17,7 +17,7 @@ public class ShowOptionsInFight : MonoBehaviour
 
     private void Update()
     {
-        if(_PokemonEQ.Instance.ActivePokemon.hp<=0)
+        if(_PokemonEQ.Instance.ActivePokemon.hp<=0 && checkDead)
             ButotonPressed();
     }
 

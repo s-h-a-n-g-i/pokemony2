@@ -41,6 +41,7 @@ public class I_HealingMonument : MonoBehaviour
     private IEnumerator HealDialoge()
     {
         playerMovement.StopPlayer();
+        playerMovement.StopMoving();
         yield return StartCoroutine(playerBobles.loveBobel());
         yield return StartCoroutine(dialoge.DialogeShow("This fountain warms you up and restores your health.\r\n"));
         playerMovement.StartPlayer();

@@ -64,6 +64,6 @@ MonoBehaviour:
   - attack: {fileID: 11400000, guid: 18f743426a5b52e47bc645a8298141f5, type: 2}
     level: 22
   - attack: {fileID: 11400000, guid: 1e5bd2933748fe54483d3c6bae988446, type: 2}
-    level: 0
+    level: 24
   - attack: {fileID: 11400000, guid: a3f920e7a8b12094d8516015ec52b1f9, type: 2}
-    level: 0
+    level: 26

@@ -219,11 +219,11 @@ public class DialogeFightManager : MonoBehaviour
         foreach (Pokemon p in pokemonsInFight)
         {
             /////TO W NORMALNEJ WERSJI ZAMIAST TEGO:
-            p.xp = p.xpToNextLevel;
-            //if (_NPCManager.Instance.isItTrainer)
-            //    GiveXPToPokemonsFromTrainer(p);
-            //else
-            //    p.giveXP(_FightManager.Instance.EnemyPokemon.level / _PokemonEQ.Instance.pokemonUsedInFight.Count);
+            //p.xp = p.xpToNextLevel;
+            if (_NPCManager.Instance.isItTrainer)
+                GiveXPToPokemonsFromTrainer(p);
+            else
+                p.giveXP(_FightManager.Instance.EnemyPokemon.level / _PokemonEQ.Instance.pokemonUsedInFight.Count);
             while (p.CheckForLevelUp())
             {
                 ChosenNewAttack = true;

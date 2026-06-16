@@ -521,8 +521,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StarteFinish
   startDialogeToFinish: 1
   dialogeLines:
-  - whoSayes: The Devil
-    whatSayes: You Fool
+  - whoSayes: THE DEVIL
+    whatSayes: 'Hahaha... You fool. '
+  - whoSayes: THE DEVIL
+    whatSayes: Did you really think you could challenge me?
+  - whoSayes: THE DEVIL
+    whatSayes: ME? THE RULER OF ALMIGHTY HELL?
+  - whoSayes: THE DEVIL
+    whatSayes: Hahahaha...!
+  - whoSayes: THE DEVIL
+    whatSayes: So weak. So pathetic.
+  - whoSayes: THE DEVIL
+    whatSayes: Your body will carry the message.
+  - whoSayes: THE DEVIL
+    whatSayes: They will learn of your failure.
+  - whoSayes: THE DEVIL
+    whatSayes: Ha...
+  - whoSayes: THE DEVIL
+    whatSayes: I shall grant you a swift death.
   animator: {fileID: 1386588816}
 --- !u!212 &1588629787
 SpriteRenderer:

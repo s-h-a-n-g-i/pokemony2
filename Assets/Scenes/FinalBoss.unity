@@ -279,8 +279,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FinalBossCutscene
   dialogeLines:
-  - whoSayes: Devil
-    whatSayes: i wil fuk u up doggie
+  - whoSayes: THE DEVIL
+    whatSayes: Well, well, well...
+  - whoSayes: THE DEVIL
+    whatSayes: Who do we have here?
+  - whoSayes: THE DEVIL
+    whatSayes: So the little lamb finally made it all the way down here.
+  - whoSayes: THE DEVIL
+    whatSayes: 'The precious gift Heaven tossed into my kingdom.
+
+'
+  - whoSayes: THE DEVIL
+    whatSayes: "Tell me, player\u2026"
+  - whoSayes: THE DEVIL
+    whatSayes: Did Heaven really convince you that you'd survive meeting the Devil?
+  - whoSayes: THE DEVIL
+    whatSayes: Hahahaha... You're so adorable...
+  - whoSayes: THE DEVIL
+    whatSayes: You're even more innocent than I thought.
+  - whoSayes: THE DEVIL
+    whatSayes: But bold?
+  - whoSayes: THE DEVIL
+    whatSayes: Oh, undeniably.
+  - whoSayes: THE DEVIL
+    whatSayes: Bold enough to start making demands in a kingdom that was never yours.
+  - whoSayes: THE DEVIL
+    whatSayes: 'Haha...
+
+'
+  - whoSayes: THE DEVIL
+    whatSayes: Come then, little lamb.
+  - whoSayes: THE DEVIL
+    whatSayes: Show me the miracle Heaven promised.
   pokemonToFight:
   - {fileID: 11400000, guid: b3d4222e35c1c4648a4e8dbc672724cb, type: 2}
   - {fileID: 11400000, guid: ccc8e2ed7f63dc743aa55beb2cce9224, type: 2}

@@ -148,7 +148,7 @@ public class Pokemon
         flying = c.flying;
 
         ApplyAttacksToClass(c.attacks);
-
+        //Debug.Log(basicName);
         for (int i = 0; i < startingLevel; i++)
         {
             LvLUp(wild);

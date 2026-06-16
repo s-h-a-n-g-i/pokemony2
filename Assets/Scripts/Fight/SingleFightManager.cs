@@ -46,7 +46,7 @@ public class SingleFightManager : MonoBehaviour
     private void setUpEnemyPokemon()
     {
         enemyPokemonImage.sprite = _FightManager.Instance.EnemyPokemon.image;
-        enemyPokemonName.text = _FightManager.Instance.EnemyPokemon.PokemonNameOut();
+        enemyPokemonName.text = _FightManager.Instance.EnemyPokemon.PokemonNameOut(true);
     }
 
     public void Attack(int playerAttackCounter)

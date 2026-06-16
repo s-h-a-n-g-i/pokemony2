@@ -5,6 +5,7 @@ public class _PlayerSave : MonoBehaviour
     public static _PlayerSave Instance;
 
     public bool placed = true;
+    public bool shoes = false;
     public string playerName = "Shangi";
     public Vector3 _playerPosition;
     public Vector2 _playerRotation = new Vector2(0,-1);

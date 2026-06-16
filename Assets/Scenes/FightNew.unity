@@ -620,6 +620,7 @@ MonoBehaviour:
   otherCanvases:
   - {fileID: 1374741256}
   - {fileID: 1497335672}
+  checkDead: 1
 --- !u!114 &185419207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4448,6 +4449,7 @@ MonoBehaviour:
   otherCanvases:
   - {fileID: 1621696624}
   - {fileID: 1497335672}
+  checkDead: 0
 --- !u!114 &792446845
 MonoBehaviour:
   m_ObjectHideFlags: 0

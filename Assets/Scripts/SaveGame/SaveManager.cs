@@ -31,6 +31,7 @@ public class SaveManager : MonoBehaviour
         SaveData data = new SaveData();
 
         data.male = _PlayerSave.Instance.male;
+        data.shoes = _PlayerSave.Instance.shoes;
         data.playerName = _PlayerSave.Instance.playerName;
         data.sceneName = _PlayerSave.Instance._sceneName;
         data.playerPosition = _PlayerSave.Instance._playerPosition;
@@ -84,6 +85,7 @@ public class SaveManager : MonoBehaviour
         SaveData data = JsonUtility.FromJson<SaveData>(json);
 
         _PlayerSave.Instance.male = data.male;
+        _PlayerSave.Instance.shoes = data.shoes;
         _PlayerSave.Instance.playerName = data.playerName;
         _PlayerSave.Instance._sceneName = data.sceneName;
         _PlayerSave.Instance._playerPosition = data.playerPosition;
@@ -303,6 +305,7 @@ public class SaveManager : MonoBehaviour
 public class SaveData
 {
     public bool male;
+    public bool shoes;
     public string playerName;
     public string sceneName;
     public Vector3 playerPosition;

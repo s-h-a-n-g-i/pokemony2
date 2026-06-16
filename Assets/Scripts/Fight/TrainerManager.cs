@@ -97,7 +97,7 @@ public class TrainerManager : MonoBehaviour
     private void setUpEnemyTrainerPokemon()
     {
         enemyPokemonImage.sprite = _NPCManager.Instance.TrainerPokemons[chosenPokemon].image;
-        enemyPokemonName.text = _NPCManager.Instance.TrainerPokemons[chosenPokemon].PokemonNameOut();
+        enemyPokemonName.text = _NPCManager.Instance.TrainerPokemons[chosenPokemon].PokemonNameOut(true);
     }
 
     public void Attack(int playerAttackCounter) 

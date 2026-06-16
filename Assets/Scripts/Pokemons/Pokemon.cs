@@ -210,8 +210,8 @@ public class Pokemon
     {
         xp -= xpToNextLevel;
         if(xp<0) xp = 0;
-        xpToNextLevel = (int)(xpToNextLevel * 1.5f);
         level++;
+        xpToNextLevel += level;
         if (level % 10 == 0) IVsUp();
         StatsUp();
         if (CreatePokemon)        

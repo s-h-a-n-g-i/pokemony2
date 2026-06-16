@@ -15,17 +15,17 @@ MonoBehaviour:
   basicName: Returner
   flying: 0
   image: {fileID: -5155002061112825379, guid: 1f03d482cfd46574da33d1d9be23e242, type: 3}
-  type: 0
-  type2: 0
+  type: 3
+  type2: 1
   basicNameEvo1: Swapper
   E1image: {fileID: 5662187840507275593, guid: 1f03d482cfd46574da33d1d9be23e242, type: 3}
   evoLevel1: 0
-  E1type: 0
-  E1type2: 0
+  E1type: 3
+  E1type2: 1
   basicNameEvo2: Returned
   E2image: {fileID: -1503990955169150816, guid: 1f03d482cfd46574da33d1d9be23e242, type: 3}
   evoLevel2: 0
-  E2type: 0
+  E2type: 2
   E2type2: 0
   attacks:
   - {fileID: 11400000, guid: 632cd3cdefaccd9429970b0e950c4339, type: 2}
@@ -33,11 +33,11 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   effects: 0
-  hp: 10
-  atk: 9
-  def: 8
-  sDef: 7
-  sAtk: 6
+  hp: 15
+  atk: 8
+  def: 4
+  sDef: 4
+  sAtk: 4
   speed: 5
   hpIV: 1
   atkIV: 2
@@ -50,4 +50,16 @@ MonoBehaviour:
   sDefX: 0
   sAtkX: 0
   speedX: 0
-  attacksOnLevelUp: []
+  attacksOnLevelUp:
+  - attack: {fileID: 11400000, guid: 7f6e6291d584fac45ba695b08b295abd, type: 2}
+    level: 6
+  - attack: {fileID: 11400000, guid: 4184afd6f0f4be2428652794af886940, type: 2}
+    level: 8
+  - attack: {fileID: 11400000, guid: 7f6e6291d584fac45ba695b08b295abd, type: 2}
+    level: 11
+  - attack: {fileID: 11400000, guid: 1e5bd2933748fe54483d3c6bae988446, type: 2}
+    level: 13
+  - attack: {fileID: 11400000, guid: f6f38ea692a730b4ca1b9781ac644ffb, type: 2}
+    level: 15
+  - attack: {fileID: 11400000, guid: 2d0537c7637ebb74c9519c348b6aec0f, type: 2}
+    level: 18

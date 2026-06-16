@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private Vector3 dirwalk;
 
-    [SerializeField] private bool hasRunningShoes = false;
+    //[SerializeField] private bool hasRunningShoes = false;
 
 
     private AnimatorControllerParameter maleAnimator;
@@ -85,9 +85,9 @@ public class PlayerMovement : MonoBehaviour
       
     private void SprintCheck() 
     { 
-        if (!hasRunningShoes) return;
+        if (!_PlayerSave.Instance.shoes) return;
 
-        if (Input.GetKey(KeyCode.Z))
+        if (Input.GetKey(KeyCode.LeftShift))
             speed = 0.1f;
         else 
             speed = 0.2f;

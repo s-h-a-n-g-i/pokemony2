@@ -24,7 +24,7 @@ public class DeadPokemonOptions : MonoBehaviour
         if (_PokemonEQ.Instance.ActivePokemon.hp == 0)
         {
             attackBtn.interactable = false;
-            chosePokemon.onClick.Invoke();
+            //if (!checkOnce) { chosePokemon.onClick.Invoke(); checkOnce = true; }
         }
         else if(_PokemonEQ.Instance.ActivePokemon.hp != 0) 
         {

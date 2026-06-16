@@ -12,42 +12,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15586245fe48fb0459c9c7bc8bb0f40d, type: 3}
   m_Name: Rat
   m_EditorClassIdentifier: Assembly-CSharp::PokemonSO
-  basicName: Rat
+  basicName: Rad
   flying: 0
   image: {fileID: -3863129827144907964, guid: 242986f14880c774087a5c747bc670e0, type: 3}
-  type: 0
+  type: 8
   type2: 0
-  basicNameEvo1: 
+  basicNameEvo1: Rade
   E1image: {fileID: -7972646959270447173, guid: 242986f14880c774087a5c747bc670e0, type: 3}
-  evoLevel1: 0
-  E1type: 0
-  E1type2: 0
-  basicNameEvo2: 
-  E2image: {fileID: 0}
-  evoLevel2: 0
-  E2type: 0
-  E2type2: 0
+  evoLevel1: 8
+  E1type: 8
+  E1type2: 5
+  basicNameEvo2: Radek
+  E2image: {fileID: 572479532972530, guid: 242986f14880c774087a5c747bc670e0, type: 3}
+  evoLevel2: 16
+  E2type: 8
+  E2type2: 5
   attacks:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 012956b2c208e83458cd3e3283d3c3de, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   effects: 0
-  hp: 0
-  atk: 0
-  def: 0
-  sDef: 0
-  sAtk: 0
-  speed: 0
-  hpIV: 0
-  atkIV: 0
-  defIV: 0
-  sDefIV: 0
-  sAtkIV: 0
-  speedIV: 0
+  hp: 10
+  atk: 10
+  def: 6
+  sDef: 3
+  sAtk: 4
+  speed: 7
+  hpIV: 1
+  atkIV: 1
+  defIV: 1
+  sDefIV: 1
+  sAtkIV: 1
+  speedIV: 1
   atkX: 0
   defX: 0
   sDefX: 0
   sAtkX: 0
   speedX: 0
-  attacksOnLevelUp: []
+  attacksOnLevelUp:
+  - attack: {fileID: 11400000, guid: 7a1b1f9bb77671443835d3c55533d81a, type: 2}
+    level: 6
+  - attack: {fileID: 11400000, guid: e0659f771f750454fb2a3a5a5042903b, type: 2}
+    level: 7
+  - attack: {fileID: 11400000, guid: a293f05e403aed140a35aad7b012f670, type: 2}
+    level: 9
+  - attack: {fileID: 11400000, guid: a3f920e7a8b12094d8516015ec52b1f9, type: 2}
+    level: 11
+  - attack: {fileID: 11400000, guid: 432b962e64602634e8072c80c65ec7bd, type: 2}
+    level: 13
+  - attack: {fileID: 11400000, guid: f3434d63883109e4284c9a489452a993, type: 2}
+    level: 14
+  - attack: {fileID: 11400000, guid: 95bfa43a18ce9a24298e2cb539322fd2, type: 2}
+    level: 17

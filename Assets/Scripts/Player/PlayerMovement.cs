@@ -88,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
         if (!_PlayerSave.Instance.shoes) return;
 
         if (Input.GetKey(KeyCode.LeftShift))
-            speed = 0.1f;
+            speed = 0.15f;
         else 
             speed = 0.2f;
 

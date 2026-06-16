@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15586245fe48fb0459c9c7bc8bb0f40d, type: 3}
   m_Name: StartPokemon
   m_EditorClassIdentifier: Assembly-CSharp::PokemonSO
-  basicName: WildCreature
+  basicName: Wild Creature
   flying: 0
   image: {fileID: 8611607649075010630, guid: 289171aa41aa0fd46922a47830d53dd4, type: 3}
   type: 0

@@ -20,6 +20,6 @@ MonoBehaviour:
   heal: 0
   accuracy: 90
   speed: 8
-  desc: KICKES your enemy!
+  desc: KICKES the enemy!
   isSuper: 0
   effect: 0

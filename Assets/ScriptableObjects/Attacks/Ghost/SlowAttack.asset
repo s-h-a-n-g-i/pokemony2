@@ -17,7 +17,9 @@ MonoBehaviour:
   pp: 15
   maxPp: 15
   damage: 8
+  heal: 0
   accuracy: 100
   speed: 5
-  desc: 
+  desc: So spooky... so scary... like you!
+  isSuper: 0
   effect: 0

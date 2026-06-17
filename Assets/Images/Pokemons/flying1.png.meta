@@ -103,12 +103,12 @@ TextureImporter:
       name: flying1_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 12
-        width: 20
-        height: 25
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 76e4e68dca34ebe4b84b45d71c352e5b
     internalID: 0
     vertices: []
     indices: 

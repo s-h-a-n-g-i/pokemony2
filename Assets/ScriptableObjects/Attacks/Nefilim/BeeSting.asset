@@ -20,6 +20,6 @@ MonoBehaviour:
   heal: 0
   accuracy: 100
   speed: 10
-  desc: Stings your enemy! Ouch...
+  desc: Stings the enemy! Ouch...
   isSuper: 0
   effect: 3

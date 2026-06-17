@@ -20,6 +20,6 @@ MonoBehaviour:
   heal: 1000
   accuracy: 100
   speed: 150
-  desc: God Bless This soul and heal Fully.
+  desc: God Bless This soul and heals fully.
   isSuper: 0
   effect: 0

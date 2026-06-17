@@ -17,7 +17,9 @@ MonoBehaviour:
   pp: 100
   maxPp: 100
   damage: -1000
+  heal: 0
   accuracy: 100
   speed: 100
-  desc: Meows at your enemy. That's cute! Meow...
+  desc: Meows at the enemy. That's cute! Meow...
+  isSuper: 0
   effect: 0

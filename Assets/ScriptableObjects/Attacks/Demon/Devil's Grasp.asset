@@ -20,6 +20,6 @@ MonoBehaviour:
   heal: 0
   accuracy: 100
   speed: 4
-  desc: You borrow the Hells flames to burn the enemy.
+  desc: Borrows the Hells flames to burn the enemy.
   isSuper: 0
   effect: 2

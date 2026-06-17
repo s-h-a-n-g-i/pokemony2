@@ -20,6 +20,6 @@ MonoBehaviour:
   heal: -1
   accuracy: 70
   speed: -10
-  desc: Charge and drain health from the enemy.
+  desc: Charges and drains health from the enemy.
   isSuper: 0
   effect: 0

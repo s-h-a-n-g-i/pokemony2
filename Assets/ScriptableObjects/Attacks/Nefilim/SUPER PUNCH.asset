@@ -20,6 +20,6 @@ MonoBehaviour:
   heal: 0
   accuracy: 80
   speed: 4
-  desc: Punches your enemy SUPER hard!
+  desc: Punches the enemy SUPER hard!
   isSuper: 0
   effect: 0

@@ -30,6 +30,7 @@ public class DialogeManager : MonoBehaviour
 
     public IEnumerator DialogeShow(string textToEnter)
     {
+        textToEnter += " (Z)";
         speedwagon = 0.05f;
         dialogeText.text = "";
         dialogeFinished = false;
@@ -37,6 +38,8 @@ public class DialogeManager : MonoBehaviour
         string oryginal = textToEnter;
         textToEnter = textToEnter.Replace("<b>", "|");
         textToEnter = textToEnter.Replace("</b>", ";");
+        textToEnter = textToEnter.Replace("<i>", "/");
+        textToEnter = textToEnter.Replace("</i>", "=");
         //Debug.Log(textToEnter);
 
         for (int i = 0; i < textToEnter.Length; i++)
@@ -48,6 +51,12 @@ public class DialogeManager : MonoBehaviour
                     break;
                 case ';':
                     dialogeText.text += "</b>";
+                    break;
+                case '/':
+                    dialogeText.text += "<i>";
+                    break;
+                case '=':
+                    dialogeText.text += "</i>";
                     break;
                 default:
                     dialogeText.text += textToEnter[i];
@@ -64,7 +73,7 @@ public class DialogeManager : MonoBehaviour
             }
         }
 
-        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z));
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Space));
         dialogeFinished = true;
     }
 

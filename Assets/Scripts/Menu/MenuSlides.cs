@@ -16,7 +16,7 @@ public class MenuSlides : MonoBehaviour
     {
         animator.SetInteger("state", state);
 
-        if (Input.GetKey(KeyCode.X) ) 
+        if (Input.GetKey(KeyCode.X) || Input.GetKey(KeyCode.Escape))
         {
             if (state == 0)
             {

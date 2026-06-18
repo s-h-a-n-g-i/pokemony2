@@ -98,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
     private void MovementCheck() 
     {
 
-        if (Input.GetKey(KeyCode.UpArrow) && !isMoving)
+        if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) && !isMoving)
         {
             lastDir = new Vector2(0,1);
             animator.SetFloat("LastInputX", lastDir.x);
@@ -112,7 +112,7 @@ public class PlayerMovement : MonoBehaviour
             
         }
 
-        if (Input.GetKey(KeyCode.DownArrow) && !isMoving)
+        if ((Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) && !isMoving)
         {
             lastDir = new Vector2(0, -1);
             animator.SetFloat("LastInputX", lastDir.x);
@@ -129,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        if (Input.GetKey(KeyCode.RightArrow) && !isMoving)
+        if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) && !isMoving)
         {
             lastDir = new Vector2(1, 0);
             animator.SetFloat("LastInputX", lastDir.x);
@@ -143,7 +143,7 @@ public class PlayerMovement : MonoBehaviour
                 
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow) && !isMoving)
+        if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) && !isMoving)
         {
             lastDir = new Vector2(-1, 0);
             animator.SetFloat("LastInputX", lastDir.x);

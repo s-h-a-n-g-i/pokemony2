@@ -80,6 +80,8 @@ public class DialogeFightManager : MonoBehaviour
         string oryginal = textToEnter;
         textToEnter = textToEnter.Replace("<b>", "|");
         textToEnter = textToEnter.Replace("</b>", ";");
+        textToEnter = textToEnter.Replace("<i>", "/");
+        textToEnter = textToEnter.Replace("</i>", "=");
         //Debug.Log(textToEnter);
 
         for (int i = 0; i < textToEnter.Length; i++) 
@@ -91,6 +93,12 @@ public class DialogeFightManager : MonoBehaviour
                     break;
                 case ';':
                     dialogeText.text += "</b>";
+                    break;
+                case '/':
+                    dialogeText.text += "<i>";
+                    break;
+                case '=':
+                    dialogeText.text += "</i>";
                     break;
                 default:
                     dialogeText.text += textToEnter[i];
@@ -106,7 +114,7 @@ public class DialogeFightManager : MonoBehaviour
             }
         }
 
-        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z));
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Space));
         dialogeFinished = true;
         if (!lastText)
         {
